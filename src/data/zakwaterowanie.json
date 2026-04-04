@@ -1,0 +1,15 @@
+[
+  {
+    "id": "apartament-centrum",
+    "name": "Apartament w centrum Warszawy",
+    "slug": "apartament-centrum",
+    "price": 200,
+    "priceType": "person",
+    "category": "zakwaterowanie",
+    "description": "Apartament w centrum to świetny pomysł jeśli cenisz sobie bliskość klubów i innych udogodnień, które może Ci zaoferować stolica",
+    "features": [],
+    "images": [
+      "/media/centrum.jpg"
+    ]
+  }
+]

@@ -1,0 +1,821 @@
+[
+  {
+    "id": "tancerz-na-panienski",
+    "name": "Tancerz na panieński",
+    "slug": "tancerz-na-panienski",
+    "price": 599,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Wieczór panieński to wyjątkowa okazja, która musi być uczczona szaleństwem i niezapomnianymi atrakcjami. Jeden z najbardziej pociągających pomysłów na ten wieczór to występ przystojnego tancerza. Ta super atrakcja na pewno zapewni ostatni dzień wolności pełen ekscytacji i przyjemności. Niezależnie od tego, czy wybierzesz limuzynę czy apartament, przystojny tancerz z szóstką na brzuchu sprawi, że serca wszystkich panien młodych zabiją szybciej.",
+    "description2": "Występ tancerza na wieczorze panieńskim to niezapomniane doświadczenie, które każda Panna Młoda powinna przeżyć. Kiedy drzwi się otworzą, a przystojny tancerz pojawi się w całej swojej charyzmie, dziewczyny będą oczarowane. Jego wysportowane ciało i imponujący sześciopak na brzuchu nie pozwolą im oderwać wzroku. To nie tylko niezwykle rozgrzewający występ, ale także niepowtarzalna okazja do spędzenia czasu z najlepszymi przyjaciółkami i wspólnego świętowania panieńskiego. Nie ma wątpliwości, że rezerwacja tego występu na wieczór panieński będzie jednym z najważniejszych i najbardziej pamiętnych momentów, o których dziewczyny będą wspominać przez wiele lat.",
+    "features": [
+      "Możliwość występu w apartamencie lub limuzynie",
+      "Tylko przystojni tancerze - realne zdjęcia",
+      "Wiele kostiumów do wyboru-policjant, strażak, komandos, mechanik",
+      "Pamiątkowe zdjęcia",
+      "Erotyczne gadżety-kajdanki, banany, pałki"
+    ],
+    "images": [
+      "/media/tancerz-1-cover.jpg",
+      "/media/tancerz-1-1.jpg",
+      "/media/tancerz-1-3.jpg"
+    ]
+  },
+  {
+    "id": "prywatny-fotograf",
+    "name": "Prywatny fotograf",
+    "slug": "prywatny-fotograf",
+    "price": 499,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Prywatny fotograf na wieczór panieński to doskonała atrakcja, która pozwoli Wam uwiecznić te wyjątkowe chwile w pięknych zdjęciach. Niezależnie od tego, czy chcecie odbyć sesję w plenerze, w limuzynie czy też w profesjonalnym studiu fotograficznym, nasz doświadczony fotograf zadba o to, aby przyszła panna młoda i wszystkie uczestniczki imprezy wyglądały absolutnie pięknie.",
+    "description2": "Profesjonalna sesja fotograficzna to wspaniała okazja do stworzenia niezapomnianych wspomnień. Nasz fotograf pomoże Wam wybrać odpowiednie miejsca, które będą idealnym tłem dla Waszych fotografii. Niezależnie od tego, czy preferujecie romantyczną plenerową atmosferę, luksusowe wnętrze limuzyny czy też klasyczne ujęcia w studiu, nasz fotograf dostosuje się do Waszych preferencji i zapewni, że każda osoba na zdjęciach będzie wyglądać zachwycająco.",
+    "description3": "Aby uwiecznić te niezapomniane chwile, do dyspozycji będzie profesjonalny fotograf, który wykona pamiątkowe zdjęcia. Dzięki temu będziecie miały piękne wspomnienia, które będziecie mogły podzielić się z bliskimi i zachować na długie lata.",
+    "features": [
+      "profesjonalny fotograf",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Godzinna sesja fotograficzna"
+    ],
+    "images": [
+      "/media/fotograf-1-cover.jpg",
+      "/media/fotograf-1-1.jpg",
+      "/media/fotograf-1-2.jpg",
+      "/media/fotograf-1-3.jpg"
+    ]
+  },
+  {
+    "id": "rozowa-limuzyna",
+    "name": "Różowa limuzyna",
+    "slug": "rozowa-limuzyna",
+    "price": 999,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Poczuj się jak Barbie i zarezerwuj różową limuzynę.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Butelka szampana",
+      "Możliwość wniesienia własnego alkoholu",
+      "Wejściówki do klubów",
+      "Sesja fotograficzna"
+    ],
+    "images": [
+      "/media/hummer3.png",
+      "/media/hunner2.png"
+    ]
+  },
+  {
+    "id": "wieczor-w-klubie",
+    "name": "Wieczór w klubie",
+    "slug": "wieczor-w-klubie",
+    "subtitle": "(min. 7 osób)",
+    "price": 149,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Wieczór panieński w klubie to must have wśród atrakcji! To niezwykła okazja, aby wraz ze swoimi bliskimi przyjaciółkami roztańczyć się na parkiecie, ciesząc się atmosferą klubową. Jest to moment, który dodaje nutkę szaleństwa i radości do całego wieczoru panieńskiego. Dzięki wejściu bez kolejki, unikniecie długiego oczekiwania i od razu zaczniecie bawić się na parkiecie. To idealne rozwiązanie dla grupy przyjaciółek, które nie lubią tracić czasu i chcą skupić się na dobrej zabawie.",
+    "description2": "Prywatna loża to kolejna korzyść, która sprawi, że wieczór panieński nabierze prestiżowego charakteru. W loży będziecie miały swoje własne miejsce, gdzie możecie się wyluzować, porozmawiać na wszystkie tematy i delektować się atmosferą klubową. To idealne miejsce do wychillowania i spędzenia czasu z przyjaciółkami.",
+    "description3": "Przedpłacony alkohol to świetna opcja, która pozwoli na łatwiejszą kontrolę nad budżetem wieczoru, nawet jeśli trochę popłyniecie. Dzięki temu możecie cieszyć się dobrą zabawą, bez konieczności martwienia się o rachunki w trakcie imprezy.",
+    "features": [
+      "Bezkolejkowe wejście VIP do klubu",
+      "Prywatna loża na wyłączność",
+      "Przedpłacony alkohol",
+      "Najlepsze kluby"
+    ],
+    "images": [
+      "/media/klub-1-cover.jpg",
+      "/media/klub-1-1.jpg",
+      "/media/klub-1-2.jpg",
+      "/media/klub-1-3.jpg"
+    ]
+  },
+  {
+    "id": "rejs-gondola",
+    "name": "Rejs gondolą po Wiśle",
+    "slug": "rejs-gondola",
+    "subtitle": "(min. 7 osób, max. 11 osób)",
+    "price": 129,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Rejs gondolą po Wiśle to niesamowita atrakcja, która zapewni Wam niezapomniany wieczór panieński. Podczas tego magicznego rejsu będziecie miały okazję podziwiać najciekawsze zabytki Warszawy, wspaniałą panoramę i malownicze krajobrazy, które rozciągają się wokół. To niezwykłe doświadczenie, które dostarczy Wam chwile relaksu i wspaniałe wspomnienia. Nie tylko widoki będą zachwycające, ale także atmosfera na łodzi. Impreza na pokładzie wypełniona będzie radosną muzyką, która zachęci Was do świetnej zabawy.",
+    "features": [
+      "Możliwość wniesienia własnego alkoholu",
+      "Możliwość wniesienia własnych przekąsek",
+      "Godzinny kurs wenecką gondolą po Wiśle",
+      "Koordynator",
+      "Profesjonalne nagłośnienie do podłączenia własnej muzyki",
+      "Butelka szampana"
+    ],
+    "images": [
+      "/media/gondola1.jpg",
+      "/media/gondola2.jpg",
+      "/media/gondola3.jpg",
+      "/media/gondola4.jpg",
+      "/media/gondola5.jpg"
+    ]
+  },
+  {
+    "id": "sexy-spa",
+    "name": "Sexy SPA",
+    "slug": "sexy-spa",
+    "subtitle": "(min. 4 osoby)",
+    "price": 269,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "SPA to doskonała atrakcja, która pozwoli przyszłej Pannie Młodej na chwilę relaksu i zadbanie o siebie przed wielkim dniem - ślubem. To wyjątkowy czas, kiedy można oderwać się od stresu i poświęcić uwagę swojemu ciału i umyślowi. W luksusowym spa możecie skorzystać z różnorodnych zabiegów pielęgnacyjnych, masaży relaksacyjnych oraz innych profesjonalnych usług. To idealna okazja, aby odprężyć się, odzyskać równowagę i poczuć się odświeżone i piękne.",
+    "description2": "SPA to również doskonały czas na spędzenie chwil razem z bliskimi przyjaciółkami. Możecie wspólnie korzystać z usług spa, relaksować się w saunie lub jacuzzi, rozmawiać, śmiać się i tworzyć piękne wspomnienia. Zadbanie o siebie w SPA przed ślubem to nie tylko fizyczna pielęgnacja, ale także dbanie o swój wewnętrzny spokój i równowagę. To czas, kiedy przyszła Panna Młoda może skoncentrować się na sobie i naładować pozytywną energią przed ważnym dniem.",
+    "features": [
+      "Aromaterapeutyczna kąpiel w jacuzzi",
+      "Rytuał Hammam Hurram - dla Panny Młodej",
+      "Hammam klasyczny lub Masaż Balijski (45 min.) - dla pozostałych uczestniczek",
+      "Kieliszek szampana"
+    ],
+    "images": [
+      "/media/spa-1-cover.jpg",
+      "/media/spa-1-1.jpg",
+      "/media/spa-1-2.jpg",
+      "/media/spa-1-3.jpg"
+    ]
+  },
+  {
+    "id": "kregle",
+    "name": "Kręgle",
+    "slug": "kregle",
+    "subtitle": "(min. 7 osób)",
+    "price": 119,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Kręgle to świetna atrakcja na wieczór panieński, która doda pikanterii i rywalizacji do waszego szalonego wieczoru. Ta forma zabawy w gronie przyjaciółek podgrzeje atmosferę i dostarczy niezapomnianych chwil radości i śmiechu. Podczas gry możecie cieszyć się zimnymi napojami i zestawem przekąsek , które pozwolą Wam się zrelaksować i odprężyć przed dalszą częścią wieczoru. Zabawa na kręgielni to nie tylko rywalizacja, ale także świetna okazja do spędzenia czasu razem, śmiechu i tworzenia wspomnień.",
+    "description2": "Macie możliwość grać przez 2 godziny, co pozwoli Wam na wiele rund i odkrycie ukrytych talentów w grze. Grę w kręgle umilą Wam serwowane przystawki. Aby uczcić Wasze osiągnięcia i podkreślić wyjątkowość wieczoru, możecie wypić lampkę szampana, który dodatkowo nada temu momentowi elegancji.",
+    "features": [
+      "2h świetnej zabawy",
+      "Zestaw przekąsek i napojów",
+      "Prywatna loża",
+      "Prywatny koordynator"
+    ],
+    "images": [
+      "/media/kregle-1-cover.jpg",
+      "/media/kregle-1-1.jpg",
+      "/media/kregle-1-2.jpg",
+      "/media/kregle-1-3.jpg"
+    ]
+  },
+  {
+    "id": "limuzyna-bmw",
+    "name": "Limuzyna BMW",
+    "slug": "limuzyna-bmw",
+    "subtitle": "(max. 12 osób)",
+    "price": 999,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Planując niezapomniany wieczór panieński, nie może zabraknąć atrakcji, które dostarczą dawki luksusu i szaleństwa. Wynajem limuzyny BMW to doskonały wybór, który na pewno spełni oczekiwania wszystkich uczestniczek. Ta elegancka maszyna jest po prostu niesamowita! Wnętrze wypełnione jest luksusowymi dodatkami, a nagłośnienie jest na tyle potężne, że nawet najgorętsze hity brzmią jeszcze lepiej. Ale to nie wszystko! Sufit ledowy typu infinity rozświetla wnętrze niesamowitą magią, a wejście typu jet door dodaje odrobiny ekstrawagancji. Ten samochód z pewnością wywoła ogromne wrażenie na wszystkich dziewczynach.",
+    "description2": "Limuzyna BMW będzie świetnym wyborem także dla fanów marki Louis Vuitton ze względu na niepowtarzalne wnętrze. Jeśli jesteś fanką stylu i elegancji, a jednocześnie pragniesz odrobiny szaleństwa w tę ostatnią noc wolności, ten samochód jest dla Ciebie stworzony.",
+    "description3": "Nie czekaj dłużej! Wynajmij limuzynę BMW i odkryj, jak marzenia stają się rzeczywistością. Zostań królową wieczoru i ciesz się luksusem, jakiego jeszcze nigdy wcześniej nie doświadczyłaś. To Twoja noc, a limuzyna BMW sprawi, że będziesz się czuła jak gwiazda na czerwonym dywanie.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Sesja fotograficzna",
+      "Butelka szampana",
+      "Wejściówki do klubów",
+      "Możliwość wniesienia własnego alkoholu",
+      "Dodatkowe wejście typu Jet Door"
+    ],
+    "images": [
+      "/media/limo-7-cover.jpg",
+      "/media/limo-7-1.jpg",
+      "/media/limo-7-2.jpg",
+      "/media/limo-7-3.jpg"
+    ]
+  },
+  {
+    "id": "party-bus",
+    "name": "Party Bus",
+    "slug": "party-bus",
+    "subtitle": "(max. 20 osób)",
+    "price": 1299,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Wynajem party busa na wieczór panieński to atrakcja, która zapewni Wam niezapomniane doświadczenie. Zabierzcie swoją imprezę na cztery koła i przygotujcie się na szaloną zabawę. Imprezowa muzyka, pulsujące nagłośnienie i fajne oświetlenie wnętrza auta stworzą niesamowitą atmosferę, która sprawi, że nie będziecie się mogły oderwać od parkietu.",
+    "description2": "Party bus to nie tylko środek transportu, ale również scena dla Waszej imprezy. Dzięki przestronnemu wnętrzu, będziecie miały wystarczająco dużo miejsca, aby tańczyć, śpiewać i cieszyć się chwilą razem ze swoimi najlepszymi przyjaciółkami.",
+    "description3": "Jednak impreza w party busie to dopiero początek. Wraz z wynajmem samochodu oferujemy Wam darmowe wejściówki do wybranych klubów, gdzie możecie kontynuować zabawę. To idealne rozwiązanie, które pozwoli Wam na dalszą eskapadę nocną, pełną tanecznych rytmów i niezapomnianych wrażeń.",
+    "features": [
+      "Sympatyczny, młody kierowca",
+      "Szkło w barku",
+      "2 Butelki szampana",
+      "Możliwość wniesienia własnego alkoholu",
+      "Sesja zdjęciowa"
+    ],
+    "images": [
+      "/media/partybus-1-1.jpg",
+      "/media/partybus-1-2.jpg",
+      "/media/partybus-1-3.jpg",
+      "/media/partybus-1-cover.jpg"
+    ]
+  },
+  {
+    "id": "kolacja-w-restauracji",
+    "name": "Kolacja w restauracji",
+    "slug": "kolacja-w-restauracji",
+    "subtitle": "(min. 4 osoby)",
+    "price": 119,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Kolacja w restauracji to doskonały początek wieczoru panieńskiego. W końcu nie warto imprezować na pusty żołądek! W restauracji będziecie miały okazję delektować się pysznymi potrawami, stworzonymi przez najlepszych kucharzy, podczas gdy spokojnie porozmawiacie na różne tematy.",
+    "description2": "Zapewniamy Wam kolację w restauracji, która na pewno spełni Wasze oczekiwania. Może to być standardowa restauracja, gdzie znajdziecie szeroki wybór dań z różnych kuchni czy też restauracja znajdująca się na szczycie wieżowca, która oferuje nie tylko wykwintne menu, ale także spektakularne widoki na miasto.",
+    "description3": "Niezależnie od wyboru restauracji, możecie być pewne, że będziecie zachwycone. Po wyrafinowanym posiłku, możecie podjąć decyzję, czy wynająć limuzynę, która doda odrobinę luksusu i prestiżu do Waszego wieczoru, czy udać się do klubu, gdzie rozpocznie się bardziej szalona część imprezy. Bez względu na to, jaki wybór podejmiecie, zapewniamy Wam, że kolacja w restauracji będzie świetnym początkiem Waszego wieczoru panieńskiego.",
+    "features": [
+      "Ekskluzywna kolacja w centrum Warszawy",
+      "Rozbudowane Menu",
+      "2 Lampki wina",
+      "Nastrojowa muzyka"
+    ],
+    "images": [
+      "/media/kolacja-1-cover.jpg",
+      "/media/kolacja-1-2.jpg",
+      "/media/kolacja-1-3.jpg"
+    ]
+  },
+  {
+    "id": "billard",
+    "name": "Billard",
+    "slug": "billard",
+    "subtitle": "(min 5 osób)",
+    "price": 99,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Jeśli poszukujesz dwugodzinnej atrakcji, która dostarczy Wam mnóstwo zabawy i emocji na wieczór panieński, to billard spełni Twoje oczekiwania! Gra w billard to idealny sposób na spędzenie aktywnego czasu w gronie przyjaciół, gdzie każdy będzie mógł zaprezentować swoje umiejętności i cieszyć się dynamiczną rozgrywką.",
+    "description2": "Otrzymacie dwugodzinny dostęp do profesjonalnego stołu billardowego. Niezależnie od poziomu zaawansowania, gra w billard dostarcza wiele satysfakcji i radości. Będziecie mogli rywalizować między sobą w różnych rodzajach gier, takich jak 8-ball, 9-ball itd., dostosowując się do Waszych preferencji i umiejętności.",
+    "description3": "Billard to nie tylko rywalizacja, ale również świetna okazja do spędzenia czasu w przyjaznej atmosferze. Salon billardowy stworzy dla Was przytulne i komfortowe miejsce, gdzie będziecie mogli delektować się przekąskami i napojami, ciesząc się towarzystwem przyjaciół.",
+    "features": [
+      "2h świetnej zabawy",
+      "Soft drink",
+      "Prywatna loża",
+      "Zestaw przekąsek"
+    ],
+    "images": [
+      "/media/billard-1-cover.jpg",
+      "/media/billard-1-1.jpg",
+      "/media/billard-1-2.jpg",
+      "/media/billard-1-3.jpg"
+    ]
+  },
+  {
+    "id": "wieczor-karaoke",
+    "name": "Wieczór karaoke",
+    "slug": "wieczor-karaoke",
+    "subtitle": "(min 5)",
+    "price": 99,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Jeśli marzysz o wieczorze pełnym śpiewu, zabawy i niezapomnianych występów, to karaoke jest idealną atrakcją na Twoją wieczorną imprezę panieńską! Karaoke to doskonały sposób na uwolnienie wewnętrznego gwiazdora muzycznego i spędzenie czasu w radosnej atmosferze.",
+    "description2": "Podczas karaoke będziecie miały dostęp do profesjonalnego zestawu karaoke, obejmującego mikrofony, głośniki i bogatą bibliotekę utworów. Każdy z Was będzie mógł wybrać ulubione piosenki, włączyć mikrofon i śpiewać ze wszystkich sił. Niezależnie od umiejętności wokalnych, najważniejsza jest dobra zabawa i wspólne świętowanie.",
+    "description3": "Karaoke to także doskonała okazja do prezentacji swoich umiejętności scenicznych. Możecie przygotować grupowe występy, duety lub solowe pokazy, które będą wywoływać salwy śmiechu i owacje na stojąco.",
+    "features": [
+      "Prywatna loża",
+      "Zestaw przekąsek",
+      "Butelka szampana",
+      "Soft drinks",
+      "Koordynator"
+    ],
+    "images": [
+      "/media/karaoke-1-cover.jpg",
+      "/media/karaoke-1-1.jpg",
+      "/media/karaoke-1-2.jpg",
+      "/media/karaoke-1-3.jpg"
+    ]
+  },
+  {
+    "id": "limuzyna-hummer",
+    "name": "Limuzyna Hummer",
+    "slug": "limuzyna-hummer",
+    "subtitle": "(max. 20 osób)",
+    "price": 1299,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Jeśli masz przyjemność być otoczona przez liczne grono bliskich przyjaciół, z którymi pragniesz spędzić wyjątkowy wieczór panieński, wynajem limuzyny Hummer to doskonała atrakcja, która nie tylko dostarczy Wam niezapomnianej imprezy, ale także zapewni komfortowy transport.Ten olbrzymi gigant może pomieścić aż do 24 osób na swoim pokładzie, co oznacza, że wszyscy Wasi bliscy znajomi mogą być razem w tej wyjątkowej chwili.",
+    "description2": "Wnętrze Hummera to prawdziwe królestwo imprezowe. Nagłośnienie o mocy, które rozsadza parkiet, sprawi, że wszyscy zaczną tańczyć i roztaczać energetyczną atmosferę jeszcze przed dotarciem do klubu. W Hummerze nie ma miejsca na nudę!",
+    "description3": "Jeśli chcesz uczynić wieczór panieński niezapomnianym i jeszcze bardziej wyjątkowym, wynajem limuzyny Hummer jest idealnym wyborem. Zabierz wszystkich swoich przyjaciół na przejażdżkę życia i stwórzcie wspomnienia, które będą trwać przez wiele lat.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Sesja fotograficzna",
+      "Butelka szampana",
+      "Godzina przejazdu",
+      "Możliwość wniesienia własnego alkoholu",
+      "Wejściówki do klubów"
+    ],
+    "images": [
+      "/media/limo-9-cover.jpg",
+      "/media/limo-9-1.jpg",
+      "/media/limo-9-2.jpg",
+      "/media/limo-9-3.jpg"
+    ]
+  },
+  {
+    "id": "wieczor-w-kasynie",
+    "name": "Wieczór w kasynie",
+    "slug": "wieczor-w-kasynie",
+    "subtitle": "(min. 7 osób)",
+    "price": 109,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Jeśli marzysz o wieczorze pełnym wrażeń, adrenaliny i niezapomnianej rozrywki na wieczór panieński, to wizyta w kasynie jest idealną atrakcją!",
+    "description2": "Podczas wizyty w kasynie, będziesz miał dostęp do profesjonalnych stołów do gier, takich jak ruletka, blackjack czy poker.",
+    "description3": "Pamiętaj aby ubrać się elegancko, poczuć się jak w Monte Carlo i cieszyć się towarzystwem swoich przyjaciół podczas tej niezwykłej nocy.",
+    "features": [
+      "Bezpłatny wstęp",
+      "50 PLN w żetonach dla każdej uczestniczki",
+      "Welcome drinki",
+      "Koordynator",
+      "Najlepsze kasyna w Warszawie"
+    ],
+    "images": [
+      "/media/kasyno-1-cover.jpg",
+      "/media/kasyno-1-1.jpg",
+      "/media/kasyno-1-2.jpg",
+      "/media/kasyno-1-3.jpg"
+    ]
+  },
+  {
+    "id": "piknik-nad-wisla",
+    "name": "Piknik nad Wisłą",
+    "slug": "piknik-nad-wisla",
+    "subtitle": "(min. 5 osób)",
+    "price": 139,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Zapraszamy na wyjątkowy piknik nad Wisłą. Świętujcie w otoczeniu przyrody i pięknych widoków. Specjalnie dla Was przygotowaliśmy przekąski, smaczne napoje, relaks na kocach przy dźwiękach wybranej przez Was muzyki, gry i zabawy integracyjne, które rozśmieszą każdą z Was. Krótka sesja zdjęciowa na tle malowniczych widoków uwieczni te niezapomniane chwile. Zabierzcie ze sobą dobry humor, a my zajmiemy się resztą.",
+    "features": [
+      "Piknik na świeżym powietrzu",
+      "Pyszne przekąski",
+      "Orzeźwiające napoje",
+      "Profesjonalna sesja zdjęciowa",
+      "Nagłośnienie z funkcją BT",
+      "Szampan",
+      "Gry i zabawy integracyjne"
+    ],
+    "images": [
+      "/media/piknik-1-cover.jpg",
+      "/media/piknik-1-1.jpg",
+      "/media/piknik-1-2.jpg",
+      "/media/piknik-1-3.jpg",
+      "/media/piknik-1-4.jpg"
+    ]
+  },
+  {
+    "id": "limuzyna-chrysler-prestige",
+    "name": "Limuzyna Chrysler Prestige",
+    "slug": "limuzyna-chrysler-prestige",
+    "subtitle": "(max. 10 osób)",
+    "price": 799,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Wynajem limuzyny Chrysler to nie tylko wygodny sposób na transport podczas wieczoru panieńskiego, ale także gwarancja świetnej zabawy. Ten ekskluzywny samochód pozwoli Wam poczuć się jak prawdziwe gwiazdy, ponieważ ta wyjątkowa noc jest przeznaczona tylko dla Was.",
+    "description2": "Wnętrze limuzyny Chrysler nie tylko zachwyca swoim luksusem, ale również sprawia, że czas spędzony w samochodzie staje się niezapomnianą przygodą. Zabrzmi imprezowa muzyka, a nastrojowe oświetlenie sprawi, że wieczór szybko nabierze rozpędu.",
+    "description3": "Dodatkowo, niesamowite wnętrze samochodu stwarza idealne tło do wykonania pamiątkowych zdjęć na Instagramie.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Sesja fotograficzna",
+      "Butelka szampana",
+      "Możliwość wniesienia własnego alkoholu",
+      "Wejściówki do klubów",
+      "Godzina przejazdu",
+      "Eleganckie skórzane kanapy"
+    ],
+    "images": [
+      "/media/limo-5-cover.jpg",
+      "/media/limo-5-2.jpg",
+      "/media/limo-5-1.jpg",
+      "/media/limo-5-3.jpg"
+    ]
+  },
+  {
+    "id": "nauka-tanca",
+    "name": "Nauka tańca",
+    "slug": "nauka-tanca",
+    "subtitle": "(min. 5 osób)",
+    "price": 99,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Jeśli marzysz o wieczorze pełnym ruchu, muzyki i świetnej zabawy na wieczór panieński, to nauka tańca będzie idealną atrakcją dla Ciebie i Twojej grupy przyjaciół!",
+    "description2": "Do Waszej dyspozycji będzie doświadczony instruktor tańca, który wprowadzi Was w magiczny świat tańca i nauczy podstawowych kroków.",
+    "description3": "Nauka tańca może obejmować różne style, takie jak Salsa, Bachata, Zouk - wybór zależy od Waszych preferencji i upodobań.",
+    "features": [
+      "Godzinna sesja taneczna",
+      "Profesjonalny instruktor",
+      "Profesjonalne studio taneczne z lustrami",
+      "Powitalny kieliszek szampana"
+    ],
+    "images": [
+      "/media/taniec-1-cover.jpg",
+      "/media/taniec-1-1.jpg",
+      "/media/taniec-1-2.jpg",
+      "/media/taniec-1-3.jpg"
+    ]
+  },
+  {
+    "id": "kurs-makijazu",
+    "name": "Kurs makijażu",
+    "slug": "kurs-makijazu",
+    "subtitle": "(min. 4 osoby)",
+    "price": 149,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Jeśli marzysz o wieczorze, podczas którego nauczysz się sztuki makijażu i odkryjesz tajniki profesjonalnego wyglądu, to kurs makijażu jest idealną atrakcją dla Twojego wieczoru panieńskiego!",
+    "description2": "Podczas kursu makijażu, dołączysz do profesjonalnego wizażysty, który podzieli się swoją wiedzą i doświadczeniem.",
+    "description3": "Nauczymy się każdego elementu makijażu, który będzie tłumaczony i indywidualnie pokazany. Wspólnie zrobimy przegląd kosmetyczek, a każda z Was otrzyma porady odnośnie produktów idealnych dla niej.",
+    "features": [
+      "1 godzina wizażu",
+      "Profesjonalna makijażystka",
+      "Profesjonalny makijaż dla Panny młodej",
+      "Niezbędne akcesoria",
+      "Porady beauty"
+    ],
+    "images": [
+      "/media/makijaz-1-cover.jpg",
+      "/media/makijaz-1-1.jpg",
+      "/media/makijaz-1-2.jpg",
+      "/media/makijaz-1-3.jpg"
+    ]
+  },
+  {
+    "id": "limuzyna-do-15-osob",
+    "name": "Limuzyna do 15 osób",
+    "slug": "limuzyna-do-15-osob",
+    "price": 999,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Wynajem limuzyny na wieczór panieński to gwarancja szaleństwa i niezapomnianej zabawy...",
+    "description2": "Limuzyna Cadillac Escalade pomieści aż do 15 osób, więc nikt nie będzie musiał dojeżdżać na własną rękę.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Sesja fotograficzna",
+      "Butelka szampana",
+      "Godzina przejazdu",
+      "Wejściówki do klubów",
+      "Możliwość wniesienia własnego alkoholu",
+      "Kanapy na przeciw siebie"
+    ],
+    "images": [
+      "/media/limo-8-cover.jpg",
+      "/media/limo-8-1.jpg",
+      "/media/limo-8-2.jpg",
+      "/media/limo-8-3.jpg"
+    ]
+  },
+  {
+    "id": "paintball",
+    "name": "Paintball",
+    "slug": "paintball",
+    "subtitle": "(min. 6 osób)",
+    "price": 119,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Paintball to niesamowita atrakcja na wieczór panieński, która dostarczy Wam ogromną dawkę adrenaliny i niezapomnianych wrażeń. To doskonały sposób na aktywne spędzenie czasu w gronie przyjaciółek, gdzie będziecie mogły sprawdzić swoje umiejętności strategiczne i taktyczne w dynamicznej rozgrywce.",
+    "features": [
+      "1h gry",
+      "Ceremonia medalowa",
+      "Niezbędny sprzęt",
+      "Możliwość gry w terenie jak i w budynku",
+      "200 kul w cenie"
+    ],
+    "images": [
+      "/media/paintball-1-cover.jpg",
+      "/media/paintball-1-1.jpg",
+      "/media/paintball-1-2.jpg",
+      "/media/paintball-1-3.jpg"
+    ]
+  },
+  {
+    "id": "limuzyna-lincoln",
+    "name": "Limuzyna Lincoln",
+    "slug": "limuzyna-lincoln",
+    "subtitle": "(max. 10 osób)",
+    "price": 599,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Limuzyna Lincoln to klasyka wśród limuzyn na wieczór panieński. Ten elegancki i luksusowy samochód zapewni Wam niezapomniane wrażenia i poczucie bycia gwiazdą. Przejażdżka limuzyną Lincoln to doskonały sposób na rozpoczęcie wieczoru panieńskiego w wielkim stylu.",
+    "features": [
+      "Młodzi, czarujący kierowcy",
+      "Profesjonalna sesja zdjęciowa",
+      "Butelka szampana",
+      "Godzinna imprezowa przejażdżka",
+      "Odbiór i zakończenie w dowolnym miejscu",
+      "Możliwość wniesienia własnego alkoholu",
+      "Możliwość podłączenia własnej muzyki -łączność bluetooth"
+    ],
+    "images": [
+      "/media/limo-1-cover.jpg",
+      "/media/limo-1-1.jpg",
+      "/media/limo-1-2.jpg",
+      "/media/limo-1-3.jpg"
+    ]
+  },
+  {
+    "id": "quady",
+    "name": "Quady",
+    "slug": "quady",
+    "subtitle": "(min. 4 osoby)",
+    "price": 299,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Quady to niesamowita atrakcja na wieczór panieński, która dostarczy Wam ogromną dawkę adrenaliny i ekscytujących wrażeń. Jazda quadami to doskonały sposób na aktywne spędzenie czasu w gronie przyjaciółek.",
+    "features": [
+      "Zapewniony transport w dwie strony",
+      "45 min. jazdy",
+      "Tor który zapewni ekscytującą rozrywkę",
+      "Profesjonalny instruktor",
+      "Kaski Off-Road"
+    ],
+    "images": [
+      "/media/quady-1-cover.jpg",
+      "/media/quady-1-1.jpg",
+      "/media/quady-1-2.jpg",
+      "/media/quady-1-3.jpg"
+    ]
+  },
+  {
+    "id": "wizyta-na-strzelnicy",
+    "name": "Wizyta na Strzelnicy",
+    "slug": "wizyta-na-strzelnicy",
+    "price": 139,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Wizyta na strzelnicy to ekscytująca atrakcja na wieczór panieński, która dostarczy Wam niezapomnianych wrażeń i adrenaliny. To doskonały sposób na sprawdzenie swoich umiejętności strzeleckich w bezpiecznym i profesjonalnym otoczeniu.",
+    "features": [
+      "5 rodzajów broni",
+      "45 strzałów",
+      "Niezbędny sprzęt",
+      "Tarcze pamiątkowe",
+      "Zawody strzeleckie",
+      "Wejściówki do klubów"
+    ],
+    "images": [
+      "/media/strzelnica-1-cover.jpg",
+      "/media/strzelnica-1-1.jpg",
+      "/media/strzelnica-1-2.jpg",
+      "/media/strzelnica-1-3.jpg"
+    ]
+  },
+  {
+    "id": "limuzyna-z-jet-door",
+    "name": "Limuzyna z Jet door",
+    "slug": "limuzyna-z-jet-door",
+    "subtitle": "(max. 10 osób)",
+    "price": 750,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Limuzyna z Jet Door to wyjątkowa atrakcja na wieczór panieński, która zapewni Wam niezapomniane wrażenia i poczucie luksusu. Unikalne wejście typu Jet Door dodaje odrobiny ekstrawagancji i sprawia, że wysiadanie z limuzyny staje się prawdziwym pokazem.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Sesja fotograficzna",
+      "Butelka szampana",
+      "Godzina przejazdu",
+      "Wejściówki do klubów",
+      "Możliwość wniesienia własnego alkoholu",
+      "Wejście typu Jet Door"
+    ],
+    "images": [
+      "/media/limo-4-cover.jpg",
+      "/media/limo-4-1.jpg",
+      "/media/limo-4-3.jpg"
+    ]
+  },
+  {
+    "id": "laserowy-paintball",
+    "name": "Laserowy Paintball",
+    "slug": "laserowy-paintball",
+    "price": 109,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Laserowy paintball to nowoczesna i ekscytująca atrakcja na wieczór panieński, która łączy w sobie elementy strategii, rywalizacji i niesamowitej zabawy. W odróżnieniu od tradycyjnego paintballu, laserowy wariant jest całkowicie bezbolesny i bezpieczny.",
+    "features": [
+      "1h wojny laserowej",
+      "Ceremonia medalowa",
+      "Laserowa broń",
+      "Kombinezon",
+      "Wejściówki do klubów",
+      "Napoje alkoholowe i zwykłe"
+    ],
+    "images": [
+      "/media/laserowy-1-cover.jpg",
+      "/media/laserowy-1-1.jpg",
+      "/media/laserowy-1-2.jpg",
+      "/media/laserowy-1-3.jpg"
+    ]
+  },
+  {
+    "id": "emocje-w-monster-trucku",
+    "name": "Emocje w Monster Trucku",
+    "slug": "emocje-w-monster-trucku",
+    "price": 299,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Emocje w Monster Trucku to niesamowita atrakcja na wieczór panieński, która dostarczy Wam ogromną dawkę adrenaliny i niezapomnianych wrażeń. Jazda potężnym Monster Truckiem to doświadczenie, które zapamięta każda uczestniczka.",
+    "features": [
+      "15 min jazdy Monster Truckiem",
+      "Instruktor i profesjonalne szkolenie",
+      "Hardcorowy Tor jazdy",
+      "Panie jadą z Młodą na pace",
+      "Potężna dawka emocji !"
+    ],
+    "images": [
+      "/media/monster-1-1.jpg",
+      "/media/monster-1-cover.jpg",
+      "/media/monster-1-2.jpg",
+      "/media/monster-1-3.jpg"
+    ]
+  },
+  {
+    "id": "park-trampolin",
+    "name": "Park Trampolin",
+    "slug": "park-trampolin",
+    "subtitle": "(min. 5 osób)",
+    "price": 99,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Park trampolin to fantastyczna atrakcja na wieczór panieński, która zapewni Wam mnóstwo radości, śmiechu i aktywnej zabawy. To doskonały sposób na spędzenie czasu w gronie przyjaciółek, gdzie każda z Was będzie mogła poczuć się jak dziecko.",
+    "features": [
+      "wejście na 70 minut",
+      "prywatny instruktor Parkour",
+      "kilkanaście stref atrakcji",
+      "wysokiej jakości sprzęt",
+      "koordynator"
+    ],
+    "images": [
+      "/media/trampolina-1-cover.jpg",
+      "/media/trampolina-1-1.jpg",
+      "/media/trampolina-1-2.jpg",
+      "/media/trampolina-1-3.jpg"
+    ]
+  },
+  {
+    "id": "nauka-tanca-na-rurze",
+    "name": "Nauka tańca na rurze",
+    "slug": "nauka-tanca-na-rurze",
+    "subtitle": "(min. 5 osób)",
+    "price": 99,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Treningi Pole Dance wymagają dużej wytrzymałości i samozaparcia. Nauka tańca na rurze to doskonała atrakcja na wieczór panieński, która łączy w sobie elementy fitness, tańca i świetnej zabawy. To niezapomniane doświadczenie, które pozwoli Wam odkryć nowe umiejętności i poczuć się pewnie.",
+    "features": [
+      "Profesjonalna instruktorka",
+      "1h zajęć",
+      "Koordynator",
+      "Powitalny szampan"
+    ],
+    "images": [
+      "/media/poledance-1-1.jpg",
+      "/media/poledance-1-cover.jpg"
+    ]
+  },
+  {
+    "id": "szalenstwo-na-gokartach",
+    "name": "Szaleństwo na Gokartach",
+    "slug": "szalenstwo-na-gokartach",
+    "subtitle": "(min. 4 osoby)",
+    "price": 199,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Szaleństwo na gokartach to ekscytująca atrakcja na wieczór panieński, która dostarczy Wam niesamowitą dawkę adrenaliny i emocji. Wyścigi gokartowe to doskonały sposób na rywalizację w gronie przyjaciółek.",
+    "features": [
+      "16 minut jazdy dla każdej uczestniczki",
+      "Ceremonia medalowa",
+      "Zapewniony transport w obie strony",
+      "Koordynator",
+      "Szampan na świętowanie zwycięskiego wyścigu !"
+    ],
+    "images": [
+      "/media/gokarty-1-3.jpg",
+      "/media/gokarty-1-1.jpg",
+      "/media/gokarty-1-2.jpg"
+    ]
+  },
+  {
+    "id": "rejs-statkiem-po-wisle",
+    "name": "Rejs statkiem po Wiśle",
+    "slug": "rejs-statkiem-po-wisle",
+    "subtitle": "(min. 9 osób)",
+    "price": 199,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Planujesz wieczór panieński, który na długo zostanie w pamięci przyszłej Panny Młodej i jej przyjaciółek? Rejs statkiem po Wiśle w Warszawie to idealna propozycja! To niezapomniane doświadczenie, które łączy w sobie piękne widoki, imprezową atmosferę i wyjątkowe chwile spędzone z najbliższymi.",
+    "features": [
+      "brak korkowego",
+      "imprezowe nagłośnienie na Bluetooth",
+      "bezprzewodowy mikrofon",
+      "marynarski wystrój",
+      "dwa pokłady",
+      "kajuta",
+      "komfortowa toaleta",
+      "Załoga z doświadczonym kapitanem",
+      "koordynator"
+    ],
+    "images": [
+      "/media/rejs-1-cover.jpg",
+      "/media/rejs-1-1.jpg",
+      "/media/rejs-1-2.jpg",
+      "/media/rejs-1-3.jpg"
+    ]
+  },
+  {
+    "id": "ognisko",
+    "name": "Ognisko",
+    "slug": "ognisko",
+    "subtitle": "(min. 7 osób)",
+    "price": 69,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Marzycie o wieczorze panieńskim w wyjątkowej atmosferze? Ognisko to doskonała atrakcja, która pozwoli Wam spędzić niezapomniany czas w plenerze, w otoczeniu natury i ciepła płomieni. To idealny sposób na relaks i świetną zabawę w gronie przyjaciółek.",
+    "features": [
+      "klimatyczna atmosfera",
+      "nagłośnienie z możliwością podłączenia",
+      "prowiant",
+      "soft drinks",
+      "przekąski",
+      "koordynator"
+    ],
+    "images": [
+      "/media/ognisko-1-cover.jpg",
+      "/media/ognisko-1-2.png",
+      "/media/ognisko-1-3.jpg"
+    ]
+  },
+  {
+    "id": "przejazd-limuzyna-chrysler",
+    "name": "Przejazd limuzyną Chrysler",
+    "slug": "przejazd-limuzyna-chrysler",
+    "subtitle": "(max. 10 osób)",
+    "price": 699,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Przejazd limuzyną Chrysler to doskonała atrakcja na wieczór panieński, która zapewni Wam poczucie luksusu i niezapomniane wrażenia. Ten elegancki samochód jest idealnym wyborem dla grupy przyjaciółek, które chcą rozpocząć wieczór w wielkim stylu.",
+    "features": [
+      "Młodzi, czarujący kierowcy",
+      "Profesjonalna sesja zdjęciowa",
+      "Butelka szampana",
+      "Godzinna imprezowa przejażdżka",
+      "Odbiór i zakończenie w dowolnym miejscu",
+      "Możliwość wniesienia własnego alkoholu",
+      "Możliwość podłączenia własnej muzyki - łączność bluetooth"
+    ],
+    "images": [
+      "/media/limo-2-cover.jpg",
+      "/media/limo-2-1.jpg",
+      "/media/Limuzyna_Chrysler_300C_BabyBentley  (2).jpg",
+      "/media/Chrysler 300C 140_4.jpg",
+      "/media/IMG_1810.jpg",
+      "/media/IMG_1640.jpg"
+    ]
+  },
+  {
+    "id": "transfer-busem",
+    "name": "Transfer Busem na Atrakcję",
+    "slug": "transfer-busem",
+    "subtitle": "(min. 5 osób)",
+    "price": 69,
+    "priceType": "person",
+    "category": "atrakcje",
+    "description": "Nie macie jak dojechać na atrakcję ? Potrzebujecie szybkiego transferu do hotelu, do klubu albo z lotniska ? Transfer Busem będzie optymalnym rozwiązaniem.",
+    "description2": "Jeżeli jest Was więcej niż 8 osób również się nie martwcie możemy zorganizować dowolną ilość busów.",
+    "features": [],
+    "images": [
+      "/media/Transfer busem na atrakcje.png",
+      "/media/van1.jpg",
+      "/media/van2.jpg",
+      "/media/van4.jpg",
+      "/media/van3.jpg"
+    ]
+  },
+  {
+    "id": "czerwony-dywan",
+    "name": "Czerwony dywan",
+    "slug": "czerwony-dywan",
+    "price": 99,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Specjalnie dla Was rozkładamy czerwony dywan z błyszczącymi kordonami przy okazji robienia sesji zdjęciowej. Poczujecie się jak gwiazdy Hollywood podczas wysiadania z limuzyny!",
+    "features": [
+      "czerwony dywan",
+      "6 srebrnych kordonów odgradzających",
+      "zdjęcia podczas wychodzenia z limuzyny"
+    ],
+    "images": [
+      "/media/dywan z limuzyna-1.jpg",
+      "/media/czerwony dywan 1-1.jpg",
+      "/media/czerwony dywan 2.jpg"
+    ]
+  },
+  {
+    "id": "rozowe-kapelusze",
+    "name": "Różowe kapelusze",
+    "slug": "rozowe-kapelusze",
+    "price": 69,
+    "priceType": "pcs",
+    "category": "atrakcje",
+    "description": "Zapraszamy wszystkie Panie do niezwykłej sesji zdjęciowej, której wyjątkowym dodatkiem będą różowe kapelusze!",
+    "features": [
+      "Różowe kapelusze dla każdej z Pań na czas sesji",
+      "Sesja zdjęciowa z kapeluszami przy limuzynie"
+    ],
+    "images": [
+      "/media/rozowe kapelusze-1.jpg"
+    ]
+  }
+]

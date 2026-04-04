@@ -1,0 +1,33 @@
+[
+  {
+    "id": "dmuchany-striptizer",
+    "name": "Dmuchany striptizer",
+    "slug": "dmuchany-striptizer",
+    "subtitle": "Gdy występ profesjonalnego tancerza to jednak zbyt duże emocje",
+    "price": 99,
+    "priceType": "pcs",
+    "category": "sklep",
+    "description": "Dmuchany striptizer zadowoli każdą niewyżytą Panne młodą",
+    "features": [
+      "Długi penis",
+      "Nigdy nie pęka"
+    ],
+    "images": [
+      "/media/dmuchany.jpg"
+    ]
+  },
+  {
+    "id": "balon-pierscionek",
+    "name": "Balon pierścionek",
+    "slug": "balon-pierscionek",
+    "subtitle": "Spraw by Panna młoda wyglądała jak gwiazda",
+    "price": 30,
+    "priceType": "pcs",
+    "category": "sklep",
+    "description": "Dmuchany balon dla Panny młodej",
+    "features": [],
+    "images": [
+      "/media/balon.jpg"
+    ]
+  }
+]

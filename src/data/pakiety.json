@@ -1,0 +1,284 @@
+[
+  {
+    "id": "transfer-limuzyna-tancerz-zakwaterowanie",
+    "name": "Transfer limuzyną + Tancerz erotyczny + Zakwaterowanie imprezowe",
+    "slug": "transfer-limuzyna-tancerz-zakwaterowanie",
+    "subtitle": "(min. 8 osób)",
+    "price": 429,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Dopiero przylatujecie do Warszawy? Świetnie bo z lotniska zabierze Was limuzyna XXL zawożąc wprost do apartamentu...",
+    "description2": "W tej opcji nie musisz martwić się o sąsiadów jeżeli chcecie poimprezować w swoim gronie w apartamencie !",
+    "features": [
+      "transfer lotniskowy",
+      "przejazd limuzyną",
+      "występ tancerza",
+      "apartament noclegowy",
+      "możliwość imprezowania w apartamencie",
+      "młody, sympatyczny szofer",
+      "powitalny szampan",
+      "zakwaterowanie na jedna dobę"
+    ],
+    "images": [
+      "/media/limuzyna+tancerz+apartament.jpg"
+    ]
+  },
+  {
+    "id": "objazd-po-klubach",
+    "name": "Objazd po klubach muzycznych",
+    "slug": "objazd-po-klubach",
+    "subtitle": "(min. 6 osób)",
+    "price": 199,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Chcecie poimprezować, ale nie lubicie spędzać zbyt wiele czasu w jednym miejscu? Objazd po klubach muzycznych to idealna atrakcja dla Was! Zabierzemy Was na niezapomnianą trasę po najlepszych klubach w Warszawie.",
+    "description2": "Czas trwania atrakcji: 5h",
+    "features": [
+      "wejściówki do klubów",
+      "priorytet wejścia na imprezy",
+      "przyjazd po wieczór panieński na terenie Warszawy",
+      "powitalny szampan",
+      "transfery limuzyną pomiędzy klubami"
+    ],
+    "images": [
+      "/media/objazdpoklubach.jpg"
+    ]
+  },
+  {
+    "id": "limuzyna-fotograf-piknik",
+    "name": "Limuzyna + Prywatny Fotograf + Piknik nad Wisłą",
+    "slug": "limuzyna-fotograf-piknik",
+    "subtitle": "(min. 5 osób)",
+    "price": 299,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Pakiet łączący przejażdżkę limuzyną z profesjonalną sesją fotograficzną i relaksującym piknikiem nad Wisłą. To idealne połączenie luksusu, sztuki i natury na niezapomniany wieczór panieński.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Powitalny Szampan w Limuzynie",
+      "Godzina przejazdu limuzyną",
+      "Wejście typu Jet Door",
+      "Możliwość puszczania własnej muzyki",
+      "Profesjonalny fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć",
+      "2 godzinny piknik na świeżym powietrzu",
+      "Pyszne przekąski",
+      "Orzeźwiające napoje",
+      "Relaks na kocach przy dźwiękach muzyki",
+      "Gry i zabawy integracyjne"
+    ],
+    "images": [
+      "/media/limuzyna + fotograf + piknik-1.jpg"
+    ]
+  },
+  {
+    "id": "transfer-tancerz-zakwaterowanie-klub",
+    "name": "Transfer lotniskowy limuzyną + Tancerz erotyczny + Zakwaterowanie + Klub muzyczny",
+    "slug": "transfer-tancerz-zakwaterowanie-klub",
+    "subtitle": "(min. 7 osób)",
+    "price": 399,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Kompletny pakiet na wieczór panieński obejmujący transfer z lotniska limuzyną, występ tancerza erotycznego, zakwaterowanie na jedną dobę oraz bezkolejkowe wejście do klubu muzycznego.",
+    "features": [
+      "Transfer lotniskowy",
+      "Przejazd limuzyną",
+      "Powitalny szampan",
+      "Występ tancerza",
+      "Zakwaterowanie na jedną dobę",
+      "Bezkolejkowe wejcie do Klubu"
+    ],
+    "images": [
+      "/media/Limuzyna + tancerz + Zakwaterowanie + Klub.jpg"
+    ]
+  },
+  {
+    "id": "piknik-fotograf-gondola",
+    "name": "Piknik na Wisłą + Prywatny fotograf + Rejs gondolą po Wiśle",
+    "slug": "piknik-fotograf-gondola",
+    "subtitle": "(min. 7 osób)",
+    "price": 299,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Pakiet łączący piknik nad Wisłą z profesjonalną sesją fotograficzną i romantycznym rejsem gondolą. Idealne połączenie relaksu na świeżym powietrzu z niezapomnianymi wrażeniami na wodzie.",
+    "features": [
+      "2 godzinny piknik na świeżym powietrzu",
+      "Pyszne przekąski",
+      "Orzeźwiające napoje",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Profesjonalny fotograf na godzinę czasu",
+      "Relaks na kocach przy dźwiękach muzyki",
+      "Gry i zabawy integracyjne",
+      "Nagłośnienie",
+      "Godzinny kurs wenecką gondolą po Wiśle"
+    ],
+    "images": [
+      "/media/pikinik + fotograf + gondola.jpg"
+    ]
+  },
+  {
+    "id": "taniec-limuzyna-tancerz-klub",
+    "name": "Nauka tańca + Przejazd Limuzyną + Tancerz erotyczny + Klub",
+    "slug": "taniec-limuzyna-tancerz-klub",
+    "subtitle": "(min. 7 osób)",
+    "price": 299,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Pakiet łączący naukę tańca z przejażdżką limuzyną, występem tancerza erotycznego i wejściem do klubu. Pełny wieczór panieński w jednym pakiecie!",
+    "features": [
+      "Godzinna sesja taneczna",
+      "Profesjonalny instruktor",
+      "Profesjonalne studio taneczne z lustrami",
+      "Powitalny kieliszek szampana",
+      "Godzinna imprezowa przejażdżka Limuzyną",
+      "Młody przystojny szofer",
+      "Możliwość wniesienia własnego alkoholu",
+      "Możliwość podłączenia własnej muzyki",
+      "Występ seksownego tancerza",
+      "Bezkolejkowe wejście do klubu"
+    ],
+    "images": [
+      "/media/Nauka tanca + tancerz + Limuzyna + Klub 2.jpg"
+    ]
+  },
+  {
+    "id": "fotograf-limuzyna-tancerz-klub",
+    "name": "Prywatny fotograf + objazd po warszawie limuzyną + tancerz + klub",
+    "slug": "fotograf-limuzyna-tancerz-klub",
+    "subtitle": "(min. 8 osób)",
+    "price": 269,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Pakiet obejmujący profesjonalną sesję fotograficzną, przejażdżkę limuzyną po Warszawie, występ tancerza erotycznego oraz bezkolejkowe wejście do klubu.",
+    "features": [
+      "Godzinny Przejazd limuzyną",
+      "Powitalny szampan",
+      "Występ tancerza",
+      "Profesjonalny fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Bezkolejkowe wejcie do Klubu",
+      "Koordynator"
+    ],
+    "images": [
+      "/media/Fotograf + Limuzyna + tancerz + Klub.jpg"
+    ]
+  },
+  {
+    "id": "fotograf-taniec-limuzyna-klub",
+    "name": "Prywatny fotograf + Nauka tańca + Objazd po warszawie limuzyną + Klub",
+    "slug": "fotograf-taniec-limuzyna-klub",
+    "subtitle": "(min. 8 osób)",
+    "price": 269,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Pakiet łączący profesjonalną sesję fotograficzną, naukę tańca, przejażdżkę limuzyną po Warszawie oraz wejście do klubu. Idealny wybór dla grupy, która chce połączyć aktywność z luksusem.",
+    "features": [
+      "Profesjonalny fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Godzinna sesja taneczna",
+      "Profesjonalny instruktor",
+      "Profesjonalne studio taneczne z lustrami",
+      "Powitalny kieliszek szampana",
+      "Godzinna imprezowa przejażdżka Limuzyną",
+      "Młody przystojny szofer",
+      "Możliwość wniesienia własnego alkoholu",
+      "Możliwość podłączenia własnej muzyki",
+      "Bezkolejkowe wejście do klubu"
+    ],
+    "images": [
+      "/media/nauka tanca + fotograf + limuzyna + klub.jpg"
+    ]
+  },
+  {
+    "id": "gokarty-limuzyna-klub",
+    "name": "Gokarty + Objazd Limuzyną po Warszawie + Klub",
+    "slug": "gokarty-limuzyna-klub",
+    "subtitle": "(min. 7 osób)",
+    "price": 249,
+    "priceType": "pcs",
+    "category": "pakiety",
+    "description": "Pakiet łączący emocjonujące wyścigi gokartowe z przejażdżką limuzyną po Warszawie i wejściem do klubu. Idealne połączenie adrenaliny i zabawy!",
+    "features": [
+      "Powitalny szampan",
+      "Godzinny przejazd limuzyną",
+      "16 minut jazdy dla każdej uczestniczki",
+      "Ceremonia medalowa",
+      "Bezkolejkowe wejcie do Klubu",
+      "Koordynator"
+    ],
+    "images": [
+      "/media/gokarty + limuzyna + klub 2.jpg"
+    ]
+  },
+  {
+    "id": "limuzyna-spa",
+    "name": "Limuzyna + Spa",
+    "slug": "limuzyna-spa",
+    "subtitle": "(min. 7 osób)",
+    "price": 359,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Pakiet łączący luksusową przejażdżkę limuzyną z relaksującą wizytą w ekskluzywnym SPA. Idealne połączenie imprezowej atmosfery z chwilą wytchnienia.",
+    "description2": "Następnie limuzyna zawozi Was do ekskluzywnego SPA, gdzie czeka na Was prawdziwa uczta dla ciała i ducha.",
+    "features": [
+      "Młody, przystojny kierowca",
+      "powitalny szampan",
+      "godzinny przejazd limuzyną",
+      "Możliwość wniesienia własnego alkoholu",
+      "Aromaterapeutyczna kąpiel w jacuzzi",
+      "Rytuał Hammam Hurram - dla Panny Młodej",
+      "Hammam klasyczny lub Masaż Balijski (45 min.) - dla pozostałych uczestniczek",
+      "Lampka szampana"
+    ],
+    "images": [
+      "/media/limuzyna + spa.jpg"
+    ]
+  },
+  {
+    "id": "strzelnica-limuzyna-tancerz-klub",
+    "name": "Strzelnica + Objazd Limuzyną + Tancerz + Klub",
+    "slug": "strzelnica-limuzyna-tancerz-klub",
+    "subtitle": "(min. 7 osób)",
+    "price": 349,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Pakiet łączący wizytę na strzelnicy, przejażdżkę limuzyną, występ tancerza erotycznego i wejście do klubu. Pełen wrażeń wieczór panieński!",
+    "features": [
+      "Niezbędny sprzęt",
+      "Pamiątkowe tarcze",
+      "5 rodzajów broni",
+      "45 strzałów",
+      "przystojny szofer",
+      "powitalny szampan w limuzynie",
+      "możliwość puszczania własnej muzyki",
+      "występ tancerza",
+      "wejściówki do Klubu"
+    ],
+    "images": [
+      "/media/strzelnica + limuzyna + tancerz + klub.jpg"
+    ]
+  },
+  {
+    "id": "ognisko-limuzyna-klub",
+    "name": "Ognisko w plenerze + Przejazd Limuzyną po Warszawie + Klub",
+    "slug": "ognisko-limuzyna-klub",
+    "subtitle": "(min. 7 osób)",
+    "price": 249,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Pakiet łączący klimatyczne ognisko w plenerze z przejażdżką limuzyną po Warszawie i wejściem do klubu. Idealne połączenie relaksu na świeżym powietrzu z imprezową atmosferą!",
+    "features": [
+      "Klimatyczna atmosfera",
+      "Nagłośnienie z możliwością podłączenia",
+      "Prowiant",
+      "Soft drinks",
+      "Przękąski",
+      "Młody, sympatyczny kierowca",
+      "Możliwość wniesienia własnego alkoholu",
+      "Godzina przejazdu limuzyną"
+    ],
+    "images": [
+      "/media/ognisko + limuzyna + klub.jpg"
+    ]
+  }
+]
