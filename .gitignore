@@ -1,0 +1,10 @@
+# Source video (extract frames locally with FFMPEG)
+bachelorretteParty.mp4
+
+# Design references (not needed in production)
+inspirations/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
