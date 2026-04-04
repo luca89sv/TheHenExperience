@@ -13,29 +13,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="preload" as="image" href="frames/frame-0001.webp">
-  <link rel="preload" as="image" href="frames/frame-0002.webp">
-  <link rel="preload" as="image" href="frames/frame-0003.webp">
-
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP for scroll-triggered animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
 
-  <!-- ═══════════════ LOADER ═══════════════ -->
-  <div id="loader" aria-label="Loading">
-    <div class="loader-inner">
-      <div class="loader-brand">The Hen Experience</div>
-      <div class="loader-bar-track">
-        <div class="loader-bar-fill" id="loader-fill"></div>
+  <!-- ═══════════════ TOP CONTACT BAR ═══════════════ -->
+  <div id="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        <a href="mailto:atrakcjenapanienski@gmail.com" class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          atrakcjenapanienski@gmail.com
+        </a>
+        <a href="tel:+48537048777" class="top-bar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +48 537 048 777
+        </a>
       </div>
-      <div class="loader-percent" id="loader-percent">0%</div>
+      <div class="top-bar-right">
+        <span class="top-bar-tagline" data-i18n="topbar.tagline">Niezapomniane wieczory panienskie w Warszawie</span>
+        <div class="top-bar-social">
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- ═══════════════ NAVIGATION ═══════════════ -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">The Hen Experience</a>
+      <a href="#" class="nav-logo">The <span class="logo-hen">Hen</span> Experience</a>
       <div class="nav-links" id="nav-links">
         <a href="#services" data-i18n="nav.services">Usługi</a>
         <a href="#how-it-works" data-i18n="nav.howItWorks">Jak to działa</a>
@@ -100,23 +116,27 @@
         <p class="overlay-desc" data-i18n="hero.p4.desc">Darmowe wejścia VIP do topowych klubów. Rezerwacje stolików i obsługa na najwyższym poziomie.</p>
       </div>
 
+      <!-- Hero CTA buttons — visible on load -->
+      <div class="hero-cta" id="hero-cta">
+        <a href="#pricing" class="btn-primary btn-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <span data-i18n="hero.cta.packages">Nasze pakiety</span>
+        </a>
+        <a href="#contact" class="btn-outline btn-hero">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <span data-i18n="hero.cta.contact">Napisz do nas</span>
+        </a>
+      </div>
+
       <!-- Scroll hint -->
       <div class="scroll-hint" id="scroll-hint">
-        <div class="scroll-hint-line"></div>
+        <div class="scroll-hint-mouse">
+          <div class="scroll-hint-wheel"></div>
+        </div>
         <span data-i18n="hero.scroll">Przewiń w dół</span>
       </div>
     </div>
   </section>
-
-  <!-- Mobile fallback hero -->
-  <div class="mobile-hero-fallback" id="mobile-hero">
-    <img src="frames/frame-0060.webp" alt="The Hen Experience" class="mobile-hero-img">
-    <div class="mobile-hero-content">
-      <h1 data-i18n="mobile.hero.title">Niezapomniany<br><em>wieczór panieński</em></h1>
-      <p data-i18n="mobile.hero.desc">Ekskluzywne wieczory panieńskie w Warszawie</p>
-      <a href="#contact" class="btn-primary" data-i18n="nav.cta">Zarezerwuj</a>
-    </div>
-  </div>
 
   <!-- ═══════════════ SERVICES ═══════════════ -->
   <section id="services" class="section">
@@ -369,11 +389,11 @@
         <h2 class="cta-title" data-i18n="cta.title">Zaplanuj niezapomniany <em>wieczór</em></h2>
         <p class="cta-desc" data-i18n="cta.desc">Napisz do nas lub zadzwoń — przygotujemy ofertę dopasowaną do Twoich marzeń.</p>
         <div class="cta-buttons">
-          <a href="tel:+48793552271" class="btn-primary btn-lg">
+          <a href="tel:+48537048777" class="btn-primary btn-lg">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
             <span data-i18n="cta.phone">Zadzwoń</span>
           </a>
-          <a href="mailto:kontakt@thehenexperience.pl" class="btn-outline btn-lg">
+          <a href="mailto:atrakcjenapanienski@gmail.com" class="btn-outline btn-lg">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <span data-i18n="cta.email">Napisz do nas</span>
           </a>
@@ -387,7 +407,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">The Hen Experience</div>
+          <div class="footer-logo">The <span class="logo-hen">Hen</span> Experience</div>
           <p data-i18n="footer.desc">Ekskluzywne wieczory panieńskie w Warszawie. Limuzyny, kluby, niezapomniane chwile.</p>
         </div>
         <div class="footer-col">
@@ -399,8 +419,8 @@
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.contact">Kontakt</h4>
-          <a href="tel:+48793552271">+48 793 552 271</a>
-          <a href="mailto:kontakt@thehenexperience.pl">kontakt@thehenexperience.pl</a>
+          <a href="tel:+48537048777">+48 537 048 777</a>
+          <a href="mailto:atrakcjenapanienski@gmail.com">atrakcjenapanienski@gmail.com</a>
           <p>Warszawa, Polska</p>
         </div>
         <div class="footer-col">
@@ -423,6 +443,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- ═══════════════ FLOATING ACTION BUTTONS ═══════════════ -->
+  <div class="fab-container" id="fab-container">
+    <a href="https://wa.me/48537048777" target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <a href="tel:+48537048777" class="fab fab-phone" aria-label="Zadzwoń">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    </a>
+  </div>
 
   <script src="js/scroll-animation.js" defer></script>
   <script src="js/sections.js" defer></script>

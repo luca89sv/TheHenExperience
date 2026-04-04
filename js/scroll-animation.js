@@ -7,25 +7,17 @@
   'use strict';
 
   // ── Configuration ──
-  const IS_MOBILE_FALLBACK = window.matchMedia('(max-width: 480px)').matches;
-  const IS_TABLET = window.matchMedia('(max-width: 768px)').matches && !IS_MOBILE_FALLBACK;
+  const IS_MOBILE = window.matchMedia('(max-width: 768px)').matches;
 
   const CONFIG = {
-    totalFrames: IS_TABLET ? 61 : 121,
+    totalFrames: IS_MOBILE ? 61 : 121,
     batchSize: 15,
-    framePath: IS_TABLET
+    framePath: IS_MOBILE
       ? (i) => `frames-mobile/frame-${String(i).padStart(4, '0')}.webp`
       : (i) => `frames/frame-${String(i).padStart(4, '0')}.webp`,
-    frameWidth: IS_TABLET ? 862 : 1724,
-    frameHeight: IS_TABLET ? 600 : 1200,
+    frameWidth: IS_MOBILE ? 862 : 1724,
+    frameHeight: IS_MOBILE ? 600 : 1200,
   };
-
-  // ── Skip canvas animation on small mobile ──
-  if (IS_MOBILE_FALLBACK) {
-    const loader = document.getElementById('loader');
-    if (loader) loader.classList.add('loaded');
-    return;
-  }
 
   // ── State ──
   let frames = new Array(CONFIG.totalFrames);
@@ -39,9 +31,6 @@
   // ── DOM refs ──
   const canvas = document.getElementById('frame-canvas');
   const ctx = canvas.getContext('2d');
-  const loader = document.getElementById('loader');
-  const loaderFill = document.getElementById('loader-fill');
-  const loaderPercent = document.getElementById('loader-percent');
   const heroSection = document.getElementById('hero');
   const scrollProgressBar = document.getElementById('scroll-progress');
   const scrollHint = document.getElementById('scroll-hint');
@@ -93,23 +82,15 @@
       img.onload = () => {
         frames[index] = img;
         loadedCount++;
-        updateLoaderUI();
         resolve(img);
       };
       img.onerror = () => {
         console.warn(`Failed to load frame ${index}`);
         loadedCount++;
-        updateLoaderUI();
         resolve(null);
       };
       img.src = CONFIG.framePath(index + 1); // frames are 1-indexed
     });
-  }
-
-  function updateLoaderUI() {
-    const pct = Math.round((loadedCount / CONFIG.totalFrames) * 100);
-    if (loaderFill) loaderFill.style.width = pct + '%';
-    if (loaderPercent) loaderPercent.textContent = pct + '%';
   }
 
   async function preloadAllFrames() {
@@ -198,11 +179,6 @@
       const h = canvas.height / dpr;
       ctx.drawImage(frames[0], 0, 0, w, h);
       drawnFrame = 0;
-    }
-
-    // Hide loader
-    if (loader) {
-      loader.classList.add('loaded');
     }
 
     // Start scroll listening

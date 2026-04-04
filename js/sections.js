@@ -7,24 +7,38 @@
   'use strict';
 
   // ═══════════════════════════════════════════
-  // SCROLL REVEAL — IntersectionObserver
+  // HERO CTA BUTTONS — show after loader, hide on scroll
+  // ═══════════════════════════════════════════
+  const heroCta = document.getElementById('hero-cta');
+  const fabContainer = document.getElementById('fab-container');
+
+  // Show hero CTA shortly after page load
+  if (heroCta) {
+    setTimeout(() => heroCta.classList.add('visible'), 400);
+  }
+
+  // ═══════════════════════════════════════════
+  // SCROLL REVEAL — IntersectionObserver (fallback, GSAP takes over below)
   // ═══════════════════════════════════════════
   const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-    );
-    revealEls.forEach((el) => revealObserver.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add('visible'));
+  if (!window.gsap) {
+    // Fallback if GSAP didn't load
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      );
+      revealEls.forEach((el) => revealObserver.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add('visible'));
+    }
   }
 
   // ═══════════════════════════════════════════
@@ -32,12 +46,18 @@
   // ═══════════════════════════════════════════
   const navbar = document.getElementById('navbar');
   const heroSection = document.getElementById('hero');
-  const mobileHero = document.getElementById('mobile-hero');
 
   function updateNavbar() {
     const scrollY = window.scrollY;
-    const heroBottom = (heroSection && heroSection.offsetHeight) || (mobileHero && mobileHero.offsetHeight) || window.innerHeight;
+    const heroBottom = (heroSection && heroSection.offsetHeight) || window.innerHeight;
     navbar.classList.toggle('scrolled', scrollY > heroBottom * 0.15);
+
+    // Hero CTA: hide when scrolled past ~5% of hero
+    if (heroCta) {
+      heroCta.classList.toggle('hidden-scroll', scrollY > window.innerHeight * 0.15);
+    }
+
+    // FABs: always visible (no scroll dependency)
   }
   window.addEventListener('scroll', updateNavbar, { passive: true });
   updateNavbar();
@@ -102,6 +122,9 @@
   // ═══════════════════════════════════════════
   const translations = {
     en: {
+      'topbar.tagline': 'Unforgettable hen parties in Warsaw',
+      'hero.cta.packages': 'Our Packages',
+      'hero.cta.contact': 'Write to Us',
       'nav.services': 'Services',
       'nav.howItWorks': 'How It Works',
       'nav.testimonials': 'Reviews',
@@ -203,6 +226,9 @@
       'footer.rights': 'All rights reserved.',
     },
     pl: {
+      'topbar.tagline': 'Niezapomniane wieczory panienskie w Warszawie',
+      'hero.cta.packages': 'Nasze pakiety',
+      'hero.cta.contact': 'Napisz do nas',
       'nav.services': 'Us\u0142ugi',
       'nav.howItWorks': 'Jak to dzia\u0142a',
       'nav.testimonials': 'Opinie',
@@ -343,4 +369,167 @@
 
   // Apply PL on load (it's the default in HTML already, but this ensures consistency)
   applyTranslations('pl');
+
+  // ═══════════════════════════════════════════
+  // GSAP SCROLL-TRIGGERED ANIMATIONS
+  // ═══════════════════════════════════════════
+  function initGSAP() {
+    if (!window.gsap || !window.ScrollTrigger) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Remove CSS transition from .reveal so GSAP handles it
+    // Also add 'visible' so GSAP captures opacity:1 as the TO value
+    revealEls.forEach((el) => {
+      el.style.transition = 'none';
+      el.classList.add('visible');
+    });
+
+    // Section headers — fade up
+    gsap.utils.toArray('.section-header.reveal').forEach((header) => {
+      gsap.from(header, {
+        y: 40,
+        opacity: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: header,
+          start: 'top 85%',
+          once: true,
+          onEnter: () => header.classList.add('visible'),
+        },
+      });
+    });
+
+    // Service cards — staggered
+    const serviceCards = gsap.utils.toArray('.service-card.reveal');
+    if (serviceCards.length) {
+      gsap.from(serviceCards, {
+        y: 50,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.services-grid',
+          start: 'top 80%',
+          once: true,
+          onEnter: () => serviceCards.forEach((c) => c.classList.add('visible')),
+        },
+      });
+    }
+
+    // Steps — slide in from alternating sides
+    gsap.utils.toArray('.step.reveal').forEach((step, i) => {
+      gsap.from(step, {
+        x: i % 2 === 0 ? -40 : 40,
+        opacity: 0,
+        duration: 0.8,
+        delay: i * 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: step,
+          start: 'top 85%',
+          once: true,
+          onEnter: () => step.classList.add('visible'),
+        },
+      });
+    });
+
+    // Testimonial cards — staggered scale up
+    const testimonialCards = gsap.utils.toArray('.testimonial-card.reveal');
+    if (testimonialCards.length) {
+      gsap.from(testimonialCards, {
+        scale: 0.92,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.testimonials-grid',
+          start: 'top 80%',
+          once: true,
+          onEnter: () => testimonialCards.forEach((c) => c.classList.add('visible')),
+        },
+      });
+    }
+
+    // Pricing cards — staggered with Y offset
+    const pricingCards = gsap.utils.toArray('.pricing-card.reveal');
+    if (pricingCards.length) {
+      gsap.from(pricingCards, {
+        y: 60,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.pricing-grid',
+          start: 'top 80%',
+          once: true,
+          onEnter: () => pricingCards.forEach((c) => c.classList.add('visible')),
+        },
+      });
+    }
+
+    // FAQ items — staggered
+    const faqItems = gsap.utils.toArray('.faq-item.reveal');
+    if (faqItems.length) {
+      gsap.from(faqItems, {
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.08,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.faq-list',
+          start: 'top 80%',
+          once: true,
+          onEnter: () => faqItems.forEach((c) => c.classList.add('visible')),
+        },
+      });
+    }
+
+    // CTA section — dramatic entrance
+    const ctaContent = document.querySelector('.cta-content.reveal');
+    if (ctaContent) {
+      gsap.from(ctaContent, {
+        y: 50,
+        opacity: 0,
+        scale: 0.96,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: ctaContent,
+          start: 'top 85%',
+          once: true,
+          onEnter: () => ctaContent.classList.add('visible'),
+        },
+      });
+    }
+
+    // Glow orbs — subtle parallax
+    gsap.utils.toArray('.glow-orb').forEach((orb) => {
+      gsap.to(orb, {
+        y: -60,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: orb.parentElement,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1,
+        },
+      });
+    });
+  }
+
+  // Wait for GSAP to load (deferred script)
+  if (window.gsap) {
+    initGSAP();
+  } else {
+    // GSAP loads via defer, so wait a tick
+    window.addEventListener('load', () => {
+      setTimeout(initGSAP, 100);
+    });
+  }
 })();
