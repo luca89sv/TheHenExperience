@@ -113,7 +113,7 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
         />
 
         <div className="p-4 flex flex-col flex-1 relative z-[1]">
-          <h3 className="font-[family-name:var(--font-display)] text-base font-semibold leading-snug mb-1 group-hover:text-pink-300 transition-colors duration-300">
+          <h3 className="font-[family-name:var(--font-display)] text-base font-semibold leading-snug mb-1 uppercase group-hover:text-pink-300 transition-colors duration-300">
             {item.name}
           </h3>
           {item.subtitle && (

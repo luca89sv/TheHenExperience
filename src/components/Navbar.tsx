@@ -55,18 +55,18 @@ export default function Navbar() {
       <div
         className="fixed top-0 left-0 right-0 z-[1001] flex items-center"
         style={{
-          height: isSmall ? "32px" : "36px",
+          height: isSmall ? "36px" : isMobile ? "40px" : "36px",
           background: "linear-gradient(90deg, #be185d, #db2777, #ec4899)",
         }}
       >
         <div className="max-w-[min(1200px,92vw)] mx-auto w-full flex items-center justify-between relative">
-          <div className="flex items-center" style={{ gap: isMobile ? "1rem" : "1.8rem" }}>
+          <div className="flex items-center" style={{ gap: isMobile ? "0" : "1.8rem", ...(isMobile ? { justifyContent: "space-between", width: "100%" } : {}) }}>
             <a
               href="mailto:atrakcjenapanienski@gmail.com"
               className="inline-flex items-center gap-1.5 text-white/90 hover:text-white transition-colors"
-              style={{ fontSize: isMobile ? "0.72rem" : "0.78rem", fontWeight: 500 }}
+              style={{ fontSize: isMobile ? "1.05rem" : "0.78rem", fontWeight: 500 }}
             >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="14" height="14" style={{ opacity: 0.8, flexShrink: 0 }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width={isMobile ? 18 : 14} height={isMobile ? 18 : 14} style={{ opacity: 0.8, flexShrink: 0 }}>
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
@@ -75,9 +75,9 @@ export default function Navbar() {
             <a
               href="tel:+48537048777"
               className="inline-flex items-center gap-1.5 text-white/90 hover:text-white transition-colors"
-              style={{ fontSize: isMobile ? "0.72rem" : "0.78rem", fontWeight: 500 }}
+              style={{ fontSize: isMobile ? "1.05rem" : "0.78rem", fontWeight: 500 }}
             >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="14" height="14" style={{ opacity: 0.8, flexShrink: 0 }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width={isMobile ? 16 : 14} height={isMobile ? 16 : 14} style={{ opacity: 0.8, flexShrink: 0 }}>
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
               </svg>
               {!isSmall && "+48 537 048 777"}
@@ -90,8 +90,8 @@ export default function Navbar() {
           >
             <T k="topbar.tagline" />
           </span>
-          {/* Social icons — hidden at ≤480px */}
-          <div className="flex items-center gap-2 ml-3" style={{ display: isSmall ? "none" : "flex" }}>
+          {/* Social icons — hidden on mobile */}
+          <div className="hidden md:flex items-center gap-2 ml-3">
             <a
               href="https://instagram.com"
               target="_blank"
@@ -124,7 +124,7 @@ export default function Navbar() {
       <nav
         className="fixed left-0 right-0 z-[1000] transition-all duration-200"
         style={{
-          top: isSmall ? "32px" : "36px",
+          top: isSmall ? "36px" : isMobile ? "40px" : "36px",
           background: scrolled ? "rgba(0, 0, 0, 0.85)" : "rgba(0, 0, 0, 0.5)",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
@@ -236,15 +236,13 @@ export default function Navbar() {
 
       {/* Mobile menu overlay */}
       <div
-        className="fixed inset-0 z-[999] flex flex-col items-center transition-all duration-[400ms]"
+        className="fixed inset-0 z-[999] flex flex-col items-center justify-center transition-all duration-[400ms]"
         style={{
           background: "rgba(0, 0, 0, 0.95)",
           backdropFilter: "blur(30px)",
           WebkitBackdropFilter: "blur(30px)",
           opacity: mobileOpen ? 1 : 0,
           visibility: mobileOpen ? "visible" : "hidden",
-          paddingTop: "100px",
-          justifyContent: "flex-start",
           gap: 0,
         }}
       >
@@ -256,7 +254,7 @@ export default function Navbar() {
             className="transition-colors text-[rgba(255,255,255,0.45)] hover:text-pink-400"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "1rem",
+              fontSize: "1.15rem",
               fontWeight: 500,
               letterSpacing: "0.04em",
               padding: "1rem 0",

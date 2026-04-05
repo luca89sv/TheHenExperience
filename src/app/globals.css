@@ -434,6 +434,16 @@
   overflow: hidden;
 }
 
+/* ── Mobile: packages section tighter ── */
+@media (max-width: 768px) {
+  .packages-header {
+    margin-top: 0 !important;
+  }
+  #pakiety {
+    padding-top: 0 !important;
+  }
+}
+
 /* ── Toast slide in ── */
 @keyframes slideInRight {
   0% { opacity: 0; transform: translateX(40px); }

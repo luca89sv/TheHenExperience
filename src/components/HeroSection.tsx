@@ -240,7 +240,7 @@ export default function HeroSection() {
     };
   }, [getConfig, setupCanvas]);
 
-  const scrollHeight = breakpoint === "mobile" ? "300vh" : breakpoint === "tablet" ? "350vh" : "400vh"; // laptop & desktop both 400vh
+  const scrollHeight = breakpoint === "mobile" ? "100vh" : breakpoint === "tablet" ? "350vh" : "400vh"; // laptop & desktop both 400vh
 
   return (
     <section

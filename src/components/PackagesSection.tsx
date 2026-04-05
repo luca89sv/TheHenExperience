@@ -56,7 +56,7 @@ function PackagesHeader() {
   }, []);
 
   return (
-    <div ref={ref} className="text-center mb-12 relative z-10" style={{ marginTop: "-18vh" }}>
+    <div ref={ref} className="packages-header text-center mb-12 relative z-10" style={{ marginTop: "-18vh" }}>
       <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>GOTOWE PAKIETY</span>
       <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold">
         Wybierz sw&oacute;j <em>pakiet</em>
@@ -121,10 +121,10 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
           {/* Price badge */}
-          <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 transition-all duration-300 group-hover:bg-pink-500/20 group-hover:border-pink-500/30 group-hover:scale-105">
-            <span className="text-xl font-bold text-pink-400 transition-colors duration-300 group-hover:text-pink-300">{pkg.price}</span>
-            <span className="text-sm text-white/60 ml-1">PLN</span>
-            <span className="text-xs text-white/40 ml-0.5">
+          <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 sm:px-5 sm:py-2 transition-all duration-300 group-hover:bg-pink-500/20 group-hover:border-pink-500/30 group-hover:scale-105">
+            <span className="text-2xl sm:text-xl font-bold text-pink-400 transition-colors duration-300 group-hover:text-pink-300">{pkg.price}</span>
+            <span className="text-base sm:text-sm text-white/60 ml-1">PLN</span>
+            <span className="text-sm sm:text-xs text-white/40 ml-0.5">
               /{pkg.priceType === "person" ? "os." : "szt."}
             </span>
           </div>
@@ -132,7 +132,7 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
 
         {/* Content */}
         <div className="p-5 flex flex-col flex-1 relative z-[1]">
-          <h3 className="font-[family-name:var(--font-display)] text-base sm:text-lg font-semibold leading-snug mb-1 group-hover:text-pink-300 transition-colors duration-300">
+          <h3 className="font-[family-name:var(--font-display)] text-xl sm:text-lg font-semibold leading-snug mb-1 uppercase group-hover:text-pink-300 transition-colors duration-300">
             {formatName(pkg.name)}
           </h3>
           {pkg.subtitle && (
@@ -140,7 +140,7 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
           )}
 
           {pkg.description && (
-            <p className="text-xs text-white/40 leading-relaxed mb-4 line-clamp-2 group-hover:text-white/55 transition-colors duration-300">
+            <p className="hidden sm:block text-xs text-white/40 leading-relaxed mb-4 line-clamp-2 group-hover:text-white/55 transition-colors duration-300">
               {pkg.description}
             </p>
           )}
@@ -209,7 +209,7 @@ export default function PackagesSection() {
 
         {/* Grid — show first 6 */}
         <ScrollReveal type="pricing">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-0">
             {allPackages.slice(0, 6).map((pkg, i) => (
               <PackageCard key={pkg.id} pkg={pkg} index={i} />
             ))}

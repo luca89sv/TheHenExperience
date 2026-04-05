@@ -27,7 +27,7 @@ export default function TestimonialsSection() {
         </ScrollReveal>
 
         <ScrollReveal type="scale-up">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: "1.5rem" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-6">
             {testimonials.map((tm, i) => (
               <div
                 key={i}
