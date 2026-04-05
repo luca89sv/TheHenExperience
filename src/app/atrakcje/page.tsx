@@ -6,6 +6,7 @@ import Image from "next/image";
 import atrakcje from "@/data/atrakcje.json";
 import { useCart } from "@/lib/cart-context";
 import { useCartToast } from "@/components/CartToast";
+import QuickContactForm from "@/components/QuickContactForm";
 
 interface Product {
   id: string;
@@ -198,6 +199,8 @@ export default function AtrakcjePage() {
         {filtered.length === 0 && (
           <p className="text-center text-white/30 py-20">Brak atrakcji w tej kategorii.</p>
         )}
+
+        <QuickContactForm />
       </div>
     </section>
   );

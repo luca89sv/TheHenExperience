@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import Link from "next/link";
+// Using <a> tags for navigation to avoid GSAP/canvas reinit issues
 
 const PHASES = [
   { id: "phase-1", start: 0.05, end: 0.22, label: "KOMPLEKSOWA ORGANIZACJA", title: "Niezapomniany wieczór od A do Z", desc: "Zakwaterowanie, dekoracje, transport, niespodzianki — profesjonalna obsługa każdego szczegółu." },
@@ -386,7 +386,7 @@ export default function HeroSection() {
             gap: breakpoint === "mobile" ? "0.4rem" : breakpoint === "tablet" ? "0.5rem" : "1rem",
           }}
         >
-          <Link
+          <a
             href="/#pakiety"
             className="btn-primary whitespace-nowrap"
             style={{
@@ -400,8 +400,8 @@ export default function HeroSection() {
               <line x1="12" y1="22.08" x2="12" y2="12" />
             </svg>
             Nasze pakiety
-          </Link>
-          <Link
+          </a>
+          <a
             href="/#kontakt"
             className="btn-outline whitespace-nowrap"
             style={{
@@ -416,7 +416,7 @@ export default function HeroSection() {
               <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
             </svg>
             Napisz do nas
-          </Link>
+          </a>
         </div>
 
         {/* Scroll hint — exact from original */}

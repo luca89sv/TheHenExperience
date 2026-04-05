@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
+// Using <a> tags for navigation to avoid GSAP/canvas reinit issues
 import pakiety from "@/data/pakiety.json";
 import pakietyNaWieczor from "@/data/pakiety-na-wieczor.json";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -93,7 +93,7 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
   const inCart = isInCart(pkg.id);
 
   return (
-    <Link
+    <a
       href={`/pakiety/${pkg.slug}`}
       className="animated-border-card group cursor-pointer"
       style={{ "--border-delay": `${-(index * 1.7)}s` } as React.CSSProperties}
@@ -194,7 +194,7 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 }
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+// Using <a> tags for navigation to avoid GSAP/canvas reinit issues
 import atrakcje from "@/data/atrakcje.json";
 import { useCart } from "@/lib/cart-context";
 import { useCartToast } from "@/components/CartToast";
@@ -76,7 +76,7 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
   const inCart = isInCart(item.id);
 
   return (
-    <Link
+    <a
       href={`/atrakcje/${item.slug}`}
       className="animated-border-card group cursor-pointer"
       style={{ "--border-delay": `${-(index * 1.3)}s` } as React.CSSProperties}
@@ -169,7 +169,7 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 }
 

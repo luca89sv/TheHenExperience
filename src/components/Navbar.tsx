@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+// Using <a> tags for navigation to avoid GSAP/canvas reinit issues
 import { useLanguage, T } from "@/lib/i18n";
 
 const navLinks = [
@@ -158,7 +158,7 @@ export default function Navbar() {
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center" style={{ gap: "2rem" }}>
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className="relative text-[rgba(255,255,255,0.45)] hover:text-white transition-colors after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-pink-500 hover:after:w-full after:transition-all after:duration-[400ms]"
@@ -169,7 +169,7 @@ export default function Navbar() {
                 }}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -247,7 +247,7 @@ export default function Navbar() {
         }}
       >
         {navLinks.map((link) => (
-          <Link
+          <a
             key={link.href}
             href={link.href}
             onClick={() => setMobileOpen(false)}
@@ -264,9 +264,9 @@ export default function Navbar() {
             }}
           >
             {link.label}
-          </Link>
+          </a>
         ))}
-        <Link
+        <a
           href="/#kontakt"
           onClick={() => setMobileOpen(false)}
           className="text-white"
@@ -281,7 +281,7 @@ export default function Navbar() {
           }}
         >
           <T k="nav.cta" />
-        </Link>
+        </a>
       </div>
     </>
   );

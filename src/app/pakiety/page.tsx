@@ -6,6 +6,7 @@ import pakiety from "@/data/pakiety.json";
 import pakietyNaWieczor from "@/data/pakiety-na-wieczor.json";
 import { useCart } from "@/lib/cart-context";
 import { useCartToast } from "@/components/CartToast";
+import QuickContactForm from "@/components/QuickContactForm";
 
 interface Product {
   id: string;
@@ -144,6 +145,8 @@ export default function PakietyPage() {
             <PackageCard key={pkg.id} pkg={pkg} index={i} />
           ))}
         </div>
+
+        <QuickContactForm />
       </div>
     </section>
   );
