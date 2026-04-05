@@ -52,41 +52,30 @@ export default function Footer() {
                 fontSize: "0.75rem",
                 fontWeight: 700,
                 letterSpacing: "0.15em",
-                color: "rgba(255, 255, 255, 0.45)",
+                color: "#f472b6",
                 marginBottom: "1.2rem",
               }}
             >
               {t("footer.links")}
             </h4>
             <div className="flex flex-col" style={{ gap: 0 }}>
-              <Link
-                href="/#uslugi"
-                className="hover:text-pink-400 transition-colors"
-                style={{ fontSize: "0.88rem", color: "rgba(249, 168, 212, 0.85)", marginBottom: "0.6rem", display: "block" }}
-              >
-                {t("nav.services")}
-              </Link>
-              <Link
-                href="/#jak-to-dziala"
-                className="hover:text-pink-400 transition-colors"
-                style={{ fontSize: "0.88rem", color: "rgba(249, 168, 212, 0.85)", marginBottom: "0.6rem", display: "block" }}
-              >
-                {t("nav.howItWorks")}
-              </Link>
-              <Link
-                href="/#pakiety"
-                className="hover:text-pink-400 transition-colors"
-                style={{ fontSize: "0.88rem", color: "rgba(249, 168, 212, 0.85)", marginBottom: "0.6rem", display: "block" }}
-              >
-                {t("nav.pricing")}
-              </Link>
-              <Link
-                href="/#faq"
-                className="hover:text-pink-400 transition-colors"
-                style={{ fontSize: "0.88rem", color: "rgba(249, 168, 212, 0.85)", marginBottom: "0.6rem", display: "block" }}
-              >
-                FAQ
-              </Link>
+              {[
+                { href: "/#pakiety", label: "Pakiety" },
+                { href: "/#atrakcje", label: "Pojedyncze atrakcje" },
+                { href: "/#jak-to-dziala", label: "Jak to działa" },
+                { href: "/#opinie", label: "Opinie" },
+                { href: "/#faq", label: "FAQ" },
+                { href: "/#kontakt", label: "Formularz kontaktowy" },
+              ].map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-white/45 hover:text-pink-400 transition-colors"
+                  style={{ fontSize: "0.88rem", marginBottom: "0.6rem", display: "block" }}
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -99,7 +88,7 @@ export default function Footer() {
                 fontSize: "0.75rem",
                 fontWeight: 700,
                 letterSpacing: "0.15em",
-                color: "rgba(255, 255, 255, 0.45)",
+                color: "#f472b6",
                 marginBottom: "1.2rem",
               }}
             >
@@ -108,21 +97,35 @@ export default function Footer() {
             <div className="flex flex-col" style={{ gap: 0 }}>
               <a
                 href="tel:+48537048777"
-                className="hover:text-pink-400 transition-colors"
-                style={{ fontSize: "0.88rem", color: "rgba(249, 168, 212, 0.85)", marginBottom: "0.6rem", display: "block" }}
+                className="text-white/45 hover:text-pink-400 transition-colors flex items-center gap-2 justify-center md:justify-start"
+                style={{ fontSize: "0.88rem", marginBottom: "0.6rem" }}
               >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="14" height="14" className="shrink-0">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                </svg>
                 +48 537 048 777
               </a>
               <a
                 href="mailto:atrakcjenapanienski@gmail.com"
-                className="hover:text-pink-400 transition-colors"
-                style={{ fontSize: "0.88rem", color: "rgba(249, 168, 212, 0.85)", marginBottom: "0.6rem", display: "block" }}
+                className="text-white/45 hover:text-pink-400 transition-colors flex items-center gap-2 justify-center md:justify-start"
+                style={{ fontSize: "0.88rem", marginBottom: "0.6rem" }}
               >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="14" height="14" className="shrink-0">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
                 atrakcjenapanienski@gmail.com
               </a>
-              <p style={{ fontSize: "0.88rem", color: "rgba(249, 168, 212, 0.85)", marginBottom: "0.6rem" }}>
+              <div
+                className="text-white/45 flex items-center gap-2 justify-center md:justify-start"
+                style={{ fontSize: "0.88rem", marginBottom: "0.6rem" }}
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="14" height="14" className="shrink-0">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
                 Warszawa, Polska
-              </p>
+              </div>
             </div>
           </div>
 
@@ -135,7 +138,7 @@ export default function Footer() {
                 fontSize: "0.75rem",
                 fontWeight: 700,
                 letterSpacing: "0.15em",
-                color: "rgba(255, 255, 255, 0.45)",
+                color: "#f472b6",
                 marginBottom: "1.2rem",
               }}
             >

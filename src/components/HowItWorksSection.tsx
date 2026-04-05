@@ -13,13 +13,12 @@ export default function HowItWorksSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="jak-to-dziala" className="relative overflow-hidden" style={{ padding: "var(--section-padding) 0" }}>
-      <div className="light-rays" />
+    <section id="jak-to-dziala" className="relative overflow-hidden" style={{ padding: "clamp(3rem, 6vw, 5rem) 0" }}>
 
       <div className="max-w-[min(1200px,92vw)] mx-auto relative z-10">
         <ScrollReveal type="fade-up">
           <div className="text-center" style={{ marginBottom: "clamp(3rem, 6vw, 5rem)" }}>
-            <span className="section-tag">{t("hiw.tag")}</span>
+            <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>{t("hiw.tag")}</span>
             <h2
               className="font-[family-name:var(--font-display)] font-semibold"
               style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", marginBottom: "1rem" }}
@@ -54,7 +53,7 @@ export default function HowItWorksSection() {
                   >
                     {t(step.titleKey)}
                   </h3>
-                  <p style={{ fontSize: "0.88rem", color: "rgba(249, 168, 212, 0.85)", lineHeight: 1.6 }}>
+                  <p style={{ fontSize: "0.88rem", color: "rgba(255, 255, 255, 0.45)", lineHeight: 1.6 }}>
                     {t(step.descKey)}
                   </p>
                 </div>

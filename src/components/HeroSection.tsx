@@ -29,6 +29,9 @@ export default function HeroSection() {
   const rafRef = useRef<number>(0);
   const progressBarRef = useRef<HTMLDivElement>(null);
 
+  const loadBarRef = useRef<HTMLDivElement>(null);
+  const loadBarWrapRef = useRef<HTMLDivElement>(null);
+
   const [activePhases, setActivePhases] = useState<boolean[]>([false, false, false, false]);
   const [heroCTAVisible, setHeroCTAVisible] = useState(true);
   const [scrollHintVisible, setScrollHintVisible] = useState(true);
@@ -106,13 +109,30 @@ export default function HeroSection() {
       });
     };
 
+    let loadedCount = 0;
+
     const preloadAllFrames = async () => {
+
       for (let i = 0; i < config.totalFrames; i += config.batchSize) {
         const batch: Promise<HTMLImageElement | null>[] = [];
         for (let j = i; j < Math.min(i + config.batchSize, config.totalFrames); j++) {
-          batch.push(loadFrame(j));
+          batch.push(loadFrame(j).then((img) => {
+            loadedCount++;
+            if (loadBarRef.current) {
+              loadBarRef.current.style.width = `${(loadedCount / config.totalFrames) * 100}%`;
+            }
+            return img;
+          }));
         }
         await Promise.all(batch);
+      }
+
+      // Hide the bar
+      if (loadBarWrapRef.current) {
+        loadBarWrapRef.current.style.opacity = "0";
+        setTimeout(() => {
+          if (loadBarWrapRef.current) loadBarWrapRef.current.style.display = "none";
+        }, 400);
       }
     };
 
@@ -226,7 +246,7 @@ export default function HeroSection() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative"
+      className="relative z-10"
       style={{ height: scrollHeight }}
     >
       <div
@@ -244,6 +264,36 @@ export default function HeroSection() {
             WebkitMaskImage: "radial-gradient(ellipse 70% 65% at 50% 48%, black 35%, transparent 72%)",
           }}
         />
+
+        {/* Frame loading indicator */}
+        <div
+          ref={loadBarWrapRef}
+          className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center"
+          style={{ transition: "opacity 0.5s ease" }}
+        >
+          <div className="flex flex-col items-center gap-5">
+            <div className="font-[family-name:var(--font-display)] text-xl tracking-wide" style={{ fontWeight: 600 }}>
+              The{" "}
+              <span style={{ color: "#f472b6", fontWeight: 700, textShadow: "0 0 20px rgba(236,72,153,0.3)" }}>
+                Hen
+              </span>{" "}
+              Experience
+            </div>
+            {/* Thin bar */}
+            <div className="w-48 h-[2px] bg-white/[0.06] rounded-full overflow-hidden">
+              <div
+                ref={loadBarRef}
+                className="h-full rounded-full"
+                style={{
+                  width: "0%",
+                  background: "linear-gradient(90deg, #db2777, #f472b6)",
+                  boxShadow: "0 0 12px rgba(236,72,153,0.6)",
+                  transition: "width 0.1s linear",
+                }}
+              />
+            </div>
+          </div>
+        </div>
 
         {/* Scroll progress bar — top */}
         <div

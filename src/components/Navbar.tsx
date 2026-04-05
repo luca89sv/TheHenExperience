@@ -5,11 +5,12 @@ import Link from "next/link";
 import { useLanguage, T } from "@/lib/i18n";
 
 const navLinks = [
-  { href: "/#uslugi", labelKey: "nav.services" },
-  { href: "/#jak-to-dziala", labelKey: "nav.howItWorks" },
-  { href: "/#opinie", labelKey: "nav.testimonials" },
-  { href: "/#pakiety", labelKey: "nav.pricing" },
-  { href: "/#faq", labelKey: "nav.faq" },
+  { href: "/#pakiety", label: "Pakiety" },
+  { href: "/#atrakcje", label: "Pojedyncze atrakcje" },
+  { href: "/#jak-to-dziala", label: "Jak to działa" },
+  { href: "/#opinie", label: "Opinie" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#kontakt", label: "Formularz kontaktowy" },
 ];
 
 export default function Navbar() {
@@ -135,7 +136,7 @@ export default function Navbar() {
           style={{ width: "min(1200px, 92vw)", height: "64px" }}
         >
           {/* Logo */}
-          <Link
+          <a
             href="/"
             className="font-[family-name:var(--font-display)] whitespace-nowrap"
             style={{ fontSize: "1.35rem", fontWeight: 700, letterSpacing: "0.01em" }}
@@ -152,7 +153,7 @@ export default function Navbar() {
               Hen
             </span>{" "}
             Experience
-          </Link>
+          </a>
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center" style={{ gap: "2rem" }}>
@@ -167,7 +168,7 @@ export default function Navbar() {
                   letterSpacing: "0.03em",
                 }}
               >
-                <T k={link.labelKey} />
+                {link.label}
               </Link>
             ))}
           </div>
@@ -193,30 +194,6 @@ export default function Navbar() {
               <span style={{ color: lang === "en" ? "#f472b6" : "rgba(255,255,255,0.3)" }}>EN</span>
             </button>
 
-            {/* CTA button */}
-            <Link
-              href="/#kontakt"
-              className="hidden md:inline-flex items-center text-white whitespace-nowrap"
-              style={{
-                fontSize: "0.82rem",
-                fontWeight: 600,
-                padding: "0.5rem 1.4rem",
-                borderRadius: "100px",
-                background: "linear-gradient(135deg, #db2777, #ec4899)",
-                letterSpacing: "0.02em",
-                transition: "transform 0.2s, box-shadow 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-1px)";
-                e.currentTarget.style.boxShadow = "0 4px 20px rgba(236, 72, 153, 0.3)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "";
-                e.currentTarget.style.boxShadow = "";
-              }}
-            >
-              <T k="nav.cta" />
-            </Link>
 
             {/* Hamburger */}
             <button
@@ -288,7 +265,7 @@ export default function Navbar() {
               borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
             }}
           >
-            <T k={link.labelKey} />
+            {link.label}
           </Link>
         ))}
         <Link

@@ -4,7 +4,11 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import CartDrawer from "@/components/CartDrawer";
+import ScrollReset from "@/components/ScrollReset";
 import { LanguageProvider } from "@/lib/i18n";
+import { CartProvider } from "@/lib/cart-context";
+import { CartToastProvider } from "@/components/CartToast";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-display",
@@ -43,12 +47,18 @@ export default function RootLayout({
       lang="pl"
       className={`${cormorant.variable} ${dmSans.variable} dark h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-black text-white">
+      <body className="min-h-full flex flex-col bg-black text-white overflow-x-hidden">
         <LanguageProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <FloatingButtons />
+          <CartProvider>
+          <CartToastProvider>
+            <ScrollReset />
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <FloatingButtons />
+            <CartDrawer />
+          </CartToastProvider>
+          </CartProvider>
         </LanguageProvider>
       </body>
     </html>

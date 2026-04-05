@@ -1,8 +1,22 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useCart } from "@/lib/cart-context";
 
 export default function FloatingButtons() {
+  const { itemCount, setIsOpen } = useCart();
+  const prevCount = useRef(itemCount);
+  const [badgePop, setBadgePop] = useState(false);
+
+  useEffect(() => {
+    if (itemCount !== prevCount.current && itemCount > 0) {
+      setBadgePop(true);
+      const t = setTimeout(() => setBadgePop(false), 300);
+      prevCount.current = itemCount;
+      return () => clearTimeout(t);
+    }
+    prevCount.current = itemCount;
+  }, [itemCount]);
   const [breakpoint, setBreakpoint] = useState<"desktop" | "tablet" | "mobile">("desktop");
 
   useEffect(() => {
@@ -28,6 +42,46 @@ export default function FloatingButtons() {
         gap: "0.8rem",
       }}
     >
+      {/* Cart button */}
+      <button
+        onClick={() => setIsOpen(true)}
+        aria-label="Koszyk"
+        className="rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform relative"
+        style={{
+          width: fabSize,
+          height: fabSize,
+          background: itemCount > 0
+            ? "linear-gradient(135deg, #be185d, #ec4899)"
+            : "rgba(20, 20, 28, 0.9)",
+          border: itemCount > 0 ? "none" : "1px solid rgba(236,72,153,0.25)",
+          boxShadow: itemCount > 0
+            ? "0 4px 25px rgba(236, 72, 153, 0.4)"
+            : "0 4px 20px rgba(0, 0, 0, 0.35)",
+        }}
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" width={phoneIconSize} height={phoneIconSize}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+        </svg>
+        {itemCount > 0 && (
+          <span
+            className="absolute flex items-center justify-center rounded-full text-white text-[10px] font-bold"
+            style={{
+              top: -4,
+              right: -4,
+              width: 20,
+              height: 20,
+              background: "#fff",
+              color: "#be185d",
+              transform: badgePop ? "scale(1.3)" : "scale(1)",
+              transition: "transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+              fontFamily: "var(--font-body)",
+            }}
+          >
+            {itemCount}
+          </span>
+        )}
+      </button>
+
       <a
         href="https://wa.me/48537048777"
         target="_blank"

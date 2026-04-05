@@ -13,11 +13,11 @@ export default function TestimonialsSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="opinie" className="relative overflow-hidden" style={{ padding: "var(--section-padding) 0" }}>
+    <section id="opinie" className="relative overflow-hidden" style={{ padding: "clamp(2rem, 4vw, 3rem) 0 clamp(2rem, 4vw, 3rem)" }}>
       <div className="max-w-[min(1200px,92vw)] mx-auto">
         <ScrollReveal type="fade-up">
           <div className="text-center" style={{ marginBottom: "clamp(3rem, 6vw, 5rem)" }}>
-            <span className="section-tag">{t("test.tag")}</span>
+            <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>{t("test.tag")}</span>
             <h2
               className="font-[family-name:var(--font-display)] font-semibold"
               style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", marginBottom: "1rem" }}
@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
                 <p
                   style={{
                     fontSize: "0.9rem",
-                    color: "rgba(249, 168, 212, 0.85)",
+                    color: "rgba(255, 255, 255, 0.45)",
                     lineHeight: 1.7,
                     flex: 1,
                     marginBottom: "1.5rem",

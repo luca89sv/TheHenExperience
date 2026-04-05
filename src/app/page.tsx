@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
+import TransitionBeam from "@/components/TransitionBeam";
 import PackagesSection from "@/components/PackagesSection";
 import ActivitiesSection from "@/components/ActivitiesSection";
-import ServicesSection from "@/components/ServicesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <TransitionBeam />
       <PackagesSection />
       <ActivitiesSection />
-      <ServicesSection />
       <HowItWorksSection />
       <TestimonialsSection />
       <FAQSection />

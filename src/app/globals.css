@@ -175,6 +175,78 @@
   }
 }
 
+/* ── Animated Border Card ── */
+@keyframes border-rotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.animated-border-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Spinning ray — a large square that rotates, with a narrow bright segment */
+.animated-border-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  z-index: 0;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 82%,
+    rgba(236, 72, 153, 0.3) 87%,
+    rgba(244, 114, 182, 0.5) 91%,
+    rgba(236, 72, 153, 0.3) 95%,
+    transparent 100%
+  );
+  animation: border-rotate 5s linear infinite;
+  animation-delay: var(--border-delay, 0s);
+}
+
+/* Card inner — covers the spinning gradient, leaving 1px border */
+.animated-border-card > .card-inner {
+  position: relative;
+  z-index: 1;
+  background: #0c0c10;
+  transition: background 0.4s ease;
+  border-radius: 16px;
+  margin: 4px;
+  overflow: hidden;
+  height: calc(100% - 8px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Solid border overlay — hidden by default, appears on hover */
+.animated-border-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ec4899, #db2777, #ec4899);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animated-border-card:hover::after {
+  opacity: 1;
+}
+
+.animated-border-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(236, 72, 153, 0.15),
+              0 0 60px rgba(236, 72, 153, 0.06);
+}
+
 /* ── Glass Card ── */
 .glass-card {
   background: var(--glass-bg);
@@ -362,11 +434,23 @@
   overflow: hidden;
 }
 
+/* ── Toast slide in ── */
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
 /* ── FAB Pulse Animation ── */
 @keyframes fab-pulse {
   0% { transform: scale(1); opacity: 0.6; }
   70% { transform: scale(1.3); opacity: 0; }
   100% { transform: scale(1.3); opacity: 0; }
+}
+
+/* ── Beam Transition Particles ── */
+@keyframes beam-particle-float {
+  0% { transform: translateY(0) scale(1); opacity: 0.4; }
+  100% { transform: translateY(-8px) scale(1.3); opacity: 0.9; }
 }
 
 /* ── Light Rays ── */

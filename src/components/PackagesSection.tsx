@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import pakiety from "@/data/pakiety.json";
 import pakietyNaWieczor from "@/data/pakiety-na-wieczor.json";
 import ScrollReveal from "@/components/ScrollReveal";
+import { useCart } from "@/lib/cart-context";
+import { useCartToast } from "@/components/CartToast";
 
 interface Product {
   id: string;
@@ -22,139 +24,207 @@ interface Product {
 
 const allPackages: Product[] = [...(pakiety as Product[]), ...(pakietyNaWieczor as Product[])];
 
-function SquigglyLine() {
-  const pathRef = useRef<SVGPathElement>(null);
-  const [animate, setAnimate] = useState(false);
+function PackagesHeader() {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setAnimate(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (pathRef.current) {
-      observer.observe(pathRef.current);
-    }
-    return () => observer.disconnect();
+    const el = ref.current;
+    if (!el) return;
+
+    let ctx: any;
+    (async () => {
+      const { gsap } = await import("gsap");
+      const { ScrollTrigger } = await import("gsap/ScrollTrigger");
+      gsap.registerPlugin(ScrollTrigger);
+
+      ctx = gsap.context(() => {
+        gsap.from(el, {
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 98%",
+            once: true,
+          },
+        });
+      }, el);
+    })();
+
+    return () => { if (ctx) ctx.revert(); };
   }, []);
 
   return (
-    <svg
-      viewBox="0 0 300 30"
-      fill="none"
-      className="w-48 sm:w-64 h-8 mx-auto mb-2"
-      preserveAspectRatio="none"
-    >
-      <path
-        ref={pathRef}
-        d="M0 15 Q25 0 50 15 T100 15 T150 15 T200 15 T250 15 T300 15"
-        stroke="#ec4899"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        fill="none"
-        className={`squiggly-line ${animate ? "animate" : ""}`}
-      />
-    </svg>
+    <div ref={ref} className="text-center mb-12 relative z-10" style={{ marginTop: "-18vh" }}>
+      <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>GOTOWE PAKIETY</span>
+      <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold">
+        Wybierz sw&oacute;j <em>pakiet</em>
+      </h2>
+      <p className="mt-3 text-white/45 max-w-lg mx-auto">
+        Gotowe pakiety na niezapomniany wiecz&oacute;r panie&#324;ski. Ka&#380;dy szczeg&oacute;&#322; dopracowany do perfekcji.
+      </p>
+    </div>
   );
 }
 
-function PackageCard({ pkg }: { pkg: Product }) {
-  const maxFeatures = 5;
-  const displayFeatures = pkg.features.slice(0, maxFeatures);
+/** Format package name: replace "+" with a styled separator */
+function formatName(name: string) {
+  const parts = name.split(/\s*\+\s*/);
+  if (parts.length <= 1) return <>{name}</>;
 
   return (
-    <div className="glass-card overflow-hidden flex flex-col">
-      {/* Image */}
-      <div className="relative aspect-[16/10] overflow-hidden bg-[#0c0c10]">
-        {pkg.images[0] && (
-          <Image
-            src={pkg.images[0]}
-            alt={pkg.name}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-      </div>
+    <>
+      {parts.map((part, i) => (
+        <span key={i}>
+          {i > 0 && (
+            <span className="inline-block mx-1.5 text-pink-400 font-light opacity-70">&bull;</span>
+          )}
+          {part}
+        </span>
+      ))}
+    </>
+  );
+}
 
-      {/* Content */}
-      <div className="p-5 flex flex-col flex-1">
-        <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold leading-snug mb-1">
-          {pkg.name}
-        </h3>
-        {pkg.subtitle && (
-          <p className="text-xs text-white/40 mb-3">{pkg.subtitle}</p>
-        )}
+function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
+  const { addItem, removeItem, isInCart } = useCart();
+  const { showToast } = useCartToast();
+  const inCart = isInCart(pkg.id);
 
-        {/* Price */}
-        <div className="mb-4">
-          <span className="text-2xl font-bold text-pink-400">{pkg.price}</span>
-          <span className="text-sm text-white/50 ml-1">PLN</span>
-          <span className="text-xs text-white/30 ml-1">
-            /{pkg.priceType === "person" ? "os." : "szt."}
-          </span>
+  return (
+    <Link
+      href={`/pakiety/${pkg.slug}`}
+      className="animated-border-card group cursor-pointer"
+      style={{ "--border-delay": `${-(index * 1.7)}s` } as React.CSSProperties}
+    >
+      <div className="card-inner relative">
+        {/* Subtle radial pink glow from bottom center on hover */}
+        <div className="absolute inset-x-0 bottom-0 rounded-b-[16px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-[2]"
+          style={{
+            height: "50%",
+            background: "radial-gradient(ellipse 60% 50% at 50% 100%, rgba(236,72,153,0.07) 0%, transparent 70%)",
+          }}
+        />
+
+        {/* Image */}
+        <div className="relative aspect-[16/10] overflow-hidden bg-[#0c0c10]">
+          {pkg.images[0] && (
+            <Image
+              src={pkg.images[0]}
+              alt={pkg.name}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+          {/* Price badge */}
+          <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 transition-all duration-300 group-hover:bg-pink-500/20 group-hover:border-pink-500/30 group-hover:scale-105">
+            <span className="text-xl font-bold text-pink-400 transition-colors duration-300 group-hover:text-pink-300">{pkg.price}</span>
+            <span className="text-sm text-white/60 ml-1">PLN</span>
+            <span className="text-xs text-white/40 ml-0.5">
+              /{pkg.priceType === "person" ? "os." : "szt."}
+            </span>
+          </div>
         </div>
 
-        {/* Features */}
-        <ul className="flex-1 space-y-1.5 mb-4">
-          {displayFeatures.map((feature, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-white/60">
-              <svg className="w-3.5 h-3.5 mt-0.5 text-pink-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              {feature}
-            </li>
-          ))}
-          {pkg.features.length > maxFeatures && (
-            <li className="text-xs text-white/30 pl-5">
-              +{pkg.features.length - maxFeatures} wi&#281;cej
-            </li>
+        {/* Content */}
+        <div className="p-5 flex flex-col flex-1 relative z-[1]">
+          <h3 className="font-[family-name:var(--font-display)] text-base sm:text-lg font-semibold leading-snug mb-1 group-hover:text-pink-300 transition-colors duration-300">
+            {formatName(pkg.name)}
+          </h3>
+          {pkg.subtitle && (
+            <p className="text-xs text-white/35 mb-4">{pkg.subtitle}</p>
           )}
-        </ul>
 
-        {/* CTA */}
-        <Link
-          href="/#kontakt"
-          className="btn-primary w-full justify-center text-sm !py-2.5"
-        >
-          Zarezerwuj
-        </Link>
+          {pkg.description && (
+            <p className="text-xs text-white/40 leading-relaxed mb-4 line-clamp-2 group-hover:text-white/55 transition-colors duration-300">
+              {pkg.description}
+            </p>
+          )}
+
+          {/* Buttons */}
+          <div className="mt-auto flex gap-2">
+            <span
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-full text-sm font-semibold border transition-all duration-300
+                text-pink-400 border-pink-500 bg-transparent
+                group-hover:bg-gradient-to-r group-hover:from-pink-700 group-hover:to-pink-500 group-hover:text-white group-hover:border-transparent"
+              style={{ fontFamily: "var(--font-body)", letterSpacing: "0.02em" }}
+            >
+              Sprawdź szczegóły
+            </span>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (inCart) {
+                  removeItem(pkg.id);
+                  showToast("Usunięto z koszyka");
+                } else {
+                  addItem(pkg);
+                  showToast("Dodano do koszyka");
+                }
+              }}
+              className={`group/cart relative flex items-center justify-center rounded-full border transition-colors duration-300 shrink-0 ${
+                inCart
+                  ? "w-[100px] h-11 gap-1.5 border-pink-500/40 bg-pink-500/10 text-pink-400 hover:bg-red-500/10 hover:border-red-400/40 hover:text-red-400"
+                  : "w-11 h-11 border-pink-500/30 bg-pink-500/10 text-pink-400 hover:bg-pink-500/25 hover:border-pink-500/50"
+              }`}
+              aria-label={inCart ? "Usuń z koszyka" : "Dodaj do koszyka"}
+            >
+              {inCart ? (
+                <>
+                  <svg className="w-4 h-4 group-hover/cart:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <svg className="w-4 h-4 hidden group-hover/cart:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-[11px] font-medium group-hover/cart:hidden" style={{ fontFamily: "var(--font-body)" }}>W koszyku</span>
+                  <span className="text-[11px] font-medium hidden group-hover/cart:inline" style={{ fontFamily: "var(--font-body)" }}>Usuń</span>
+                </>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
 export default function PackagesSection() {
   return (
-    <section id="pakiety" className="relative overflow-hidden py-[var(--section-padding)]">
+    <section id="pakiety" className="relative overflow-x-hidden pt-[var(--section-padding)] pb-12" style={{ position: "relative", zIndex: 5 }}>
       <div className="glow-orb absolute -top-40 -right-40" />
 
       <div className="max-w-[1200px] mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <span className="section-tag">GOTOWE PAKIETY</span>
-          <SquigglyLine />
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold">
-            Wybierz sw&oacute;j <em>pakiet</em>
-          </h2>
-          <p className="mt-3 text-white/45 max-w-lg mx-auto">
-            Gotowe pakiety na niezapomniany wiecz&oacute;r panie&#324;ski. Ka&#380;dy szczeg&oacute;&#322; dopracowany do perfekcji.
-          </p>
-        </div>
+        {/* Header — negative margin pulls it up into the beam glow tip */}
+        <PackagesHeader />
 
-        {/* Grid */}
+        {/* Grid — show first 6 */}
         <ScrollReveal type="pricing">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allPackages.map((pkg) => (
-              <PackageCard key={pkg.id} pkg={pkg} />
+            {allPackages.slice(0, 6).map((pkg, i) => (
+              <PackageCard key={pkg.id} pkg={pkg} index={i} />
             ))}
           </div>
         </ScrollReveal>
+
+        {/* Show all */}
+        <div className="text-center mt-36">
+          <a href="/pakiety" className="btn-outline btn-lg group/btn">
+            Zobacz wszystkie pakiety
+            <svg className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );
