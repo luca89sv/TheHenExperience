@@ -498,6 +498,65 @@
   opacity: 1;
 }
 
+/* ── Language Ready Gate ── */
+/* Hide page content until LanguageProvider resolves the saved language.
+   Prevents the visible PL → EN flicker on reload. */
+body:not(.lang-ready) > *:not(#page-loader) {
+  opacity: 0;
+}
+body.lang-ready > *:not(#page-loader) {
+  transition: opacity 0.15s ease;
+}
+
+/* ── Page Loader ── */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+#page-loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#page-loader .loader-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+}
+#page-loader .loader-title em {
+  font-style: italic;
+  color: #f472b6;
+}
+#page-loader .loader-bar {
+  width: 120px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+#page-loader .loader-bar-inner {
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, #db2777, #f472b6);
+  border-radius: 2px;
+  animation: loader-slide 1s ease-in-out infinite;
+}
+@keyframes loader-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(350%); }
+}
+
 /* ── Beam Transition Particles ── */
 @keyframes beam-particle-float {
   0% { transform: translateY(0) scale(1); opacity: 0.4; }

@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/lib/i18n";
-// Using <a> tags for navigation to avoid GSAP/canvas reinit issues
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const pathname = usePathname();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const framesRef = useRef<(HTMLImageElement | null)[]>([]);
@@ -215,13 +216,13 @@ export default function HeroSection() {
     };
     window.addEventListener("resize", onResize);
 
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onResize);
-      cancelAnimationFrame(rafRef.current);
-    };
+    // Do NOT clean up RAF or listeners. Next.js caches components on navigation
+    // and restores them without re-running effects. If we kill the animation
+    // here, it never restarts. Keeping it alive is harmless — tick() checks
+    // if canvas exists before drawing.
+    return () => {};
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [getConfig, setupCanvas]);
+  }, [pathname]);
 
   const scrollHeight = breakpoint === "mobile" ? "300vh" : breakpoint === "tablet" ? "350vh" : "400vh";
 

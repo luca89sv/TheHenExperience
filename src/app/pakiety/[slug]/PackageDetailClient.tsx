@@ -24,6 +24,12 @@ interface Product {
   description3?: string;
   features: string[];
   images: string[];
+  name_en?: string;
+  subtitle_en?: string;
+  description_en?: string;
+  description2_en?: string;
+  description3_en?: string;
+  features_en?: string[];
 }
 
 const allPackages: Product[] = [...(pakiety as Product[]), ...(pakietyNaWieczor as Product[])];
@@ -148,8 +154,9 @@ function ImageCarousel({ images, name }: { images: string[]; name: string }) {
 function SuggestedActivityCard({ item, index }: { item: Product; index: number }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const inCart = isInCart(item.id);
+  const itemName = lang === "en" && item.name_en ? item.name_en : item.name;
 
   return (
     <a
@@ -162,7 +169,7 @@ function SuggestedActivityCard({ item, index }: { item: Product; index: number }
           {item.images[0] && (
             <Image
               src={item.images[0]}
-              alt={item.name}
+              alt={itemName}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
@@ -176,7 +183,7 @@ function SuggestedActivityCard({ item, index }: { item: Product; index: number }
         </div>
         <div className="p-4 flex flex-col flex-1 relative z-[1]">
           <h3 className="font-[family-name:var(--font-display)] text-sm sm:text-base font-semibold leading-snug uppercase mb-3 group-hover:text-pink-300 transition-colors duration-300">
-            {item.name}
+            {itemName}
           </h3>
           <div className="mt-auto flex gap-2">
             <span
@@ -225,8 +232,10 @@ function SuggestedActivityCard({ item, index }: { item: Product; index: number }
 function RelatedPackageCard({ pkg, index }: { pkg: Product; index: number }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const inCart = isInCart(pkg.id);
+  const pkgName = lang === "en" && pkg.name_en ? pkg.name_en : pkg.name;
+  const pkgSubtitle = lang === "en" && pkg.subtitle_en ? pkg.subtitle_en : pkg.subtitle;
 
   return (
     <a
@@ -242,7 +251,7 @@ function RelatedPackageCard({ pkg, index }: { pkg: Product; index: number }) {
           {pkg.images[0] && (
             <Image
               src={pkg.images[0]}
-              alt={pkg.name}
+              alt={pkgName}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -256,9 +265,9 @@ function RelatedPackageCard({ pkg, index }: { pkg: Product; index: number }) {
         </div>
         <div className="p-5 flex flex-col flex-1 relative z-[1]">
           <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold leading-snug uppercase mb-1 group-hover:text-pink-300 transition-colors duration-300">
-            {pkg.name}
+            {pkgName}
           </h3>
-          {pkg.subtitle && <p className="text-xs text-white/35 mb-3">{pkg.subtitle}</p>}
+          {pkgSubtitle && <p className="text-xs text-white/35 mb-3">{pkgSubtitle}</p>}
           <div className="mt-auto flex gap-2">
             <span
               className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-full text-sm font-semibold border transition-all duration-300 text-pink-400 border-pink-500 bg-transparent group-hover:bg-gradient-to-r group-hover:from-pink-700 group-hover:to-pink-500 group-hover:text-white group-hover:border-transparent"
@@ -308,7 +317,7 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
   const [bookingOpen, setBookingOpen] = useState(false);
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   if (!pkg) {
     return (
@@ -324,6 +333,13 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
   }
 
   const inCart = isInCart(pkg.id);
+
+  const name = lang === "en" && pkg.name_en ? pkg.name_en : pkg.name;
+  const subtitle = lang === "en" && pkg.subtitle_en ? pkg.subtitle_en : pkg.subtitle;
+  const description = lang === "en" && pkg.description_en ? pkg.description_en : pkg.description;
+  const description2 = lang === "en" && pkg.description2_en ? pkg.description2_en : pkg.description2;
+  const description3 = lang === "en" && pkg.description3_en ? pkg.description3_en : pkg.description3;
+  const features = lang === "en" && pkg.features_en ? pkg.features_en : pkg.features;
 
   return (
     <>
@@ -343,7 +359,7 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Carousel — 3/5 width */}
           <div className="lg:col-span-3">
-            <ImageCarousel images={pkg.images} name={pkg.name} />
+            <ImageCarousel images={pkg.images} name={name} />
           </div>
 
           {/* Info card — 2/5 width */}
@@ -355,11 +371,11 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
               {t('detail.package')}
             </span>
             <h1 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight uppercase mb-2">
-              {pkg.name}
+              {name}
             </h1>
-            {pkg.subtitle && (
+            {subtitle && (
               <p className="text-white/35 text-sm mb-4" style={{ fontFamily: "var(--font-body)" }}>
-                {pkg.subtitle}
+                {subtitle}
               </p>
             )}
 
@@ -371,9 +387,9 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
               </span>
             </div>
 
-            {pkg.description && (
+            {description && (
               <p className="text-white/45 text-sm leading-relaxed mb-6 line-clamp-4" style={{ fontFamily: "var(--font-body)" }}>
-                {pkg.description}
+                {description}
               </p>
             )}
 
@@ -436,22 +452,22 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
         {/* Description + contact side by side */}
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
           <div className="lg:col-span-3">
-            {pkg.description && (
+            {description && (
               <div>
                 <h2 className="font-[family-name:var(--font-display)] text-xl sm:text-2xl font-semibold mb-4">
                   {t('detail.aboutPackage')}
                 </h2>
                 <p className="text-white/50 leading-relaxed whitespace-pre-line" style={{ fontFamily: "var(--font-body)", fontSize: "0.95rem" }}>
-                  {pkg.description}
+                  {description}
                 </p>
-                {pkg.description2 && (
+                {description2 && (
                   <p className="text-white/50 leading-relaxed mt-4 whitespace-pre-line" style={{ fontFamily: "var(--font-body)", fontSize: "0.95rem" }}>
-                    {pkg.description2}
+                    {description2}
                   </p>
                 )}
-                {pkg.description3 && (
+                {description3 && (
                   <p className="text-white/50 leading-relaxed mt-4 whitespace-pre-line" style={{ fontFamily: "var(--font-body)", fontSize: "0.95rem" }}>
-                    {pkg.description3}
+                    {description3}
                   </p>
                 )}
               </div>
@@ -484,13 +500,13 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
         </div>
 
         {/* Features — full width, 2 columns */}
-        {pkg.features.length > 0 && (
+        {features.length > 0 && (
           <div className="mt-10">
             <h2 className="font-[family-name:var(--font-display)] text-xl sm:text-2xl font-semibold mb-5">
               {t('detail.packageIncludes')}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {pkg.features.map((feat, i) => (
+              {features.map((feat, i) => (
                 <div
                   key={i}
                   className="flex items-start gap-3 p-4 rounded-xl border border-white/6 bg-white/[0.02] hover:border-pink-500/20 hover:bg-pink-500/[0.03] transition-all duration-300"
@@ -559,7 +575,7 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
       <BookingModal
         isOpen={bookingOpen}
         onClose={() => setBookingOpen(false)}
-        productName={pkg.name}
+        productName={name}
         price={pkg.price}
         priceType={pkg.priceType}
       />

@@ -2,13 +2,17 @@
   {
     "id": "transfer-limuzyna-tancerz-zakwaterowanie",
     "name": "Transfer limuzyną + Tancerz erotyczny + Zakwaterowanie imprezowe",
+    "name_en": "Limousine Transfer + Exotic Dancer + Party Accommodation",
     "slug": "transfer-limuzyna-tancerz-zakwaterowanie",
     "subtitle": "(min. 8 osób)",
+    "subtitle_en": "(min. 8 people)",
     "price": 429,
     "priceType": "person",
     "category": "pakiety",
     "description": "Dopiero przylatujecie do Warszawy? Świetnie bo z lotniska zabierze Was limuzyna XXL zawożąc wprost do apartamentu...",
+    "description_en": "Just arriving in Warsaw? Perfect — an XXL limousine will pick you up straight from the airport and take you directly to the apartment...",
     "description2": "W tej opcji nie musisz martwić się o sąsiadów jeżeli chcecie poimprezować w swoim gronie w apartamencie !",
+    "description2_en": "With this option you don't have to worry about the neighbours — party freely with your group in the privacy of your own apartment!",
     "features": [
       "transfer lotniskowy",
       "przejazd limuzyną",
@@ -19,6 +23,16 @@
       "powitalny szampan",
       "zakwaterowanie na jedna dobę"
     ],
+    "features_en": [
+      "airport transfer",
+      "limousine ride",
+      "exotic dancer performance",
+      "overnight apartment",
+      "option to party in the apartment",
+      "young, friendly chauffeur",
+      "welcome champagne",
+      "accommodation for one night"
+    ],
     "images": [
       "/media/limuzyna+tancerz+apartament.jpg"
     ]
@@ -26,19 +40,30 @@
   {
     "id": "objazd-po-klubach",
     "name": "Objazd po klubach muzycznych",
+    "name_en": "Club Crawl",
     "slug": "objazd-po-klubach",
     "subtitle": "(min. 6 osób)",
+    "subtitle_en": "(min. 6 people)",
     "price": 199,
     "priceType": "person",
     "category": "pakiety",
     "description": "Chcecie poimprezować, ale nie lubicie spędzać zbyt wiele czasu w jednym miejscu? Objazd po klubach muzycznych to idealna atrakcja dla Was! Zabierzemy Was na niezapomnianą trasę po najlepszych klubach w Warszawie.",
+    "description_en": "Want to party but prefer not to stay in one place all night? A club crawl is the perfect activity for you! We'll take you on an unforgettable tour of Warsaw's best clubs.",
     "description2": "Czas trwania atrakcji: 5h",
+    "description2_en": "Duration: 5 hours",
     "features": [
       "wejściówki do klubów",
       "priorytet wejścia na imprezy",
       "przyjazd po wieczór panieński na terenie Warszawy",
       "powitalny szampan",
       "transfery limuzyną pomiędzy klubami"
+    ],
+    "features_en": [
+      "club entry passes",
+      "priority entry to venues",
+      "pick-up for your hen party anywhere in Warsaw",
+      "welcome champagne",
+      "limousine transfers between clubs"
     ],
     "images": [
       "/media/objazdpoklubach.jpg"
@@ -47,12 +72,15 @@
   {
     "id": "limuzyna-fotograf-piknik",
     "name": "Limuzyna + Prywatny Fotograf + Piknik nad Wisłą",
+    "name_en": "Limousine + Private Photographer + Picnic by the Vistula",
     "slug": "limuzyna-fotograf-piknik",
     "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
     "price": 299,
     "priceType": "person",
     "category": "pakiety",
     "description": "Pakiet łączący przejażdżkę limuzyną z profesjonalną sesją fotograficzną i relaksującym piknikiem nad Wisłą. To idealne połączenie luksusu, sztuki i natury na niezapomniany wieczór panieński.",
+    "description_en": "A package combining a limousine ride with a professional photo session and a relaxing picnic by the Vistula river. The perfect blend of luxury, art, and nature for an unforgettable hen party.",
     "features": [
       "Młody, sympatyczny kierowca",
       "Powitalny Szampan w Limuzynie",
@@ -67,6 +95,20 @@
       "Relaks na kocach przy dźwiękach muzyki",
       "Gry i zabawy integracyjne"
     ],
+    "features_en": [
+      "Young, friendly chauffeur",
+      "Welcome champagne in the limousine",
+      "One-hour limousine ride",
+      "Jet Door entry experience",
+      "Option to play your own music",
+      "Professional photographer for one hour",
+      "25 professionally edited photos",
+      "2-hour outdoor picnic",
+      "Delicious snacks",
+      "Refreshing drinks",
+      "Relaxing on blankets to the sound of music",
+      "Group games and ice-breakers"
+    ],
     "images": [
       "/media/limuzyna + fotograf + piknik-1.jpg"
     ]
@@ -74,12 +116,15 @@
   {
     "id": "transfer-tancerz-zakwaterowanie-klub",
     "name": "Transfer lotniskowy limuzyną + Tancerz erotyczny + Zakwaterowanie + Klub muzyczny",
+    "name_en": "Limousine Airport Transfer + Exotic Dancer + Accommodation + Nightclub",
     "slug": "transfer-tancerz-zakwaterowanie-klub",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 399,
     "priceType": "person",
     "category": "pakiety",
     "description": "Kompletny pakiet na wieczór panieński obejmujący transfer z lotniska limuzyną, występ tancerza erotycznego, zakwaterowanie na jedną dobę oraz bezkolejkowe wejście do klubu muzycznego.",
+    "description_en": "A complete hen party package including a limousine airport transfer, an exotic dancer performance, overnight accommodation, and skip-the-queue entry to a nightclub.",
     "features": [
       "Transfer lotniskowy",
       "Przejazd limuzyną",
@@ -88,6 +133,14 @@
       "Zakwaterowanie na jedną dobę",
       "Bezkolejkowe wejcie do Klubu"
     ],
+    "features_en": [
+      "Airport transfer",
+      "Limousine ride",
+      "Welcome champagne",
+      "Exotic dancer performance",
+      "Accommodation for one night",
+      "Skip-the-queue entry to the club"
+    ],
     "images": [
       "/media/Limuzyna + tancerz + Zakwaterowanie + Klub.jpg"
     ]
@@ -95,12 +148,15 @@
   {
     "id": "piknik-fotograf-gondola",
     "name": "Piknik na Wisłą + Prywatny fotograf + Rejs gondolą po Wiśle",
+    "name_en": "Picnic by the Vistula + Private Photographer + Gondola Cruise on the Vistula",
     "slug": "piknik-fotograf-gondola",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 299,
     "priceType": "person",
     "category": "pakiety",
     "description": "Pakiet łączący piknik nad Wisłą z profesjonalną sesją fotograficzną i romantycznym rejsem gondolą. Idealne połączenie relaksu na świeżym powietrzu z niezapomnianymi wrażeniami na wodzie.",
+    "description_en": "A package combining a picnic by the Vistula with a professional photo session and a romantic gondola cruise. The perfect blend of outdoor relaxation and unforgettable moments on the water.",
     "features": [
       "2 godzinny piknik na świeżym powietrzu",
       "Pyszne przekąski",
@@ -112,6 +168,17 @@
       "Nagłośnienie",
       "Godzinny kurs wenecką gondolą po Wiśle"
     ],
+    "features_en": [
+      "2-hour outdoor picnic",
+      "Delicious snacks",
+      "Refreshing drinks",
+      "25 professionally edited photos",
+      "Professional photographer for one hour",
+      "Relaxing on blankets to the sound of music",
+      "Group games and ice-breakers",
+      "Sound system",
+      "One-hour Venetian gondola cruise on the Vistula"
+    ],
     "images": [
       "/media/pikinik + fotograf + gondola.jpg"
     ]
@@ -119,12 +186,15 @@
   {
     "id": "taniec-limuzyna-tancerz-klub",
     "name": "Nauka tańca + Przejazd Limuzyną + Tancerz erotyczny + Klub",
+    "name_en": "Dance Lesson + Limousine Ride + Exotic Dancer + Club",
     "slug": "taniec-limuzyna-tancerz-klub",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 299,
     "priceType": "person",
     "category": "pakiety",
     "description": "Pakiet łączący naukę tańca z przejażdżką limuzyną, występem tancerza erotycznego i wejściem do klubu. Pełny wieczór panieński w jednym pakiecie!",
+    "description_en": "A package combining a dance lesson with a limousine ride, an exotic dancer performance, and club entry. A full hen party experience in one package!",
     "features": [
       "Godzinna sesja taneczna",
       "Profesjonalny instruktor",
@@ -137,6 +207,18 @@
       "Występ seksownego tancerza",
       "Bezkolejkowe wejście do klubu"
     ],
+    "features_en": [
+      "One-hour dance session",
+      "Professional dance instructor",
+      "Professional mirrored dance studio",
+      "Welcome glass of champagne",
+      "One-hour party limousine ride",
+      "Young, handsome chauffeur",
+      "Option to bring your own alcohol",
+      "Option to play your own music",
+      "Sexy exotic dancer performance",
+      "Skip-the-queue club entry"
+    ],
     "images": [
       "/media/Nauka tanca + tancerz + Limuzyna + Klub 2.jpg"
     ]
@@ -144,12 +226,15 @@
   {
     "id": "fotograf-limuzyna-tancerz-klub",
     "name": "Prywatny fotograf + objazd po warszawie limuzyną + tancerz + klub",
+    "name_en": "Private Photographer + Limousine Tour of Warsaw + Exotic Dancer + Club",
     "slug": "fotograf-limuzyna-tancerz-klub",
     "subtitle": "(min. 8 osób)",
+    "subtitle_en": "(min. 8 people)",
     "price": 269,
     "priceType": "person",
     "category": "pakiety",
     "description": "Pakiet obejmujący profesjonalną sesję fotograficzną, przejażdżkę limuzyną po Warszawie, występ tancerza erotycznego oraz bezkolejkowe wejście do klubu.",
+    "description_en": "A package including a professional photo session, a limousine tour of Warsaw, an exotic dancer performance, and skip-the-queue club entry.",
     "features": [
       "Godzinny Przejazd limuzyną",
       "Powitalny szampan",
@@ -159,6 +244,15 @@
       "Bezkolejkowe wejcie do Klubu",
       "Koordynator"
     ],
+    "features_en": [
+      "One-hour limousine ride",
+      "Welcome champagne",
+      "Exotic dancer performance",
+      "Professional photographer for one hour",
+      "25 professionally edited photos",
+      "Skip-the-queue club entry",
+      "Event coordinator"
+    ],
     "images": [
       "/media/Fotograf + Limuzyna + tancerz + Klub.jpg"
     ]
@@ -166,12 +260,15 @@
   {
     "id": "fotograf-taniec-limuzyna-klub",
     "name": "Prywatny fotograf + Nauka tańca + Objazd po warszawie limuzyną + Klub",
+    "name_en": "Private Photographer + Dance Lesson + Limousine Tour of Warsaw + Club",
     "slug": "fotograf-taniec-limuzyna-klub",
     "subtitle": "(min. 8 osób)",
+    "subtitle_en": "(min. 8 people)",
     "price": 269,
     "priceType": "person",
     "category": "pakiety",
     "description": "Pakiet łączący profesjonalną sesję fotograficzną, naukę tańca, przejażdżkę limuzyną po Warszawie oraz wejście do klubu. Idealny wybór dla grupy, która chce połączyć aktywność z luksusem.",
+    "description_en": "A package combining a professional photo session, a dance lesson, a limousine tour of Warsaw, and club entry. The ideal choice for a group that wants to mix activity with luxury.",
     "features": [
       "Profesjonalny fotograf na godzinę czasu",
       "25 profesjonalnie obrobionych zdjęć",
@@ -185,6 +282,19 @@
       "Możliwość podłączenia własnej muzyki",
       "Bezkolejkowe wejście do klubu"
     ],
+    "features_en": [
+      "Professional photographer for one hour",
+      "25 professionally edited photos",
+      "One-hour dance session",
+      "Professional dance instructor",
+      "Professional mirrored dance studio",
+      "Welcome glass of champagne",
+      "One-hour party limousine ride",
+      "Young, handsome chauffeur",
+      "Option to bring your own alcohol",
+      "Option to play your own music",
+      "Skip-the-queue club entry"
+    ],
     "images": [
       "/media/nauka tanca + fotograf + limuzyna + klub.jpg"
     ]
@@ -192,12 +302,15 @@
   {
     "id": "gokarty-limuzyna-klub",
     "name": "Gokarty + Objazd Limuzyną po Warszawie + Klub",
+    "name_en": "Go-Karts + Limousine Tour of Warsaw + Club",
     "slug": "gokarty-limuzyna-klub",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 249,
     "priceType": "pcs",
     "category": "pakiety",
     "description": "Pakiet łączący emocjonujące wyścigi gokartowe z przejażdżką limuzyną po Warszawie i wejściem do klubu. Idealne połączenie adrenaliny i zabawy!",
+    "description_en": "A package combining thrilling go-kart racing with a limousine tour of Warsaw and club entry. The perfect mix of adrenaline and fun!",
     "features": [
       "Powitalny szampan",
       "Godzinny przejazd limuzyną",
@@ -206,6 +319,14 @@
       "Bezkolejkowe wejcie do Klubu",
       "Koordynator"
     ],
+    "features_en": [
+      "Welcome champagne",
+      "One-hour limousine ride",
+      "16 minutes of driving for each participant",
+      "Medal ceremony",
+      "Skip-the-queue club entry",
+      "Event coordinator"
+    ],
     "images": [
       "/media/gokarty + limuzyna + klub 2.jpg"
     ]
@@ -213,13 +334,17 @@
   {
     "id": "limuzyna-spa",
     "name": "Limuzyna + Spa",
+    "name_en": "Limousine + Spa",
     "slug": "limuzyna-spa",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 359,
     "priceType": "person",
     "category": "pakiety",
     "description": "Pakiet łączący luksusową przejażdżkę limuzyną z relaksującą wizytą w ekskluzywnym SPA. Idealne połączenie imprezowej atmosfery z chwilą wytchnienia.",
+    "description_en": "A package combining a luxury limousine ride with a relaxing visit to an exclusive spa. The perfect balance of party atmosphere and pure indulgence.",
     "description2": "Następnie limuzyna zawozi Was do ekskluzywnego SPA, gdzie czeka na Was prawdziwa uczta dla ciała i ducha.",
+    "description2_en": "The limousine then takes you to an exclusive spa, where a true feast for body and soul awaits.",
     "features": [
       "Młody, przystojny kierowca",
       "powitalny szampan",
@@ -230,6 +355,16 @@
       "Hammam klasyczny lub Masaż Balijski (45 min.) - dla pozostałych uczestniczek",
       "Lampka szampana"
     ],
+    "features_en": [
+      "Young, handsome chauffeur",
+      "Welcome champagne",
+      "One-hour limousine ride",
+      "Option to bring your own alcohol",
+      "Aromatherapy jacuzzi bath",
+      "Hammam Hurram ritual — for the bride-to-be",
+      "Classic hammam or Balinese massage (45 min.) — for the rest of the group",
+      "Glass of champagne"
+    ],
     "images": [
       "/media/limuzyna + spa.jpg"
     ]
@@ -237,12 +372,15 @@
   {
     "id": "strzelnica-limuzyna-tancerz-klub",
     "name": "Strzelnica + Objazd Limuzyną + Tancerz + Klub",
+    "name_en": "Shooting Range + Limousine Tour + Exotic Dancer + Club",
     "slug": "strzelnica-limuzyna-tancerz-klub",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 349,
     "priceType": "person",
     "category": "pakiety",
     "description": "Pakiet łączący wizytę na strzelnicy, przejażdżkę limuzyną, występ tancerza erotycznego i wejście do klubu. Pełen wrażeń wieczór panieński!",
+    "description_en": "A package combining a visit to a shooting range, a limousine ride, an exotic dancer performance, and club entry. A thrill-packed hen party!",
     "features": [
       "Niezbędny sprzęt",
       "Pamiątkowe tarcze",
@@ -254,6 +392,17 @@
       "występ tancerza",
       "wejściówki do Klubu"
     ],
+    "features_en": [
+      "All necessary equipment",
+      "Souvenir shooting targets",
+      "5 types of firearms",
+      "45 shots",
+      "Handsome chauffeur",
+      "Welcome champagne in the limousine",
+      "Option to play your own music",
+      "Exotic dancer performance",
+      "Club entry passes"
+    ],
     "images": [
       "/media/strzelnica + limuzyna + tancerz + klub.jpg"
     ]
@@ -261,12 +410,15 @@
   {
     "id": "ognisko-limuzyna-klub",
     "name": "Ognisko w plenerze + Przejazd Limuzyną po Warszawie + Klub",
+    "name_en": "Outdoor Bonfire + Limousine Ride through Warsaw + Club",
     "slug": "ognisko-limuzyna-klub",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 249,
     "priceType": "person",
     "category": "pakiety",
     "description": "Pakiet łączący klimatyczne ognisko w plenerze z przejażdżką limuzyną po Warszawie i wejściem do klubu. Idealne połączenie relaksu na świeżym powietrzu z imprezową atmosferą!",
+    "description_en": "A package combining a cosy outdoor bonfire with a limousine ride through Warsaw and club entry. The perfect mix of fresh-air relaxation and party atmosphere!",
     "features": [
       "Klimatyczna atmosfera",
       "Nagłośnienie z możliwością podłączenia",
@@ -276,6 +428,16 @@
       "Młody, sympatyczny kierowca",
       "Możliwość wniesienia własnego alkoholu",
       "Godzina przejazdu limuzyną"
+    ],
+    "features_en": [
+      "Atmospheric ambience",
+      "Sound system with aux connection",
+      "Provisions",
+      "Soft drinks",
+      "Snacks",
+      "Young, friendly chauffeur",
+      "Option to bring your own alcohol",
+      "One-hour limousine ride"
     ],
     "images": [
       "/media/ognisko + limuzyna + klub.jpg"

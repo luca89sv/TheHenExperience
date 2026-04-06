@@ -137,7 +137,7 @@ export default function TransitionBeam() {
   if (isMobile) return null;
 
   return (
-    <div ref={containerRef} style={{ height: "130vh", marginTop: "-50vh", position: "relative", zIndex: 1 }}>
+    <div ref={containerRef} style={{ height: "130vh", marginTop: "-75vh", position: "relative", zIndex: 1 }}>
       <div
         style={{
           position: "sticky",

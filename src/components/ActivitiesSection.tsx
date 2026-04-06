@@ -11,13 +11,17 @@ import { useLanguage } from "@/lib/i18n";
 interface Product {
   id: string;
   name: string;
+  name_en?: string;
   slug: string;
   subtitle?: string;
+  subtitle_en?: string;
   price: number;
   priceType: "person" | "pcs";
   category: string;
   description?: string;
+  description_en?: string;
   features: string[];
+  features_en?: string[];
   images: string[];
 }
 
@@ -34,12 +38,12 @@ const categoryMap: Record<string, string[]> = {
   "kregle":                    ["Rozrywka", "Dzienne"],
   "limuzyna-bmw":              ["Limuzyny"],
   "party-bus":                 ["Party busy", "Nocne", "Polecane"],
-  "kolacja-w-restauracji":     ["Posiłki", "Nocne"],
+  "kolacja-w-restauracji":     ["Posi\u0142ki", "Nocne"],
   "billard":                   ["Rozrywka", "Dzienne"],
   "wieczor-karaoke":           ["Nocne", "Rozrywka"],
   "limuzyna-hummer":           ["Limuzyny", "Polecane"],
   "wieczor-w-kasynie":         ["Nocne", "Rozrywka"],
-  "piknik-nad-wisla":          ["Plenerowe", "Dzienne", "Posiłki"],
+  "piknik-nad-wisla":          ["Plenerowe", "Dzienne", "Posi\u0142ki"],
   "limuzyna-chrysler-prestige":["Limuzyny"],
   "nauka-tanca":               ["Sexy", "Dzienne", "Rozrywka"],
   "kurs-makijazu":             ["Dzienne"],
@@ -55,7 +59,7 @@ const categoryMap: Record<string, string[]> = {
   "nauka-tanca-na-rurze":      ["Sexy", "Dzienne", "Polecane"],
   "szalenstwo-na-gokartach":   ["Rozrywka", "Dzienne"],
   "rejs-statkiem-po-wisle":    ["Plenerowe", "Dzienne"],
-  "ognisko":                   ["Plenerowe", "Dzienne", "Posiłki"],
+  "ognisko":                   ["Plenerowe", "Dzienne", "Posi\u0142ki"],
   "przejazd-limuzyna-chrysler":["Limuzyny", "Transfery"],
   "transfer-busem":            ["Transfery"],
   "czerwony-dywan":            ["Dzienne"],
@@ -64,7 +68,7 @@ const categoryMap: Record<string, string[]> = {
 
 const CATEGORY_KEYS = [
   "Wszystko", "Polecane", "Dzienne", "Nocne", "Limuzyny", "Party busy",
-  "Sexy", "Posiłki", "Rozrywka", "Plenerowe", "Transfery",
+  "Sexy", "Posi\u0142ki", "Rozrywka", "Plenerowe", "Transfery",
 ];
 
 function getCategories(id: string): string[] {
@@ -74,8 +78,10 @@ function getCategories(id: string): string[] {
 function ActivityCard({ item, index }: { item: Product; index: number }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const inCart = isInCart(item.id);
+  const name = lang === "en" && item.name_en ? item.name_en : item.name;
+  const subtitle = lang === "en" && item.subtitle_en ? item.subtitle_en : item.subtitle;
 
   return (
     <a
@@ -88,7 +94,7 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
           {item.images[0] && (
             <Image
               src={item.images[0]}
-              alt={item.name}
+              alt={name}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
@@ -116,10 +122,10 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
 
         <div className="p-4 flex flex-col flex-1 relative z-[1]">
           <h3 className="font-[family-name:var(--font-display)] text-base font-semibold leading-snug mb-1 uppercase group-hover:text-pink-300 transition-colors duration-300">
-            {item.name}
+            {name}
           </h3>
-          {item.subtitle && (
-            <p className="text-xs text-white/35 mb-3">{item.subtitle}</p>
+          {subtitle && (
+            <p className="text-xs text-white/35 mb-3">{subtitle}</p>
           )}
 
           {/* Buttons */}
@@ -149,7 +155,7 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
                   ? "w-[88px] h-9 gap-1 border-pink-500/40 bg-pink-500/10 text-pink-400 hover:bg-red-500/10 hover:border-red-400/40 hover:text-red-400"
                   : "w-9 h-9 border-pink-500/30 bg-pink-500/10 text-pink-400 hover:bg-pink-500/25 hover:border-pink-500/50"
               }`}
-              aria-label={inCart ? "Usuń z koszyka" : "Dodaj do koszyka"}
+              aria-label={inCart ? "Remove from cart" : "Add to cart"}
             >
               {inCart ? (
                 <>
@@ -187,7 +193,7 @@ export default function ActivitiesSection() {
     "Limuzyny": t('cat.limos'),
     "Party busy": t('cat.partyBus'),
     "Sexy": t('cat.sexy'),
-    "Posiłki": t('cat.meals'),
+    "Posi\u0142ki": t('cat.meals'),
     "Rozrywka": t('cat.fun'),
     "Plenerowe": t('cat.outdoor'),
     "Transfery": t('cat.transfers'),

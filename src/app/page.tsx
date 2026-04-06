@@ -7,10 +7,12 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
+import PageLoader from "@/components/PageLoader";
 
 export default function Home() {
   return (
     <>
+      <PageLoader />
       <HeroSection />
       <TransitionBeam />
       <FeaturedSection />

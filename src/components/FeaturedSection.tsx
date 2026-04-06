@@ -11,12 +11,15 @@ import atrakcje from "@/data/atrakcje.json";
 interface Product {
   id: string;
   name: string;
+  name_en?: string;
   slug: string;
   subtitle?: string;
+  subtitle_en?: string;
   price: number;
   priceType: "person" | "pcs";
   category: string;
   description?: string;
+  description_en?: string;
   features: string[];
   images: string[];
 }
@@ -152,7 +155,8 @@ function CartButton({ item, size = "sm" }: { item: Product; size?: "sm" | "lg" }
 const HERO_IMAGE = "/media/fotograf-1-cover.jpg";
 
 function HeroCard({ item }: { item: Product }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const name = lang === "en" && item.name_en ? item.name_en : item.name;
   const href = item.category === "pakiety" ? `/pakiety/${item.slug}` : `/atrakcje/${item.slug}`;
 
   return (
@@ -172,7 +176,7 @@ function HeroCard({ item }: { item: Product }) {
         {/* Image */}
         <Image
           src={HERO_IMAGE}
-          alt={item.name}
+          alt={name}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -249,7 +253,8 @@ function HeroCard({ item }: { item: Product }) {
 }
 
 function SideCard({ item, index }: { item: Product; index: number }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const name = lang === "en" && item.name_en ? item.name_en : item.name;
   const href = item.category === "pakiety" ? `/pakiety/${item.slug}` : `/atrakcje/${item.slug}`;
 
   return (
@@ -257,7 +262,7 @@ function SideCard({ item, index }: { item: Product; index: number }) {
       {/* Image */}
       <Image
         src={item.images[0]}
-        alt={item.name}
+        alt={name}
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-110"
         sizes="(max-width: 768px) 50vw, 25vw"
@@ -303,7 +308,7 @@ function SideCard({ item, index }: { item: Product; index: number }) {
       {/* Content — bottom */}
       <div className="absolute inset-x-0 bottom-0 z-10 p-3 sm:p-4">
         <h3 className="font-[family-name:var(--font-display)] text-sm sm:text-base font-semibold uppercase leading-tight mb-1 group-hover:text-pink-200 transition-colors duration-300">
-          {item.name}
+          {name}
         </h3>
         <div className="flex items-center justify-between">
           <div className="flex items-baseline gap-1">
@@ -341,7 +346,7 @@ function SideCard({ item, index }: { item: Product; index: number }) {
 
 export default function FeaturedSection() {
   return (
-    <section className="relative py-[var(--section-padding)]" style={{ position: "relative", zIndex: 4 }}>
+    <section className="relative py-[var(--section-padding)]" style={{ position: "relative", zIndex: 4, marginTop: "-20vh" }}>
       {/* Subtle background glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] pointer-events-none"

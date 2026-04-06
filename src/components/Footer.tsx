@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useLanguage } from "@/lib/i18n";
 
 export default function Footer() {
@@ -60,12 +59,12 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col" style={{ gap: 0 }}>
               {[
-                { href: "/#pakiety", label: "Pakiety" },
-                { href: "/#atrakcje", label: "Pojedyncze atrakcje" },
-                { href: "/#jak-to-dziala", label: "Jak to działa" },
-                { href: "/#opinie", label: "Opinie" },
-                { href: "/#faq", label: "FAQ" },
-                { href: "/#kontakt", label: "Formularz kontaktowy" },
+                { href: "/#pakiety", key: "nav.packages" },
+                { href: "/#atrakcje", key: "nav.activities" },
+                { href: "/#jak-to-dziala", key: "nav.howItWorks" },
+                { href: "/#opinie", key: "nav.reviews" },
+                { href: "/#faq", key: "nav.faq" },
+                { href: "/#kontakt", key: "nav.contact" },
               ].map((link) => (
                 <a
                   key={link.href}
@@ -73,7 +72,7 @@ export default function Footer() {
                   className="text-white/45 hover:text-pink-400 transition-colors"
                   style={{ fontSize: "0.88rem", marginBottom: "0.6rem", display: "block" }}
                 >
-                  {link.label}
+                  {t(link.key)}
                 </a>
               ))}
             </div>

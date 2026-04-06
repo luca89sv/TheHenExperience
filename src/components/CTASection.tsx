@@ -127,24 +127,24 @@ export default function CTASection() {
                   {/* Name + Email row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">Imię</label>
+                      <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">{t("cta.labelName")}</label>
                       <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Twoje imię"
+                        placeholder={t("cta.placeholderName")}
                         className="w-full bg-transparent border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_20px_rgba(236,72,153,0.08)]"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">Email</label>
+                      <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">{t("cta.labelEmail")}</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="twoj@email.pl"
+                        placeholder={t("cta.placeholderEmail")}
                         className="w-full bg-transparent border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_20px_rgba(236,72,153,0.08)]"
                       />
                     </div>
@@ -153,7 +153,7 @@ export default function CTASection() {
                   {/* Phone + Date row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">Telefon</label>
+                      <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">{t("cta.labelPhone")}</label>
                       <input
                         type="tel"
                         name="phone"
@@ -164,7 +164,7 @@ export default function CTASection() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">Data wieczoru</label>
+                      <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">{t("cta.labelDate")}</label>
                       <input
                         type="date"
                         name="date"
@@ -177,7 +177,7 @@ export default function CTASection() {
 
                   {/* Guests */}
                   <div>
-                    <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">Liczba osób</label>
+                    <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">{t("cta.labelGuests")}</label>
                     <select
                       name="guests"
                       value={formData.guests}
@@ -185,23 +185,23 @@ export default function CTASection() {
                       className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white outline-none transition-all duration-300 focus:border-pink-500/40 focus:bg-white/[0.06] focus:shadow-[0_0_20px_rgba(236,72,153,0.08)] [color-scheme:dark] appearance-none"
                       style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`, backgroundRepeat: "no-repeat", backgroundPosition: "right 16px center" }}
                     >
-                      <option value="" className="bg-[#0c0c10]">Wybierz...</option>
-                      <option value="2-5" className="bg-[#0c0c10]">2-5 osób</option>
-                      <option value="6-10" className="bg-[#0c0c10]">6-10 osób</option>
-                      <option value="11-15" className="bg-[#0c0c10]">11-15 osób</option>
-                      <option value="16-20" className="bg-[#0c0c10]">16-20 osób</option>
-                      <option value="20+" className="bg-[#0c0c10]">20+ osób</option>
+                      <option value="" className="bg-[#0c0c10]">{t("cta.guestsSelect")}</option>
+                      <option value="2-5" className="bg-[#0c0c10]">2-5 {t("cta.guestsPeople")}</option>
+                      <option value="6-10" className="bg-[#0c0c10]">6-10 {t("cta.guestsPeople")}</option>
+                      <option value="11-15" className="bg-[#0c0c10]">11-15 {t("cta.guestsPeople")}</option>
+                      <option value="16-20" className="bg-[#0c0c10]">16-20 {t("cta.guestsPeople")}</option>
+                      <option value="20+" className="bg-[#0c0c10]">20+ {t("cta.guestsPeople")}</option>
                     </select>
                   </div>
 
                   {/* Message */}
                   <div>
-                    <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">Wiadomość</label>
+                    <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase">{t("cta.labelMessage")}</label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Opowiedz nam o swoich planach..."
+                      placeholder={t("cta.placeholderMessage")}
                       rows={4}
                       className="w-full bg-transparent border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_20px_rgba(236,72,153,0.08)] resize-none"
                     />
@@ -217,7 +217,7 @@ export default function CTASection() {
                       letterSpacing: "0.03em",
                     }}
                   >
-                    Wyślij wiadomość
+                    {t("cta.submit")}
                   </button>
                 </form>
               </div>

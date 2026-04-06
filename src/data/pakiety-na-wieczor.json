@@ -2,11 +2,13 @@
   {
     "id": "pakiet-dla-odwaznych-lasek",
     "name": "Pakiet dla odważnych lasek",
+    "name_en": "Package for Bold Girls",
     "slug": "pakiet-dla-odwaznych-lasek",
     "price": 300,
     "priceType": "person",
     "category": "pakiety_na_wieczor",
     "description": "Kolacja w restauracji\nWystęp tancerzy\nPrzejazd limuzyną\nKlub",
+    "description_en": "Restaurant dinner\nExotic dancer show\nLimousine ride\nClub",
     "features": [],
     "images": [
       "/media/strippers.jpg"
@@ -15,11 +17,13 @@
   {
     "id": "pakiet-odpoczynek",
     "name": "Pakiet dla osób pragnących odpocząć od zgiełku",
+    "name_en": "Relaxation & Escape Package",
     "slug": "pakiet-odpoczynek",
     "price": 400,
     "priceType": "person",
     "category": "pakiety_na_wieczor",
     "description": "Relaks w SPA\nZakwaterowanie w domku pod Warszawą\nSPA/Sauna\nKajaki",
+    "description_en": "SPA relaxation\nAccommodation in a cottage near Warsaw\nSPA/Sauna\nKayaking",
     "features": [],
     "images": [
       "/media/spa.jpg"

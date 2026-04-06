@@ -4,13 +4,13 @@ import { useState, useEffect } from "react";
 // Using <a> tags for navigation to avoid GSAP/canvas reinit issues
 import { useLanguage, T } from "@/lib/i18n";
 
-const navLinks = [
-  { href: "/#pakiety", label: "Pakiety" },
-  { href: "/#atrakcje", label: "Pojedyncze atrakcje" },
-  { href: "/#jak-to-dziala", label: "Jak to działa" },
-  { href: "/#opinie", label: "Opinie" },
-  { href: "/#faq", label: "FAQ" },
-  { href: "/#kontakt", label: "Formularz kontaktowy" },
+const NAV_LINK_KEYS = [
+  { href: "/#pakiety", key: "nav.packages" },
+  { href: "/#atrakcje", key: "nav.activities" },
+  { href: "/#jak-to-dziala", key: "nav.howItWorks" },
+  { href: "/#opinie", key: "nav.reviews" },
+  { href: "/#faq", key: "nav.faq" },
+  { href: "/#kontakt", key: "nav.contact" },
 ];
 
 export default function Navbar() {
@@ -18,7 +18,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isSmall, setIsSmall] = useState(false); // ≤480px
   const [isMobile, setIsMobile] = useState(false); // ≤768px
-  const { lang, setLang } = useLanguage();
+  const { lang, setLang, t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -157,7 +157,7 @@ export default function Navbar() {
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center" style={{ gap: "2rem" }}>
-            {navLinks.map((link) => (
+            {NAV_LINK_KEYS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -168,7 +168,7 @@ export default function Navbar() {
                   letterSpacing: "0.03em",
                 }}
               >
-                {link.label}
+                {t(link.key)}
               </a>
             ))}
           </div>
@@ -246,7 +246,7 @@ export default function Navbar() {
           gap: 0,
         }}
       >
-        {navLinks.map((link) => (
+        {NAV_LINK_KEYS.map((link) => (
           <a
             key={link.href}
             href={link.href}
@@ -263,7 +263,7 @@ export default function Navbar() {
               borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
             }}
           >
-            {link.label}
+            {t(link.key)}
           </a>
         ))}
         <a

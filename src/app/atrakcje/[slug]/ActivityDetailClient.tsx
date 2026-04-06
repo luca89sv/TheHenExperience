@@ -22,6 +22,12 @@ interface Product {
   description3?: string;
   features: string[];
   images: string[];
+  name_en?: string;
+  subtitle_en?: string;
+  description_en?: string;
+  description2_en?: string;
+  description3_en?: string;
+  features_en?: string[];
 }
 
 const allActivities = atrakcje as Product[];
@@ -138,8 +144,9 @@ function ImageCarousel({ images, name }: { images: string[]; name: string }) {
 function RelatedActivityCard({ item, index }: { item: Product; index: number }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const inCart = isInCart(item.id);
+  const itemName = lang === "en" && item.name_en ? item.name_en : item.name;
 
   return (
     <a
@@ -152,7 +159,7 @@ function RelatedActivityCard({ item, index }: { item: Product; index: number }) 
           {item.images[0] && (
             <Image
               src={item.images[0]}
-              alt={item.name}
+              alt={itemName}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
@@ -166,7 +173,7 @@ function RelatedActivityCard({ item, index }: { item: Product; index: number }) 
         </div>
         <div className="p-4 flex flex-col flex-1 relative z-[1]">
           <h3 className="font-[family-name:var(--font-display)] text-sm sm:text-base font-semibold leading-snug uppercase mb-3 group-hover:text-pink-300 transition-colors duration-300">
-            {item.name}
+            {itemName}
           </h3>
           <div className="mt-auto flex gap-2">
             <span
@@ -217,7 +224,7 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
   const [bookingOpen, setBookingOpen] = useState(false);
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   if (!item) {
     return (
@@ -233,6 +240,13 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
   }
 
   const inCart = isInCart(item.id);
+
+  const name = lang === "en" && item.name_en ? item.name_en : item.name;
+  const subtitle = lang === "en" && item.subtitle_en ? item.subtitle_en : item.subtitle;
+  const description = lang === "en" && item.description_en ? item.description_en : item.description;
+  const description2 = lang === "en" && item.description2_en ? item.description2_en : item.description2;
+  const description3 = lang === "en" && item.description3_en ? item.description3_en : item.description3;
+  const features = lang === "en" && item.features_en ? item.features_en : item.features;
 
   return (
     <>
@@ -252,7 +266,7 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Carousel — 3/5 width */}
           <div className="lg:col-span-3">
-            <ImageCarousel images={item.images} name={item.name} />
+            <ImageCarousel images={item.images} name={name} />
           </div>
 
           {/* Info card — 2/5 width */}
@@ -264,11 +278,11 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
               {t('detail.activity')}
             </span>
             <h1 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight uppercase mb-2">
-              {item.name}
+              {name}
             </h1>
-            {item.subtitle && (
+            {subtitle && (
               <p className="text-white/35 text-sm mb-4" style={{ fontFamily: "var(--font-body)" }}>
-                {item.subtitle}
+                {subtitle}
               </p>
             )}
 
@@ -280,9 +294,9 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
               </span>
             </div>
 
-            {item.description && (
+            {description && (
               <p className="text-white/45 text-sm leading-relaxed mb-6 line-clamp-4" style={{ fontFamily: "var(--font-body)" }}>
-                {item.description}
+                {description}
               </p>
             )}
 
@@ -343,22 +357,22 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
         {/* Description + contact side by side */}
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
           <div className="lg:col-span-3">
-            {item.description && (
+            {description && (
               <div>
             <h2 className="font-[family-name:var(--font-display)] text-xl sm:text-2xl font-semibold mb-4">
               {t('detail.aboutActivity')}
             </h2>
             <p className="text-white/50 leading-relaxed whitespace-pre-line" style={{ fontFamily: "var(--font-body)", fontSize: "0.95rem" }}>
-              {item.description}
+              {description}
             </p>
-            {item.description2 && (
+            {description2 && (
               <p className="text-white/50 leading-relaxed mt-4 whitespace-pre-line" style={{ fontFamily: "var(--font-body)", fontSize: "0.95rem" }}>
-                {item.description2}
+                {description2}
               </p>
             )}
-            {item.description3 && (
+            {description3 && (
               <p className="text-white/50 leading-relaxed mt-4 whitespace-pre-line" style={{ fontFamily: "var(--font-body)", fontSize: "0.95rem" }}>
-                {item.description3}
+                {description3}
               </p>
             )}
               </div>
@@ -391,13 +405,13 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
         </div>
 
         {/* Features — full width, 2 columns */}
-        {item.features.length > 0 && (
+        {features.length > 0 && (
           <div className="mt-10">
             <h2 className="font-[family-name:var(--font-display)] text-xl sm:text-2xl font-semibold mb-5">
               {t('detail.activityIncludes')}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {item.features.map((feat, i) => (
+              {features.map((feat, i) => (
                 <div
                   key={i}
                   className="flex items-start gap-3 p-4 rounded-xl border border-white/6 bg-white/[0.02] hover:border-pink-500/20 hover:bg-pink-500/[0.03] transition-all duration-300"
@@ -437,7 +451,7 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
       <BookingModal
         isOpen={bookingOpen}
         onClose={() => setBookingOpen(false)}
-        productName={item.name}
+        productName={name}
         price={item.price}
         priceType={item.priceType}
       />

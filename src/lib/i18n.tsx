@@ -1,18 +1,19 @@
 "use client";
 
-import React, { createContext, useContext, useState, useCallback, ReactNode } from "react";
+import React, { createContext, useContext, useState, useCallback, useEffect, ReactNode } from "react";
 
 const translations = {
   en: {
     'topbar.tagline': 'Unforgettable hen parties in Warsaw',
     'hero.cta.packages': 'Our Packages',
     'hero.cta.contact': 'Write to Us',
-    'nav.services': 'Services',
-    'nav.howItWorks': 'How It Works',
-    'nav.testimonials': 'Reviews',
-    'nav.pricing': 'Pricing',
-    'nav.faq': 'FAQ',
     'nav.cta': 'Book Now',
+    'nav.packages': 'Packages',
+    'nav.activities': 'Individual activities',
+    'nav.howItWorks': 'How it works',
+    'nav.reviews': 'Reviews',
+    'nav.faq': 'FAQ',
+    'nav.contact': 'Contact form',
     'hero.scroll': 'Scroll down',
     'hero.p1.label': 'FULL ORGANIZATION',
     'hero.p1.title': 'An Unforgettable Night A to Z',
@@ -101,6 +102,19 @@ const translations = {
     'cta.desc': 'Contact us \u2014 we\u2019ll prepare a custom offer tailored to your dreams.',
     'cta.phone': 'Call Us',
     'cta.email': 'Email Us',
+    // CTA form
+    'cta.labelName': 'Name',
+    'cta.labelEmail': 'Email',
+    'cta.labelPhone': 'Phone',
+    'cta.labelDate': 'Event date',
+    'cta.labelGuests': 'Number of guests',
+    'cta.labelMessage': 'Message',
+    'cta.placeholderName': 'Your name',
+    'cta.placeholderEmail': 'your@email.com',
+    'cta.placeholderMessage': 'Tell us about your plans...',
+    'cta.guestsSelect': 'Select...',
+    'cta.guestsPeople': 'people',
+    'cta.submit': 'Send message',
     'footer.desc': 'Exclusive bachelorette parties in Warsaw. Limousines, clubs, unforgettable moments.',
     'footer.links': 'Navigation',
     'footer.contact': 'Contact',
@@ -214,12 +228,13 @@ const translations = {
     'topbar.tagline': 'Niezapomniane wieczory panienskie w Warszawie',
     'hero.cta.packages': 'Nasze pakiety',
     'hero.cta.contact': 'Napisz do nas',
-    'nav.services': 'Us\u0142ugi',
-    'nav.howItWorks': 'Jak to dzia\u0142a',
-    'nav.testimonials': 'Opinie',
-    'nav.pricing': 'Cennik',
-    'nav.faq': 'FAQ',
     'nav.cta': 'Zarezerwuj',
+    'nav.packages': 'Pakiety',
+    'nav.activities': 'Pojedyncze atrakcje',
+    'nav.howItWorks': 'Jak to dzia\u0142a',
+    'nav.reviews': 'Opinie',
+    'nav.faq': 'FAQ',
+    'nav.contact': 'Formularz kontaktowy',
     'hero.scroll': 'Przewi\u0144 w d\u00f3\u0142',
     'hero.p1.label': 'KOMPLEKSOWA ORGANIZACJA',
     'hero.p1.title': 'Niezapomniany wiecz\u00f3r od A do Z',
@@ -308,6 +323,19 @@ const translations = {
     'cta.desc': 'Napisz do nas lub zadzwo\u0144 \u2014 przygotujemy ofert\u0119 dopasowan\u0105 do Twoich marze\u0144.',
     'cta.phone': 'Zadzwo\u0144',
     'cta.email': 'Napisz do nas',
+    // CTA form
+    'cta.labelName': 'Imi\u0119',
+    'cta.labelEmail': 'Email',
+    'cta.labelPhone': 'Telefon',
+    'cta.labelDate': 'Data wieczoru',
+    'cta.labelGuests': 'Liczba os\u00f3b',
+    'cta.labelMessage': 'Wiadomo\u015b\u0107',
+    'cta.placeholderName': 'Twoje imi\u0119',
+    'cta.placeholderEmail': 'twoj@email.pl',
+    'cta.placeholderMessage': 'Opowiedz nam o swoich planach...',
+    'cta.guestsSelect': 'Wybierz...',
+    'cta.guestsPeople': 'os\u00f3b',
+    'cta.submit': 'Wy\u015blij wiadomo\u015b\u0107',
     'footer.desc': 'Ekskluzywne wieczory panie\u0144skie w Warszawie. Limuzyny, kluby, niezapomniane chwile.',
     'footer.links': 'Nawigacja',
     'footer.contact': 'Kontakt',
@@ -431,7 +459,21 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("pl");
+  const [lang, setLangState] = useState<Lang>("pl");
+
+  useEffect(() => {
+    const saved = localStorage.getItem("lang");
+    if (saved === "en" || saved === "pl") setLangState(saved);
+    // Reveal content now that the correct language is applied
+    requestAnimationFrame(() => {
+      document.body.classList.add("lang-ready");
+    });
+  }, []);
+
+  const setLang = useCallback((l: Lang) => {
+    setLangState(l);
+    localStorage.setItem("lang", l);
+  }, []);
 
   const t = useCallback(
     (key: string): string => {

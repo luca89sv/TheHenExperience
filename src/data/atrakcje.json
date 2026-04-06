@@ -2,11 +2,13 @@
   {
     "id": "tancerz-na-panienski",
     "name": "Tancerz na panieński",
+    "name_en": "Exotic Dancer for Hen Party",
     "slug": "tancerz-na-panienski",
     "price": 599,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Wieczór panieński to wyjątkowa okazja, która musi być uczczona szaleństwem i niezapomnianymi atrakcjami. Jeden z najbardziej pociągających pomysłów na ten wieczór to występ przystojnego tancerza. Ta super atrakcja na pewno zapewni ostatni dzień wolności pełen ekscytacji i przyjemności. Niezależnie od tego, czy wybierzesz limuzynę czy apartament, przystojny tancerz z szóstką na brzuchu sprawi, że serca wszystkich panien młodych zabiją szybciej.",
+    "description_en": "A hen party is a special occasion that deserves to be celebrated with wild fun and unforgettable entertainment. One of the most exciting ideas for the evening is a performance by a handsome exotic dancer. This amazing attraction will make sure your last night of freedom is full of excitement and pleasure. Whether you choose a limousine or a private apartment, our handsome dancer with a six-pack will make every bride-to-be's heart beat faster.",
     "description2": "Występ tancerza na wieczorze panieńskim to niezapomniane doświadczenie, które każda Panna Młoda powinna przeżyć. Kiedy drzwi się otworzą, a przystojny tancerz pojawi się w całej swojej charyzmie, dziewczyny będą oczarowane. Jego wysportowane ciało i imponujący sześciopak na brzuchu nie pozwolą im oderwać wzroku. To nie tylko niezwykle rozgrzewający występ, ale także niepowtarzalna okazja do spędzenia czasu z najlepszymi przyjaciółkami i wspólnego świętowania panieńskiego. Nie ma wątpliwości, że rezerwacja tego występu na wieczór panieński będzie jednym z najważniejszych i najbardziej pamiętnych momentów, o których dziewczyny będą wspominać przez wiele lat.",
     "features": [
       "Możliwość występu w apartamencie lub limuzynie",
@@ -14,6 +16,13 @@
       "Wiele kostiumów do wyboru-policjant, strażak, komandos, mechanik",
       "Pamiątkowe zdjęcia",
       "Erotyczne gadżety-kajdanki, banany, pałki"
+    ],
+    "features_en": [
+      "Performance available in a private apartment or limousine",
+      "Only handsome dancers — real photos provided",
+      "Wide choice of costumes: police officer, firefighter, commando, mechanic",
+      "Souvenir photos",
+      "Erotic accessories — handcuffs, bananas, batons"
     ],
     "images": [
       "/media/tancerz-1-cover.jpg",
@@ -24,17 +33,24 @@
   {
     "id": "prywatny-fotograf",
     "name": "Prywatny fotograf",
+    "name_en": "Private Photographer",
     "slug": "prywatny-fotograf",
     "price": 499,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Prywatny fotograf na wieczór panieński to doskonała atrakcja, która pozwoli Wam uwiecznić te wyjątkowe chwile w pięknych zdjęciach. Niezależnie od tego, czy chcecie odbyć sesję w plenerze, w limuzynie czy też w profesjonalnym studiu fotograficznym, nasz doświadczony fotograf zadba o to, aby przyszła panna młoda i wszystkie uczestniczki imprezy wyglądały absolutnie pięknie.",
+    "description_en": "A private photographer for your hen party is the perfect way to capture these special moments in beautiful photos. Whether you want an outdoor shoot, a session inside a limousine, or a professional studio setting, our experienced photographer will make sure the bride-to-be and all guests look absolutely stunning.",
     "description2": "Profesjonalna sesja fotograficzna to wspaniała okazja do stworzenia niezapomnianych wspomnień. Nasz fotograf pomoże Wam wybrać odpowiednie miejsca, które będą idealnym tłem dla Waszych fotografii. Niezależnie od tego, czy preferujecie romantyczną plenerową atmosferę, luksusowe wnętrze limuzyny czy też klasyczne ujęcia w studiu, nasz fotograf dostosuje się do Waszych preferencji i zapewni, że każda osoba na zdjęciach będzie wyglądać zachwycająco.",
     "description3": "Aby uwiecznić te niezapomniane chwile, do dyspozycji będzie profesjonalny fotograf, który wykona pamiątkowe zdjęcia. Dzięki temu będziecie miały piękne wspomnienia, które będziecie mogły podzielić się z bliskimi i zachować na długie lata.",
     "features": [
       "profesjonalny fotograf",
       "25 profesjonalnie obrobionych zdjęć",
       "Godzinna sesja fotograficzna"
+    ],
+    "features_en": [
+      "Professional photographer",
+      "25 professionally edited photos",
+      "One-hour photo session"
     ],
     "images": [
       "/media/fotograf-1-cover.jpg",
@@ -46,17 +62,26 @@
   {
     "id": "rozowa-limuzyna",
     "name": "Różowa limuzyna",
+    "name_en": "Pink Limousine",
     "slug": "rozowa-limuzyna",
     "price": 999,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Poczuj się jak Barbie i zarezerwuj różową limuzynę.",
+    "description_en": "Feel like Barbie and book the iconic pink limousine.",
     "features": [
       "Młody, sympatyczny kierowca",
       "Butelka szampana",
       "Możliwość wniesienia własnego alkoholu",
       "Wejściówki do klubów",
       "Sesja fotograficzna"
+    ],
+    "features_en": [
+      "Young, friendly driver",
+      "Bottle of champagne",
+      "Option to bring your own alcohol",
+      "Club entry passes",
+      "Photo session"
     ],
     "images": [
       "/media/hummer3.png",
@@ -66,12 +91,15 @@
   {
     "id": "wieczor-w-klubie",
     "name": "Wieczór w klubie",
+    "name_en": "Night at the Club",
     "slug": "wieczor-w-klubie",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 149,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Wieczór panieński w klubie to must have wśród atrakcji! To niezwykła okazja, aby wraz ze swoimi bliskimi przyjaciółkami roztańczyć się na parkiecie, ciesząc się atmosferą klubową. Jest to moment, który dodaje nutkę szaleństwa i radości do całego wieczoru panieńskiego. Dzięki wejściu bez kolejki, unikniecie długiego oczekiwania i od razu zaczniecie bawić się na parkiecie. To idealne rozwiązanie dla grupy przyjaciółek, które nie lubią tracić czasu i chcą skupić się na dobrej zabawie.",
+    "description_en": "A night at the club is an absolute must for any hen party! It's an incredible opportunity to hit the dance floor with your closest friends and soak up the ultimate club atmosphere. Skip the queue with VIP entry and start the fun straight away. Perfect for a group of girls who want to make every minute count.",
     "description2": "Prywatna loża to kolejna korzyść, która sprawi, że wieczór panieński nabierze prestiżowego charakteru. W loży będziecie miały swoje własne miejsce, gdzie możecie się wyluzować, porozmawiać na wszystkie tematy i delektować się atmosferą klubową. To idealne miejsce do wychillowania i spędzenia czasu z przyjaciółkami.",
     "description3": "Przedpłacony alkohol to świetna opcja, która pozwoli na łatwiejszą kontrolę nad budżetem wieczoru, nawet jeśli trochę popłyniecie. Dzięki temu możecie cieszyć się dobrą zabawą, bez konieczności martwienia się o rachunki w trakcie imprezy.",
     "features": [
@@ -79,6 +107,12 @@
       "Prywatna loża na wyłączność",
       "Przedpłacony alkohol",
       "Najlepsze kluby"
+    ],
+    "features_en": [
+      "VIP queue-jump entry to the club",
+      "Exclusive private booth",
+      "Pre-paid drinks package",
+      "Warsaw's best clubs"
     ],
     "images": [
       "/media/klub-1-cover.jpg",
@@ -90,12 +124,15 @@
   {
     "id": "rejs-gondola",
     "name": "Rejs gondolą po Wiśle",
+    "name_en": "Gondola Cruise on the Vistula",
     "slug": "rejs-gondola",
     "subtitle": "(min. 7 osób, max. 11 osób)",
+    "subtitle_en": "(min. 7 people, max. 11 people)",
     "price": 129,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Rejs gondolą po Wiśle to niesamowita atrakcja, która zapewni Wam niezapomniany wieczór panieński. Podczas tego magicznego rejsu będziecie miały okazję podziwiać najciekawsze zabytki Warszawy, wspaniałą panoramę i malownicze krajobrazy, które rozciągają się wokół. To niezwykłe doświadczenie, które dostarczy Wam chwile relaksu i wspaniałe wspomnienia. Nie tylko widoki będą zachwycające, ale także atmosfera na łodzi. Impreza na pokładzie wypełniona będzie radosną muzyką, która zachęci Was do świetnej zabawy.",
+    "description_en": "A gondola cruise on the Vistula River is a stunning hen party experience you'll never forget. Glide along the river while admiring Warsaw's most beautiful landmarks, the magnificent skyline, and the picturesque scenery all around. It's a truly magical experience that combines relaxation with wonderful memories. The views are breathtaking and the on-board party atmosphere, complete with great music, will keep the fun going all evening.",
     "features": [
       "Możliwość wniesienia własnego alkoholu",
       "Możliwość wniesienia własnych przekąsek",
@@ -103,6 +140,14 @@
       "Koordynator",
       "Profesjonalne nagłośnienie do podłączenia własnej muzyki",
       "Butelka szampana"
+    ],
+    "features_en": [
+      "Option to bring your own alcohol",
+      "Option to bring your own snacks",
+      "One-hour Venetian gondola cruise on the Vistula",
+      "Coordinator included",
+      "Professional sound system — connect your own music",
+      "Bottle of champagne"
     ],
     "images": [
       "/media/gondola1.jpg",
@@ -115,18 +160,27 @@
   {
     "id": "sexy-spa",
     "name": "Sexy SPA",
+    "name_en": "Sexy SPA",
     "slug": "sexy-spa",
     "subtitle": "(min. 4 osoby)",
+    "subtitle_en": "(min. 4 people)",
     "price": 269,
     "priceType": "person",
     "category": "atrakcje",
     "description": "SPA to doskonała atrakcja, która pozwoli przyszłej Pannie Młodej na chwilę relaksu i zadbanie o siebie przed wielkim dniem - ślubem. To wyjątkowy czas, kiedy można oderwać się od stresu i poświęcić uwagę swojemu ciału i umyślowi. W luksusowym spa możecie skorzystać z różnorodnych zabiegów pielęgnacyjnych, masaży relaksacyjnych oraz innych profesjonalnych usług. To idealna okazja, aby odprężyć się, odzyskać równowagę i poczuć się odświeżone i piękne.",
+    "description_en": "A spa day is the perfect treat for a bride-to-be looking to relax and pamper herself before the big day. Take a break from all the wedding stress and give your body and mind the attention they deserve. At our luxury spa you can enjoy a range of beauty treatments, relaxing massages, and professional services. It's the ideal opportunity to unwind, restore your balance, and feel refreshed and beautiful.",
     "description2": "SPA to również doskonały czas na spędzenie chwil razem z bliskimi przyjaciółkami. Możecie wspólnie korzystać z usług spa, relaksować się w saunie lub jacuzzi, rozmawiać, śmiać się i tworzyć piękne wspomnienia. Zadbanie o siebie w SPA przed ślubem to nie tylko fizyczna pielęgnacja, ale także dbanie o swój wewnętrzny spokój i równowagę. To czas, kiedy przyszła Panna Młoda może skoncentrować się na sobie i naładować pozytywną energią przed ważnym dniem.",
     "features": [
       "Aromaterapeutyczna kąpiel w jacuzzi",
       "Rytuał Hammam Hurram - dla Panny Młodej",
       "Hammam klasyczny lub Masaż Balijski (45 min.) - dla pozostałych uczestniczek",
       "Kieliszek szampana"
+    ],
+    "features_en": [
+      "Aromatherapy jacuzzi bath",
+      "Hammam Hurram ritual — for the bride-to-be",
+      "Classic Hammam or Balinese Massage (45 min.) — for all other guests",
+      "Glass of champagne"
     ],
     "images": [
       "/media/spa-1-cover.jpg",
@@ -138,18 +192,27 @@
   {
     "id": "kregle",
     "name": "Kręgle",
+    "name_en": "Bowling",
     "slug": "kregle",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 119,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Kręgle to świetna atrakcja na wieczór panieński, która doda pikanterii i rywalizacji do waszego szalonego wieczoru. Ta forma zabawy w gronie przyjaciółek podgrzeje atmosferę i dostarczy niezapomnianych chwil radości i śmiechu. Podczas gry możecie cieszyć się zimnymi napojami i zestawem przekąsek , które pozwolą Wam się zrelaksować i odprężyć przed dalszą częścią wieczoru. Zabawa na kręgielni to nie tylko rywalizacja, ale także świetna okazja do spędzenia czasu razem, śmiechu i tworzenia wspomnień.",
+    "description_en": "Bowling is a fantastic hen party activity that adds a healthy dose of friendly competition to your wild evening. This group-friendly game will heat up the atmosphere and deliver moments of pure joy and laughter. Enjoy cold drinks and a snack platter to keep you fuelled between frames. It's not just about the competition — it's a great excuse to spend quality time together, laugh your heads off, and make memories.",
     "description2": "Macie możliwość grać przez 2 godziny, co pozwoli Wam na wiele rund i odkrycie ukrytych talentów w grze. Grę w kręgle umilą Wam serwowane przystawki. Aby uczcić Wasze osiągnięcia i podkreślić wyjątkowość wieczoru, możecie wypić lampkę szampana, który dodatkowo nada temu momentowi elegancji.",
     "features": [
       "2h świetnej zabawy",
       "Zestaw przekąsek i napojów",
       "Prywatna loża",
       "Prywatny koordynator"
+    ],
+    "features_en": [
+      "2 hours of great fun",
+      "Snack and drinks package",
+      "Private booth",
+      "Private coordinator"
     ],
     "images": [
       "/media/kregle-1-cover.jpg",
@@ -161,12 +224,15 @@
   {
     "id": "limuzyna-bmw",
     "name": "Limuzyna BMW",
+    "name_en": "BMW Limousine",
     "slug": "limuzyna-bmw",
     "subtitle": "(max. 12 osób)",
+    "subtitle_en": "(max. 12 people)",
     "price": 999,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Planując niezapomniany wieczór panieński, nie może zabraknąć atrakcji, które dostarczą dawki luksusu i szaleństwa. Wynajem limuzyny BMW to doskonały wybór, który na pewno spełni oczekiwania wszystkich uczestniczek. Ta elegancka maszyna jest po prostu niesamowita! Wnętrze wypełnione jest luksusowymi dodatkami, a nagłośnienie jest na tyle potężne, że nawet najgorętsze hity brzmią jeszcze lepiej. Ale to nie wszystko! Sufit ledowy typu infinity rozświetla wnętrze niesamowitą magią, a wejście typu jet door dodaje odrobiny ekstrawagancji. Ten samochód z pewnością wywoła ogromne wrażenie na wszystkich dziewczynach.",
+    "description_en": "Planning an unforgettable hen party? You can't go wrong with a BMW limousine — it delivers the perfect mix of luxury and excitement. This stunning machine is simply incredible. The interior is packed with high-end details, the sound system is powerful enough to make every hit sound even better, and the infinity LED ceiling lights up the cabin with spectacular magic. To top it all off, the jet door entry adds that extra touch of extravagance. This car is guaranteed to leave everyone speechless.",
     "description2": "Limuzyna BMW będzie świetnym wyborem także dla fanów marki Louis Vuitton ze względu na niepowtarzalne wnętrze. Jeśli jesteś fanką stylu i elegancji, a jednocześnie pragniesz odrobiny szaleństwa w tę ostatnią noc wolności, ten samochód jest dla Ciebie stworzony.",
     "description3": "Nie czekaj dłużej! Wynajmij limuzynę BMW i odkryj, jak marzenia stają się rzeczywistością. Zostań królową wieczoru i ciesz się luksusem, jakiego jeszcze nigdy wcześniej nie doświadczyłaś. To Twoja noc, a limuzyna BMW sprawi, że będziesz się czuła jak gwiazda na czerwonym dywanie.",
     "features": [
@@ -176,6 +242,14 @@
       "Wejściówki do klubów",
       "Możliwość wniesienia własnego alkoholu",
       "Dodatkowe wejście typu Jet Door"
+    ],
+    "features_en": [
+      "Young, friendly driver",
+      "Photo session",
+      "Bottle of champagne",
+      "Club entry passes",
+      "Option to bring your own alcohol",
+      "Jet Door entry"
     ],
     "images": [
       "/media/limo-7-cover.jpg",
@@ -187,12 +261,15 @@
   {
     "id": "party-bus",
     "name": "Party Bus",
+    "name_en": "Party Bus",
     "slug": "party-bus",
     "subtitle": "(max. 20 osób)",
+    "subtitle_en": "(max. 20 people)",
     "price": 1299,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Wynajem party busa na wieczór panieński to atrakcja, która zapewni Wam niezapomniane doświadczenie. Zabierzcie swoją imprezę na cztery koła i przygotujcie się na szaloną zabawę. Imprezowa muzyka, pulsujące nagłośnienie i fajne oświetlenie wnętrza auta stworzą niesamowitą atmosferę, która sprawi, że nie będziecie się mogły oderwać od parkietu.",
+    "description_en": "Hiring a party bus for your hen party is guaranteed to give you an unforgettable experience. Take the party on the road and get ready for a wild time. Party music, a thumping sound system, and stunning interior lighting will create an incredible atmosphere that'll keep everyone on the dance floor.",
     "description2": "Party bus to nie tylko środek transportu, ale również scena dla Waszej imprezy. Dzięki przestronnemu wnętrzu, będziecie miały wystarczająco dużo miejsca, aby tańczyć, śpiewać i cieszyć się chwilą razem ze swoimi najlepszymi przyjaciółkami.",
     "description3": "Jednak impreza w party busie to dopiero początek. Wraz z wynajmem samochodu oferujemy Wam darmowe wejściówki do wybranych klubów, gdzie możecie kontynuować zabawę. To idealne rozwiązanie, które pozwoli Wam na dalszą eskapadę nocną, pełną tanecznych rytmów i niezapomnianych wrażeń.",
     "features": [
@@ -201,6 +278,13 @@
       "2 Butelki szampana",
       "Możliwość wniesienia własnego alkoholu",
       "Sesja zdjęciowa"
+    ],
+    "features_en": [
+      "Young, friendly driver",
+      "Glassware at the bar",
+      "2 bottles of champagne",
+      "Option to bring your own alcohol",
+      "Photo session"
     ],
     "images": [
       "/media/partybus-1-1.jpg",
@@ -212,12 +296,15 @@
   {
     "id": "kolacja-w-restauracji",
     "name": "Kolacja w restauracji",
+    "name_en": "Restaurant Dinner",
     "slug": "kolacja-w-restauracji",
     "subtitle": "(min. 4 osoby)",
+    "subtitle_en": "(min. 4 people)",
     "price": 119,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Kolacja w restauracji to doskonały początek wieczoru panieńskiego. W końcu nie warto imprezować na pusty żołądek! W restauracji będziecie miały okazję delektować się pysznymi potrawami, stworzonymi przez najlepszych kucharzy, podczas gdy spokojnie porozmawiacie na różne tematy.",
+    "description_en": "A restaurant dinner is the perfect way to kick off your hen party — after all, no one parties well on an empty stomach! Treat yourselves to delicious dishes crafted by top chefs, while catching up and enjoying each other's company.",
     "description2": "Zapewniamy Wam kolację w restauracji, która na pewno spełni Wasze oczekiwania. Może to być standardowa restauracja, gdzie znajdziecie szeroki wybór dań z różnych kuchni czy też restauracja znajdująca się na szczycie wieżowca, która oferuje nie tylko wykwintne menu, ale także spektakularne widoki na miasto.",
     "description3": "Niezależnie od wyboru restauracji, możecie być pewne, że będziecie zachwycone. Po wyrafinowanym posiłku, możecie podjąć decyzję, czy wynająć limuzynę, która doda odrobinę luksusu i prestiżu do Waszego wieczoru, czy udać się do klubu, gdzie rozpocznie się bardziej szalona część imprezy. Bez względu na to, jaki wybór podejmiecie, zapewniamy Wam, że kolacja w restauracji będzie świetnym początkiem Waszego wieczoru panieńskiego.",
     "features": [
@@ -225,6 +312,12 @@
       "Rozbudowane Menu",
       "2 Lampki wina",
       "Nastrojowa muzyka"
+    ],
+    "features_en": [
+      "Exclusive dinner in central Warsaw",
+      "Extensive menu",
+      "2 glasses of wine",
+      "Ambient music"
     ],
     "images": [
       "/media/kolacja-1-cover.jpg",
@@ -235,12 +328,15 @@
   {
     "id": "billard",
     "name": "Billard",
+    "name_en": "Pool / Billiards",
     "slug": "billard",
     "subtitle": "(min 5 osób)",
+    "subtitle_en": "(min. 5 people)",
     "price": 99,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Jeśli poszukujesz dwugodzinnej atrakcji, która dostarczy Wam mnóstwo zabawy i emocji na wieczór panieński, to billard spełni Twoje oczekiwania! Gra w billard to idealny sposób na spędzenie aktywnego czasu w gronie przyjaciół, gdzie każdy będzie mógł zaprezentować swoje umiejętności i cieszyć się dynamiczną rozgrywką.",
+    "description_en": "Looking for a two-hour hen party activity packed with fun and excitement? Billiards is the answer! It's the perfect way to spend some active time with friends, show off your skills, and enjoy a fast-paced, competitive game.",
     "description2": "Otrzymacie dwugodzinny dostęp do profesjonalnego stołu billardowego. Niezależnie od poziomu zaawansowania, gra w billard dostarcza wiele satysfakcji i radości. Będziecie mogli rywalizować między sobą w różnych rodzajach gier, takich jak 8-ball, 9-ball itd., dostosowując się do Waszych preferencji i umiejętności.",
     "description3": "Billard to nie tylko rywalizacja, ale również świetna okazja do spędzenia czasu w przyjaznej atmosferze. Salon billardowy stworzy dla Was przytulne i komfortowe miejsce, gdzie będziecie mogli delektować się przekąskami i napojami, ciesząc się towarzystwem przyjaciół.",
     "features": [
@@ -248,6 +344,12 @@
       "Soft drink",
       "Prywatna loża",
       "Zestaw przekąsek"
+    ],
+    "features_en": [
+      "2 hours of great fun",
+      "Soft drink included",
+      "Private booth",
+      "Snack package"
     ],
     "images": [
       "/media/billard-1-cover.jpg",
@@ -259,12 +361,15 @@
   {
     "id": "wieczor-karaoke",
     "name": "Wieczór karaoke",
+    "name_en": "Karaoke Night",
     "slug": "wieczor-karaoke",
     "subtitle": "(min 5)",
+    "subtitle_en": "(min. 5 people)",
     "price": 99,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Jeśli marzysz o wieczorze pełnym śpiewu, zabawy i niezapomnianych występów, to karaoke jest idealną atrakcją na Twoją wieczorną imprezę panieńską! Karaoke to doskonały sposób na uwolnienie wewnętrznego gwiazdora muzycznego i spędzenie czasu w radosnej atmosferze.",
+    "description_en": "If you dream of an evening full of singing, laughter, and unforgettable performances, karaoke is the perfect hen party activity! It's the ideal way to unleash your inner pop star and spend the night in a joyful, carefree atmosphere.",
     "description2": "Podczas karaoke będziecie miały dostęp do profesjonalnego zestawu karaoke, obejmującego mikrofony, głośniki i bogatą bibliotekę utworów. Każdy z Was będzie mógł wybrać ulubione piosenki, włączyć mikrofon i śpiewać ze wszystkich sił. Niezależnie od umiejętności wokalnych, najważniejsza jest dobra zabawa i wspólne świętowanie.",
     "description3": "Karaoke to także doskonała okazja do prezentacji swoich umiejętności scenicznych. Możecie przygotować grupowe występy, duety lub solowe pokazy, które będą wywoływać salwy śmiechu i owacje na stojąco.",
     "features": [
@@ -273,6 +378,13 @@
       "Butelka szampana",
       "Soft drinks",
       "Koordynator"
+    ],
+    "features_en": [
+      "Private karaoke booth",
+      "Snack package",
+      "Bottle of champagne",
+      "Soft drinks",
+      "Coordinator included"
     ],
     "images": [
       "/media/karaoke-1-cover.jpg",
@@ -284,12 +396,15 @@
   {
     "id": "limuzyna-hummer",
     "name": "Limuzyna Hummer",
+    "name_en": "Hummer Limousine",
     "slug": "limuzyna-hummer",
     "subtitle": "(max. 20 osób)",
+    "subtitle_en": "(max. 20 people)",
     "price": 1299,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Jeśli masz przyjemność być otoczona przez liczne grono bliskich przyjaciół, z którymi pragniesz spędzić wyjątkowy wieczór panieński, wynajem limuzyny Hummer to doskonała atrakcja, która nie tylko dostarczy Wam niezapomnianej imprezy, ale także zapewni komfortowy transport.Ten olbrzymi gigant może pomieścić aż do 24 osób na swoim pokładzie, co oznacza, że wszyscy Wasi bliscy znajomi mogą być razem w tej wyjątkowej chwili.",
+    "description_en": "If you're lucky enough to be surrounded by a large group of close friends for your hen party, the Hummer limousine is the ultimate choice — it delivers an unforgettable party experience and comfortable transport all in one. This enormous giant can accommodate up to 24 guests on board, so everyone you love can share this special moment together.",
     "description2": "Wnętrze Hummera to prawdziwe królestwo imprezowe. Nagłośnienie o mocy, które rozsadza parkiet, sprawi, że wszyscy zaczną tańczyć i roztaczać energetyczną atmosferę jeszcze przed dotarciem do klubu. W Hummerze nie ma miejsca na nudę!",
     "description3": "Jeśli chcesz uczynić wieczór panieński niezapomnianym i jeszcze bardziej wyjątkowym, wynajem limuzyny Hummer jest idealnym wyborem. Zabierz wszystkich swoich przyjaciół na przejażdżkę życia i stwórzcie wspomnienia, które będą trwać przez wiele lat.",
     "features": [
@@ -299,6 +414,14 @@
       "Godzina przejazdu",
       "Możliwość wniesienia własnego alkoholu",
       "Wejściówki do klubów"
+    ],
+    "features_en": [
+      "Young, friendly driver",
+      "Photo session",
+      "Bottle of champagne",
+      "One-hour ride",
+      "Option to bring your own alcohol",
+      "Club entry passes"
     ],
     "images": [
       "/media/limo-9-cover.jpg",
@@ -310,12 +433,15 @@
   {
     "id": "wieczor-w-kasynie",
     "name": "Wieczór w kasynie",
+    "name_en": "Casino Night",
     "slug": "wieczor-w-kasynie",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 109,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Jeśli marzysz o wieczorze pełnym wrażeń, adrenaliny i niezapomnianej rozrywki na wieczór panieński, to wizyta w kasynie jest idealną atrakcją!",
+    "description_en": "If you're dreaming of a hen party evening full of thrills, adrenaline, and unforgettable entertainment, a night at the casino is the perfect choice!",
     "description2": "Podczas wizyty w kasynie, będziesz miał dostęp do profesjonalnych stołów do gier, takich jak ruletka, blackjack czy poker.",
     "description3": "Pamiętaj aby ubrać się elegancko, poczuć się jak w Monte Carlo i cieszyć się towarzystwem swoich przyjaciół podczas tej niezwykłej nocy.",
     "features": [
@@ -324,6 +450,13 @@
       "Welcome drinki",
       "Koordynator",
       "Najlepsze kasyna w Warszawie"
+    ],
+    "features_en": [
+      "Free entry",
+      "50 PLN in chips per person",
+      "Welcome drinks",
+      "Coordinator included",
+      "Warsaw's best casinos"
     ],
     "images": [
       "/media/kasyno-1-cover.jpg",
@@ -335,12 +468,15 @@
   {
     "id": "piknik-nad-wisla",
     "name": "Piknik nad Wisłą",
+    "name_en": "Picnic by the Vistula",
     "slug": "piknik-nad-wisla",
     "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
     "price": 139,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Zapraszamy na wyjątkowy piknik nad Wisłą. Świętujcie w otoczeniu przyrody i pięknych widoków. Specjalnie dla Was przygotowaliśmy przekąski, smaczne napoje, relaks na kocach przy dźwiękach wybranej przez Was muzyki, gry i zabawy integracyjne, które rozśmieszą każdą z Was. Krótka sesja zdjęciowa na tle malowniczych widoków uwieczni te niezapomniane chwile. Zabierzcie ze sobą dobry humor, a my zajmiemy się resztą.",
+    "description_en": "Join us for a one-of-a-kind picnic by the Vistula River. Celebrate surrounded by nature and stunning views. We've prepared snacks, tasty drinks, cosy blankets, and your own music playing in the background — plus fun group games that will have everyone laughing. A short photo session against the scenic backdrop will capture the memories forever. All you need to bring is good vibes — we'll take care of the rest.",
     "features": [
       "Piknik na świeżym powietrzu",
       "Pyszne przekąski",
@@ -349,6 +485,15 @@
       "Nagłośnienie z funkcją BT",
       "Szampan",
       "Gry i zabawy integracyjne"
+    ],
+    "features_en": [
+      "Outdoor picnic",
+      "Delicious snacks",
+      "Refreshing drinks",
+      "Professional photo session",
+      "Bluetooth sound system",
+      "Champagne",
+      "Group games and icebreakers"
     ],
     "images": [
       "/media/piknik-1-cover.jpg",
@@ -361,12 +506,15 @@
   {
     "id": "limuzyna-chrysler-prestige",
     "name": "Limuzyna Chrysler Prestige",
+    "name_en": "Chrysler Prestige Limousine",
     "slug": "limuzyna-chrysler-prestige",
     "subtitle": "(max. 10 osób)",
+    "subtitle_en": "(max. 10 people)",
     "price": 799,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Wynajem limuzyny Chrysler to nie tylko wygodny sposób na transport podczas wieczoru panieńskiego, ale także gwarancja świetnej zabawy. Ten ekskluzywny samochód pozwoli Wam poczuć się jak prawdziwe gwiazdy, ponieważ ta wyjątkowa noc jest przeznaczona tylko dla Was.",
+    "description_en": "Hiring the Chrysler limousine isn't just a stylish way to get around during your hen party — it's a guarantee of a fantastic time. This exclusive car will make you feel like true celebrities, because this special night is all about you.",
     "description2": "Wnętrze limuzyny Chrysler nie tylko zachwyca swoim luksusem, ale również sprawia, że czas spędzony w samochodzie staje się niezapomnianą przygodą. Zabrzmi imprezowa muzyka, a nastrojowe oświetlenie sprawi, że wieczór szybko nabierze rozpędu.",
     "description3": "Dodatkowo, niesamowite wnętrze samochodu stwarza idealne tło do wykonania pamiątkowych zdjęć na Instagramie.",
     "features": [
@@ -378,6 +526,15 @@
       "Godzina przejazdu",
       "Eleganckie skórzane kanapy"
     ],
+    "features_en": [
+      "Young, friendly driver",
+      "Photo session",
+      "Bottle of champagne",
+      "Option to bring your own alcohol",
+      "Club entry passes",
+      "One-hour ride",
+      "Elegant leather seating"
+    ],
     "images": [
       "/media/limo-5-cover.jpg",
       "/media/limo-5-2.jpg",
@@ -388,12 +545,15 @@
   {
     "id": "nauka-tanca",
     "name": "Nauka tańca",
+    "name_en": "Dance Class",
     "slug": "nauka-tanca",
     "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
     "price": 99,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Jeśli marzysz o wieczorze pełnym ruchu, muzyki i świetnej zabawy na wieczór panieński, to nauka tańca będzie idealną atrakcją dla Ciebie i Twojej grupy przyjaciół!",
+    "description_en": "If you're dreaming of a hen party evening full of movement, music, and great fun, a dance class is the perfect activity for you and your group!",
     "description2": "Do Waszej dyspozycji będzie doświadczony instruktor tańca, który wprowadzi Was w magiczny świat tańca i nauczy podstawowych kroków.",
     "description3": "Nauka tańca może obejmować różne style, takie jak Salsa, Bachata, Zouk - wybór zależy od Waszych preferencji i upodobań.",
     "features": [
@@ -401,6 +561,12 @@
       "Profesjonalny instruktor",
       "Profesjonalne studio taneczne z lustrami",
       "Powitalny kieliszek szampana"
+    ],
+    "features_en": [
+      "One-hour dance session",
+      "Professional dance instructor",
+      "Professional mirrored dance studio",
+      "Welcome glass of champagne"
     ],
     "images": [
       "/media/taniec-1-cover.jpg",
@@ -412,12 +578,15 @@
   {
     "id": "kurs-makijazu",
     "name": "Kurs makijażu",
+    "name_en": "Make-Up Masterclass",
     "slug": "kurs-makijazu",
     "subtitle": "(min. 4 osoby)",
+    "subtitle_en": "(min. 4 people)",
     "price": 149,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Jeśli marzysz o wieczorze, podczas którego nauczysz się sztuki makijażu i odkryjesz tajniki profesjonalnego wyglądu, to kurs makijażu jest idealną atrakcją dla Twojego wieczoru panieńskiego!",
+    "description_en": "If you'd love an evening where you learn the art of make-up and discover the secrets of a professional look, a make-up masterclass is the perfect hen party activity!",
     "description2": "Podczas kursu makijażu, dołączysz do profesjonalnego wizażysty, który podzieli się swoją wiedzą i doświadczeniem.",
     "description3": "Nauczymy się każdego elementu makijażu, który będzie tłumaczony i indywidualnie pokazany. Wspólnie zrobimy przegląd kosmetyczek, a każda z Was otrzyma porady odnośnie produktów idealnych dla niej.",
     "features": [
@@ -426,6 +595,13 @@
       "Profesjonalny makijaż dla Panny młodej",
       "Niezbędne akcesoria",
       "Porady beauty"
+    ],
+    "features_en": [
+      "1-hour make-up session",
+      "Professional make-up artist",
+      "Full professional make-up for the bride-to-be",
+      "All accessories provided",
+      "Personalised beauty tips"
     ],
     "images": [
       "/media/makijaz-1-cover.jpg",
@@ -437,11 +613,13 @@
   {
     "id": "limuzyna-do-15-osob",
     "name": "Limuzyna do 15 osób",
+    "name_en": "Limousine for up to 15 People",
     "slug": "limuzyna-do-15-osob",
     "price": 999,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Wynajem limuzyny na wieczór panieński to gwarancja szaleństwa i niezapomnianej zabawy...",
+    "description_en": "Hiring a limousine for your hen party is a guarantee of wild fun and unforgettable memories...",
     "description2": "Limuzyna Cadillac Escalade pomieści aż do 15 osób, więc nikt nie będzie musiał dojeżdżać na własną rękę.",
     "features": [
       "Młody, sympatyczny kierowca",
@@ -451,6 +629,15 @@
       "Wejściówki do klubów",
       "Możliwość wniesienia własnego alkoholu",
       "Kanapy na przeciw siebie"
+    ],
+    "features_en": [
+      "Young, friendly driver",
+      "Photo session",
+      "Bottle of champagne",
+      "One-hour ride",
+      "Club entry passes",
+      "Option to bring your own alcohol",
+      "Face-to-face seating"
     ],
     "images": [
       "/media/limo-8-cover.jpg",
@@ -462,18 +649,28 @@
   {
     "id": "paintball",
     "name": "Paintball",
+    "name_en": "Paintball",
     "slug": "paintball",
     "subtitle": "(min. 6 osób)",
+    "subtitle_en": "(min. 6 people)",
     "price": 119,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Paintball to niesamowita atrakcja na wieczór panieński, która dostarczy Wam ogromną dawkę adrenaliny i niezapomnianych wrażeń. To doskonały sposób na aktywne spędzenie czasu w gronie przyjaciółek, gdzie będziecie mogły sprawdzić swoje umiejętności strategiczne i taktyczne w dynamicznej rozgrywce.",
+    "description_en": "Paintball is an incredible hen party activity that delivers a massive adrenaline rush and unforgettable excitement. It's the perfect way to spend some active time with your friends while testing your strategic and tactical skills in a fast-paced battle.",
     "features": [
       "1h gry",
       "Ceremonia medalowa",
       "Niezbędny sprzęt",
       "Możliwość gry w terenie jak i w budynku",
       "200 kul w cenie"
+    ],
+    "features_en": [
+      "1 hour of gameplay",
+      "Medal ceremony",
+      "All equipment provided",
+      "Outdoor and indoor play options",
+      "200 paintballs included"
     ],
     "images": [
       "/media/paintball-1-cover.jpg",
@@ -485,12 +682,15 @@
   {
     "id": "limuzyna-lincoln",
     "name": "Limuzyna Lincoln",
+    "name_en": "Lincoln Limousine",
     "slug": "limuzyna-lincoln",
     "subtitle": "(max. 10 osób)",
+    "subtitle_en": "(max. 10 people)",
     "price": 599,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Limuzyna Lincoln to klasyka wśród limuzyn na wieczór panieński. Ten elegancki i luksusowy samochód zapewni Wam niezapomniane wrażenia i poczucie bycia gwiazdą. Przejażdżka limuzyną Lincoln to doskonały sposób na rozpoczęcie wieczoru panieńskiego w wielkim stylu.",
+    "description_en": "The Lincoln limousine is a timeless classic for any hen party. This elegant and luxurious car will give you an unforgettable experience and make you feel like a true star. A ride in the Lincoln limousine is the perfect way to start your hen party in grand style.",
     "features": [
       "Młodzi, czarujący kierowcy",
       "Profesjonalna sesja zdjęciowa",
@@ -499,6 +699,15 @@
       "Odbiór i zakończenie w dowolnym miejscu",
       "Możliwość wniesienia własnego alkoholu",
       "Możliwość podłączenia własnej muzyki -łączność bluetooth"
+    ],
+    "features_en": [
+      "Young, charming drivers",
+      "Professional photo session",
+      "Bottle of champagne",
+      "One-hour party ride",
+      "Pick-up and drop-off at any location",
+      "Option to bring your own alcohol",
+      "Connect your own music via Bluetooth"
     ],
     "images": [
       "/media/limo-1-cover.jpg",
@@ -510,18 +719,28 @@
   {
     "id": "quady",
     "name": "Quady",
+    "name_en": "Quad Biking",
     "slug": "quady",
     "subtitle": "(min. 4 osoby)",
+    "subtitle_en": "(min. 4 people)",
     "price": 299,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Quady to niesamowita atrakcja na wieczór panieński, która dostarczy Wam ogromną dawkę adrenaliny i ekscytujących wrażeń. Jazda quadami to doskonały sposób na aktywne spędzenie czasu w gronie przyjaciółek.",
+    "description_en": "Quad biking is a fantastic hen party activity that delivers a massive adrenaline rush and thrilling excitement. It's the perfect way to spend some active time with your friends out in the fresh air.",
     "features": [
       "Zapewniony transport w dwie strony",
       "45 min. jazdy",
       "Tor który zapewni ekscytującą rozrywkę",
       "Profesjonalny instruktor",
       "Kaski Off-Road"
+    ],
+    "features_en": [
+      "Return transport provided",
+      "45-minute ride",
+      "Exciting off-road track",
+      "Professional instructor",
+      "Off-road helmets included"
     ],
     "images": [
       "/media/quady-1-cover.jpg",
@@ -533,11 +752,13 @@
   {
     "id": "wizyta-na-strzelnicy",
     "name": "Wizyta na Strzelnicy",
+    "name_en": "Shooting Range Visit",
     "slug": "wizyta-na-strzelnicy",
     "price": 139,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Wizyta na strzelnicy to ekscytująca atrakcja na wieczór panieński, która dostarczy Wam niezapomnianych wrażeń i adrenaliny. To doskonały sposób na sprawdzenie swoich umiejętności strzeleckich w bezpiecznym i profesjonalnym otoczeniu.",
+    "description_en": "A shooting range visit is an exciting hen party activity that delivers unforgettable thrills and a real adrenaline hit. It's the perfect way to test your shooting skills in a safe and professional environment.",
     "features": [
       "5 rodzajów broni",
       "45 strzałów",
@@ -545,6 +766,14 @@
       "Tarcze pamiątkowe",
       "Zawody strzeleckie",
       "Wejściówki do klubów"
+    ],
+    "features_en": [
+      "5 types of firearms",
+      "45 shots included",
+      "All equipment provided",
+      "Souvenir targets",
+      "Shooting competition",
+      "Club entry passes"
     ],
     "images": [
       "/media/strzelnica-1-cover.jpg",
@@ -556,12 +785,15 @@
   {
     "id": "limuzyna-z-jet-door",
     "name": "Limuzyna z Jet door",
+    "name_en": "Limousine with Jet Door",
     "slug": "limuzyna-z-jet-door",
     "subtitle": "(max. 10 osób)",
+    "subtitle_en": "(max. 10 people)",
     "price": 750,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Limuzyna z Jet Door to wyjątkowa atrakcja na wieczór panieński, która zapewni Wam niezapomniane wrażenia i poczucie luksusu. Unikalne wejście typu Jet Door dodaje odrobiny ekstrawagancji i sprawia, że wysiadanie z limuzyny staje się prawdziwym pokazem.",
+    "description_en": "The Jet Door limousine is a standout hen party experience that combines luxury with a dramatic flair. The unique Jet Door entry adds a touch of extravagance and turns stepping out of the limousine into an unforgettable spectacle.",
     "features": [
       "Młody, sympatyczny kierowca",
       "Sesja fotograficzna",
@@ -570,6 +802,15 @@
       "Wejściówki do klubów",
       "Możliwość wniesienia własnego alkoholu",
       "Wejście typu Jet Door"
+    ],
+    "features_en": [
+      "Young, friendly driver",
+      "Photo session",
+      "Bottle of champagne",
+      "One-hour ride",
+      "Club entry passes",
+      "Option to bring your own alcohol",
+      "Jet Door entry"
     ],
     "images": [
       "/media/limo-4-cover.jpg",
@@ -580,11 +821,13 @@
   {
     "id": "laserowy-paintball",
     "name": "Laserowy Paintball",
+    "name_en": "Laser Tag",
     "slug": "laserowy-paintball",
     "price": 109,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Laserowy paintball to nowoczesna i ekscytująca atrakcja na wieczór panieński, która łączy w sobie elementy strategii, rywalizacji i niesamowitej zabawy. W odróżnieniu od tradycyjnego paintballu, laserowy wariant jest całkowicie bezbolesny i bezpieczny.",
+    "description_en": "Laser tag is a modern and exciting hen party activity that combines strategy, competition, and amazing fun. Unlike traditional paintball, the laser version is completely painless and safe for everyone.",
     "features": [
       "1h wojny laserowej",
       "Ceremonia medalowa",
@@ -592,6 +835,14 @@
       "Kombinezon",
       "Wejściówki do klubów",
       "Napoje alkoholowe i zwykłe"
+    ],
+    "features_en": [
+      "1 hour of laser battle",
+      "Medal ceremony",
+      "Laser gun equipment",
+      "Combat suit",
+      "Club entry passes",
+      "Alcoholic and soft drinks"
     ],
     "images": [
       "/media/laserowy-1-cover.jpg",
@@ -603,17 +854,26 @@
   {
     "id": "emocje-w-monster-trucku",
     "name": "Emocje w Monster Trucku",
+    "name_en": "Monster Truck Experience",
     "slug": "emocje-w-monster-trucku",
     "price": 299,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Emocje w Monster Trucku to niesamowita atrakcja na wieczór panieński, która dostarczy Wam ogromną dawkę adrenaliny i niezapomnianych wrażeń. Jazda potężnym Monster Truckiem to doświadczenie, które zapamięta każda uczestniczka.",
+    "description_en": "The Monster Truck Experience is an incredible hen party activity that delivers a massive adrenaline rush and unforgettable thrills. A ride in a powerful Monster Truck is something every participant will remember for years to come.",
     "features": [
       "15 min jazdy Monster Truckiem",
       "Instruktor i profesjonalne szkolenie",
       "Hardcorowy Tor jazdy",
       "Panie jadą z Młodą na pace",
       "Potężna dawka emocji !"
+    ],
+    "features_en": [
+      "15-minute Monster Truck ride",
+      "Instructor and professional briefing",
+      "Hardcore off-road track",
+      "Guests ride in the truck bed with the bride-to-be",
+      "Massive dose of excitement!"
     ],
     "images": [
       "/media/monster-1-1.jpg",
@@ -625,18 +885,28 @@
   {
     "id": "park-trampolin",
     "name": "Park Trampolin",
+    "name_en": "Trampoline Park",
     "slug": "park-trampolin",
     "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
     "price": 99,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Park trampolin to fantastyczna atrakcja na wieczór panieński, która zapewni Wam mnóstwo radości, śmiechu i aktywnej zabawy. To doskonały sposób na spędzenie czasu w gronie przyjaciółek, gdzie każda z Was będzie mogła poczuć się jak dziecko.",
+    "description_en": "A trampoline park is a fantastic hen party activity that will bring you loads of joy, laughter, and high-energy fun. It's the perfect way to spend time with your friends where every single one of you gets to feel like a kid again.",
     "features": [
       "wejście na 70 minut",
       "prywatny instruktor Parkour",
       "kilkanaście stref atrakcji",
       "wysokiej jakości sprzęt",
       "koordynator"
+    ],
+    "features_en": [
+      "70-minute session",
+      "Private parkour instructor",
+      "Dozens of activity zones",
+      "High-quality equipment",
+      "Coordinator included"
     ],
     "images": [
       "/media/trampolina-1-cover.jpg",
@@ -648,17 +918,26 @@
   {
     "id": "nauka-tanca-na-rurze",
     "name": "Nauka tańca na rurze",
+    "name_en": "Pole Dancing Class",
     "slug": "nauka-tanca-na-rurze",
     "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
     "price": 99,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Treningi Pole Dance wymagają dużej wytrzymałości i samozaparcia. Nauka tańca na rurze to doskonała atrakcja na wieczór panieński, która łączy w sobie elementy fitness, tańca i świetnej zabawy. To niezapomniane doświadczenie, które pozwoli Wam odkryć nowe umiejętności i poczuć się pewnie.",
+    "description_en": "Pole dancing requires stamina and determination. A pole dancing class is an excellent hen party activity that combines fitness, dance, and great fun. It's an unforgettable experience that lets you discover new skills and build confidence.",
     "features": [
       "Profesjonalna instruktorka",
       "1h zajęć",
       "Koordynator",
       "Powitalny szampan"
+    ],
+    "features_en": [
+      "Professional female instructor",
+      "1-hour class",
+      "Coordinator included",
+      "Welcome champagne"
     ],
     "images": [
       "/media/poledance-1-1.jpg",
@@ -668,18 +947,28 @@
   {
     "id": "szalenstwo-na-gokartach",
     "name": "Szaleństwo na Gokartach",
+    "name_en": "Go-Kart Racing",
     "slug": "szalenstwo-na-gokartach",
     "subtitle": "(min. 4 osoby)",
+    "subtitle_en": "(min. 4 people)",
     "price": 199,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Szaleństwo na gokartach to ekscytująca atrakcja na wieczór panieński, która dostarczy Wam niesamowitą dawkę adrenaliny i emocji. Wyścigi gokartowe to doskonały sposób na rywalizację w gronie przyjaciółek.",
+    "description_en": "Go-kart racing is a thrilling hen party activity that delivers an incredible adrenaline rush and non-stop excitement. Racing against your closest friends is the perfect way to bring out everyone's competitive side.",
     "features": [
       "16 minut jazdy dla każdej uczestniczki",
       "Ceremonia medalowa",
       "Zapewniony transport w obie strony",
       "Koordynator",
       "Szampan na świętowanie zwycięskiego wyścigu !"
+    ],
+    "features_en": [
+      "16 minutes of driving per person",
+      "Medal ceremony",
+      "Return transport provided",
+      "Coordinator included",
+      "Champagne to celebrate the winning race!"
     ],
     "images": [
       "/media/gokarty-1-3.jpg",
@@ -690,12 +979,15 @@
   {
     "id": "rejs-statkiem-po-wisle",
     "name": "Rejs statkiem po Wiśle",
+    "name_en": "River Cruise on the Vistula",
     "slug": "rejs-statkiem-po-wisle",
     "subtitle": "(min. 9 osób)",
+    "subtitle_en": "(min. 9 people)",
     "price": 199,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Planujesz wieczór panieński, który na długo zostanie w pamięci przyszłej Panny Młodej i jej przyjaciółek? Rejs statkiem po Wiśle w Warszawie to idealna propozycja! To niezapomniane doświadczenie, które łączy w sobie piękne widoki, imprezową atmosferę i wyjątkowe chwile spędzone z najbliższymi.",
+    "description_en": "Planning a hen party that the bride-to-be and her friends will remember for years to come? A river cruise on the Vistula in Warsaw is the perfect choice! It's an unforgettable experience that combines beautiful views, a party atmosphere, and special moments with the people who matter most.",
     "features": [
       "brak korkowego",
       "imprezowe nagłośnienie na Bluetooth",
@@ -707,6 +999,17 @@
       "Załoga z doświadczonym kapitanem",
       "koordynator"
     ],
+    "features_en": [
+      "No corkage fee",
+      "Party Bluetooth sound system",
+      "Wireless microphone",
+      "Nautical-themed décor",
+      "Two decks",
+      "Private cabin",
+      "Comfortable toilet facilities",
+      "Crew with an experienced captain",
+      "Coordinator included"
+    ],
     "images": [
       "/media/rejs-1-cover.jpg",
       "/media/rejs-1-1.jpg",
@@ -717,12 +1020,15 @@
   {
     "id": "ognisko",
     "name": "Ognisko",
+    "name_en": "Bonfire Evening",
     "slug": "ognisko",
     "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
     "price": 69,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Marzycie o wieczorze panieńskim w wyjątkowej atmosferze? Ognisko to doskonała atrakcja, która pozwoli Wam spędzić niezapomniany czas w plenerze, w otoczeniu natury i ciepła płomieni. To idealny sposób na relaks i świetną zabawę w gronie przyjaciółek.",
+    "description_en": "Dreaming of a hen party with a truly special atmosphere? A bonfire evening is a wonderful activity that lets you spend an unforgettable time outdoors, surrounded by nature and the warmth of the flames. It's the perfect way to relax and have a great time with your closest friends.",
     "features": [
       "klimatyczna atmosfera",
       "nagłośnienie z możliwością podłączenia",
@@ -730,6 +1036,14 @@
       "soft drinks",
       "przekąski",
       "koordynator"
+    ],
+    "features_en": [
+      "Atmospheric setting",
+      "Sound system with connectivity",
+      "Provisions included",
+      "Soft drinks",
+      "Snacks",
+      "Coordinator included"
     ],
     "images": [
       "/media/ognisko-1-cover.jpg",
@@ -740,12 +1054,15 @@
   {
     "id": "przejazd-limuzyna-chrysler",
     "name": "Przejazd limuzyną Chrysler",
+    "name_en": "Chrysler Limousine Ride",
     "slug": "przejazd-limuzyna-chrysler",
     "subtitle": "(max. 10 osób)",
+    "subtitle_en": "(max. 10 people)",
     "price": 699,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Przejazd limuzyną Chrysler to doskonała atrakcja na wieczór panieński, która zapewni Wam poczucie luksusu i niezapomniane wrażenia. Ten elegancki samochód jest idealnym wyborem dla grupy przyjaciółek, które chcą rozpocząć wieczór w wielkim stylu.",
+    "description_en": "A Chrysler limousine ride is a fantastic hen party experience that gives you that feeling of pure luxury and unforgettable glamour. This elegant car is the ideal choice for a group of friends who want to start their evening in true style.",
     "features": [
       "Młodzi, czarujący kierowcy",
       "Profesjonalna sesja zdjęciowa",
@@ -754,6 +1071,15 @@
       "Odbiór i zakończenie w dowolnym miejscu",
       "Możliwość wniesienia własnego alkoholu",
       "Możliwość podłączenia własnej muzyki - łączność bluetooth"
+    ],
+    "features_en": [
+      "Young, charming drivers",
+      "Professional photo session",
+      "Bottle of champagne",
+      "One-hour party ride",
+      "Pick-up and drop-off at any location",
+      "Option to bring your own alcohol",
+      "Connect your own music via Bluetooth"
     ],
     "images": [
       "/media/limo-2-cover.jpg",
@@ -767,14 +1093,18 @@
   {
     "id": "transfer-busem",
     "name": "Transfer Busem na Atrakcję",
+    "name_en": "Minibus Transfer to Activity",
     "slug": "transfer-busem",
     "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
     "price": 69,
     "priceType": "person",
     "category": "atrakcje",
     "description": "Nie macie jak dojechać na atrakcję ? Potrzebujecie szybkiego transferu do hotelu, do klubu albo z lotniska ? Transfer Busem będzie optymalnym rozwiązaniem.",
+    "description_en": "Need a ride to your activity? Looking for a quick transfer to your hotel, the club, or from the airport? A minibus transfer is the ideal solution.",
     "description2": "Jeżeli jest Was więcej niż 8 osób również się nie martwcie możemy zorganizować dowolną ilość busów.",
     "features": [],
+    "features_en": [],
     "images": [
       "/media/Transfer busem na atrakcje.png",
       "/media/van1.jpg",
@@ -786,15 +1116,22 @@
   {
     "id": "czerwony-dywan",
     "name": "Czerwony dywan",
+    "name_en": "Red Carpet Experience",
     "slug": "czerwony-dywan",
     "price": 99,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Specjalnie dla Was rozkładamy czerwony dywan z błyszczącymi kordonami przy okazji robienia sesji zdjęciowej. Poczujecie się jak gwiazdy Hollywood podczas wysiadania z limuzyny!",
+    "description_en": "We roll out the red carpet with shiny velvet ropes just for you — perfect for a photo session as you step out of the limousine. You'll feel just like Hollywood stars!",
     "features": [
       "czerwony dywan",
       "6 srebrnych kordonów odgradzających",
       "zdjęcia podczas wychodzenia z limuzyny"
+    ],
+    "features_en": [
+      "Red carpet",
+      "6 silver velvet rope stanchions",
+      "Photos taken as you exit the limousine"
     ],
     "images": [
       "/media/dywan z limuzyna-1.jpg",
@@ -805,14 +1142,20 @@
   {
     "id": "rozowe-kapelusze",
     "name": "Różowe kapelusze",
+    "name_en": "Pink Hats Photo Session",
     "slug": "rozowe-kapelusze",
     "price": 69,
     "priceType": "pcs",
     "category": "atrakcje",
     "description": "Zapraszamy wszystkie Panie do niezwykłej sesji zdjęciowej, której wyjątkowym dodatkiem będą różowe kapelusze!",
+    "description_en": "We invite all the ladies to a fabulous photo session featuring iconic pink hats as the star accessory!",
     "features": [
       "Różowe kapelusze dla każdej z Pań na czas sesji",
       "Sesja zdjęciowa z kapeluszami przy limuzynie"
+    ],
+    "features_en": [
+      "Pink hat for every guest during the session",
+      "Photo session with hats beside the limousine"
     ],
     "images": [
       "/media/rozowe kapelusze-1.jpg"

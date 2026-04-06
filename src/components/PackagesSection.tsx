@@ -13,13 +13,17 @@ import { useLanguage } from "@/lib/i18n";
 interface Product {
   id: string;
   name: string;
+  name_en?: string;
   slug: string;
   subtitle?: string;
+  subtitle_en?: string;
   price: number;
   priceType: "person" | "pcs";
   category: string;
   description?: string;
+  description_en?: string;
   features: string[];
+  features_en?: string[];
   images: string[];
 }
 
@@ -92,8 +96,11 @@ function formatName(name: string) {
 function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const inCart = isInCart(pkg.id);
+  const name = lang === "en" && pkg.name_en ? pkg.name_en : pkg.name;
+  const subtitle = lang === "en" && pkg.subtitle_en ? pkg.subtitle_en : pkg.subtitle;
+  const description = lang === "en" && pkg.description_en ? pkg.description_en : pkg.description;
 
   return (
     <a
@@ -136,15 +143,15 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
         {/* Content */}
         <div className="p-5 flex flex-col flex-1 relative z-[1]">
           <h3 className="font-[family-name:var(--font-display)] text-xl sm:text-lg font-semibold leading-snug mb-1 uppercase group-hover:text-pink-300 transition-colors duration-300">
-            {formatName(pkg.name)}
+            {formatName(name)}
           </h3>
-          {pkg.subtitle && (
-            <p className="text-xs text-white/35 mb-4">{pkg.subtitle}</p>
+          {subtitle && (
+            <p className="text-xs text-white/35 mb-4">{subtitle}</p>
           )}
 
-          {pkg.description && (
+          {description && (
             <p className="hidden sm:block text-xs text-white/40 leading-relaxed mb-4 line-clamp-2 group-hover:text-white/55 transition-colors duration-300">
-              {pkg.description}
+              {description}
             </p>
           )}
 

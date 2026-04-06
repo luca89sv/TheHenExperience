@@ -12,12 +12,15 @@ import QuickContactForm from "@/components/QuickContactForm";
 interface Product {
   id: string;
   name: string;
+  name_en?: string;
   slug: string;
   subtitle?: string;
+  subtitle_en?: string;
   price: number;
   priceType: "person" | "pcs";
   category: string;
   description?: string;
+  description_en?: string;
   features: string[];
   images: string[];
 }
@@ -74,8 +77,10 @@ function getCategories(id: string): string[] {
 function ActivityCard({ item, index }: { item: Product; index: number }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const inCart = isInCart(item.id);
+  const name = lang === "en" && item.name_en ? item.name_en : item.name;
+  const subtitle = lang === "en" && item.subtitle_en ? item.subtitle_en : item.subtitle;
 
   return (
     <a
@@ -108,9 +113,9 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
         />
         <div className="p-4 flex flex-col flex-1 relative z-[1]">
           <h3 className="font-[family-name:var(--font-display)] text-base font-semibold leading-snug mb-1 group-hover:text-pink-300 transition-colors duration-300">
-            {item.name}
+            {name}
           </h3>
-          {item.subtitle && <p className="text-xs text-white/35 mb-3">{item.subtitle}</p>}
+          {subtitle && <p className="text-xs text-white/35 mb-3">{subtitle}</p>}
           <div className="mt-auto flex gap-2">
             <span
               className="flex-1 flex items-center justify-center py-2 rounded-full text-xs font-semibold border transition-all duration-300 text-pink-400 border-pink-500 bg-transparent group-hover:bg-gradient-to-r group-hover:from-pink-700 group-hover:to-pink-500 group-hover:text-white group-hover:border-transparent"
