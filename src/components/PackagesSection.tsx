@@ -211,7 +211,7 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
 export default function PackagesSection() {
   const { t } = useLanguage();
   return (
-    <section id="pakiety" className="relative overflow-x-hidden pt-[var(--section-padding)] pb-12" style={{ position: "relative", zIndex: 5 }}>
+    <section id="pakiety" className="relative overflow-hidden pt-[var(--section-padding)] pb-12" style={{ position: "relative", zIndex: 5 }}>
       <div className="glow-orb absolute -top-40 -right-40" />
 
       <div className="max-w-[1200px] mx-auto px-4">
