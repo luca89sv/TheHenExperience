@@ -6,6 +6,7 @@ import Image from "next/image";
 import atrakcje from "@/data/atrakcje.json";
 import { useCart } from "@/lib/cart-context";
 import { useCartToast } from "@/components/CartToast";
+import { useLanguage } from "@/lib/i18n";
 
 interface Product {
   id: string;
@@ -61,7 +62,7 @@ const categoryMap: Record<string, string[]> = {
   "rozowe-kapelusze":          ["Dzienne"],
 };
 
-const CATEGORIES = [
+const CATEGORY_KEYS = [
   "Wszystko", "Polecane", "Dzienne", "Nocne", "Limuzyny", "Party busy",
   "Sexy", "Posiłki", "Rozrywka", "Plenerowe", "Transfery",
 ];
@@ -73,6 +74,7 @@ function getCategories(id: string): string[] {
 function ActivityCard({ item, index }: { item: Product; index: number }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
+  const { t } = useLanguage();
   const inCart = isInCart(item.id);
 
   return (
@@ -99,7 +101,7 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
             <span className="text-base font-bold text-pink-400 transition-colors duration-300 group-hover:text-pink-300">{item.price}</span>
             <span className="text-xs text-white/60 ml-1">PLN</span>
             <span className="text-xs text-white/40 ml-0.5">
-              /{item.priceType === "person" ? "os." : "szt."}
+              /{item.priceType === "person" ? t('price.perPerson') : t('price.perPiece')}
             </span>
           </div>
         </div>
@@ -128,7 +130,7 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
                 group-hover:bg-gradient-to-r group-hover:from-pink-700 group-hover:to-pink-500 group-hover:text-white group-hover:border-transparent"
               style={{ fontFamily: "var(--font-body)", letterSpacing: "0.02em" }}
             >
-              Szczegóły
+              {t('activities.details')}
             </span>
             <button
               onClick={(e) => {
@@ -136,10 +138,10 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
                 e.stopPropagation();
                 if (inCart) {
                   removeItem(item.id);
-                  showToast("Usunięto z koszyka");
+                  showToast(t('cart.removedToast'));
                 } else {
                   addItem(item);
-                  showToast("Dodano do koszyka");
+                  showToast(t('cart.addedToast'));
                 }
               }}
               className={`group/cart relative flex items-center justify-center rounded-full border transition-colors duration-300 shrink-0 ${
@@ -157,8 +159,8 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
                   <svg className="w-3.5 h-3.5 hidden group-hover/cart:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span className="text-[10px] font-medium hidden sm:inline group-hover/cart:!hidden" style={{ fontFamily: "var(--font-body)" }}>W koszyku</span>
-                  <span className="text-[10px] font-medium hidden sm:!hidden sm:group-hover/cart:!inline" style={{ fontFamily: "var(--font-body)" }}>Usuń</span>
+                  <span className="text-[10px] font-medium hidden sm:inline group-hover/cart:!hidden" style={{ fontFamily: "var(--font-body)" }}>{t('packages.inCart')}</span>
+                  <span className="text-[10px] font-medium hidden sm:!hidden sm:group-hover/cart:!inline" style={{ fontFamily: "var(--font-body)" }}>{t('packages.remove')}</span>
                 </>
               ) : (
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
@@ -174,7 +176,22 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
 }
 
 export default function ActivitiesSection() {
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("Polecane");
+
+  const categoryLabels: Record<string, string> = {
+    "Wszystko": t('cat.all'),
+    "Polecane": t('cat.recommended'),
+    "Dzienne": t('cat.daytime'),
+    "Nocne": t('cat.nightlife'),
+    "Limuzyny": t('cat.limos'),
+    "Party busy": t('cat.partyBus'),
+    "Sexy": t('cat.sexy'),
+    "Posiłki": t('cat.meals'),
+    "Rozrywka": t('cat.fun'),
+    "Plenerowe": t('cat.outdoor'),
+    "Transfery": t('cat.transfers'),
+  };
 
   const filtered = activeCategory === "Wszystko"
     ? allActivities
@@ -187,18 +204,18 @@ export default function ActivitiesSection() {
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">
-          <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>POJEDYNCZE ATRAKCJE</span>
+          <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>{t('activities.tag')}</span>
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold">
-            Dopasuj sw&oacute;j <em>wiecz&oacute;r</em>
+            <span dangerouslySetInnerHTML={{ __html: t('activities.title') }} />
           </h2>
           <p className="mt-3 text-white/45 max-w-lg mx-auto">
-            Wybierz pojedyncze atrakcje i stw&oacute;rz w&#322;asny, niepowtarzalny plan wieczoru panie&#324;skiego.
+            {t('activities.subtitle')}
           </p>
         </div>
 
         {/* Category pills */}
         <div className="flex flex-wrap justify-center gap-2 mb-10">
-          {CATEGORIES.map((cat) => (
+          {CATEGORY_KEYS.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
@@ -209,7 +226,7 @@ export default function ActivitiesSection() {
               }`}
               style={{ fontFamily: "var(--font-body)" }}
             >
-              {cat}
+              {categoryLabels[cat]}
             </button>
           ))}
         </div>
@@ -225,7 +242,7 @@ export default function ActivitiesSection() {
         {filtered.length > 8 && (
           <div className="text-center mt-16">
             <a href="/atrakcje" className="btn-outline btn-lg group/btn">
-              Zobacz wszystkie atrakcje
+              {t('activities.seeAll')}
               <svg className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>

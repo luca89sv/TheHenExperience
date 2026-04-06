@@ -6,6 +6,7 @@ import Image from "next/image";
 import atrakcje from "@/data/atrakcje.json";
 import { useCart } from "@/lib/cart-context";
 import { useCartToast } from "@/components/CartToast";
+import { useLanguage } from "@/lib/i18n";
 import QuickContactForm from "@/components/QuickContactForm";
 
 interface Product {
@@ -33,12 +34,12 @@ const categoryMap: Record<string, string[]> = {
   "kregle":                    ["Rozrywka", "Dzienne"],
   "limuzyna-bmw":              ["Limuzyny"],
   "party-bus":                 ["Party busy", "Nocne", "Polecane"],
-  "kolacja-w-restauracji":     ["Posilki", "Nocne"],
+  "kolacja-w-restauracji":     ["Posiłki", "Nocne"],
   "billard":                   ["Rozrywka", "Dzienne"],
   "wieczor-karaoke":           ["Nocne", "Rozrywka"],
   "limuzyna-hummer":           ["Limuzyny", "Polecane"],
   "wieczor-w-kasynie":         ["Nocne", "Rozrywka"],
-  "piknik-nad-wisla":          ["Plenerowe", "Dzienne", "Posilki"],
+  "piknik-nad-wisla":          ["Plenerowe", "Dzienne", "Posiłki"],
   "limuzyna-chrysler-prestige":["Limuzyny"],
   "nauka-tanca":               ["Sexy", "Dzienne", "Rozrywka"],
   "kurs-makijazu":             ["Dzienne"],
@@ -54,7 +55,7 @@ const categoryMap: Record<string, string[]> = {
   "nauka-tanca-na-rurze":      ["Sexy", "Dzienne", "Polecane"],
   "szalenstwo-na-gokartach":   ["Rozrywka", "Dzienne"],
   "rejs-statkiem-po-wisle":    ["Plenerowe", "Dzienne"],
-  "ognisko":                   ["Plenerowe", "Dzienne", "Posilki"],
+  "ognisko":                   ["Plenerowe", "Dzienne", "Posiłki"],
   "przejazd-limuzyna-chrysler":["Limuzyny", "Transfery"],
   "transfer-busem":            ["Transfery"],
   "czerwony-dywan":            ["Dzienne"],
@@ -63,7 +64,7 @@ const categoryMap: Record<string, string[]> = {
 
 const CATEGORIES = [
   "Wszystko", "Polecane", "Dzienne", "Nocne", "Limuzyny", "Party busy",
-  "Sexy", "Posilki", "Rozrywka", "Plenerowe", "Transfery",
+  "Sexy", "Posiłki", "Rozrywka", "Plenerowe", "Transfery",
 ];
 
 function getCategories(id: string): string[] {
@@ -73,6 +74,7 @@ function getCategories(id: string): string[] {
 function ActivityCard({ item, index }: { item: Product; index: number }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
+  const { t } = useLanguage();
   const inCart = isInCart(item.id);
 
   return (
@@ -97,7 +99,7 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
             <span className="text-base font-bold text-pink-400 transition-colors duration-300 group-hover:text-pink-300">{item.price}</span>
             <span className="text-xs text-white/60 ml-1">PLN</span>
             <span className="text-xs text-white/40 ml-0.5">
-              /{item.priceType === "person" ? "os." : "szt."}
+              {item.priceType === "person" ? t('price.perPerson') : t('price.perPiece')}
             </span>
           </div>
         </div>
@@ -114,13 +116,13 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
               className="flex-1 flex items-center justify-center py-2 rounded-full text-xs font-semibold border transition-all duration-300 text-pink-400 border-pink-500 bg-transparent group-hover:bg-gradient-to-r group-hover:from-pink-700 group-hover:to-pink-500 group-hover:text-white group-hover:border-transparent"
               style={{ fontFamily: "var(--font-body)", letterSpacing: "0.02em" }}
             >
-              Szczegoly
+              {t('activities.details')}
             </span>
             <button
               onClick={(e) => {
                 e.preventDefault(); e.stopPropagation();
-                if (inCart) { removeItem(item.id); showToast("Usunięto z koszyka"); }
-                else { addItem(item); showToast("Dodano do koszyka"); }
+                if (inCart) { removeItem(item.id); showToast(t('cart.removedToast')); }
+                else { addItem(item); showToast(t('cart.addedToast')); }
               }}
               className={`group/cart relative flex items-center justify-center rounded-full border transition-colors duration-300 shrink-0 ${
                 inCart
@@ -137,8 +139,8 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
                   <svg className="w-3.5 h-3.5 hidden group-hover/cart:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span className="text-[10px] font-medium hidden sm:inline group-hover/cart:!hidden" style={{ fontFamily: "var(--font-body)" }}>W koszyku</span>
-                  <span className="text-[10px] font-medium hidden sm:!hidden sm:group-hover/cart:!inline" style={{ fontFamily: "var(--font-body)" }}>Usuń</span>
+                  <span className="text-[10px] font-medium hidden sm:inline group-hover/cart:!hidden" style={{ fontFamily: "var(--font-body)" }}>{t('packages.inCart')}</span>
+                  <span className="text-[10px] font-medium hidden sm:!hidden sm:group-hover/cart:!inline" style={{ fontFamily: "var(--font-body)" }}>{t('packages.remove')}</span>
                 </>
               ) : (
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
@@ -154,7 +156,22 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
 }
 
 export default function AtrakcjePage() {
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("Wszystko");
+
+  const categoryLabels: Record<string, string> = {
+    "Wszystko": t('cat.all'),
+    "Polecane": t('cat.recommended'),
+    "Dzienne": t('cat.daytime'),
+    "Nocne": t('cat.nightlife'),
+    "Limuzyny": t('cat.limos'),
+    "Party busy": t('cat.partyBus'),
+    "Sexy": t('cat.sexy'),
+    "Posiłki": t('cat.meals'),
+    "Rozrywka": t('cat.fun'),
+    "Plenerowe": t('cat.outdoor'),
+    "Transfery": t('cat.transfers'),
+  };
 
   const filtered = activeCategory === "Wszystko"
     ? allActivities
@@ -164,12 +181,12 @@ export default function AtrakcjePage() {
     <section className="relative overflow-hidden pt-32 pb-[var(--section-padding)]">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="text-center mb-10">
-          <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>WSZYSTKIE ATRAKCJE</span>
+          <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>{t('listing.allActivitiesTag')}</span>
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold">
-            Pojedyncze <em>atrakcje</em>
+            <span dangerouslySetInnerHTML={{ __html: t('listing.allActivitiesTitle') }} />
           </h2>
           <p className="mt-3 text-white/45 max-w-lg mx-auto">
-            Wybierz pojedyncze atrakcje i stw&oacute;rz w&#322;asny, niepowtarzalny plan wieczoru panie&#324;skiego.
+            {t('listing.allActivitiesSubtitle')}
           </p>
         </div>
 
@@ -185,7 +202,7 @@ export default function AtrakcjePage() {
               }`}
               style={{ fontFamily: "var(--font-body)" }}
             >
-              {cat}
+              {categoryLabels[cat] || cat}
             </button>
           ))}
         </div>
@@ -197,7 +214,7 @@ export default function AtrakcjePage() {
         </div>
 
         {filtered.length === 0 && (
-          <p className="text-center text-white/30 py-20">Brak atrakcji w tej kategorii.</p>
+          <p className="text-center text-white/30 py-20">{t('listing.noResults')}</p>
         )}
 
         <QuickContactForm />

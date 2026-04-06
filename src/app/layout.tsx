@@ -46,7 +46,7 @@ export default function RootLayout({
     <html
       lang="pl"
       className={`${cormorant.variable} ${dmSans.variable} dark h-full antialiased`}
-    >
+>
       <body className="min-h-full flex flex-col bg-black text-white overflow-x-hidden">
         <LanguageProvider>
           <CartProvider>

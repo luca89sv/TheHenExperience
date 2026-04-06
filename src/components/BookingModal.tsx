@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useLanguage } from "@/lib/i18n";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -11,6 +12,7 @@ interface BookingModalProps {
 }
 
 export default function BookingModal({ isOpen, onClose, productName, price, priceType }: BookingModalProps) {
+  const { t } = useLanguage();
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -108,17 +110,17 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                 </svg>
               </div>
               <h3 className="font-[family-name:var(--font-display)] text-2xl font-semibold mb-2">
-                Rezerwacja wys&lstrok;ana!
+                {t('booking.successTitle')}
               </h3>
               <p className="text-white/45 text-sm mb-6">
-                Skontaktujemy si&#281; z Tob&#261; wkr&oacute;tce, aby potwierdzi&#263; szczeg&oacute;&#322;y.
+                {t('booking.successDesc')}
               </p>
               <button
                 onClick={onClose}
                 className="px-6 py-2.5 rounded-full text-sm font-semibold border border-pink-500 text-pink-400 hover:bg-pink-500/10 transition-colors"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                Zamknij
+                {t('booking.close')}
               </button>
             </div>
           ) : (
@@ -129,7 +131,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                   className="inline-block text-[0.65rem] font-bold tracking-[0.25em] uppercase mb-2"
                   style={{ color: "rgba(255,255,255,0.35)" }}
                 >
-                  REZERWACJA
+                  {t('booking.tag')}
                 </span>
                 <h3 className="font-[family-name:var(--font-display)] text-xl sm:text-2xl font-semibold leading-tight">
                   {productName}
@@ -138,7 +140,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                   <span className="text-2xl font-bold text-pink-400">{price}</span>
                   <span className="text-sm text-white/50">PLN</span>
                   <span className="text-xs text-white/35">
-                    /{priceType === "person" ? "os." : "szt."}
+                    /{priceType === "person" ? t('price.perPerson') : t('price.perPiece')}
                   </span>
                 </div>
               </div>
@@ -151,7 +153,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                      Imi&#281; i nazwisko *
+                      {t('booking.labelName')}
                     </label>
                     <input
                       type="text"
@@ -164,7 +166,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                   </div>
                   <div>
                     <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                      Telefon *
+                      {t('booking.labelPhone')}
                     </label>
                     <input
                       type="tel"
@@ -179,7 +181,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
 
                 <div>
                   <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                    Email *
+                    {t('booking.labelEmail')}
                   </label>
                   <input
                     type="email"
@@ -194,7 +196,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                      Data imprezy *
+                      {t('booking.labelDate')}
                     </label>
                     <input
                       type="date"
@@ -207,7 +209,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                   </div>
                   <div>
                     <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                      Liczba os&oacute;b
+                      {t('booking.labelGuests')}
                     </label>
                     <input
                       type="number"
@@ -215,7 +217,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                       max="99"
                       value={form.guests}
                       onChange={(e) => setForm({ ...form, guests: e.target.value })}
-                      placeholder="np. 8"
+                      placeholder={t('booking.placeholderGuests')}
                       className="w-full bg-white/5 border border-white/8 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-pink-500/40 transition-colors"
                       style={{ fontFamily: "var(--font-body)" }}
                     />
@@ -224,7 +226,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
 
                 <div>
                   <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                    Wiadomo&#347;&#263;
+                    {t('booking.labelMessage')}
                   </label>
                   <textarea
                     rows={3}
@@ -232,7 +234,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className="w-full bg-white/5 border border-white/8 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-pink-500/40 transition-colors resize-none"
                     style={{ fontFamily: "var(--font-body)" }}
-                    placeholder="Dodatkowe informacje, pytania..."
+                    placeholder={t('booking.placeholderMessage')}
                   />
                 </div>
 
@@ -247,7 +249,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                     boxShadow: "0 4px 20px rgba(236, 72, 153, 0.25)",
                   }}
                 >
-                  {submitting ? "Wysy\u0142anie..." : "Wy\u015Blij rezerwacj\u0119"}
+                  {submitting ? t('booking.submitting') : t('booking.submit')}
                 </button>
               </form>
             </>

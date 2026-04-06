@@ -1,24 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { useLanguage } from "@/lib/i18n";
 // Using <a> tags for navigation to avoid GSAP/canvas reinit issues
 
-const PHASES = [
-  { id: "phase-1", start: 0.05, end: 0.22, label: "KOMPLEKSOWA ORGANIZACJA", title: "Niezapomniany wieczór od A do Z", desc: "Zakwaterowanie, dekoracje, transport, niespodzianki — profesjonalna obsługa każdego szczegółu." },
-  { id: "phase-2", start: 0.26, end: 0.44, label: "TWÓJ WIECZÓR", title: "Spraw jej tę noc", desc: "Wieczór panieński, o którym będą mówić latami. Każda chwila zaprojektowana, by zachwycać." },
-  { id: "phase-3", start: 0.48, end: 0.66, label: "LUKSUSOWY TRANSPORT", title: "Ekskluzywny transport limuzyną", desc: "Luksusowe limuzyny z profesjonalnym szoferem i schłodzonym szampanem na pokładzie." },
-  { id: "phase-4", start: 0.70, end: 0.90, label: "NOCNE ŻYCIE", title: "Najlepsze kluby w Warszawie", desc: "Darmowe wejścia VIP do topowych klubów. Rezerwacje stolików i obsługa na najwyższym poziomie." },
-];
-
-/* Exact positions from old-static/css/style.css — 4 breakpoints */
-const PHASE_POSITIONS: Record<string, React.CSSProperties>[] = [
-  { desktop: { left: "6%", top: "25%" }, laptop: { left: "4%", top: "20%" }, tablet: { left: "3%", top: "38%" }, mobile: { left: "3%", top: "40%" } },
-  { desktop: { right: "6%", top: "35%" }, laptop: { right: "4%", top: "30%" }, tablet: { right: "3%", top: "48%" }, mobile: { right: "3%", top: "50%" } },
-  { desktop: { left: "6%", bottom: "22%" }, laptop: { left: "4%", bottom: "20%" }, tablet: { left: "3%", bottom: "30%" }, mobile: { left: "3%", bottom: "32%" } },
-  { desktop: { right: "6%", bottom: "18%" }, laptop: { right: "4%", bottom: "15%" }, tablet: { right: "3%", bottom: "25%" }, mobile: { right: "3%", bottom: "26%" } },
-];
-
 export default function HeroSection() {
+  const { t } = useLanguage();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const framesRef = useRef<(HTMLImageElement | null)[]>([]);
@@ -29,8 +16,20 @@ export default function HeroSection() {
   const rafRef = useRef<number>(0);
   const progressBarRef = useRef<HTMLDivElement>(null);
 
-  const loadBarRef = useRef<HTMLDivElement>(null);
-  const loadBarWrapRef = useRef<HTMLDivElement>(null);
+  const PHASES = [
+    { id: "phase-1", start: 0.05, end: 0.22, label: t('hero.p1.label'), title: t('hero.p1.title'), desc: t('hero.p1.desc') },
+    { id: "phase-2", start: 0.26, end: 0.44, label: t('hero.p2.label'), title: t('hero.p2.title'), desc: t('hero.p2.desc') },
+    { id: "phase-3", start: 0.48, end: 0.66, label: t('hero.p3.label'), title: t('hero.p3.title'), desc: t('hero.p3.desc') },
+    { id: "phase-4", start: 0.70, end: 0.90, label: t('hero.p4.label'), title: t('hero.p4.title'), desc: t('hero.p4.desc') },
+  ];
+
+  /* Exact positions from old-static/css/style.css — 4 breakpoints */
+  const PHASE_POSITIONS: Record<string, React.CSSProperties>[] = [
+    { desktop: { left: "6%", top: "25%" }, laptop: { left: "4%", top: "20%" }, tablet: { left: "3%", top: "38%" }, mobile: { left: "3%", top: "40%" } },
+    { desktop: { right: "6%", top: "35%" }, laptop: { right: "4%", top: "30%" }, tablet: { right: "3%", top: "48%" }, mobile: { right: "3%", top: "50%" } },
+    { desktop: { left: "6%", bottom: "22%" }, laptop: { left: "4%", bottom: "20%" }, tablet: { left: "3%", bottom: "30%" }, mobile: { left: "3%", bottom: "32%" } },
+    { desktop: { right: "6%", bottom: "18%" }, laptop: { right: "4%", bottom: "15%" }, tablet: { right: "3%", bottom: "25%" }, mobile: { right: "3%", bottom: "26%" } },
+  ];
 
   const [activePhases, setActivePhases] = useState<boolean[]>([false, false, false, false]);
   const [heroCTAVisible, setHeroCTAVisible] = useState(true);
@@ -109,30 +108,13 @@ export default function HeroSection() {
       });
     };
 
-    let loadedCount = 0;
-
     const preloadAllFrames = async () => {
-
       for (let i = 0; i < config.totalFrames; i += config.batchSize) {
         const batch: Promise<HTMLImageElement | null>[] = [];
         for (let j = i; j < Math.min(i + config.batchSize, config.totalFrames); j++) {
-          batch.push(loadFrame(j).then((img) => {
-            loadedCount++;
-            if (loadBarRef.current) {
-              loadBarRef.current.style.width = `${(loadedCount / config.totalFrames) * 100}%`;
-            }
-            return img;
-          }));
+          batch.push(loadFrame(j));
         }
         await Promise.all(batch);
-      }
-
-      // Hide the bar
-      if (loadBarWrapRef.current) {
-        loadBarWrapRef.current.style.opacity = "0";
-        setTimeout(() => {
-          if (loadBarWrapRef.current) loadBarWrapRef.current.style.display = "none";
-        }, 400);
       }
     };
 
@@ -238,9 +220,10 @@ export default function HeroSection() {
       window.removeEventListener("resize", onResize);
       cancelAnimationFrame(rafRef.current);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getConfig, setupCanvas]);
 
-  const scrollHeight = breakpoint === "mobile" ? "100vh" : breakpoint === "tablet" ? "350vh" : "400vh"; // laptop & desktop both 400vh
+  const scrollHeight = breakpoint === "mobile" ? "300vh" : breakpoint === "tablet" ? "350vh" : "400vh";
 
   return (
     <section
@@ -253,7 +236,7 @@ export default function HeroSection() {
         className="sticky top-0 overflow-hidden flex items-center justify-center bg-black"
         style={{ height: "100dvh" }}
       >
-        {/* Canvas — exact mask from original CSS */}
+        {/* Canvas */}
         <canvas
           ref={canvasRef}
           className="absolute top-1/2 left-1/2 will-change-transform"
@@ -265,37 +248,7 @@ export default function HeroSection() {
           }}
         />
 
-        {/* Frame loading indicator */}
-        <div
-          ref={loadBarWrapRef}
-          className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center"
-          style={{ transition: "opacity 0.5s ease" }}
-        >
-          <div className="flex flex-col items-center gap-5">
-            <div className="font-[family-name:var(--font-display)] text-xl tracking-wide" style={{ fontWeight: 600 }}>
-              The{" "}
-              <span style={{ color: "#f472b6", fontWeight: 700, textShadow: "0 0 20px rgba(236,72,153,0.3)" }}>
-                Hen
-              </span>{" "}
-              Experience
-            </div>
-            {/* Thin bar */}
-            <div className="w-48 h-[2px] bg-white/[0.06] rounded-full overflow-hidden">
-              <div
-                ref={loadBarRef}
-                className="h-full rounded-full"
-                style={{
-                  width: "0%",
-                  background: "linear-gradient(90deg, #db2777, #f472b6)",
-                  boxShadow: "0 0 12px rgba(236,72,153,0.6)",
-                  transition: "width 0.1s linear",
-                }}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll progress bar — top */}
+        {/* Scroll progress bar */}
         <div
           ref={progressBarRef}
           className="absolute top-0 left-0 h-[2px] z-10"
@@ -306,7 +259,7 @@ export default function HeroSection() {
           }}
         />
 
-        {/* Phase overlay boxes — positioned exactly like original */}
+        {/* Phase overlay boxes */}
         {PHASES.map((phase, i) => {
           const pos = PHASE_POSITIONS[i][breakpoint] as React.CSSProperties;
           const isDesktop = breakpoint === "desktop" || breakpoint === "laptop";
@@ -399,7 +352,7 @@ export default function HeroSection() {
               <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
               <line x1="12" y1="22.08" x2="12" y2="12" />
             </svg>
-            Nasze pakiety
+            {t('hero.cta.packages')}
           </a>
           <a
             href="/#kontakt"
@@ -415,11 +368,11 @@ export default function HeroSection() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width={breakpoint === "mobile" ? 14 : breakpoint === "tablet" ? 15 : 18} height={breakpoint === "mobile" ? 14 : breakpoint === "tablet" ? 15 : 18}>
               <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
             </svg>
-            Napisz do nas
+            {t('hero.cta.contact')}
           </a>
         </div>
 
-        {/* Scroll hint — exact from original */}
+        {/* Scroll hint */}
         <div
           className={`absolute left-1/2 -translate-x-1/2 flex flex-col items-center z-[5] transition-opacity duration-600 ${
             scrollHintVisible ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -447,7 +400,7 @@ export default function HeroSection() {
               letterSpacing: "0.18em",
             }}
           >
-            Przewiń w dół
+            {t('hero.scroll')}
           </span>
         </div>
       </div>

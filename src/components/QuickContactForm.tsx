@@ -2,8 +2,10 @@
 
 import { useState, useCallback } from "react";
 import { useCartToast } from "@/components/CartToast";
+import { useLanguage } from "@/lib/i18n";
 
 export default function QuickContactForm() {
+  const { t } = useLanguage();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
   const { showToast } = useCartToast();
@@ -19,13 +21,13 @@ export default function QuickContactForm() {
       });
       const data = await res.json();
       if (data.success) {
-        showToast("Wiadomość wysłana!");
+        showToast(t('contact.successToast'));
         setForm({ name: "", email: "", phone: "", message: "" });
       } else {
-        showToast("Błąd wysyłania", "error");
+        showToast(t('contact.errorToast'), "error");
       }
     } catch {
-      showToast("Błąd połączenia", "error");
+      showToast(t('contact.connectionError'), "error");
     } finally {
       setSubmitting(false);
     }
@@ -71,13 +73,13 @@ export default function QuickContactForm() {
               className="inline-block text-[0.65rem] font-bold tracking-[0.25em] uppercase mb-3"
               style={{ color: "rgba(255,255,255,0.3)" }}
             >
-              KONTAKT
+              {t('contact.tag')}
             </span>
             <h2 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl lg:text-4xl font-semibold">
-              Masz pytania? <em>Pisz</em>
+              <span dangerouslySetInnerHTML={{ __html: t('contact.title') }} />
             </h2>
             <p className="mt-2 text-white/35 text-sm max-w-md mx-auto" style={{ fontFamily: "var(--font-body)" }}>
-              Odpowiadamy szybko. Napisz do nas, a pomo&#380;emy zaplanowa&#263; Tw&oacute;j idealny wiecz&oacute;r.
+              {t('contact.subtitle')}
             </p>
           </div>
 
@@ -89,7 +91,7 @@ export default function QuickContactForm() {
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder="Imię"
+                placeholder={t('contact.placeholderName')}
                 className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_15px_rgba(236,72,153,0.08)]"
                 style={{ fontFamily: "var(--font-body)" }}
               />
@@ -98,7 +100,7 @@ export default function QuickContactForm() {
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder="Email"
+                placeholder={t('contact.placeholderEmail')}
                 className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_15px_rgba(236,72,153,0.08)]"
                 style={{ fontFamily: "var(--font-body)" }}
               />
@@ -107,7 +109,7 @@ export default function QuickContactForm() {
               type="tel"
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
-              placeholder="Telefon"
+              placeholder={t('contact.placeholderPhone')}
               className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_15px_rgba(236,72,153,0.08)] mb-3"
               style={{ fontFamily: "var(--font-body)" }}
             />
@@ -116,7 +118,7 @@ export default function QuickContactForm() {
               rows={3}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
-              placeholder="Twoje pytanie..."
+              placeholder={t('contact.placeholderMessage')}
               className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_15px_rgba(236,72,153,0.08)] resize-none mb-4"
               style={{ fontFamily: "var(--font-body)" }}
             />
@@ -131,7 +133,7 @@ export default function QuickContactForm() {
                   letterSpacing: "0.03em",
                 }}
               >
-                {submitting ? "Wysyłanie..." : "Wyślij wiadomość"}
+                {submitting ? t('contact.submitting') : t('contact.submit')}
               </button>
             </div>
           </form>

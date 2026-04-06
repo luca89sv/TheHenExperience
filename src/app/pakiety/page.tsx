@@ -6,6 +6,7 @@ import pakiety from "@/data/pakiety.json";
 import pakietyNaWieczor from "@/data/pakiety-na-wieczor.json";
 import { useCart } from "@/lib/cart-context";
 import { useCartToast } from "@/components/CartToast";
+import { useLanguage } from "@/lib/i18n";
 import QuickContactForm from "@/components/QuickContactForm";
 
 interface Product {
@@ -41,6 +42,7 @@ function formatName(name: string) {
 function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
   const { addItem, removeItem, isInCart } = useCart();
   const { showToast } = useCartToast();
+  const { t } = useLanguage();
   const inCart = isInCart(pkg.id);
 
   return (
@@ -68,7 +70,7 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
             <span className="text-xl font-bold text-pink-400 transition-colors duration-300 group-hover:text-pink-300">{pkg.price}</span>
             <span className="text-sm text-white/60 ml-1">PLN</span>
             <span className="text-xs text-white/40 ml-0.5">
-              /{pkg.priceType === "person" ? "os." : "szt."}
+              {pkg.priceType === "person" ? t('price.perPerson') : t('price.perPiece')}
             </span>
           </div>
         </div>
@@ -87,13 +89,13 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
               className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-full text-sm font-semibold border transition-all duration-300 text-pink-400 border-pink-500 bg-transparent group-hover:bg-gradient-to-r group-hover:from-pink-700 group-hover:to-pink-500 group-hover:text-white group-hover:border-transparent"
               style={{ fontFamily: "var(--font-body)", letterSpacing: "0.02em" }}
             >
-              Sprawdz szczegoly
+              {t('packages.details')}
             </span>
             <button
               onClick={(e) => {
                 e.preventDefault(); e.stopPropagation();
-                if (inCart) { removeItem(pkg.id); showToast("Usunięto z koszyka"); }
-                else { addItem(pkg); showToast("Dodano do koszyka"); }
+                if (inCart) { removeItem(pkg.id); showToast(t('cart.removedToast')); }
+                else { addItem(pkg); showToast(t('cart.addedToast')); }
               }}
               className={`group/cart relative flex items-center justify-center rounded-full border transition-colors duration-300 shrink-0 ${
                 inCart
@@ -110,8 +112,8 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
                   <svg className="w-4 h-4 hidden group-hover/cart:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span className="text-[11px] font-medium group-hover/cart:hidden" style={{ fontFamily: "var(--font-body)" }}>W koszyku</span>
-                  <span className="text-[11px] font-medium hidden group-hover/cart:inline" style={{ fontFamily: "var(--font-body)" }}>Usuń</span>
+                  <span className="text-[11px] font-medium group-hover/cart:hidden" style={{ fontFamily: "var(--font-body)" }}>{t('packages.inCart')}</span>
+                  <span className="text-[11px] font-medium hidden group-hover/cart:inline" style={{ fontFamily: "var(--font-body)" }}>{t('packages.remove')}</span>
                 </>
               ) : (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
@@ -127,16 +129,18 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
 }
 
 export default function PakietyPage() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative overflow-hidden pt-32 pb-[var(--section-padding)]">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>WSZYSTKIE PAKIETY</span>
+          <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>{t('listing.allPackagesTag')}</span>
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold">
-            Gotowe <em>pakiety</em>
+            <span dangerouslySetInnerHTML={{ __html: t('listing.allPackagesTitle') }} />
           </h2>
           <p className="mt-3 text-white/45 max-w-lg mx-auto">
-            Gotowe pakiety na niezapomniany wiecz&oacute;r panie&#324;ski. Ka&#380;dy szczeg&oacute;&#322; dopracowany do perfekcji.
+            {t('listing.allPackagesSubtitle')}
           </p>
         </div>
 

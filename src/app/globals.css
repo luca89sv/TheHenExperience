@@ -457,6 +457,47 @@
   100% { transform: scale(1.3); opacity: 0; }
 }
 
+/* ── Featured Hero Card — rotating gradient border ── */
+.featured-hero-border {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.featured-hero-border:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(236, 72, 153, 0.2),
+              0 0 60px rgba(236, 72, 153, 0.08);
+}
+
+/* Spinning ray — wider and brighter than regular cards */
+.featured-hero-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 70%,
+    rgba(236, 72, 153, 0.5) 78%,
+    rgba(244, 114, 182, 0.8) 84%,
+    rgba(168, 85, 247, 0.6) 88%,
+    rgba(244, 114, 182, 0.8) 92%,
+    rgba(236, 72, 153, 0.5) 96%,
+    transparent 100%
+  );
+  animation: border-rotate 4s linear infinite;
+}
+
+/* Solid gradient overlay on hover */
+.featured-hero-hover {
+  background: linear-gradient(135deg, #ec4899, #a855f7, #ec4899);
+  transition: opacity 0.3s ease;
+}
+.featured-hero-border:hover .featured-hero-hover {
+  opacity: 1;
+}
+
 /* ── Beam Transition Particles ── */
 @keyframes beam-particle-float {
   0% { transform: translateY(0) scale(1); opacity: 0.4; }

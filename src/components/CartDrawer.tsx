@@ -3,10 +3,12 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { useCart } from "@/lib/cart-context";
+import { useLanguage } from "@/lib/i18n";
 
 export default function CartDrawer() {
   const { items, isOpen, setIsOpen, removeItem, updateGuests, getTotal } =
     useCart();
+  const { t } = useLanguage();
   const drawerRef = useRef<HTMLDivElement>(null);
 
   // Lock body scroll when open
@@ -62,7 +64,7 @@ export default function CartDrawer() {
             className="text-lg font-semibold text-white"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Tw&oacute;j koszyk{" "}
+            {t('cart.title')}{" "}
             <span className="text-white/40 text-base font-normal">
               ({items.length})
             </span>
@@ -108,7 +110,7 @@ export default function CartDrawer() {
               className="text-white/30 text-sm"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              Tw&oacute;j koszyk jest pusty
+              {t('cart.empty')}
             </p>
           </div>
         ) : (
@@ -158,7 +160,7 @@ export default function CartDrawer() {
                       </h3>
                       <p className="text-xs text-pink-400 mt-0.5">
                         {item.product.price} PLN
-                        {item.product.priceType === "person" ? "/os." : ""}
+                        {item.product.priceType === "person" ? t('price.perPerson') : ""}
                       </p>
                     </div>
                   </div>
@@ -170,7 +172,7 @@ export default function CartDrawer() {
                         className="text-xs text-white/45"
                         style={{ fontFamily: "var(--font-body)" }}
                       >
-                        Liczba os&oacute;b
+                        {t('cart.guests')}
                       </span>
                       <div className="flex items-center gap-0">
                         <button
@@ -215,7 +217,7 @@ export default function CartDrawer() {
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                       </svg>
-                      Usu&#324;
+                      {t('cart.remove')}
                     </button>
                     <span className="text-sm font-semibold text-white">
                       {subtotal} PLN
@@ -238,7 +240,7 @@ export default function CartDrawer() {
                 className="text-sm text-white/45"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                Razem
+                {t('cart.total')}
               </span>
               <span
                 className="text-xl font-bold text-white"
@@ -257,7 +259,7 @@ export default function CartDrawer() {
                 letterSpacing: "0.02em",
               }}
             >
-              Przejd&#378; do zam&oacute;wienia
+              {t('cart.checkout')}
             </a>
           </div>
         )}
