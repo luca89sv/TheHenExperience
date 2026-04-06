@@ -356,14 +356,14 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
         </a>
 
         {/* Top section: carousel + info */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 items-start">
           {/* Carousel — 3/5 width */}
           <div className="lg:col-span-3">
             <ImageCarousel images={pkg.images} name={name} />
           </div>
 
           {/* Info card — 2/5 width */}
-          <div className="lg:col-span-2 flex flex-col">
+          <div className="lg:col-span-2">
             <span
               className="text-[0.65rem] font-bold tracking-[0.25em] uppercase mb-3"
               style={{ color: "rgba(255,255,255,0.3)" }}
@@ -379,7 +379,7 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
               </p>
             )}
 
-            <div className="flex items-baseline gap-1.5 mb-6">
+            <div className="flex items-baseline gap-1.5 mb-2">
               <span className="text-3xl font-bold text-pink-400">{pkg.price}</span>
               <span className="text-base text-white/50">PLN</span>
               <span className="text-sm text-white/30">
@@ -387,13 +387,7 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
               </span>
             </div>
 
-            {description && (
-              <p className="text-white/45 text-sm leading-relaxed mb-6 line-clamp-4" style={{ fontFamily: "var(--font-body)" }}>
-                {description}
-              </p>
-            )}
-
-            <div className="mt-auto space-y-3">
+            <div className="space-y-3 mt-6">
               {/* Booking button */}
               <button
                 onClick={() => setBookingOpen(true)}
@@ -419,10 +413,10 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
                     showToast(t('cart.addedToast'));
                   }
                 }}
-                className={`w-full py-3 rounded-full font-semibold text-sm transition-all duration-300 border ${
+                className={`w-full py-3 rounded-full font-semibold text-sm transition-all duration-300 border-2 ${
                   inCart
                     ? "border-pink-500/40 bg-pink-500/10 text-pink-400 hover:bg-red-500/10 hover:border-red-400/40 hover:text-red-400"
-                    : "border-pink-500/30 text-pink-400 hover:bg-pink-500/10 hover:border-pink-500/50"
+                    : "border-pink-500/60 text-pink-400 hover:bg-pink-500/10 hover:border-pink-400"
                 }`}
                 style={{ fontFamily: "var(--font-body)", letterSpacing: "0.02em" }}
               >
@@ -450,7 +444,7 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
         </div>
 
         {/* Description + contact side by side */}
-        <div className="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 items-start">
           <div className="lg:col-span-3">
             {description && (
               <div>
@@ -473,8 +467,6 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
               </div>
             )}
           </div>
-
-          {/* Right — contact info */}
           <div className="lg:col-span-2">
             <div className="rounded-2xl border border-white/6 p-6" style={{ background: "rgba(255,255,255,0.02)" }}>
               <p className="text-[0.65rem] text-white/25 uppercase tracking-widest font-semibold mb-4" style={{ fontFamily: "var(--font-body)" }}>

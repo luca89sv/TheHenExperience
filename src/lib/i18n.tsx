@@ -460,15 +460,22 @@ const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("pl");
+  const [langResolved, setLangResolved] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("lang");
     if (saved === "en" || saved === "pl") setLangState(saved);
-    // Reveal content now that the correct language is applied
-    requestAnimationFrame(() => {
-      document.body.classList.add("lang-ready");
-    });
+    setLangResolved(true);
   }, []);
+
+  // Reveal content AFTER React has re-rendered with the correct language
+  useEffect(() => {
+    if (langResolved) {
+      requestAnimationFrame(() => {
+        document.body.classList.add("lang-ready");
+      });
+    }
+  }, [langResolved, lang]);
 
   const setLang = useCallback((l: Lang) => {
     setLangState(l);

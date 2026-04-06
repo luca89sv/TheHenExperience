@@ -263,14 +263,14 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
         </a>
 
         {/* Top section: carousel + info */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 items-start">
           {/* Carousel — 3/5 width */}
           <div className="lg:col-span-3">
             <ImageCarousel images={item.images} name={name} />
           </div>
 
           {/* Info card — 2/5 width */}
-          <div className="lg:col-span-2 flex flex-col">
+          <div className="lg:col-span-2">
             <span
               className="text-[0.65rem] font-bold tracking-[0.25em] uppercase mb-3"
               style={{ color: "rgba(255,255,255,0.3)" }}
@@ -286,7 +286,7 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
               </p>
             )}
 
-            <div className="flex items-baseline gap-1.5 mb-6">
+            <div className="flex items-baseline gap-1.5 mb-2">
               <span className="text-3xl font-bold text-pink-400">{item.price}</span>
               <span className="text-base text-white/50">PLN</span>
               <span className="text-sm text-white/30">
@@ -294,13 +294,7 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
               </span>
             </div>
 
-            {description && (
-              <p className="text-white/45 text-sm leading-relaxed mb-6 line-clamp-4" style={{ fontFamily: "var(--font-body)" }}>
-                {description}
-              </p>
-            )}
-
-            <div className="mt-auto space-y-3">
+            <div className="space-y-3 mt-6">
               <button
                 onClick={() => setBookingOpen(true)}
                 className="w-full py-3.5 rounded-full font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_6px_24px_rgba(236,72,153,0.3)]"
@@ -324,10 +318,10 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
                     showToast(t('cart.addedToast'));
                   }
                 }}
-                className={`w-full py-3 rounded-full font-semibold text-sm transition-all duration-300 border ${
+                className={`w-full py-3 rounded-full font-semibold text-sm transition-all duration-300 border-2 ${
                   inCart
                     ? "border-pink-500/40 bg-pink-500/10 text-pink-400 hover:bg-red-500/10 hover:border-red-400/40 hover:text-red-400"
-                    : "border-pink-500/30 text-pink-400 hover:bg-pink-500/10 hover:border-pink-500/50"
+                    : "border-pink-500/60 text-pink-400 hover:bg-pink-500/10 hover:border-pink-400"
                 }`}
                 style={{ fontFamily: "var(--font-body)", letterSpacing: "0.02em" }}
               >
@@ -351,12 +345,33 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
               </button>
             </div>
 
+            {/* Contact info */}
+            <div className="rounded-2xl border border-white/6 p-6 mt-5" style={{ background: "rgba(255,255,255,0.02)" }}>
+              <p className="text-[0.65rem] text-white/25 uppercase tracking-widest font-semibold mb-4" style={{ fontFamily: "var(--font-body)" }}>
+                {t('contact.questions')}
+              </p>
+              <div className="space-y-3">
+                <a href="tel:+48537048777" className="flex items-center gap-2.5 text-white/40 hover:text-pink-400 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                  </svg>
+                  +48 537 048 777
+                </a>
+                <a href="mailto:atrakcjenapanienski@gmail.com" className="flex items-center gap-2.5 text-white/40 hover:text-pink-400 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  atrakcjenapanienski@gmail.com
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        {/* Description + contact side by side */}
-        <div className="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
-          <div className="lg:col-span-3">
+        {/* Description */}
+        <div className="mt-6 lg:max-w-[60%]">
             {description && (
               <div>
             <h2 className="font-[family-name:var(--font-display)] text-xl sm:text-2xl font-semibold mb-4">
@@ -377,31 +392,6 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
             )}
               </div>
             )}
-          </div>
-
-          {/* Right — contact info */}
-          <div className="lg:col-span-2">
-            <div className="rounded-2xl border border-white/6 p-6" style={{ background: "rgba(255,255,255,0.02)" }}>
-              <p className="text-[0.65rem] text-white/25 uppercase tracking-widest font-semibold mb-4" style={{ fontFamily: "var(--font-body)" }}>
-                {t('contact.questions')}
-              </p>
-              <div className="space-y-3">
-                <a href="tel:+48537048777" className="flex items-center gap-2.5 text-white/40 hover:text-pink-400 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
-                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                  </svg>
-                  +48 537 048 777
-                </a>
-                <a href="mailto:atrakcjenapanienski@gmail.com" className="flex items-center gap-2.5 text-white/40 hover:text-pink-400 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
-                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <polyline points="22,6 12,13 2,6" />
-                  </svg>
-                  atrakcjenapanienski@gmail.com
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Features — full width, 2 columns */}
