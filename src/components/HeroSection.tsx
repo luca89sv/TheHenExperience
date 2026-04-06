@@ -224,7 +224,7 @@ export default function HeroSection() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
-  const scrollHeight = breakpoint === "mobile" ? "300vh" : breakpoint === "tablet" ? "350vh" : "400vh";
+  const scrollHeight = breakpoint === "mobile" ? "150vh" : breakpoint === "tablet" ? "220vh" : "400vh";
 
   return (
     <section
