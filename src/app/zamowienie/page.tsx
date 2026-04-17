@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { useCart } from "@/lib/cart-context";
+import { useLanguage } from "@/lib/i18n";
 import Toast from "@/components/Toast";
 
 interface ToastState {
@@ -10,7 +11,9 @@ interface ToastState {
 }
 
 export default function CheckoutPage() {
-  const { items, removeItem, getTotal, clearCart, hydrated } = useCart();
+  const { items, removeItem, getTotal, clearCart, hydrated, getGuestErrors } = useCart();
+  const { t } = useLanguage();
+  const guestErrors = getGuestErrors();
   const total = getTotal();
 
   const [form, setForm] = useState({
@@ -21,6 +24,7 @@ export default function CheckoutPage() {
     message: "",
   });
   const [submitting, setSubmitting] = useState(false);
+  const [orderSent, setOrderSent] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
 
   const handleChange = (
@@ -32,6 +36,14 @@ export default function CheckoutPage() {
   const handleSubmit = useCallback(
     async (e: React.FormEvent) => {
       e.preventDefault();
+
+      if (guestErrors.length > 0) {
+        setToast({
+          message: "Popraw liczbę osób w atrakcjach zaznaczonych na czerwono.",
+          type: "error",
+        });
+        return;
+      }
 
       if (!form.name || !form.phone || !form.email) {
         setToast({
@@ -77,12 +89,8 @@ export default function CheckoutPage() {
         const data = await res.json();
 
         if (data.success) {
-          setToast({
-            message:
-              "Zamówienie zostało wysłane! Skontaktujemy się z Tobą wkrótce.",
-            type: "success",
-          });
           clearCart();
+          setOrderSent(true);
           setForm({ name: "", phone: "", email: "", date: "", message: "" });
         } else {
           setToast({
@@ -154,6 +162,43 @@ export default function CheckoutPage() {
 
         {!hydrated ? (
           <div className="text-center py-20 text-white/20 text-sm">Ładowanie...</div>
+        ) : orderSent ? (
+          /* Order confirmation */
+          <div
+            className="rounded-2xl p-12 text-center"
+            style={{
+              background: "rgba(255,255,255,0.02)",
+              border: "1px solid rgba(255,255,255,0.06)",
+            }}
+          >
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-pink-500/20 flex items-center justify-center">
+              <svg className="w-10 h-10 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+            </div>
+            <h2
+              className="font-[family-name:var(--font-display)] text-white text-2xl font-semibold mb-3"
+            >
+              {t('checkout.successTitle')}
+            </h2>
+            <p
+              className="text-white/40 text-sm mb-8 max-w-md mx-auto"
+              style={{ fontFamily: "var(--font-body)", lineHeight: 1.7 }}
+            >
+              {t('checkout.successDesc')}
+            </p>
+            <a
+              href="/"
+              className="inline-block px-8 py-3.5 rounded-full text-sm font-semibold text-white transition-all duration-300 hover:opacity-90"
+              style={{
+                background: "linear-gradient(135deg, #be185d, #ec4899)",
+                fontFamily: "var(--font-body)",
+                letterSpacing: "0.02em",
+              }}
+            >
+              {t('checkout.backHome')}
+            </a>
+          </div>
         ) : items.length === 0 ? (
           /* Empty state */
           <div
@@ -179,13 +224,13 @@ export default function CheckoutPage() {
             <h2
               className="font-[family-name:var(--font-display)] text-white text-xl font-semibold mb-3"
             >
-              Twój koszyk jest pusty
+              {t('checkout.emptyTitle')}
             </h2>
             <p
               className="text-white/30 text-sm mb-8"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              Dodaj atrakcje do koszyka, aby złożyć zamówienie.
+              {t('checkout.emptyDesc')}
             </p>
             <a
               href="/"
@@ -196,7 +241,7 @@ export default function CheckoutPage() {
                 letterSpacing: "0.02em",
               }}
             >
-              Przeglądaj atrakcje
+              {t('checkout.browse')}
             </a>
           </div>
         ) : (
@@ -222,6 +267,7 @@ export default function CheckoutPage() {
                     item.product.priceType === "person"
                       ? item.product.price * item.guests
                       : item.product.price;
+                  const error = guestErrors.find(e => e.productId === item.product.id);
 
                   return (
                     <div
@@ -232,6 +278,7 @@ export default function CheckoutPage() {
                           index < items.length - 1
                             ? "1px solid rgba(255,255,255,0.06)"
                             : "none",
+                        ...(error ? { background: "rgba(239,68,68,0.05)" } : {}),
                       }}
                     >
                       <div className="flex items-start justify-between gap-4">
@@ -259,6 +306,13 @@ export default function CheckoutPage() {
                                 ? `${item.guests} osób \u00D7 ${item.product.price} PLN/os.`
                                 : `${item.product.price} PLN`}
                             </p>
+                            {error && (
+                              <p className="text-[11px] text-red-400 mt-1.5" style={{ fontFamily: "var(--font-body)" }}>
+                                {error.type === "min"
+                                  ? `Minimum ${error.limit} osób — zmień liczbę w koszyku lub usuń`
+                                  : `Maksimum ${error.limit} osób — zmień liczbę w koszyku lub usuń`}
+                              </p>
+                            )}
                           </div>
                         </div>
 
@@ -432,10 +486,11 @@ export default function CheckoutPage() {
 
                   {/* Date */}
                   <div>
-                    <label className={labelClassName}>Data wieczoru</label>
+                    <label className={labelClassName}>Data wieczoru <span className="text-pink-400">*</span></label>
                     <input
                       type="date"
                       name="date"
+                      required
                       value={form.date}
                       onChange={handleChange}
                       className={`${inputClassName} bg-white/[0.04]`}
@@ -458,7 +513,7 @@ export default function CheckoutPage() {
                   {/* Submit */}
                   <button
                     type="submit"
-                    disabled={submitting}
+                    disabled={submitting || guestErrors.length > 0}
                     className="w-full mt-2 py-3.5 rounded-full text-sm font-semibold text-white transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                     style={{
                       background: "linear-gradient(135deg, #be185d, #ec4899)",

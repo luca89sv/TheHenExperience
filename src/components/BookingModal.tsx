@@ -9,10 +9,12 @@ interface BookingModalProps {
   productName: string;
   price: number;
   priceType: "person" | "pcs";
+  minPeople?: number;
+  maxPeople?: number;
 }
 
-export default function BookingModal({ isOpen, onClose, productName, price, priceType }: BookingModalProps) {
-  const { t } = useLanguage();
+export default function BookingModal({ isOpen, onClose, productName, price, priceType, minPeople, maxPeople }: BookingModalProps) {
+  const { t, lang } = useLanguage();
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -23,6 +25,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (isOpen) {
@@ -31,6 +34,15 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
       document.body.style.overflow = "";
     }
     return () => { document.body.style.overflow = ""; };
+  }, [isOpen]);
+
+  // Reset form when modal reopens
+  useEffect(() => {
+    if (isOpen) {
+      setSubmitted(false);
+      setError("");
+      setForm({ name: "", phone: "", email: "", date: "", guests: "", message: "" });
+    }
   }, [isOpen]);
 
   useEffect(() => {
@@ -42,6 +54,22 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
+
+    const guestCount = parseInt(form.guests) || 0;
+    if (minPeople && guestCount < minPeople) {
+      setError(lang === "pl"
+        ? `Minimalna liczba os\u00f3b to ${minPeople}. Prosz\u0119 poprawi\u0107.`
+        : `Minimum number of people is ${minPeople}. Please correct.`);
+      return;
+    }
+    if (maxPeople && guestCount > maxPeople) {
+      setError(lang === "pl"
+        ? `Maksymalna liczba os\u00f3b to ${maxPeople}. Prosz\u0119 poprawi\u0107.`
+        : `Maximum number of people is ${maxPeople}. Please correct.`);
+      return;
+    }
+
     setSubmitting(true);
 
     try {
@@ -50,23 +78,38 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
-          items: [{ name: productName, price, priceType, guests: parseInt(form.guests) || 1 }],
-          total: priceType === "person" ? price * (parseInt(form.guests) || 1) : price,
+          items: [{
+            name: productName,
+            price,
+            priceType,
+            guests: guestCount || 1,
+            subtotal: priceType === "person" ? price * (guestCount || 1) : price,
+          }],
+          total: priceType === "person" ? price * (guestCount || 1) : price,
         }),
       });
 
       const data = await res.json();
       if (data.success) {
         setSubmitted(true);
+        setForm({ name: "", phone: "", email: "", date: "", guests: "", message: "" });
+      } else {
+        setError(lang === "pl"
+          ? "Nie uda\u0142o si\u0119 wys\u0142a\u0107. Spr\u00f3buj ponownie."
+          : "Failed to send. Please try again.");
       }
     } catch {
-      // silently handle
+      setError(lang === "pl"
+        ? "B\u0142\u0105d po\u0142\u0105czenia. Spr\u00f3buj ponownie."
+        : "Connection error. Please try again.");
     } finally {
       setSubmitting(false);
     }
-  }, [form, productName, price, priceType]);
+  }, [form, productName, price, priceType, minPeople, maxPeople, lang]);
 
   if (!isOpen) return null;
+
+  const req = <span className="text-pink-400">*</span>;
 
   return (
     <div className="fixed inset-0 z-[1200] flex items-center justify-center p-4">
@@ -150,10 +193,16 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
 
               {/* Form */}
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                {error && (
+                  <div className="rounded-xl px-4 py-3 text-sm text-red-400 border border-red-500/20 bg-red-500/5" style={{ fontFamily: "var(--font-body)" }}>
+                    {error}
+                  </div>
+                )}
+
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                      {t('booking.labelName')}
+                      {t('booking.labelName')} {req}
                     </label>
                     <input
                       type="text"
@@ -166,7 +215,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                   </div>
                   <div>
                     <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                      {t('booking.labelPhone')}
+                      {t('booking.labelPhone')} {req}
                     </label>
                     <input
                       type="tel"
@@ -181,7 +230,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
 
                 <div>
                   <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                    {t('booking.labelEmail')}
+                    {t('booking.labelEmail')} {req}
                   </label>
                   <input
                     type="email"
@@ -196,7 +245,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                      {t('booking.labelDate')}
+                      {t('booking.labelDate')} {req}
                     </label>
                     <input
                       type="date"
@@ -209,12 +258,15 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                   </div>
                   <div>
                     <label className="block text-xs text-white/35 mb-1.5 font-medium" style={{ fontFamily: "var(--font-body)" }}>
-                      {t('booking.labelGuests')}
+                      {t('booking.labelGuests')} {req}
+                      {minPeople && <span className="text-white/25"> (min. {minPeople})</span>}
+                      {maxPeople && <span className="text-white/25"> (max. {maxPeople})</span>}
                     </label>
                     <input
                       type="number"
-                      min="1"
-                      max="99"
+                      min={minPeople || 1}
+                      max={maxPeople || 99}
+                      required
                       value={form.guests}
                       onChange={(e) => setForm({ ...form, guests: e.target.value })}
                       placeholder={t('booking.placeholderGuests')}

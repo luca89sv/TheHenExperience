@@ -24,10 +24,10 @@ interface Product {
   images: string[];
 }
 
-const allData = [...(pakiety as Product[]), ...(atrakcje as Product[])];
+const allData = [...(pakiety as Product[]), ...(atrakcje as Product[])].filter((p: any) => !p.archived);
 
 const FEATURED_IDS = [
-  "fotograf-limuzyna-tancerz-klub",
+  "limuzyna-piknik-sesja-klub",
   "rozowa-limuzyna",
   "limuzyna-hummer",
   "party-bus",
@@ -346,7 +346,7 @@ function SideCard({ item, index }: { item: Product; index: number }) {
 
 export default function FeaturedSection() {
   return (
-    <section className="relative overflow-hidden py-[var(--section-padding)] mt-[-30vh] md:mt-[-20vh] z-[11] md:z-[4]" style={{ position: "relative" }}>
+    <section className="relative overflow-hidden py-[var(--section-padding)] mt-[-5vh] md:mt-[-20vh] z-[11] md:z-[4]" style={{ position: "relative" }}>
       {/* Subtle background glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] pointer-events-none"
@@ -362,7 +362,7 @@ export default function FeaturedSection() {
         {/* Bento grid — hero perfectly aligned with 2 rows of side cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:grid-rows-2">
           {/* Hero card — spans 2 cols and 2 rows on desktop */}
-          <div className="col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto min-h-[300px]">
+          <div className="col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto lg:min-h-[300px]">
             <HeroCard item={heroItem} />
           </div>
 

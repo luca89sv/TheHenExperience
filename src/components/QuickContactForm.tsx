@@ -8,6 +8,7 @@ export default function QuickContactForm() {
   const { t } = useLanguage();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const { showToast } = useCartToast();
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
@@ -21,7 +22,7 @@ export default function QuickContactForm() {
       });
       const data = await res.json();
       if (data.success) {
-        showToast(t('contact.successToast'));
+        setSubmitted(true);
         setForm({ name: "", email: "", phone: "", message: "" });
       } else {
         showToast(t('contact.errorToast'), "error");
@@ -84,26 +85,54 @@ export default function QuickContactForm() {
           </div>
 
           {/* Form */}
+          {submitted ? (
+            <div className="flex flex-col items-center justify-center text-center py-8 max-w-xl mx-auto">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-500/20 flex items-center justify-center">
+                <svg className="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </div>
+              <h3 className="font-[family-name:var(--font-display)] text-2xl font-semibold mb-2">
+                {t('cta.successTitle')}
+              </h3>
+              <p className="text-white/45 text-sm mb-6" style={{ fontFamily: "var(--font-body)" }}>
+                {t('cta.successDesc')}
+              </p>
+              <button
+                onClick={() => setSubmitted(false)}
+                className="px-6 py-2.5 rounded-full text-sm font-semibold border border-pink-500 text-pink-400 hover:bg-pink-500/10 transition-colors"
+                style={{ fontFamily: "var(--font-body)" }}
+              >
+                {t('cta.sendAnother')}
+              </button>
+            </div>
+          ) : (
           <form onSubmit={handleSubmit} className="max-w-xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
-              <input
-                type="text"
-                required
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder={t('contact.placeholderName')}
-                className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_15px_rgba(236,72,153,0.08)]"
-                style={{ fontFamily: "var(--font-body)" }}
-              />
-              <input
-                type="email"
-                required
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder={t('contact.placeholderEmail')}
-                className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_15px_rgba(236,72,153,0.08)]"
-                style={{ fontFamily: "var(--font-body)" }}
-              />
+              <div>
+                <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-body)" }}>{t('contact.placeholderName')} <span className="text-pink-400">*</span></label>
+                <input
+                  type="text"
+                  required
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  placeholder={t('contact.placeholderName')}
+                  className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_15px_rgba(236,72,153,0.08)]"
+                  style={{ fontFamily: "var(--font-body)" }}
+                />
+              </div>
+              <div>
+                <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-body)" }}>{t('contact.placeholderEmail')} <span className="text-pink-400">*</span></label>
+                <input
+                  type="email"
+                  required
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                  placeholder={t('contact.placeholderEmail')}
+                  className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_15px_rgba(236,72,153,0.08)]"
+                  style={{ fontFamily: "var(--font-body)" }}
+                />
+              </div>
             </div>
             <input
               type="tel"
@@ -113,6 +142,7 @@ export default function QuickContactForm() {
               className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder:text-white/20 outline-none transition-all duration-300 focus:border-pink-500/40 focus:shadow-[0_0_15px_rgba(236,72,153,0.08)] mb-3"
               style={{ fontFamily: "var(--font-body)" }}
             />
+            <label className="block text-xs text-white/30 mb-1.5 font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-body)" }}>{t('contact.placeholderMessage')} <span className="text-pink-400">*</span></label>
             <textarea
               required
               rows={3}
@@ -137,6 +167,7 @@ export default function QuickContactForm() {
               </button>
             </div>
           </form>
+          )}
         </div>
       </div>
     </div>

@@ -6,9 +6,10 @@ import { useCart } from "@/lib/cart-context";
 import { useLanguage } from "@/lib/i18n";
 
 export default function CartDrawer() {
-  const { items, isOpen, setIsOpen, removeItem, updateGuests, getTotal } =
+  const { items, isOpen, setIsOpen, removeItem, updateGuests, getTotal, getGuestErrors } =
     useCart();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const guestErrors = getGuestErrors();
   const drawerRef = useRef<HTMLDivElement>(null);
 
   // Lock body scroll when open
@@ -38,7 +39,7 @@ export default function CartDrawer() {
     <>
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 z-[950] bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`fixed inset-0 z-[1050] bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsOpen(false)}
@@ -47,7 +48,7 @@ export default function CartDrawer() {
       {/* Drawer */}
       <div
         ref={drawerRef}
-        className={`fixed top-0 right-0 z-[960] h-full w-full max-w-md flex flex-col transition-transform duration-300 ease-out ${
+        className={`fixed top-0 right-0 z-[1060] h-full w-full max-w-md flex flex-col transition-transform duration-300 ease-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{
@@ -166,46 +167,60 @@ export default function CartDrawer() {
                   </div>
 
                   {/* Guest stepper for per-person items */}
-                  {item.product.priceType === "person" && (
-                    <div className="flex items-center justify-between mt-3 pt-3" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                      <span
-                        className="text-xs text-white/45"
-                        style={{ fontFamily: "var(--font-body)" }}
-                      >
-                        {t('cart.guests')}
-                      </span>
-                      <div className="flex items-center gap-0">
-                        <button
-                          onClick={() =>
-                            updateGuests(item.product.id, item.guests - 1)
-                          }
-                          disabled={item.guests <= 1}
-                          className="w-8 h-8 flex items-center justify-center rounded-l-xl border border-white/[0.08] bg-transparent text-white/60 hover:text-white hover:border-pink-500/40 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
-                        >
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
-                          </svg>
-                        </button>
-                        <span
-                          className="w-10 h-8 flex items-center justify-center border-y border-white/[0.08] text-sm text-white bg-transparent"
-                          style={{ fontFamily: "var(--font-body)" }}
-                        >
-                          {item.guests}
-                        </span>
-                        <button
-                          onClick={() =>
-                            updateGuests(item.product.id, item.guests + 1)
-                          }
-                          disabled={item.guests >= 99}
-                          className="w-8 h-8 flex items-center justify-center rounded-r-xl border border-white/[0.08] bg-transparent text-white/60 hover:text-white hover:border-pink-500/40 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
-                        >
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m-7-7h14" />
-                          </svg>
-                        </button>
+                  {item.product.priceType === "person" && (() => {
+                    const error = guestErrors.find(e => e.productId === item.product.id);
+                    return (
+                      <div className="mt-3 pt-3" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+                        <div className="flex items-center justify-between">
+                          <span
+                            className="text-xs text-white/45"
+                            style={{ fontFamily: "var(--font-body)" }}
+                          >
+                            {t('cart.guests')}
+                          </span>
+                          <div className="flex items-center gap-0">
+                            <button
+                              onClick={() =>
+                                updateGuests(item.product.id, item.guests - 1)
+                              }
+                              disabled={item.guests <= 1}
+                              className="w-8 h-8 flex items-center justify-center rounded-l-xl border border-white/[0.08] bg-transparent text-white/60 hover:text-white hover:border-pink-500/40 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
+                            >
+                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
+                              </svg>
+                            </button>
+                            <span
+                              className={`w-10 h-8 flex items-center justify-center border-y text-sm bg-transparent ${error ? 'text-red-400 border-red-500/30' : 'text-white border-white/[0.08]'}`}
+                              style={{ fontFamily: "var(--font-body)" }}
+                            >
+                              {item.guests}
+                            </span>
+                            <button
+                              onClick={() =>
+                                updateGuests(item.product.id, item.guests + 1)
+                              }
+                              disabled={item.guests >= 99}
+                              className="w-8 h-8 flex items-center justify-center rounded-r-xl border border-white/[0.08] bg-transparent text-white/60 hover:text-white hover:border-pink-500/40 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
+                            >
+                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m-7-7h14" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        {error && (
+                          <p className="text-[11px] text-red-400 mt-2" style={{ fontFamily: "var(--font-body)" }}>
+                            {error.type === "min"
+                              ? (lang === "pl" ? `Minimum ${error.limit} osób` : `Minimum ${error.limit} people`)
+                              : (lang === "pl" ? `Maksimum ${error.limit} osób` : `Maximum ${error.limit} people`)}
+                            {" — "}
+                            {lang === "pl" ? "zmień liczbę osób lub usuń atrakcję" : "adjust the number of guests or remove this item"}
+                          </p>
+                        )}
                       </div>
-                    </div>
-                  )}
+                    );
+                  })()}
 
                   {/* Subtotal + remove */}
                   <div className="flex items-center justify-between mt-3 pt-3" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
@@ -249,18 +264,31 @@ export default function CartDrawer() {
                 {total} PLN
               </span>
             </div>
-            <a
-              href="/zamowienie"
-              onClick={() => setIsOpen(false)}
-              className="block w-full text-center py-3.5 rounded-full text-sm font-semibold text-white transition-all duration-300 hover:opacity-90"
-              style={{
-                background: "linear-gradient(135deg, #be185d, #ec4899)",
-                fontFamily: "var(--font-body)",
-                letterSpacing: "0.02em",
-              }}
-            >
-              {t('cart.checkout')}
-            </a>
+            {guestErrors.length > 0 ? (
+              <span
+                className="block w-full text-center py-3.5 rounded-full text-sm font-semibold text-white/40 cursor-not-allowed"
+                style={{
+                  background: "rgba(255,255,255,0.06)",
+                  fontFamily: "var(--font-body)",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                {t('cart.checkout')}
+              </span>
+            ) : (
+              <a
+                href="/zamowienie"
+                onClick={() => setIsOpen(false)}
+                className="block w-full text-center py-3.5 rounded-full text-sm font-semibold text-white transition-all duration-300 hover:opacity-90"
+                style={{
+                  background: "linear-gradient(135deg, #be185d, #ec4899)",
+                  fontFamily: "var(--font-body)",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                {t('cart.checkout')}
+              </a>
+            )}
           </div>
         )}
       </div>

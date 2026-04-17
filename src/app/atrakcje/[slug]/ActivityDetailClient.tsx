@@ -28,6 +28,8 @@ interface Product {
   description2_en?: string;
   description3_en?: string;
   features_en?: string[];
+  minPeople?: number;
+  maxPeople?: number;
 }
 
 const allActivities = atrakcje as Product[];
@@ -444,6 +446,8 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
         productName={name}
         price={item.price}
         priceType={item.priceType}
+        minPeople={item.minPeople}
+        maxPeople={item.maxPeople}
       />
     </>
   );

@@ -1,5 +1,243 @@
 [
   {
+    "id": "limuzyna-piknik-sesja-klub",
+    "name": "Limuzyna + Piknik + Mini Sesja + Czerwony Dywan + Klub",
+    "name_en": "Limousine + Picnic + Mini Photo Session + Red Carpet + Club",
+    "slug": "limuzyna-piknik-sesja-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 319,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Zacznijcie wieczór panieński od klimatycznego pikniku nad Wisłą – to idealny moment na relaks, rozmowy i wspólne świętowanie w luźnej atmosferze. Na miejscu jest opiekun, który dba o przebieg spotkania, więc Wy możecie po prostu cieszyć się chwilą.\nNastępnie czeka na Was godzinny przejazd luksusową limuzyną po Warszawie. Wsiadacie do eleganckiego auta z nastrojowym oświetleniem i powitalnym szampanem, a w trakcie jazdy zobaczycie najciekawsze miejsca i możecie zrobić krótkie przystanki na zdjęcia. Fotograf uwieczni Wasz wieczór na profesjonalnej sesji zdjęciowej na czerwonym dywanie.\nNa zakończenie limuzyna zawiezie Was do klubu, gdzie zaczyna się dalsza zabawa. To świetne połączenie relaksu, klimatu i dobrej imprezy – dokładnie takie, jak powinien wyglądać wieczór panieński.",
+    "description_en": "Start your hen party with a relaxing picnic by the Vistula River – the perfect moment to unwind, chat and celebrate together in a laid-back atmosphere. A coordinator is on site to look after everything, so you can simply enjoy the moment.\nNext, a one-hour ride in a luxury limousine awaits you through Warsaw. You'll step into an elegant car with ambient lighting and welcome champagne, and during the ride you'll see the most interesting sights with short photo stops along the way. A photographer will capture your evening with a professional red-carpet photo session.\nTo finish, the limousine takes you to a club where the party continues. It's the perfect mix of relaxation, atmosphere and a great night out – exactly what a hen party should be.",
+    "addons": "Dodatkowa sesja 30 min, 15 profesjonalnie obrobionych zdjęć 250 zł\nKrótkie wideo z wydarzenia – krótki filmik w stylu rolek (idealne na Instagram i TikTok) 100 zł",
+    "addons_en": "Extra 30-min session, 15 professionally edited photos 250 PLN\nShort event video – a short reel-style clip (perfect for Instagram and TikTok) 100 PLN",
+    "images": [
+      "/media/limuzyna-piknik-sesja-klub.jpg"
+    ],
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Powitalny Szampan w Limuzynie",
+      "Godzina przejazdu limuzyną",
+      "Możliwość puszczania własnej muzyki",
+      "Profesjonalna sesja zdjęciowa na czerwonym dywanie przy limuzynie",
+      "10 profesjonalnie obrobionych zdjęć",
+      "2 godzinny piknik na świeżym powietrzu",
+      "Pyszne przekąski",
+      "Orzeźwiające napoje",
+      "Relaks na kocach przy dźwiękach muzyki",
+      "Gry i zabawy integracyjne",
+      "Wejściówki do wybranego klubu",
+      "Koordynator"
+    ],
+    "features_en": [
+      "Young, friendly chauffeur",
+      "Welcome champagne in the limousine",
+      "One-hour limousine ride",
+      "Option to play your own music",
+      "Professional red-carpet photo session by the limousine",
+      "10 professionally edited photos",
+      "2-hour outdoor picnic",
+      "Delicious snacks",
+      "Refreshing drinks",
+      "Relaxing on blankets to the sound of music",
+      "Group games and ice-breakers",
+      "Entry to a club of your choice",
+      "Coordinator"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "fotograf-limuzyna-dywan-klub",
+    "name": "Prywatny Fotograf + Limuzyna + Czerwony Dywan + Klub",
+    "name_en": "Private Photographer + Limousine + Red Carpet + Club",
+    "slug": "fotograf-limuzyna-dywan-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 269,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Zorganizujcie wieczór panieński, który naprawdę robi wrażenie. Pakiet rozpoczynamy od prywatnej sesji zdjęciowej z fotografem, który uchwyci Wasze wyjątkowe momenty. Luźna atmosfera i kreatywne ujęcia sprawią, że powstaną zdjęcia, do których będziecie wracać latami.\nPo sesji czeka przejazd limuzyną z nastrojowym oświetleniem i powitalnym szampanem. Godzinny przejazd po Warszawie to czas na zabawę, muzykę oraz rozgrzewka przed kolejną atrakcją. W trakcie robimy krótki przystanek na pamiątkową sesję na czerwonym dywanie.\nNa finał wjeżdżacie pod klub w wielkim stylu i kontynuujecie imprezę do białego rana.\nTo coś więcej niż wieczór panieński – to doświadczenie, które zapamiętacie na zawsze.",
+    "description_en": "Organise a hen party that truly makes an impression. The package starts with a private photo session with a photographer who will capture your special moments. A relaxed vibe and creative shots will produce photos you'll treasure for years.\nAfterwards, a limousine ride awaits with ambient lighting and welcome champagne. The one-hour drive through Warsaw is the time for fun, music and a warm-up before the next attraction. Along the way we make a short stop for a memorable red-carpet session.\nFor the finale, you pull up to the club in grand style and continue the party until dawn.\nThis is more than a hen party – it's an experience you'll remember forever.",
+    "addons": "Krótkie wideo z wydarzenia – krótki filmik w stylu rolek (idealne na Instagram i TikTok) 100 zł\nDodatkowe 30 min przejazdu limuzyną – 450 zł",
+    "addons_en": "Short event video – a short reel-style clip (perfect for Instagram and TikTok) 100 PLN\nExtra 30 min limousine ride – 450 PLN",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Godzinny Przejazd limuzyną",
+      "Powitalny szampan",
+      "Profesjonalny fotograf na godzinę czasu",
+      "Sesja zdjęciowa na czerwonym dywanie przy limuzynie",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Wejściówki do wybranego klubu",
+      "Koordynator"
+    ],
+    "features_en": [
+      "Young, friendly chauffeur",
+      "One-hour limousine ride",
+      "Welcome champagne",
+      "Professional photographer for one hour",
+      "Red-carpet photo session by the limousine",
+      "25 professionally edited photos",
+      "Entry to a club of your choice",
+      "Coordinator"
+    ],
+    "images": [
+      "/media/fotograf-limuzyna-dywan-klub.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "sesja-wideo-limuzyna-dywan-klub",
+    "name": "Mini Sesja + Wideo + Limuzyna + Czerwony Dywan + Klub",
+    "name_en": "Mini Session + Video + Limousine + Red Carpet + Club",
+    "slug": "sesja-wideo-limuzyna-dywan-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 299,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Zabawa zaczyna się w imprezowej limuzynie. W środku czeka na Was nastrojowe oświetlenie, muzyka i aż dwie butelki powitalnego szampana. Towarzyszy Wam młody, sympatyczny kierowca, a Wy możecie po prostu bawić się i cieszyć chwilą.\nW trakcie dwóch postojów realizowana jest profesjonalna mini sesja zdjęciowa, dzięki której powstaną piękne, pamiątkowe ujęcia. Całe wydarzenie uwiecznione jest także w formie krótkiego, dynamicznego wideo w stylu rolki – idealnego na Instagram i TikToka, które odda klimat Waszej imprezy.\nNa zakończenie limuzyna zawozi Was do klubu, gdzie wchodzicie w wielkim stylu i kontynuujecie zabawę do białego rana.",
+    "description_en": "The fun begins in the party limousine. Inside you'll find ambient lighting, music and two bottles of welcome champagne. A young, friendly chauffeur is at the wheel while you simply enjoy yourselves.\nDuring two stops a professional mini photo session takes place, producing beautiful keepsake shots. The entire event is also captured in a short, dynamic reel-style video – perfect for Instagram and TikTok, capturing the vibe of your party.\nTo finish, the limousine drops you off at a club where you make a grand entrance and party until dawn.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "2 h przejazdu limuzyną",
+      "Dwie butelki powitalnego szampana",
+      "Profesjonalna sesja zdjęciowa na czerwonym dywanie przy limuzynie (2 postoje)",
+      "Krótkie wideo z wydarzenia – krótki filmik w stylu rolek (idealne na Instagram i TikTok)",
+      "15 profesjonalnie obrobionych zdjęć",
+      "Wejściówki do klubu z oferty"
+    ],
+    "features_en": [
+      "Young, friendly chauffeur",
+      "2-hour limousine ride",
+      "Two bottles of welcome champagne",
+      "Professional red-carpet photo session by the limousine (2 stops)",
+      "Short event video – a reel-style clip (perfect for Instagram and TikTok)",
+      "15 professionally edited photos",
+      "Entry to a club from the offer"
+    ],
+    "images": [
+      "/media/sesja-wideo-limuzyna-dywan-klub.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "sesja-wideo-limuzyna-klub",
+    "name": "Mini Sesja + Wideo + Limuzyna + Klub",
+    "name_en": "Mini Session + Video + Limousine + Club",
+    "slug": "sesja-wideo-limuzyna-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 229,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Szukacie pomysłu na wieczór panieński, który będzie stylowy, nowoczesny i pełen świetnych wspomnień? Ten pakiet to idealne połączenie zabawy, klimatu i efektu \"wow\".\nWsiadacie do luksusowej limuzyny, gdzie czeka na Was młody, sympatyczny kierowca, nastrojowe oświetlenie i powitalny szampan. Przez 90 minut przemierzacie Warszawę, bawiąc się i słuchając ulubionej muzyki.\nW trakcie przejazdu zatrzymujecie się na dwóch postojach, podczas których realizowana jest profesjonalna mini sesja zdjęciowa przy limuzynie. Efekt? 10 starannie obrobionych zdjęć, które będą piękną pamiątką z tego wyjątkowego dnia.\nDodatkowo otrzymujecie krótkie, dynamiczne wideo w stylu rolki – idealne na Instagram i TikToka, które odda klimat Waszej imprezy i zrobi wrażenie w social media.",
+    "description_en": "Looking for a hen party idea that's stylish, modern and full of great memories? This package is the perfect blend of fun, atmosphere and that 'wow' factor.\nYou step into a luxury limousine where a young, friendly chauffeur, ambient lighting and welcome champagne await. For 90 minutes you cruise through Warsaw, partying and listening to your favourite music.\nDuring the ride you make two stops for a professional mini photo session by the limousine. The result? 10 carefully edited photos that will be a beautiful keepsake of this special day.\nYou also receive a short, dynamic reel-style video – perfect for Instagram and TikTok, capturing the vibe of your party and making an impression on social media.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "90 min przejazdu limuzyną",
+      "Dwie butelki powitalnego szampana",
+      "Profesjonalna sesja zdjęciowa przy limuzynie (2 postoje)",
+      "Krótkie wideo z wydarzenia – krótki filmik w stylu rolek (idealne na Instagram i TikTok)",
+      "15 profesjonalnie obrobionych zdjęć",
+      "Wejściówki do klubu z oferty"
+    ],
+    "features_en": [
+      "Young, friendly chauffeur",
+      "90-minute limousine ride",
+      "Two bottles of welcome champagne",
+      "Professional photo session by the limousine (2 stops)",
+      "Short event video – a reel-style clip (perfect for Instagram and TikTok)",
+      "15 professionally edited photos",
+      "Entry to a club from the offer"
+    ],
+    "images": [
+      "/media/sesja-wideo-limuzyna-klub.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "fotograf-restauracja-limuzyna-dywan-klub",
+    "name": "Prywatny Fotograf + Restauracja + Limuzyna + Czerwony Dywan + Klub",
+    "name_en": "Private Photographer + Restaurant + Limousine + Red Carpet + Club",
+    "slug": "fotograf-restauracja-limuzyna-dywan-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 299,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Jeśli chcecie połączyć styl, dobrą zabawę i piękne wspomnienia – ten pakiet jest idealnym wyborem na wyjątkowy wieczór panieński.\nStartujemy w restauracji, gdzie czeka na Was zarezerwowany stolik, dekoracje tematyczne i gry panieńskie, które wprowadzą Was w luźny, imprezowy klimat.\nPodczas imprezy towarzyszy Wam prywatny fotograf, który przez godzinę uchwyci najfajniejsze momenty – naturalne ujęcia, śmiech i emocje, które stworzą wyjątkową pamiątkę.\nZ restauracji odjeżdżacie limuzyną, gdzie czeka przepyszny szampan. W trakcie postoju fotograf zrobi Wam sesję zdjęciową w stylu VIP na czerwonym dywanie. Efekt? 15 starannie obrobionych zdjęć, które będą piękną pamiątką z tego wyjątkowego dnia.\nNa zakończenie ruszacie do klubu z zapewnionymi wejściówkami i kontynuujecie zabawę do białego rana.",
+    "description_en": "If you want to combine style, great fun and beautiful memories, this package is the ideal choice for a special hen party.\nYou start at a restaurant with a reserved table, themed decorations and hen-party games that set a relaxed, party mood.\nA private photographer accompanies you for an hour, capturing the best moments – natural shots, laughter and emotions that create a unique keepsake.\nFrom the restaurant you leave by limousine, where delicious champagne awaits. During a stop the photographer captures a VIP-style red-carpet session. The result? 15 carefully edited photos that will be a beautiful memento of this special day.\nTo finish, you head to a club with guaranteed entry and party until dawn.",
+    "addons": "Krótkie wideo z wydarzenia – krótki filmik w stylu rolek (idealne na Instagram i TikTok) 100 zł\nDodatkowe 30 min przejazdu limuzyną – 450 zł",
+    "addons_en": "Short event video – a short reel-style clip (perfect for Instagram and TikTok) 100 PLN\nExtra 30 min limousine ride – 450 PLN",
+    "features": [
+      "Rezerwacja stolika (bez wyżywienia)",
+      "Dekoracje tematyczne w restauracji",
+      "Gry panieńskie",
+      "Prywatny fotograf na godzinę czasu",
+      "Sesja przy limuzynie na czerwonym dywanie",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Wejściówki do klubu z oferty"
+    ],
+    "features_en": [
+      "Table reservation (food not included)",
+      "Themed decorations at the restaurant",
+      "Hen-party games",
+      "Private photographer for one hour",
+      "Red-carpet session by the limousine",
+      "25 professionally edited photos",
+      "Entry to a club from the offer"
+    ],
+    "images": [
+      "/media/fotograf-restauracja-limuzyna-klub.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "restauracja-tancerz-limuzyna-dywan-klub",
+    "name": "Restauracja + Mini Sesja + Tancerz + Limuzyna + Czerwony Dywan + Klub",
+    "name_en": "Restaurant + Mini Session + Dancer + Limousine + Red Carpet + Club",
+    "slug": "restauracja-tancerz-limuzyna-dywan-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 349,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Szukacie wieczoru panieńskiego, który zrobi efekt \"wow\" od początku do końca? Ten pakiet to gotowy scenariusz na udaną imprezę.\nZaczynacie w restauracji, gdzie czeka na Was zarezerwowany stolik z dekoracjami tematycznymi i grami panieńskimi – idealny moment, żeby się rozkręcić i wejść w imprezowy nastrój.\nKolejną część imprezy spędzicie w luksusowej limuzynie, sącząc szampana w rytmie ulubionej muzyki.\nW trakcie jazdy czeka na Was wyjątkowa atrakcja – występ tancerza, który podkręci klimat i dostarczy mnóstwo emocji. To moment, którego nie zapomnicie!\nPodczas postoju realizowana jest mini sesja zdjęciowa przy limuzynie na czerwonym dywanie. Efekt? 10 profesjonalnie obrobionych zdjęć, które będą idealną pamiątką z tego wieczoru.\nNa zakończenie wchodzicie do klubu z zapewnionymi wejściówkami i kontynuujecie zabawę do białego rana.",
+    "description_en": "Looking for a hen party that delivers a 'wow' from start to finish? This package is a ready-made scenario for an amazing night.\nYou start at a restaurant with a reserved table, themed decorations and hen-party games – the perfect moment to get into the party mood.\nThe next part of the evening takes place in a luxury limousine, sipping champagne to the beat of your favourite music.\nDuring the ride a special attraction awaits – a dancer performance that will turn up the heat and deliver loads of excitement. A moment you won't forget!\nDuring a stop a mini photo session is taken by the limousine on the red carpet. The result? 10 professionally edited photos that will be the perfect memento of your evening.\nTo finish, you enter a club with guaranteed entry and party until dawn.",
+    "addons": "Dodatkowe 30 min przejazdu limuzyną – 450 zł",
+    "addons_en": "Extra 30 min limousine ride – 450 PLN",
+    "features": [
+      "Rezerwacja stolika (bez wyżywienia)",
+      "Dekoracje tematyczne w restauracji",
+      "Gry panieńskie",
+      "Młody, sympatyczny kierowca",
+      "Godzinny przejazd limuzyną",
+      "Powitalny Szampan w Limuzynie",
+      "Występ tancerza w limuzynie",
+      "Sesja przy limuzynie na czerwonym dywanie",
+      "10 profesjonalnie obrobionych zdjęć",
+      "Wejściówki do klubu z oferty"
+    ],
+    "features_en": [
+      "Table reservation (food not included)",
+      "Themed decorations at the restaurant",
+      "Hen-party games",
+      "Young, friendly chauffeur",
+      "One-hour limousine ride",
+      "Welcome champagne in the limousine",
+      "Dancer performance in the limousine",
+      "Red-carpet session by the limousine",
+      "10 professionally edited photos",
+      "Entry to a club from the offer"
+    ],
+    "images": [
+      "/media/restauracja-tancerz-limuzyna-klub.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
     "id": "transfer-limuzyna-tancerz-zakwaterowanie",
     "name": "Transfer limuzyną + Tancerz erotyczny + Zakwaterowanie imprezowe",
     "name_en": "Limousine Transfer + Exotic Dancer + Party Accommodation",
@@ -35,7 +273,9 @@
     ],
     "images": [
       "/media/limuzyna+tancerz+apartament.jpg"
-    ]
+    ],
+    "minPeople": 8,
+    "archived": true
   },
   {
     "id": "objazd-po-klubach",
@@ -67,7 +307,9 @@
     ],
     "images": [
       "/media/objazdpoklubach.jpg"
-    ]
+    ],
+    "minPeople": 6,
+    "archived": true
   },
   {
     "id": "limuzyna-fotograf-piknik",
@@ -111,7 +353,9 @@
     ],
     "images": [
       "/media/limuzyna + fotograf + piknik-1.jpg"
-    ]
+    ],
+    "minPeople": 5,
+    "archived": true
   },
   {
     "id": "transfer-tancerz-zakwaterowanie-klub",
@@ -143,7 +387,9 @@
     ],
     "images": [
       "/media/Limuzyna + tancerz + Zakwaterowanie + Klub.jpg"
-    ]
+    ],
+    "minPeople": 7,
+    "archived": true
   },
   {
     "id": "piknik-fotograf-gondola",
@@ -181,7 +427,9 @@
     ],
     "images": [
       "/media/pikinik + fotograf + gondola.jpg"
-    ]
+    ],
+    "minPeople": 7,
+    "archived": true
   },
   {
     "id": "taniec-limuzyna-tancerz-klub",
@@ -221,7 +469,9 @@
     ],
     "images": [
       "/media/Nauka tanca + tancerz + Limuzyna + Klub 2.jpg"
-    ]
+    ],
+    "minPeople": 7,
+    "archived": true
   },
   {
     "id": "fotograf-limuzyna-tancerz-klub",
@@ -255,7 +505,9 @@
     ],
     "images": [
       "/media/Fotograf + Limuzyna + tancerz + Klub.jpg"
-    ]
+    ],
+    "minPeople": 8,
+    "archived": true
   },
   {
     "id": "fotograf-taniec-limuzyna-klub",
@@ -297,7 +549,9 @@
     ],
     "images": [
       "/media/nauka tanca + fotograf + limuzyna + klub.jpg"
-    ]
+    ],
+    "minPeople": 8,
+    "archived": true
   },
   {
     "id": "gokarty-limuzyna-klub",
@@ -329,7 +583,9 @@
     ],
     "images": [
       "/media/gokarty + limuzyna + klub 2.jpg"
-    ]
+    ],
+    "minPeople": 7,
+    "archived": true
   },
   {
     "id": "limuzyna-spa",
@@ -367,7 +623,9 @@
     ],
     "images": [
       "/media/limuzyna + spa.jpg"
-    ]
+    ],
+    "minPeople": 7,
+    "archived": true
   },
   {
     "id": "strzelnica-limuzyna-tancerz-klub",
@@ -405,7 +663,9 @@
     ],
     "images": [
       "/media/strzelnica + limuzyna + tancerz + klub.jpg"
-    ]
+    ],
+    "minPeople": 7,
+    "archived": true
   },
   {
     "id": "ognisko-limuzyna-klub",
@@ -441,6 +701,8 @@
     ],
     "images": [
       "/media/ognisko + limuzyna + klub.jpg"
-    ]
+    ],
+    "minPeople": 7,
+    "archived": true
   }
 ]

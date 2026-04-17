@@ -25,7 +25,7 @@ interface Product {
   images: string[];
 }
 
-const allPackages: Product[] = [...(pakiety as Product[]), ...(pakietyNaWieczor as Product[])];
+const allPackages: Product[] = [...(pakiety as Product[]), ...(pakietyNaWieczor as Product[])].filter((p: any) => !p.archived);
 
 function formatName(name: string) {
   const parts = name.split(/\s*\+\s*/);

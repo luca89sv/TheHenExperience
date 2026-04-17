@@ -594,3 +594,16 @@ body.lang-ready > *:not(#page-loader) {
   );
   opacity: 0.8;
 }
+
+/* Package card description: hidden on mobile, 2-line clamp on sm+ */
+.sm-only-clamp {
+  display: none;
+}
+@media (min-width: 640px) {
+  .sm-only-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

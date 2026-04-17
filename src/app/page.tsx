@@ -14,7 +14,6 @@ export default function Home() {
     <>
       <PageLoader />
       <HeroSection />
-      <TransitionBeam />
       <FeaturedSection />
       <PackagesSection />
       <ActivitiesSection />

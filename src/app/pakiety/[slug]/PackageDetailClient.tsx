@@ -30,6 +30,8 @@ interface Product {
   description2_en?: string;
   description3_en?: string;
   features_en?: string[];
+  minPeople?: number;
+  maxPeople?: number;
 }
 
 const allPackages: Product[] = [...(pakiety as Product[]), ...(pakietyNaWieczor as Product[])];
@@ -570,6 +572,8 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
         productName={name}
         price={pkg.price}
         priceType={pkg.priceType}
+        minPeople={pkg.minPeople}
+        maxPeople={pkg.maxPeople}
       />
     </>
   );

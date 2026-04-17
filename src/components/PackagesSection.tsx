@@ -25,9 +25,10 @@ interface Product {
   features: string[];
   features_en?: string[];
   images: string[];
+  archived?: boolean;
 }
 
-const allPackages: Product[] = [...(pakiety as Product[]), ...(pakietyNaWieczor as Product[])];
+const allPackages: Product[] = [...(pakiety as Product[]), ...(pakietyNaWieczor as Product[])].filter(p => !p.archived);
 
 function PackagesHeader() {
   const ref = useRef<HTMLDivElement>(null);
@@ -150,8 +151,8 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
           )}
 
           {description && (
-            <p className="hidden sm:block text-xs text-white/40 leading-relaxed mb-4 line-clamp-2 group-hover:text-white/55 transition-colors duration-300">
-              {description}
+            <p className="hidden sm:block text-xs text-white/40 leading-relaxed mb-4 group-hover:text-white/55 transition-colors duration-300">
+              {description.replace(/\n/g, ' ').slice(0, 120)}...
             </p>
           )}
 

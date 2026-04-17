@@ -4,6 +4,162 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/lib/i18n";
 
+/* ── Mobile hero: video + timed phase overlays ── */
+function MobileVideoHero({ PHASES, PHASE_POSITIONS, t }: {
+  PHASES: { id: string; start: number; end: number; label: string; title: string; desc: string }[];
+  PHASE_POSITIONS: Record<string, React.CSSProperties>[];
+  t: (key: string) => string;
+}) {
+  const [activePhase, setActivePhase] = useState(-1);
+  const [heroCTAVisible, setHeroCTAVisible] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const breakpoint = typeof window !== "undefined" && window.innerWidth <= 480 ? "mobile" : "tablet";
+
+  useEffect(() => {
+    // Cycle phases: show CTA for 2s, then each phase for 3s, then loop
+    const PHASE_DURATION = 3000;
+    const CTA_DURATION = 2500;
+    let timer: ReturnType<typeof setTimeout>;
+    let currentIdx = -1;
+
+    const cycle = () => {
+      currentIdx++;
+      if (currentIdx > PHASES.length) currentIdx = 0;
+
+      if (currentIdx === 0) {
+        // Show CTA, hide phases
+        setHeroCTAVisible(true);
+        setActivePhase(-1);
+        timer = setTimeout(cycle, CTA_DURATION);
+      } else {
+        // Show phase, hide CTA
+        setHeroCTAVisible(false);
+        setActivePhase(currentIdx - 1);
+        timer = setTimeout(cycle, PHASE_DURATION);
+      }
+    };
+
+    // Start after a brief delay
+    timer = setTimeout(cycle, 1500);
+    return () => clearTimeout(timer);
+  }, [PHASES.length]);
+
+  return (
+    <section className="relative z-10 md:hidden" style={{ height: "100dvh" }}>
+      <div className="relative overflow-hidden flex items-center justify-center bg-black" style={{ height: "100dvh" }}>
+        {/* Video background */}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            maskImage: "radial-gradient(ellipse 85% 75% at 50% 48%, black 35%, transparent 72%)",
+            WebkitMaskImage: "radial-gradient(ellipse 85% 75% at 50% 48%, black 35%, transparent 72%)",
+          }}
+        >
+          <source src="/bachelorretteParty.mp4" type="video/mp4" />
+        </video>
+
+        {/* Phase overlay boxes */}
+        {PHASES.map((phase, i) => {
+          const pos = PHASE_POSITIONS[i][breakpoint] as React.CSSProperties;
+          return (
+            <div
+              key={phase.id}
+              className={`absolute z-[5] transition-all duration-[550ms] pointer-events-none hero-overlay-border ${
+                activePhase === i
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
+              }`}
+              style={{
+                ...pos,
+                maxWidth: breakpoint === "mobile" ? "170px" : "200px",
+                padding: breakpoint === "mobile" ? "0.6rem 0.8rem" : "0.8rem 1rem",
+                background: "rgba(8, 8, 12, 0.65)",
+                backdropFilter: "blur(24px)",
+                WebkitBackdropFilter: "blur(24px)",
+                border: "1px solid rgba(255, 255, 255, 0.07)",
+                borderRadius: "20px",
+              }}
+            >
+              <span
+                className="block uppercase tracking-[0.2em] text-pink-400"
+                style={{
+                  fontSize: breakpoint === "mobile" ? "0.5rem" : "0.55rem",
+                  fontWeight: 700,
+                  fontFamily: "var(--font-body)",
+                  marginBottom: breakpoint === "mobile" ? "0.2rem" : "0.3rem",
+                }}
+              >
+                {phase.label}
+              </span>
+              <h2
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: breakpoint === "mobile" ? "0.85rem" : "1rem",
+                  fontWeight: 600,
+                  lineHeight: 1.2,
+                }}
+              >
+                {phase.title}
+              </h2>
+            </div>
+          );
+        })}
+
+        {/* Hero CTA buttons */}
+        <div
+          className={`absolute left-1/2 -translate-x-1/2 flex flex-col items-center z-[6] transition-all duration-[800ms] ${
+            heroCTAVisible
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 translate-y-4 pointer-events-none"
+          }`}
+          style={{
+            bottom: breakpoint === "mobile" ? "7.5rem" : "9rem",
+            gap: breakpoint === "mobile" ? "0.4rem" : "0.5rem",
+          }}
+        >
+          <a
+            href="/#pakiety"
+            className="btn-primary whitespace-nowrap"
+            style={{
+              padding: breakpoint === "mobile" ? "0.5rem 1.3rem" : "0.55rem 1.5rem",
+              fontSize: breakpoint === "mobile" ? "0.75rem" : "0.8rem",
+            }}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width={breakpoint === "mobile" ? 14 : 15} height={breakpoint === "mobile" ? 14 : 15}>
+              <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+              <line x1="12" y1="22.08" x2="12" y2="12" />
+            </svg>
+            {t('hero.cta.packages')}
+          </a>
+          <a
+            href="/#kontakt"
+            className="btn-outline whitespace-nowrap"
+            style={{
+              padding: breakpoint === "mobile" ? "0.5rem 1.3rem" : "0.55rem 1.5rem",
+              fontSize: breakpoint === "mobile" ? "0.75rem" : "0.8rem",
+              background: "rgba(0, 0, 0, 0.55)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+            }}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width={breakpoint === "mobile" ? 14 : 15} height={breakpoint === "mobile" ? 14 : 15}>
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+            </svg>
+            {t('hero.cta.contact')}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── Desktop hero: scroll-driven frame animation (unchanged) ── */
 export default function HeroSection() {
   const { t } = useLanguage();
   const pathname = usePathname();
@@ -16,6 +172,7 @@ export default function HeroSection() {
   const actualRotationRef = useRef(0);
   const rafRef = useRef<number>(0);
   const progressBarRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const PHASES = [
     { id: "phase-1", start: 0.05, end: 0.22, label: t('hero.p1.label'), title: t('hero.p1.title'), desc: t('hero.p1.desc') },
@@ -36,6 +193,13 @@ export default function HeroSection() {
   const [heroCTAVisible, setHeroCTAVisible] = useState(true);
   const [scrollHintVisible, setScrollHintVisible] = useState(true);
   const [breakpoint, setBreakpoint] = useState<"desktop" | "laptop" | "tablet" | "mobile">("desktop");
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const getConfig = useCallback((mobile: boolean) => ({
     totalFrames: mobile ? 61 : 121,
@@ -225,6 +389,10 @@ export default function HeroSection() {
   }, [pathname]);
 
   const scrollHeight = breakpoint === "mobile" ? "150vh" : breakpoint === "tablet" ? "220vh" : "400vh";
+
+  if (isMobile) {
+    return <MobileVideoHero PHASES={PHASES} PHASE_POSITIONS={PHASE_POSITIONS} t={t} />;
+  }
 
   return (
     <section

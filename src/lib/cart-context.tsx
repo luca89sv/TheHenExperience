@@ -20,11 +20,19 @@ export interface Product {
   description?: string;
   features: string[];
   images: string[];
+  minPeople?: number;
+  maxPeople?: number;
 }
 
 export interface CartItem {
   product: Product;
   guests: number;
+}
+
+export interface GuestError {
+  productId: string;
+  type: "min" | "max";
+  limit: number;
 }
 
 interface CartContextValue {
@@ -37,6 +45,7 @@ interface CartContextValue {
   clearCart: () => void;
   getTotal: () => number;
   isInCart: (productId: string) => boolean;
+  getGuestErrors: () => GuestError[];
   itemCount: number;
   hydrated: boolean;
 }
@@ -119,6 +128,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }, 0);
   }, [items]);
 
+  const getGuestErrors = useCallback((): GuestError[] => {
+    const errors: GuestError[] = [];
+    for (const item of items) {
+      if (item.product.priceType !== "person") continue;
+      if (item.product.minPeople && item.guests < item.product.minPeople) {
+        errors.push({ productId: item.product.id, type: "min", limit: item.product.minPeople });
+      }
+      if (item.product.maxPeople && item.guests > item.product.maxPeople) {
+        errors.push({ productId: item.product.id, type: "max", limit: item.product.maxPeople });
+      }
+    }
+    return errors;
+  }, [items]);
+
   return (
     <CartContext.Provider
       value={{
@@ -131,6 +154,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         clearCart,
         getTotal,
         isInCart,
+        getGuestErrors,
         itemCount: items.length,
         hydrated,
       }}

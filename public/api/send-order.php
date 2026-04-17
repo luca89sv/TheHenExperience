@@ -29,35 +29,42 @@ $message = htmlspecialchars($input['message'] ?? '', ENT_QUOTES, 'UTF-8');
 $items   = $input['items'] ?? [];
 $total   = floatval($input['total'] ?? 0);
 
-if (empty($name) || empty($phone) || empty($email) || empty($items)) {
+if (empty($name) || empty($email)) {
     echo json_encode(['success' => false, 'error' => 'Brakuje wymaganych pól.']);
     exit;
 }
 
+$isContactOnly = empty($items);
+
 $to = 'atrakcjenapanienski@gmail.com';
-$subject = "Nowe zamówienie od {$name} — {$total} PLN";
+$subject = $isContactOnly
+    ? "Nowa wiadomość od {$name}"
+    : "Nowe zamówienie od {$name} — {$total} PLN";
 
 // Build items HTML
 $itemsHtml = '';
-foreach ($items as $i => $item) {
-    $num = str_pad($i + 1, 2, '0', STR_PAD_LEFT);
-    $itemName = htmlspecialchars($item['name'] ?? '', ENT_QUOTES, 'UTF-8');
-    $price = floatval($item['price'] ?? 0);
-    $priceType = $item['priceType'] ?? 'pcs';
-    $guests = intval($item['guests'] ?? 1);
-    $subtotal = floatval($item['subtotal'] ?? 0);
+$itemsBlock = '';
+if (!$isContactOnly) {
+    foreach ($items as $i => $item) {
+        $num = str_pad($i + 1, 2, '0', STR_PAD_LEFT);
+        $itemName = htmlspecialchars($item['name'] ?? '', ENT_QUOTES, 'UTF-8');
+        $price = floatval($item['price'] ?? 0);
+        $priceType = $item['priceType'] ?? 'pcs';
+        $guests = intval($item['guests'] ?? 1);
+        $subtotal = floatval($item['subtotal'] ?? 0);
 
-    $qtyInfo = $priceType === 'person'
-        ? "{$guests} os. × {$price} PLN/os."
-        : "{$price} PLN";
+        $qtyInfo = $priceType === 'person'
+            ? "{$guests} os. × {$price} PLN/os."
+            : "{$price} PLN";
 
-    $itemsHtml .= "
-    <tr style='border-bottom: 1px solid #2a2a30;'>
-        <td style='padding: 12px 16px; color: #fff; font-size: 14px;'>{$num}</td>
-        <td style='padding: 12px 16px; color: #fff; font-size: 14px; font-weight: 600;'>{$itemName}</td>
-        <td style='padding: 12px 16px; color: #aaa; font-size: 14px; text-align: center;'>{$qtyInfo}</td>
-        <td style='padding: 12px 16px; color: #f472b6; font-size: 14px; font-weight: 600; text-align: right;'>{$subtotal} PLN</td>
-    </tr>";
+        $itemsHtml .= "
+        <tr style='border-bottom: 1px solid #2a2a30;'>
+            <td style='padding: 12px 16px; color: #fff; font-size: 14px;'>{$num}</td>
+            <td style='padding: 12px 16px; color: #fff; font-size: 14px; font-weight: 600;'>{$itemName}</td>
+            <td style='padding: 12px 16px; color: #aaa; font-size: 14px; text-align: center;'>{$qtyInfo}</td>
+            <td style='padding: 12px 16px; color: #f472b6; font-size: 14px; font-weight: 600; text-align: right;'>{$subtotal} PLN</td>
+        </tr>";
+    }
 }
 
 $messageBlock = '';
@@ -69,6 +76,8 @@ if (!empty($message)) {
     </div>";
 }
 
+$guests = htmlspecialchars($input['guests'] ?? '', ENT_QUOTES, 'UTF-8');
+
 $dateRow = '';
 if (!empty($date)) {
     $dateRow = "
@@ -78,12 +87,21 @@ if (!empty($date)) {
     </tr>";
 }
 
+$guestsRow = '';
+if (!empty($guests)) {
+    $guestsRow = "
+    <tr>
+        <td style='padding: 6px 0; color: rgba(255,255,255,0.4); font-size: 13px;'>Liczba osób:</td>
+        <td style='padding: 6px 0; color: #fff; font-size: 14px; font-weight: 500;'>{$guests}</td>
+    </tr>";
+}
+
 $html = "
 <div style='background: #0c0c10; padding: 40px 0; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;'>
     <div style='max-width: 600px; margin: 0 auto; background: #131318; border-radius: 16px; border: 1px solid rgba(255,255,255,0.06); overflow: hidden;'>
 
         <div style='padding: 32px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06);'>
-            <h1 style='margin: 0; color: #f472b6; font-size: 24px; font-weight: 700;'>Nowe zamówienie</h1>
+            <h1 style='margin: 0; color: #f472b6; font-size: 24px; font-weight: 700;'>" . ($isContactOnly ? 'Nowa wiadomość' : 'Nowe zamówienie') . "</h1>
             <p style='margin: 8px 0 0; color: rgba(255,255,255,0.4); font-size: 14px;'>The Hen Experience</p>
         </div>
 
@@ -103,9 +121,11 @@ $html = "
                     <td style='padding: 6px 0; color: #fff; font-size: 14px; font-weight: 500;'>{$email}</td>
                 </tr>
                 {$dateRow}
+                {$guestsRow}
             </table>
         </div>
 
+        " . ($isContactOnly ? "" : "
         <div style='padding: 24px 32px; border-bottom: 1px solid rgba(255,255,255,0.06);'>
             <h2 style='margin: 0 0 16px; color: #fff; font-size: 16px; font-weight: 600;'>Zamówione atrakcje</h2>
             <table style='width: 100%; border-collapse: collapse;'>
@@ -125,7 +145,7 @@ $html = "
                 <span style='color: rgba(255,255,255,0.4); font-size: 14px;'>Łącznie: </span>
                 <span style='color: #f472b6; font-size: 22px; font-weight: 700;'>{$total} PLN</span>
             </div>
-        </div>
+        </div>") . "
 
         {$messageBlock}
 
