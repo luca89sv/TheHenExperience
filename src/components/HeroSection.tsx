@@ -20,7 +20,7 @@ function MobileVideoHero({ PHASES, PHASE_POSITIONS, t }: {
     if (!video) return;
 
     // Sync phases to video time (5s loop)
-    // Phase timings matched to video content
+    // Using rAF polling for smooth, frame-accurate timing
     const PHASE_TIMES = [
       { start: 0.0, end: 1.0 },   // CTA
       { start: 1.0, end: 2.2 },   // Phase 1: Kompleksowa organizacja
@@ -29,26 +29,29 @@ function MobileVideoHero({ PHASES, PHASE_POSITIONS, t }: {
       { start: 4.2, end: 5.0 },   // Phase 4: Nocne życie
     ];
 
-    const onTimeUpdate = () => {
-      const t = video.currentTime;
-      if (t < PHASE_TIMES[0].end) {
+    let rafId: number;
+
+    const pollTime = () => {
+      const ct = video.currentTime;
+      if (ct < PHASE_TIMES[0].end) {
         setHeroCTAVisible(true);
         setActivePhase(-1);
       } else {
         setHeroCTAVisible(false);
         let found = -1;
         for (let i = 1; i < PHASE_TIMES.length; i++) {
-          if (t >= PHASE_TIMES[i].start && t < PHASE_TIMES[i].end) {
+          if (ct >= PHASE_TIMES[i].start && ct < PHASE_TIMES[i].end) {
             found = i - 1;
             break;
           }
         }
         setActivePhase(found);
       }
+      rafId = requestAnimationFrame(pollTime);
     };
 
-    video.addEventListener("timeupdate", onTimeUpdate);
-    return () => video.removeEventListener("timeupdate", onTimeUpdate);
+    rafId = requestAnimationFrame(pollTime);
+    return () => cancelAnimationFrame(rafId);
   }, []);
 
   return (
