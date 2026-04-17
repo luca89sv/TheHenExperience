@@ -16,33 +16,40 @@ function MobileVideoHero({ PHASES, PHASE_POSITIONS, t }: {
   const breakpoint = typeof window !== "undefined" && window.innerWidth <= 480 ? "mobile" : "tablet";
 
   useEffect(() => {
-    // Cycle phases: show CTA for 2s, then each phase for 3s, then loop
-    const PHASE_DURATION = 3000;
-    const CTA_DURATION = 2500;
-    let timer: ReturnType<typeof setTimeout>;
-    let currentIdx = -1;
+    const video = videoRef.current;
+    if (!video) return;
 
-    const cycle = () => {
-      currentIdx++;
-      if (currentIdx > PHASES.length) currentIdx = 0;
+    // Sync phases to video time (5s loop)
+    // Phase timings matched to video content
+    const PHASE_TIMES = [
+      { start: 0.0, end: 1.0 },   // CTA
+      { start: 1.0, end: 2.2 },   // Phase 1: Kompleksowa organizacja
+      { start: 2.2, end: 3.4 },   // Phase 2: Twój wieczór
+      { start: 3.4, end: 4.2 },   // Phase 3: Luksusowy transport
+      { start: 4.2, end: 5.0 },   // Phase 4: Nocne życie
+    ];
 
-      if (currentIdx === 0) {
-        // Show CTA, hide phases
+    const onTimeUpdate = () => {
+      const t = video.currentTime;
+      if (t < PHASE_TIMES[0].end) {
         setHeroCTAVisible(true);
         setActivePhase(-1);
-        timer = setTimeout(cycle, CTA_DURATION);
       } else {
-        // Show phase, hide CTA
         setHeroCTAVisible(false);
-        setActivePhase(currentIdx - 1);
-        timer = setTimeout(cycle, PHASE_DURATION);
+        let found = -1;
+        for (let i = 1; i < PHASE_TIMES.length; i++) {
+          if (t >= PHASE_TIMES[i].start && t < PHASE_TIMES[i].end) {
+            found = i - 1;
+            break;
+          }
+        }
+        setActivePhase(found);
       }
     };
 
-    // Start after a brief delay
-    timer = setTimeout(cycle, 1500);
-    return () => clearTimeout(timer);
-  }, [PHASES.length]);
+    video.addEventListener("timeupdate", onTimeUpdate);
+    return () => video.removeEventListener("timeupdate", onTimeUpdate);
+  }, []);
 
   return (
     <section className="relative z-10 md:hidden" style={{ height: "100dvh" }}>

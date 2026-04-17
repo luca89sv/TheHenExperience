@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   title: "The Hen Experience — Niezapomniany Wiecz\u00f3r Panie\u0144ski w Warszawie",
   description:
     "Ekskluzywne wieczory panie\u0144skie w Warszawie. Limuzyny, kluby VIP, dekoracje i niezapomniane chwile. Zarezerwuj wymarzon\u0105 noc.",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "The Hen Experience — Premium Hen Parties in Warsaw",
     description:

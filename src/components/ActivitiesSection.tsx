@@ -120,18 +120,18 @@ function ActivityCard({ item, index }: { item: Product; index: number }) {
           }}
         />
 
-        <div className="p-4 flex flex-col flex-1 relative z-[1]">
-          <h3 className="font-[family-name:var(--font-display)] text-base font-semibold leading-snug mb-1 uppercase group-hover:text-pink-300 transition-colors duration-300">
+        <div className="p-2.5 sm:p-4 flex flex-col flex-1 relative z-[1]">
+          <h3 className="font-[family-name:var(--font-display)] text-sm sm:text-base font-semibold leading-snug mb-1 uppercase group-hover:text-pink-300 transition-colors duration-300">
             {name}
           </h3>
           {subtitle && (
-            <p className="text-xs text-white/35 mb-3">{subtitle}</p>
+            <p className="text-[10px] sm:text-xs text-white/35 mb-2 sm:mb-3">{subtitle}</p>
           )}
 
           {/* Buttons */}
           <div className="mt-auto flex gap-2">
             <span
-              className="flex-1 flex items-center justify-center py-2 rounded-full text-xs font-semibold border transition-all duration-300
+              className="hidden sm:flex flex-1 items-center justify-center py-2 rounded-full text-xs font-semibold border transition-all duration-300
                 text-pink-400 border-pink-500 bg-transparent
                 group-hover:bg-gradient-to-r group-hover:from-pink-700 group-hover:to-pink-500 group-hover:text-white group-hover:border-transparent"
               style={{ fontFamily: "var(--font-body)", letterSpacing: "0.02em" }}
