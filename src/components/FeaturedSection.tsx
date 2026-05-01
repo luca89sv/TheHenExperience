@@ -16,7 +16,7 @@ interface Product {
   subtitle?: string;
   subtitle_en?: string;
   price: number;
-  priceType: "person" | "pcs";
+  priceType: "person" | "pcs" | "hour";
   category: string;
   description?: string;
   description_en?: string;
@@ -315,7 +315,7 @@ function SideCard({ item, index }: { item: Product; index: number }) {
             <span className="text-lg sm:text-xl font-bold text-pink-400 group-hover:text-pink-300 transition-colors duration-300">{item.price}</span>
             <span className="text-xs text-white/50">PLN</span>
             <span className="text-[10px] text-white/30">
-              {item.priceType === "person" ? t('price.perPerson') : t('price.perPiece')}
+              {item.priceType === "person" ? t('price.perPerson') : item.priceType === "hour" ? t('price.perHour') : t('price.perPiece')}
             </span>
           </div>
           <span

@@ -145,7 +145,7 @@ export default function Footer() {
             </h4>
             <div className="flex justify-center md:justify-start" style={{ gap: "1rem" }}>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/atrakcjenapanienski_pl/"
                 target="_blank"
                 rel="noopener"
                 aria-label="Instagram"
@@ -163,7 +163,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61563390710251"
                 target="_blank"
                 rel="noopener"
                 aria-label="Facebook"
@@ -176,22 +176,6 @@ export default function Footer() {
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                </svg>
-              </a>
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener"
-                aria-label="TikTok"
-                className="flex items-center justify-center transition-colors border border-[rgba(255,255,255,0.06)] text-[rgba(255,255,255,0.45)] hover:border-[rgba(236,72,153,0.35)] hover:text-pink-400"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "8px",
-                }}
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.11v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46v-7.1a8.16 8.16 0 005.58 2.18V11.3a4.84 4.84 0 01-3.77-1.84V6.69z" />
                 </svg>
               </a>
             </div>

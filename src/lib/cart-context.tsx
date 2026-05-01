@@ -15,7 +15,7 @@ export interface Product {
   slug: string;
   subtitle?: string;
   price: number;
-  priceType: "person" | "pcs";
+  priceType: "person" | "pcs" | "hour";
   category: string;
   description?: string;
   features: string[];

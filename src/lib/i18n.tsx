@@ -235,6 +235,7 @@ const translations = {
     // Price labels
     'price.perPerson': '/pers.',
     'price.perPiece': '/pc.',
+    'price.perHour': '/h',
   },
   pl: {
     'topbar.tagline': 'Niezapomniane wieczory panienskie w Warszawie',
@@ -468,6 +469,7 @@ const translations = {
     // Price labels
     'price.perPerson': '/os.',
     'price.perPiece': '/szt.',
+    'price.perHour': '/h',
   },
 } as const;
 

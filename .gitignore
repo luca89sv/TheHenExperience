@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# raw asset working materials (Pexels/Unsplash downloads used to build collages)
+/public/media/_src/
+
 # production
 /build
 

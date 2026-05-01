@@ -18,7 +18,7 @@ interface Product {
   subtitle?: string;
   subtitle_en?: string;
   price: number;
-  priceType: "person" | "pcs";
+  priceType: "person" | "pcs" | "hour";
   category: string;
   description?: string;
   description_en?: string;
@@ -136,7 +136,7 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
             <span className="text-2xl sm:text-xl font-bold text-pink-400 transition-colors duration-300 group-hover:text-pink-300">{pkg.price}</span>
             <span className="text-base sm:text-sm text-white/60 ml-1">PLN</span>
             <span className="text-sm sm:text-xs text-white/40 ml-0.5">
-              /{pkg.priceType === "person" ? t('price.perPerson') : t('price.perPiece')}
+              /{pkg.priceType === "person" ? t('price.perPerson') : pkg.priceType === "hour" ? t('price.perHour') : t('price.perPiece')}
             </span>
           </div>
         </div>

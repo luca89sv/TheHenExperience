@@ -15,7 +15,7 @@ interface Product {
   slug: string;
   subtitle?: string;
   price: number;
-  priceType: "person" | "pcs";
+  priceType: "person" | "pcs" | "hour";
   category: string;
   description?: string;
   description2?: string;
@@ -292,7 +292,7 @@ export default function ActivityDetailClient({ slug }: { slug: string }) {
               <span className="text-3xl font-bold text-pink-400">{item.price}</span>
               <span className="text-base text-white/50">PLN</span>
               <span className="text-sm text-white/30">
-                {item.priceType === "person" ? t('price.perPerson') : t('price.perPiece')}
+                {item.priceType === "person" ? t('price.perPerson') : item.priceType === "hour" ? t('price.perHour') : t('price.perPiece')}
               </span>
             </div>
 

@@ -8,7 +8,7 @@ interface BookingModalProps {
   onClose: () => void;
   productName: string;
   price: number;
-  priceType: "person" | "pcs";
+  priceType: "person" | "pcs" | "hour";
   minPeople?: number;
   maxPeople?: number;
 }
@@ -183,7 +183,7 @@ export default function BookingModal({ isOpen, onClose, productName, price, pric
                   <span className="text-2xl font-bold text-pink-400">{price}</span>
                   <span className="text-sm text-white/50">PLN</span>
                   <span className="text-xs text-white/35">
-                    /{priceType === "person" ? t('price.perPerson') : t('price.perPiece')}
+                    /{priceType === "person" ? t('price.perPerson') : priceType === "hour" ? t('price.perHour') : t('price.perPiece')}
                   </span>
                 </div>
               </div>

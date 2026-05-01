@@ -17,7 +17,7 @@ interface Product {
   slug: string;
   subtitle?: string;
   price: number;
-  priceType: "person" | "pcs";
+  priceType: "person" | "pcs" | "hour";
   category: string;
   description?: string;
   description2?: string;
@@ -385,7 +385,7 @@ export default function PackageDetailClient({ slug }: { slug: string }) {
               <span className="text-3xl font-bold text-pink-400">{pkg.price}</span>
               <span className="text-base text-white/50">PLN</span>
               <span className="text-sm text-white/30">
-                {pkg.priceType === "person" ? t('price.perPerson') : t('price.perPiece')}
+                {pkg.priceType === "person" ? t('price.perPerson') : pkg.priceType === "hour" ? t('price.perHour') : t('price.perPiece')}
               </span>
             </div>
 

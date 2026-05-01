@@ -93,7 +93,7 @@ export default function Navbar() {
           {/* Social icons — hidden on mobile */}
           <div className="hidden md:flex items-center gap-2 ml-3">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/atrakcjenapanienski_pl/"
               target="_blank"
               rel="noopener"
               aria-label="Instagram"
@@ -106,7 +106,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61563390710251"
               target="_blank"
               rel="noopener"
               aria-label="Facebook"

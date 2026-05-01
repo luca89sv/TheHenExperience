@@ -4,7 +4,7 @@ export interface Product {
   slug: string;
   subtitle?: string;
   price: number;
-  priceType: "person" | "pcs";
+  priceType: "person" | "pcs" | "hour";
   category: "atrakcje" | "pakiety" | "zakwaterowanie" | "sklep" | "pakiety_na_wieczor";
   description?: string;
   description2?: string;
@@ -68,7 +68,7 @@ export const atrakcje: Product[] = [
     name: "Różowa limuzyna",
     slug: "rozowa-limuzyna",
     price: 999,
-    priceType: "pcs",
+    priceType: "hour",
     category: "atrakcje",
     description: "Poczuj się jak Barbie i zarezerwuj różową limuzynę.",
     features: [
@@ -189,7 +189,7 @@ export const atrakcje: Product[] = [
     slug: "limuzyna-bmw",
     subtitle: "(max. 12 osób)",
     price: 999,
-    priceType: "pcs",
+    priceType: "hour",
     category: "atrakcje",
     description:
       "Planując niezapomniany wieczór panieński, nie może zabraknąć atrakcji, które dostarczą dawki luksusu i szaleństwa. Wynajem limuzyny BMW to doskonały wybór, który na pewno spełni oczekiwania wszystkich uczestniczek. Ta elegancka maszyna jest po prostu niesamowita! Wnętrze wypełnione jest luksusowymi dodatkami, a nagłośnienie jest na tyle potężne, że nawet najgorętsze hity brzmią jeszcze lepiej. Ale to nie wszystko! Sufit ledowy typu infinity rozświetla wnętrze niesamowitą magią, a wejście typu jet door dodaje odrobiny ekstrawagancji. Ten samochód z pewnością wywoła ogromne wrażenie na wszystkich dziewczynach.",
@@ -327,7 +327,7 @@ export const atrakcje: Product[] = [
     slug: "limuzyna-hummer",
     subtitle: "(max. 20 osób)",
     price: 1299,
-    priceType: "pcs",
+    priceType: "hour",
     category: "atrakcje",
     description:
       "Jeśli masz przyjemność być otoczona przez liczne grono bliskich przyjaciół, z którymi pragniesz spędzić wyjątkowy wieczór panieński, wynajem limuzyny Hummer to doskonała atrakcja, która nie tylko dostarczy Wam niezapomnianej imprezy, ale także zapewni komfortowy transport.Ten olbrzymi gigant może pomieścić aż do 24 osób na swoim pokładzie, co oznacza, że wszyscy Wasi bliscy znajomi mogą być razem w tej wyjątkowej chwili.",
@@ -411,7 +411,7 @@ export const atrakcje: Product[] = [
     slug: "limuzyna-chrysler-prestige",
     subtitle: "(max. 10 osób)",
     price: 799,
-    priceType: "pcs",
+    priceType: "hour",
     category: "atrakcje",
     description:
       "Wynajem limuzyny Chrysler to nie tylko wygodny sposób na transport podczas wieczoru panieńskiego, ale także gwarancja świetnej zabawy. Ten ekskluzywny samochód pozwoli Wam poczuć się jak prawdziwe gwiazdy, ponieważ ta wyjątkowa noc jest przeznaczona tylko dla Was.",
@@ -495,7 +495,7 @@ export const atrakcje: Product[] = [
     name: "Limuzyna do 15 osób",
     slug: "limuzyna-do-15-osob",
     price: 999,
-    priceType: "pcs",
+    priceType: "hour",
     category: "atrakcje",
     description:
       "Wynajem limuzyny na wieczór panieński to gwarancja szaleństwa i niezapomnianej zabawy...",
@@ -547,7 +547,7 @@ export const atrakcje: Product[] = [
     slug: "limuzyna-lincoln",
     subtitle: "(max. 10 osób)",
     price: 599,
-    priceType: "pcs",
+    priceType: "hour",
     category: "atrakcje",
     description:
       "Limuzyna Lincoln to klasyka wśród limuzyn na wieczór panieński. Ten elegancki i luksusowy samochód zapewni Wam niezapomniane wrażenia i poczucie bycia gwiazdą. Przejażdżka limuzyną Lincoln to doskonały sposób na rozpoczęcie wieczoru panieńskiego w wielkim stylu.",
@@ -621,7 +621,7 @@ export const atrakcje: Product[] = [
     slug: "limuzyna-z-jet-door",
     subtitle: "(max. 10 osób)",
     price: 750,
-    priceType: "pcs",
+    priceType: "hour",
     category: "atrakcje",
     description:
       "Limuzyna z Jet Door to wyjątkowa atrakcja na wieczór panieński, która zapewni Wam niezapomniane wrażenia i poczucie luksusu. Unikalne wejście typu Jet Door dodaje odrobiny ekstrawagancji i sprawia, że wysiadanie z limuzyny staje się prawdziwym pokazem.",
@@ -813,7 +813,7 @@ export const atrakcje: Product[] = [
     slug: "przejazd-limuzyna-chrysler",
     subtitle: "(max. 10 osób)",
     price: 699,
-    priceType: "pcs",
+    priceType: "hour",
     category: "atrakcje",
     description:
       "Przejazd limuzyną Chrysler to doskonała atrakcja na wieczór panieński, która zapewni Wam poczucie luksusu i niezapomniane wrażenia. Ten elegancki samochód jest idealnym wyborem dla grupy przyjaciółek, które chcą rozpocząć wieczór w wielkim stylu.",
@@ -1056,7 +1056,7 @@ export const pakiety: Product[] = [
     name: "Nauka tańca + Przejazd Limuzyną + Tancerz erotyczny + Klub",
     slug: "taniec-limuzyna-tancerz-klub",
     subtitle: "(min. 7 osób)",
-    price: 299,
+    price: 339,
     priceType: "person",
     category: "pakiety",
     description:

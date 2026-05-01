@@ -1,5 +1,116 @@
 [
   {
+    "id": "aresztowanie-tancerz-limuzyna-dywan-klub",
+    "name": "Aresztowanie Panny Młodej + Tancerz + Mini Sesja + Czerwony Dywan + Limuzyna + Klub",
+    "name_en": "Bride Arrest + Dancer + Mini Session + Red Carpet + Limousine + Club",
+    "slug": "aresztowanie-tancerz-limuzyna-dywan-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 369,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Szukasz pomysłu na wieczór panieński, który zrobi prawdziwe show? Ten pakiet to idealne połączenie adrenaliny, emocji i dobrej zabawy. Wszystko zaczyna się od spektakularnego „aresztowania\" Panny Młodej na początku przejazdu. Chwilę później przenosicie się do limuzyny, gdzie czeka na Was dalsza część show – energetyczny występ tancerza, przepyszny szampan i imprezowa muzyka. Po występie będzie czas na zdjęcia. Profesjonalny fotograf zaprosi Was na sesję na czerwonym dywanie i wykona dla Was 10 profesjonalnych zdjęć. Finałem wieczoru będzie wejście do klubu, gdzie możecie kontynuować zabawę do białego rana.",
+    "description_en": "Looking for a hen party that will be a real show? This package is the perfect mix of adrenaline, emotions and great fun. It all starts with a spectacular \"arrest\" of the Bride at the beginning of the ride. Moments later you move into the limousine, where the rest of the show awaits — an energetic dancer performance, delicious champagne and party music. After the performance there is time for photos. A professional photographer invites you to a red-carpet session and takes 10 professional photos for you. The finale of the evening is the entrance to the club, where you can keep partying until dawn.",
+    "images": [
+      "/media/aresztowanie-tancerz-limuzyna-dywan-klub.jpg"
+    ],
+    "features": [
+      "Przejazd limuzyną na 90 minut",
+      "Aresztowanie Panny Młodej",
+      "Występ tancerza w limuzynie",
+      "2 butelki szampana",
+      "10 profesjonalnie obrobionych zdjęć",
+      "Mini sesja z fotografem na czerwonym dywanie przy limuzynie",
+      "Wejściówki do wybranego klubu"
+    ],
+    "features_en": [
+      "90-minute limousine ride",
+      "Bride arrest stunt",
+      "Dancer performance in the limousine",
+      "2 bottles of champagne",
+      "10 professionally edited photos",
+      "Red-carpet mini session by the limousine",
+      "Entry to a club of your choice"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "karaoke-beer-pong-limuzyna-tancerz-klub",
+    "name": "Karaoke + Beer Pong + Limuzyna + Tancerz + Mini Sesja + Klub",
+    "name_en": "Karaoke + Beer Pong + Limousine + Dancer + Mini Session + Club",
+    "slug": "karaoke-beer-pong-limuzyna-tancerz-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 339,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Szukasz pomysłu na wyjątkowy wieczór, który połączy świetną zabawę, odrobinę rywalizacji i nutę luksusu? Ten pakiet to idealna propozycja dla dziewczyn, które chcą przeżyć coś więcej niż zwykłe wyjście na miasto. Rozkręćcie imprezę podczas karaoke i poczujcie się jak prawdziwe gwiazdy sceny, a potem rywalizujcie ze sobą w kultowej grze beer pong, która zawsze gwarantuje mnóstwo śmiechu i emocji. Całość dopełnia przejazd limuzyną, dzięki któremu poczujecie klimat VIP i zaczniecie (lub zakończycie) wieczór w wyjątkowym stylu. W trakcie przejazdu dołączy do Was przystojny tancerz, który wykona niezwykle rozgrzewający występ. Na koniec mini sesja zdjęciowa przy limuzynie, gdzie profesjonalny fotograf uchwyci najlepsze momenty, do których będziecie wracać jeszcze długo po imprezie. Po wszystkim otrzymujecie wejściówki do wybranego klubu z oferty i kontynuujecie zabawę do białego rana.",
+    "description_en": "Looking for a special evening that combines great fun, a touch of competition and a hint of luxury? This package is the perfect choice for girls who want to experience something more than just a regular night out. Get the party started with karaoke and feel like real stage stars, then compete with each other in the iconic beer pong game, which always guarantees plenty of laughter and excitement. The whole experience is rounded off with a limousine ride that lets you feel the VIP vibe and start (or finish) the evening in style. During the ride a handsome dancer will join you and put on a truly heart-warming performance. To finish, a mini photo session by the limousine, where a professional photographer captures the best moments you'll return to long after the party. Afterwards you get entry to a club of your choice from the offer and keep partying until dawn.",
+    "images": [
+      "/media/karaoke-beer-pong-limuzyna-tancerz-klub.jpg"
+    ],
+    "features": [
+      "Przejazd limuzyną na 90 minut",
+      "Występ tancerza w limuzynie",
+      "Prywatna sala karaoke",
+      "Prywatna sala do zabawy w beer pong",
+      "Powitalny szampan w limuzynie",
+      "10 profesjonalnie obrobionych zdjęć",
+      "Mini sesja z fotografem przy limuzynie",
+      "Butelka Prosecco oraz piwo do zabawy Beer Pong",
+      "Wejściówki do wybranego klubu"
+    ],
+    "features_en": [
+      "90-minute limousine ride",
+      "Dancer performance in the limousine",
+      "Private karaoke room",
+      "Private beer pong room",
+      "Welcome champagne in the limousine",
+      "10 professionally edited photos",
+      "Mini photo session by the limousine",
+      "Bottle of Prosecco and beer for Beer Pong",
+      "Entry to a club of your choice"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "karaoke-beer-pong-limuzyna-sesja-klub",
+    "name": "Karaoke + Beer Pong + Limuzyna + Mini Sesja + Klub",
+    "name_en": "Karaoke + Beer Pong + Limousine + Mini Session + Club",
+    "slug": "karaoke-beer-pong-limuzyna-sesja-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 289,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Szukasz pomysłu na wyjątkowy wieczór, który połączy świetną zabawę, odrobinę rywalizacji i nutę luksusu? Ten pakiet to idealna propozycja dla dziewczyn, które chcą przeżyć coś więcej niż zwykłe wyjście na miasto. Rozkręćcie imprezę podczas karaoke i poczujcie się jak prawdziwe gwiazdy sceny, a potem rywalizujcie ze sobą w kultowej grze beer pong, która zawsze gwarantuje mnóstwo śmiechu i emocji. Całość dopełnia przejazd limuzyną, dzięki któremu poczujecie klimat VIP i zaczniecie (lub zakończycie) wieczór w wyjątkowym stylu. Na koniec mini sesja zdjęciowa przy limuzynie, gdzie profesjonalny fotograf uchwyci najlepsze momenty, do których będziecie wracać jeszcze długo po imprezie. Po wszystkim otrzymujecie wejściówki do wybranego klubu z oferty i kontynuujecie zabawę do białego rana.",
+    "description_en": "Looking for a special evening that combines great fun, a touch of competition and a hint of luxury? This package is the perfect choice for girls who want to experience something more than just a regular night out. Get the party started with karaoke and feel like real stage stars, then compete with each other in the iconic beer pong game, which always guarantees plenty of laughter and excitement. The whole experience is rounded off with a limousine ride that lets you feel the VIP vibe and start (or finish) the evening in style. To finish, a mini photo session by the limousine, where a professional photographer captures the best moments you'll return to long after the party. Afterwards you get entry to a club of your choice from the offer and keep partying until dawn.",
+    "images": [
+      "/media/karaoke-beer-pong-limuzyna-sesja-klub.jpg"
+    ],
+    "features": [
+      "Godzinny przejazd limuzyną",
+      "Prywatna sala karaoke",
+      "Prywatna sala do zabawy w beer pong",
+      "Powitalny szampan w limuzynie",
+      "10 profesjonalnie obrobionych zdjęć",
+      "Mini sesja z fotografem przy limuzynie",
+      "Butelka Prosecco oraz piwo do zabawy Beer Pong",
+      "Wejściówki do wybranego klubu"
+    ],
+    "features_en": [
+      "One-hour limousine ride",
+      "Private karaoke room",
+      "Private beer pong room",
+      "Welcome champagne in the limousine",
+      "10 professionally edited photos",
+      "Mini photo session by the limousine",
+      "Bottle of Prosecco and beer for Beer Pong",
+      "Entry to a club of your choice"
+    ],
+    "minPeople": 5
+  },
+  {
     "id": "limuzyna-piknik-sesja-klub",
     "name": "Limuzyna + Piknik + Mini Sesja + Czerwony Dywan + Klub",
     "name_en": "Limousine + Picnic + Mini Photo Session + Red Carpet + Club",
@@ -201,7 +312,7 @@
     "slug": "restauracja-tancerz-limuzyna-dywan-klub",
     "subtitle": "(min. 5 osób)",
     "subtitle_en": "(min. 5 people)",
-    "price": 349,
+    "price": 299,
     "priceType": "person",
     "category": "pakiety",
     "description": "Szukacie wieczoru panieńskiego, który zrobi efekt \"wow\" od początku do końca? Ten pakiet to gotowy scenariusz na udaną imprezę.\nZaczynacie w restauracji, gdzie czeka na Was zarezerwowany stolik z dekoracjami tematycznymi i grami panieńskimi – idealny moment, żeby się rozkręcić i wejść w imprezowy nastrój.\nKolejną część imprezy spędzicie w luksusowej limuzynie, sącząc szampana w rytmie ulubionej muzyki.\nW trakcie jazdy czeka na Was wyjątkowa atrakcja – występ tancerza, który podkręci klimat i dostarczy mnóstwo emocji. To moment, którego nie zapomnicie!\nPodczas postoju realizowana jest mini sesja zdjęciowa przy limuzynie na czerwonym dywanie. Efekt? 10 profesjonalnie obrobionych zdjęć, które będą idealną pamiątką z tego wieczoru.\nNa zakończenie wchodzicie do klubu z zapewnionymi wejściówkami i kontynuujecie zabawę do białego rana.",
@@ -234,6 +345,557 @@
     ],
     "images": [
       "/media/restauracja-tancerz-limuzyna-klub.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "pakiet-sexy-panienski",
+    "name": "Pakiet Sexy Panieński – Limuzyna + Mini Sesja + Tancerz + Klub",
+    "name_en": "Sexy Hen Package – Limousine + Mini Session + Dancer + Club",
+    "slug": "pakiet-sexy-panienski",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 289,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Rozpoczynamy wieczór od przejazdu limuzyną, zwiedzając najpiękniejsze zakątki Warszawy. Na pokładzie czeka na Was schłodzony szampan oraz kieliszki, a atmosferę podkręci gorący występ tancerza, który dostarczy mnóstwo emocji i świetnej zabawy.\nW trakcie przejazdu robimy krótki przystanek na mini sesję zdjęciową, aby uchwycić wyjątkowe momenty tego wieczoru. Następnie limuzyna zawiezie Was do jednego z najmodniejszych klubów w Warszawie.",
+    "description_en": "We begin the evening with a limousine ride, showing you the most beautiful spots of Warsaw. On board, chilled champagne and glasses await, and the atmosphere is turned up by a hot dancer performance that delivers loads of excitement and great fun.\nDuring the ride we make a short stop for a mini photo session to capture the special moments of the night. The limousine then takes you to one of the trendiest clubs in Warsaw.",
+    "features": [
+      "10 profesjonalnie obrobionych zdjęć",
+      "Mini sesja z fotografem",
+      "Występ tancerza w limuzynie",
+      "Wejściówki do klubu",
+      "Godzinny przejazd limuzyną",
+      "Możliwość puszczania własnej muzyki",
+      "Powitalny Szampan w Limuzynie",
+      "Możliwość wniesienia własnych napojów"
+    ],
+    "features_en": [
+      "10 professionally edited photos",
+      "Mini photo session with a photographer",
+      "Dancer performance in the limousine",
+      "Club entry passes",
+      "One-hour limousine ride",
+      "Option to play your own music",
+      "Welcome champagne in the limousine",
+      "Option to bring your own drinks"
+    ],
+    "images": [
+      "/media/pakiet-sexy-panienski.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "taniec-limuzyna-tancerz-klub",
+    "name": "Nauka tańca + Przejazd Limuzyną + Tancerz erotyczny + Klub",
+    "name_en": "Dance Lesson + Limousine Ride + Exotic Dancer + Club",
+    "slug": "taniec-limuzyna-tancerz-klub",
+    "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
+    "price": 339,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Wieczór panieński rozpoczyna się od ekscytującej lekcji tańca, podczas której uczycie się zmysłowych kroków wybranego tańca: Bachaty, Zouka lub innych. W profesjonalnym studiu tanecznym, pod okiem doświadczonego instruktora, zgłębiacie tajniki tych gorących latynoamerykańskich tańców, które wprowadzają Was w wyjątkowy nastrój.\nPo intensywnej i zabawnej lekcji tańca czeka na Was luksusowa limuzyna, która zabierze Was w niezapomniany objazd po Warszawie. W środku czekają na Was wygodne siedzenia, nastrojowe oświetlenie i barek z powitalnym szampanem. Limuzyna przemierza ulice Warszawy, pozwalając Wam podziwiać nocne życie i najpiękniejsze miejsca stolicy, aby w pewnym momencie stać się miejscem występu tancerza erotycznego, który doda pikanterii i ekscytacji Waszemu spotkaniu. Profesjonalny tancerz zapewnia widowiskowy pokaz, który na długo pozostanie w Waszej pamięci.\nPo tej dawce emocji limuzyna zawozi Was do jednego z najmodniejszych klubów w Warszawie, gdzie bawicie się do białego rana. Wybierz ten pakiet, aby wieczór panieński stał się wyjątkowym i niepowtarzalnym przeżyciem dla wszystkich uczestniczek.",
+    "description_en": "The hen party starts with an exciting dance lesson where you learn the sensual steps of a chosen dance: Bachata, Zouk or others. In a professional dance studio, under the eye of an experienced instructor, you dive into the secrets of these hot Latin dances that set a unique mood.\nAfter an intense and fun dance class, a luxury limousine awaits to take you on an unforgettable tour of Warsaw. Inside you'll find comfortable seats, ambient lighting and a bar with welcome champagne. The limousine cruises the streets of Warsaw so you can admire the nightlife and the most beautiful places in the capital – and at one point it becomes the stage for an exotic dancer who adds spice and excitement to your evening. A professional performer delivers a spectacular show you'll remember for a long time.\nAfter that thrill, the limousine drives you to one of the trendiest clubs in Warsaw where you party until dawn. Choose this package to make your hen party an extraordinary, unforgettable experience for everyone.",
+    "features": [
+      "Godzinna sesja taneczna",
+      "Profesjonalny instruktor",
+      "Profesjonalne studio taneczne z lustrami",
+      "Powitalny kieliszek szampana",
+      "Godzinna imprezowa przejażdżka Limuzyną",
+      "Młody przystojny szofer",
+      "Możliwość wniesienia własnego alkoholu",
+      "Możliwość podłączenia własnej muzyki",
+      "Występ seksownego tancerza",
+      "Wejściówki do wybranego klubu"
+    ],
+    "features_en": [
+      "One-hour dance session",
+      "Professional dance instructor",
+      "Professional mirrored dance studio",
+      "Welcome glass of champagne",
+      "One-hour party limousine ride",
+      "Young, handsome chauffeur",
+      "Option to bring your own alcohol",
+      "Option to play your own music",
+      "Sexy exotic dancer performance",
+      "Entry to a club of your choice"
+    ],
+    "images": [
+      "/media/Nauka tanca + tancerz + Limuzyna + Klub 2.jpg"
+    ],
+    "minPeople": 7
+  },
+  {
+    "id": "gokarty-limuzyna-klub",
+    "name": "Gokarty + Mini sesja + Objazd Limuzyną po Warszawie + Klub",
+    "name_en": "Go-Karts + Mini Session + Limousine Tour of Warsaw + Club",
+    "slug": "gokarty-limuzyna-klub",
+    "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
+    "price": 289,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Wieczór panieński rozpoczniecie od ekscytującej rywalizacji na torze gokartowym. Spotkacie się na profesjonalnym torze, gdzie czeka na Was dawka adrenaliny i świetna zabawa. Wyścigi gokartowe to doskonała okazja, by poczuć dreszczyk emocji i sprawdzić swoje umiejętności za kierownicą. Ryk silników, ostre zakręty i szybkie proste sprawiają, że każda z Was poczuje się jak prawdziwy kierowca rajdowy, a zdrowa rywalizacja dostarczy mnóstwo radości i śmiechu.\nPo pełnych emocji wyścigach przenosicie się do luksusowej limuzyny, która zabierze Was na niezapomniany objazd po Warszawie. W środku zrelaksujecie się na wygodnych siedzeniach, korzystając z nastrojowego oświetlenia i baru z powitalnym szampanem. Limuzyna przemierza ulice Warszawy, pozwalając Wam podziwiać nocne życie miasta i najpiękniejsze jego zakątki. W trakcie przejazdu zatrzymujemy się na mini sesję zdjęciową, w trakcie której fotograf wykona dla Was 10 profesjonalnych zdjęć.\nWieczór zakończy się wizytą w jednym z najmodniejszych klubów w Warszawie. Klubowa atmosfera i doskonała muzyka sprawią, że ten wieczór stanie się niezapomnianym przeżyciem dla wszystkich uczestniczek.",
+    "description_en": "You'll start the hen party with an exciting go-kart race. You'll meet at a professional track for a rush of adrenaline and great fun. Go-kart racing is the perfect chance to feel the thrill and test your skills behind the wheel. Roaring engines, sharp turns and fast straights make every one of you feel like a real rally driver, and friendly competition brings loads of joy and laughter.\nAfter the action-packed race, you move into a luxury limousine that takes you on an unforgettable tour of Warsaw. Inside you relax on comfy seats, enjoying ambient lighting and a bar with welcome champagne. The limousine cruises the streets of Warsaw so you can admire the city's nightlife and most beautiful spots. During the ride we stop for a mini photo session where the photographer takes 10 professional shots for you.\nThe evening ends at one of the trendiest clubs in Warsaw. The club atmosphere and great music will turn the night into an unforgettable experience for everyone.",
+    "features": [
+      "Powitalny szampan",
+      "10 profesjonalnie obrobionych zdjęć",
+      "Mini sesja z fotografem",
+      "Godzinny przejazd limuzyną",
+      "16 minut jazdy dla każdej uczestniczki",
+      "Bezkolejkowe wejście do Klubu",
+      "Koordynator",
+      "Możliwość wniesienia własnych napojów"
+    ],
+    "features_en": [
+      "Welcome champagne",
+      "10 professionally edited photos",
+      "Mini photo session with a photographer",
+      "One-hour limousine ride",
+      "16 minutes of driving for each participant",
+      "Skip-the-queue club entry",
+      "Event coordinator",
+      "Option to bring your own drinks"
+    ],
+    "images": [
+      "/media/gokarty + limuzyna + klub 2.jpg"
+    ],
+    "minPeople": 7
+  },
+  {
+    "id": "limuzyna-spa",
+    "name": "Limuzyna + Mini Sesja + Spa",
+    "name_en": "Limousine + Mini Session + Spa",
+    "slug": "limuzyna-spa",
+    "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
+    "price": 369,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Wieczór panieński rozpoczyna się od luksusowej limuzyny, która zabiera Was w relaksującą podróż po mieście. Wnętrze limuzyny jest wyposażone w wygodne siedzenia, nastrojowe oświetlenie i barek z ulubionymi napojami, co tworzy idealne warunki do rozpoczęcia wieczoru w wyjątkowym stylu. Podczas przejazdu macie okazję podziwiać najpiękniejsze zakątki Warszawy, ciesząc się komfortem i elegancją. W trakcie przejazdu zatrzymujemy się na mini sesję zdjęciową, w trakcie której fotograf wykona dla Was 10 profesjonalnych zdjęć.\nNastępnie limuzyna zawozi Was do ekskluzywnego SPA, gdzie czeka na Was prawdziwa uczta dla ciała i ducha. Dodatkowo możecie zrelaksować się w saunie, która będzie do Waszej dyspozycji. To idealna okazja, aby odpocząć, zrelaksować się i naładować baterie przed wielkim dniem.",
+    "description_en": "The hen party starts with a luxury limousine that takes you on a relaxing ride through the city. The cabin features comfortable seats, ambient lighting and a mini bar with your favourite drinks – the perfect setting to begin the evening in grand style. During the ride you'll admire the most beautiful spots of Warsaw while enjoying comfort and elegance. We make a stop for a mini photo session where the photographer takes 10 professional shots for you.\nThe limousine then takes you to an exclusive SPA where a true feast for body and soul awaits. You can also unwind in the sauna, which is available for your group. It's the perfect chance to rest, relax and recharge before the big day.",
+    "features": [
+      "Młody, przystojny kierowca",
+      "Powitalny szampan",
+      "Godzinny przejazd limuzyną",
+      "Możliwość wniesienia własnego alkoholu",
+      "Aromaterapeutyczna kąpiel w jacuzzi",
+      "Rytuał Hammam Hurram - dla Panny Młodej",
+      "Hammam klasyczny lub Masaż Balijski (45 min.) - dla pozostałych uczestniczek",
+      "Lampka szampana",
+      "10 profesjonalnie obrobionych zdjęć",
+      "Mini sesja z fotografem"
+    ],
+    "features_en": [
+      "Young, handsome chauffeur",
+      "Welcome champagne",
+      "One-hour limousine ride",
+      "Option to bring your own alcohol",
+      "Aromatherapy jacuzzi bath",
+      "Hammam Hurram ritual — for the bride-to-be",
+      "Classic hammam or Balinese massage (45 min.) — for the rest of the group",
+      "Glass of champagne",
+      "10 professionally edited photos",
+      "Mini photo session with a photographer"
+    ],
+    "images": [
+      "/media/limuzyna + spa.jpg"
+    ],
+    "minPeople": 7
+  },
+  {
+    "id": "fotograf-taniec-limuzyna-klub",
+    "name": "Prywatny fotograf + Nauka tańca + Objazd po Warszawie limuzyną + Klub",
+    "name_en": "Private Photographer + Dance Lesson + Limousine Tour of Warsaw + Club",
+    "slug": "fotograf-taniec-limuzyna-klub",
+    "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
+    "price": 329,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Wieczór panieński rozpoczyna się od sesji fotograficznej z prywatnym fotografem, który zabiera Was na plenerową sesję zdjęciową w najpiękniejszych zakątkach Warszawy. Spacerujecie po malowniczych uliczkach Starego Miasta, pozując na tle urokliwych kamienic i zabytków. Fotograf uwiecznia spontaniczne momenty śmiechu, radości oraz stylizowane ujęcia, które staną się piękną pamiątką tego wyjątkowego wieczoru.\nNastępnie udajecie się do profesjonalnego studia tanecznego na lekcję zmysłowych tańców, takich jak Bachata czy Zouk. Pod okiem doświadczonego instruktora zgłębiacie tajniki tych gorących latynoamerykańskich tańców, które wprowadzają Was w wyjątkowy nastrój i dodają energii. Nauka tańca to nie tylko świetna zabawa, ale także okazja do wspólnego śmiechu i tworzenia niezapomnianych wspomnień.\nPo intensywnej lekcji tańca czeka na Was luksusowa limuzyna, która zabiera Was na objazd po Warszawie. W środku możecie się zrelaksować na wygodnych siedzeniach, korzystając z nastrojowego oświetlenia i baru z powitalnym szampanem. Podczas przejazdu podziwiać będziecie najpiękniejsze zakątki miasta, takie jak Pałac Kultury i Nauki, Opera Narodowa i nowoczesne wieżowce w centrum Warszawy. Wieczór kończy się wizytą w jednym z najmodniejszych klubów w Warszawie i do białego rana świętujecie ten wyjątkowy wieczór w wielkim stylu.",
+    "description_en": "The hen party starts with a photo session with a private photographer who takes you for an outdoor shoot in the most beautiful spots of Warsaw. You wander the picturesque streets of the Old Town, posing against charming tenements and landmarks. The photographer captures spontaneous laughter, joy and styled shots that become a beautiful keepsake of this special evening.\nYou then head to a professional dance studio for a lesson in sensual dances such as Bachata or Zouk. Under the eye of an experienced instructor you dive into the secrets of these hot Latin dances that set a unique mood and boost your energy. The dance class is not only great fun but also a chance to share laughter and create unforgettable memories.\nAfter the intense lesson, a luxury limousine awaits to take you on a tour of Warsaw. Inside you relax on comfy seats, enjoying ambient lighting and a bar with welcome champagne. During the ride you'll see the city's most beautiful spots including the Palace of Culture, the National Opera and the modern skyscrapers of central Warsaw. The evening ends at one of the trendiest clubs in Warsaw where you celebrate in grand style until dawn.",
+    "features": [
+      "Profesjonalny fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Mini sesja przy limuzynie",
+      "Godzinna sesja taneczna",
+      "Profesjonalny instruktor",
+      "Profesjonalne studio taneczne z lustrami",
+      "Powitalny kieliszek szampana",
+      "Godzinna imprezowa przejażdżka Limuzyną",
+      "Młody przystojny szofer",
+      "Możliwość wniesienia własnego alkoholu",
+      "Możliwość podłączenia własnej muzyki",
+      "Bezkolejkowe wejście do klubu"
+    ],
+    "features_en": [
+      "Professional photographer for one hour",
+      "25 professionally edited photos",
+      "Mini session by the limousine",
+      "One-hour dance session",
+      "Professional dance instructor",
+      "Professional mirrored dance studio",
+      "Welcome glass of champagne",
+      "One-hour party limousine ride",
+      "Young, handsome chauffeur",
+      "Option to bring your own alcohol",
+      "Option to play your own music",
+      "Skip-the-queue club entry"
+    ],
+    "images": [
+      "/media/nauka tanca + fotograf + limuzyna + klub.jpg"
+    ],
+    "minPeople": 7
+  },
+  {
+    "id": "fotograf-limuzyna-tancerz-klub",
+    "name": "Prywatny fotograf + Objazd po Warszawie limuzyną + Tancerz + Klub",
+    "name_en": "Private Photographer + Limousine Tour of Warsaw + Exotic Dancer + Club",
+    "slug": "fotograf-limuzyna-tancerz-klub",
+    "subtitle": "(min. 8 osób)",
+    "subtitle_en": "(min. 8 people)",
+    "price": 279,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Wieczór panieński rozpoczyna się od sesji fotograficznej z prywatnym fotografem, który zabiera Was na plenerową sesję zdjęciową w najpiękniejszych zakątkach Warszawy. Spacerujecie po malowniczych uliczkach Starego Miasta, pozując na tle urokliwych kamienic i zabytków. Fotograf uwiecznia spontaniczne momenty śmiechu, radości oraz stylizowane ujęcia, które staną się piękną pamiątką tego wyjątkowego wieczoru.\nPo plenerowej sesji zdjęciowej podjeżdża po Was elegancka limuzyna, która zabiera Was na luksusowy objazd po Warszawie. W środku możecie się zrelaksować na wygodnych siedzeniach, korzystając z nastrojowego oświetlenia i baru z ulubionymi napojami. Fotograf towarzyszy Wam na początku przejazdu, uwieczniając te magiczne chwile w limuzynie.\nKolejnym punktem wieczoru jest emocjonujący występ tancerza erotycznego. Profesjonalny tancerz zapewnia widowiskowe show, które dostarcza mnóstwo śmiechu i ekscytacji, tworząc niezapomnianą atmosferę. Po pokazie limuzyna zawozi Was do jednego z najmodniejszych klubów w Warszawie, gdzie czeka na Was noc pełna tańca i zabawy.",
+    "description_en": "The hen party starts with a photo session with a private photographer who takes you for an outdoor shoot in the most beautiful corners of Warsaw. You wander the picturesque streets of the Old Town, posing against charming tenements and landmarks. The photographer captures spontaneous laughter, joy and styled shots that become a beautiful keepsake of this special evening.\nAfter the outdoor session, an elegant limousine picks you up for a luxurious tour of Warsaw. Inside you relax on comfy seats, enjoying ambient lighting and a bar with your favourite drinks. The photographer joins you at the start of the ride, capturing those magical moments in the limousine.\nNext comes an exciting exotic dancer performance. A professional performer delivers a spectacular show that brings plenty of laughter and excitement, creating an unforgettable atmosphere. After the show, the limousine takes you to one of the trendiest clubs in Warsaw, where a night of dancing and fun awaits.",
+    "features": [
+      "Godzinny Przejazd limuzyną",
+      "Powitalny szampan",
+      "Występ tancerza",
+      "Profesjonalny fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Mini sesja przy limuzynie",
+      "Bezkolejkowe wejście do Klubu",
+      "Koordynator"
+    ],
+    "features_en": [
+      "One-hour limousine ride",
+      "Welcome champagne",
+      "Exotic dancer performance",
+      "Professional photographer for one hour",
+      "25 professionally edited photos",
+      "Mini session by the limousine",
+      "Skip-the-queue club entry",
+      "Event coordinator"
+    ],
+    "images": [
+      "/media/Fotograf + Limuzyna + tancerz + Klub.jpg"
+    ],
+    "minPeople": 8
+  },
+  {
+    "id": "piknik-fotograf-gondola",
+    "name": "Piknik nad Wisłą + Prywatny fotograf + Rejs gondolą po Wiśle",
+    "name_en": "Picnic by the Vistula + Private Photographer + Gondola Cruise on the Vistula",
+    "slug": "piknik-fotograf-gondola",
+    "subtitle": "(min. 7 osób)",
+    "subtitle_en": "(min. 7 people)",
+    "price": 319,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Wieczór panieński rozpoczniecie uroczym piknikiem nad brzegiem Wisły. W otoczeniu natury, z widokiem na spokojną rzekę, zrelaksujecie się i będziecie cieszyć się wspólnie spędzonym czasem przy dźwiękach ulubionej muzyki i grach integracyjnych. Towarzyszy Wam prywatny fotograf, który uwiecznia wszystkie wyjątkowe chwile. Fotograf wykonuje profesjonalne zdjęcia podczas pikniku, łapiąc spontaniczne momenty śmiechu i radości oraz stylizowane sesje w różnych urokliwych zakątkach nad Wisłą.\nPo pikniku wsiadacie na statek, by wyruszyć w rejs po Wiśle. Podziwiacie panoramę Warszawy z pokładu, obserwując, jak miasto zmienia się o zmierzchu. Rejs gondolą to nie tylko wspaniała okazja do dalszego relaksu, ale także możliwość wykonania kolejnych pięknych zdjęć, które będą niezapomnianą pamiątką z tego magicznego wieczoru. Cały ten wieczór, pełen relaksu, zabawy i wyjątkowych chwil, pozostanie w Waszej pamięci na długo.",
+    "description_en": "Your hen party starts with a charming picnic by the Vistula River. Surrounded by nature with a view of the calm water, you'll relax and enjoy time together with your favourite music and group games. A private photographer accompanies you, capturing every special moment. The photographer takes professional shots during the picnic, catching spontaneous laughter and joy along with styled sessions in charming spots along the Vistula.\nAfter the picnic you board a boat for a cruise on the Vistula. You admire the Warsaw skyline from the deck, watching the city shift at dusk. A gondola cruise is not only a great chance to keep relaxing but also an opportunity for more beautiful photos that will be an unforgettable keepsake of this magical evening.",
+    "features": [
+      "2 godzinny piknik na świeżym powietrzu",
+      "Pyszne przekąski",
+      "Dekoracje tematyczne",
+      "Orzeźwiające napoje",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Profesjonalny fotograf na godzinę czasu",
+      "Relaks na kocach przy dźwiękach muzyki",
+      "Gry i zabawy integracyjne",
+      "Nagłośnienie",
+      "Godzinny kurs wenecką gondolą po Wiśle"
+    ],
+    "features_en": [
+      "2-hour outdoor picnic",
+      "Delicious snacks",
+      "Themed decorations",
+      "Refreshing drinks",
+      "25 professionally edited photos",
+      "Professional photographer for one hour",
+      "Relaxing on blankets to the sound of music",
+      "Group games and ice-breakers",
+      "Sound system",
+      "One-hour Venetian gondola cruise on the Vistula"
+    ],
+    "images": [
+      "/media/pikinik + fotograf + gondola.jpg"
+    ],
+    "minPeople": 7
+  },
+  {
+    "id": "limuzyna-fotograf-piknik",
+    "name": "Limuzyna + Prywatny Fotograf + Piknik nad Wisłą",
+    "name_en": "Limousine + Private Photographer + Picnic by the Vistula",
+    "slug": "limuzyna-fotograf-piknik",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 319,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Rozpocznijcie wieczór panieński ekscytującym objazdem po mieście w luksusowej limuzynie Chrysler. Spotykacie się w wybranym miejscu, gdzie czeka na Was elegancki pojazd wyposażony w wygodne siedzenia, nastrojowe oświetlenie i barek z powitalnym szampanem. Limuzyna przemierza ulice Warszawy, przejeżdżając obok ikon miasta takich jak Pałac Kultury i Nauki, Opera Narodowa, Stare Miasto oraz nowoczesne wieżowce w centrum Warszawy. W trakcie przejazdu możecie zatrzymać się w wybranych miejscach, aby zrobić zdjęcia i cieszyć się chwilą.\nPo ekscytującej podróży docieracie nad brzeg Wisły, gdzie czeka na Was przygotowany piknik z kwiatami, kocami, drewnianymi stołami i dekoracjami tematycznymi. W otoczeniu natury, z widokiem na rzekę, relaksujecie się, rozmawiacie i bawicie. Cały ten magiczny wieczór towarzyszy Wam prywatny fotograf, który uwiecznia wszystkie wyjątkowe chwile. Każda z Was ma okazję do indywidualnych sesji, jak i wspólnych fotografii grupowych. Kreatywne pomysły fotografa dodają zdjęciom wyjątkowego charakteru, a Wy zyskujecie piękne pamiątki z tego niezapomnianego wieczoru, pełnego luksusu, relaksu i radości.",
+    "description_en": "Start your hen party with an exciting tour of the city in a luxury Chrysler limousine. You meet at a chosen spot where an elegant car awaits with comfy seats, ambient lighting and a mini bar with welcome champagne. The limousine cruises the streets of Warsaw past the city's icons — the Palace of Culture, the National Opera, the Old Town and the modern skyscrapers of the centre. Along the way you can stop at selected spots to take photos and enjoy the moment.\nAfter the exciting ride you arrive by the Vistula, where a prepared picnic awaits with flowers, blankets, wooden tables and themed decorations. Surrounded by nature with a view of the river, you'll relax, chat and have fun. A private photographer accompanies you all evening, capturing every special moment. Each of you has the chance for individual portraits as well as group shots. The photographer's creative ideas give the photos a special character, and you gain beautiful keepsakes of this unforgettable evening full of luxury, relaxation and joy.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Powitalny Szampan w Limuzynie",
+      "Godzina przejazdu limuzyną",
+      "Możliwość puszczania własnej muzyki",
+      "Profesjonalny fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć",
+      "2 godzinny piknik na świeżym powietrzu",
+      "Dekoracje tematyczne i piknikowe",
+      "Przekąski i napoje do wyboru",
+      "Relaks na kocach przy dźwiękach muzyki",
+      "Gry i zabawy integracyjne"
+    ],
+    "features_en": [
+      "Young, friendly chauffeur",
+      "Welcome champagne in the limousine",
+      "One-hour limousine ride",
+      "Option to play your own music",
+      "Professional photographer for one hour",
+      "25 professionally edited photos",
+      "2-hour outdoor picnic",
+      "Themed picnic decorations",
+      "Snacks and drinks of your choice",
+      "Relaxing on blankets to the sound of music",
+      "Group games and ice-breakers"
+    ],
+    "images": [
+      "/media/limuzyna + fotograf + piknik-1.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "objazd-po-klubach",
+    "name": "Objazd po klubach muzycznych",
+    "name_en": "Club Crawl",
+    "slug": "objazd-po-klubach",
+    "subtitle": "(min. 6 osób)",
+    "subtitle_en": "(min. 6 people)",
+    "price": 199,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Chcecie poimprezować, ale nie lubicie spędzać zbyt wiele czasu w jednym miejscu? Czekanie na ubera, który w dodatku nie zabierze Was wszystkich razem, to strata czasu i pieniędzy. Wybierzcie pakiet, w którym odwiedzicie kilka klubów, nie czekając na wejście do nich, a transfery pomiędzy nimi odbędą się sprawnie na pokładzie długiej limuzyny, gdzie zawsze czekać na Was będzie lampka szampana!",
+    "description_en": "Want to party but prefer not to stay in one place all night? Waiting for an Uber that won't even take your whole group is a waste of time and money. Choose a package where you visit several clubs without waiting in line, with transfers between them handled smoothly on board a stretch limousine — where a glass of champagne always awaits.",
+    "description2": "Czas trwania atrakcji: 5h",
+    "description2_en": "Duration: 5 hours",
+    "features": [
+      "wejściówki do klubów",
+      "priorytet wejścia na imprezy",
+      "przyjazd po wieczór panieński na terenie Warszawy",
+      "powitalny szampan",
+      "transfery limuzyną pomiędzy klubami"
+    ],
+    "features_en": [
+      "club entry passes",
+      "priority entry to venues",
+      "pick-up for your hen party anywhere in Warsaw",
+      "welcome champagne",
+      "limousine transfers between clubs"
+    ],
+    "images": [
+      "/media/objazdpoklubach.jpg"
+    ],
+    "minPeople": 6
+  },
+  {
+    "id": "fotograf-piknik",
+    "name": "Prywatny Fotograf + Piknik nad Wisłą",
+    "name_en": "Private Photographer + Picnic by the Vistula",
+    "slug": "fotograf-piknik",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 239,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Imprezę organizujemy na plaży nad Wisłą, gdzie czeka na Was klimatyczny piknik z kwiatami, kocami, drewnianymi stołami i dekoracjami tematycznymi. W otoczeniu natury, z widokiem na rzekę, relaksujecie się, rozmawiacie i bawicie. Cały ten magiczny wieczór towarzyszy Wam prywatny fotograf, który uwiecznia wszystkie wyjątkowe chwile. Każda z Was ma okazję do indywidualnych sesji, jak i wspólnych fotografii grupowych. Kreatywne pomysły fotografa dodają zdjęciom wyjątkowego charakteru, a Wy zyskujecie piękne pamiątki z tego niezapomnianego wieczoru, pełnego luksusu, relaksu i radości.",
+    "description_en": "The party takes place on a beach by the Vistula, where a cosy picnic awaits with flowers, blankets, wooden tables and themed decorations. Surrounded by nature with a view of the river, you relax, chat and have fun. A private photographer accompanies you all evening, capturing every special moment. Each of you has the chance for individual portraits as well as group photos. The photographer's creative ideas give the shots a special character, and you gain beautiful keepsakes of this unforgettable evening full of luxury, relaxation and joy.",
+    "features": [
+      "Możliwość puszczania własnej muzyki",
+      "Profesjonalny fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć",
+      "2 godzinny piknik na świeżym powietrzu",
+      "Dekoracje tematyczne i piknikowe",
+      "Przekąski i napoje do wyboru",
+      "Relaks na kocach przy dźwiękach muzyki",
+      "Gry i zabawy integracyjne"
+    ],
+    "features_en": [
+      "Option to play your own music",
+      "Professional photographer for one hour",
+      "25 professionally edited photos",
+      "2-hour outdoor picnic",
+      "Themed picnic decorations",
+      "Snacks and drinks of your choice",
+      "Relaxing on blankets to the sound of music",
+      "Group games and ice-breakers"
+    ],
+    "images": [
+      "/media/fotograf-piknik.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "fotograf-limuzyna",
+    "name": "Prywatny fotograf + Limuzyna",
+    "name_en": "Private Photographer + Limousine",
+    "slug": "fotograf-limuzyna",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 249,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Rozpoczynacie od przejazdu luksusową limuzyną, gdzie czeka na Was szampan, muzyka i wyjątkowa, imprezowa atmosfera. Towarzyszy Wam prywatny fotograf, który uchwyci najpiękniejsze i najbardziej spontaniczne momenty tej nocy. W trakcie przejazdu robimy krótki postój na sesję przy limuzynie, a następnie udajemy się na docelową sesję zdjęciową. Miejsce na sesję ustalacie wspólnie z fotografem, dopasowując ją do Waszego stylu i klimatu.\nTo idealny pakiet dla przyszłej Panny Młodej i jej ekipy, które preferują spokojniejsze, bardziej klimatyczne świętowanie.",
+    "description_en": "You start with a luxury limousine ride where champagne, music and a unique party atmosphere await. A private photographer accompanies you, capturing the most beautiful and spontaneous moments of the night. During the ride we make a short stop for a session by the limousine, then head to the main photo location. You agree on the location with the photographer, tailored to your style and vibe.\nIt's the ideal package for the bride-to-be and her crew who prefer a calmer, more atmospheric celebration.",
+    "features": [
+      "Młody, sympatyczny kierowca",
+      "Powitalny Szampan w Limuzynie",
+      "Godzina przejazdu limuzyną",
+      "Możliwość puszczania własnej muzyki",
+      "Profesjonalny fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć"
+    ],
+    "features_en": [
+      "Young, friendly chauffeur",
+      "Welcome champagne in the limousine",
+      "One-hour limousine ride",
+      "Option to play your own music",
+      "Professional photographer for one hour",
+      "25 professionally edited photos"
+    ],
+    "images": [
+      "/media/fotograf-limuzyna.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "fotograf-tancerz-apartament",
+    "name": "Prywatny fotograf + Tancerz w apartamencie",
+    "name_en": "Private Photographer + Dancer in the Apartment",
+    "slug": "fotograf-tancerz-apartament",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 219,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Jeśli szukacie emocji i niezapomnianych wrażeń na wieczór panieński, to jest to pakiet właśnie dla Was. Atmosferę rozkręci nasz przystojny tancerz, który zapewni pełen emocji, 20-minutowy występ w kameralnej atmosferze apartamentu. Po części artystycznej zostaje z Wami na chwilę, by wspólnie napić się drinka i zrobić pamiątkowe zdjęcia.\nAtrakcję uwieczni prywatny fotograf, który wykona także sesję pozowaną w apartamencie lub hotelu, dopasowaną do Waszych potrzeb. Dzięki temu otrzymacie wyjątkową pamiątkę, do której będziecie wracać latami. To idealny pakiet dla grup, które chcą świętować w kameralnym i swobodnym klimacie.",
+    "description_en": "If you're looking for excitement and unforgettable experiences for your hen party, this is the package for you. The atmosphere is heated up by our handsome dancer, who delivers a thrilling 20-minute performance in the intimate setting of your apartment. After the show he stays for a moment to share a drink and pose for keepsake photos.\nThe whole attraction is captured by a private photographer who also delivers a posed session in your apartment or hotel, tailored to your needs. The result is a unique memento you'll return to for years. It's the ideal package for groups who want to celebrate in a relaxed, intimate atmosphere.",
+    "features": [
+      "Profesjonalny fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Występ tancerza w apartamencie / hotelu"
+    ],
+    "features_en": [
+      "Professional photographer for one hour",
+      "25 professionally edited photos",
+      "Dancer performance in the apartment / hotel"
+    ],
+    "images": [
+      "/media/fotograf-tancerz-apartament.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "kregle-limuzyna-klub",
+    "name": "Kręgle + Limuzyna + Mini sesja + Klub",
+    "name_en": "Bowling + Limousine + Mini Session + Club",
+    "slug": "kregle-limuzyna-klub",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 289,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Wieczór panieński, który zaczyna się na luzie, a kończy prawdziwą imprezą. Zaczynacie od wizyty w kręgielni, gdzie przy dobrej muzyce i odrobinie rywalizacji szybko łapiecie imprezowy klimat.\nNastępnie z kręgielni przenosicie się do luksusowej limuzyny, w której czeka na Was powitalny szampan i ciąg dalszy zabawy. W trakcie przejazdu możecie zatrzymać się w wybranych miejscach, aby zrobić zdjęcia i cieszyć się chwilą. To moment, w którym czujecie się jak prawdziwe VIP-y.\nNa finał traficie do wybranego klubu, gdzie kontynuujecie zabawę do białego rana.",
+    "description_en": "A hen party that starts relaxed and ends in a real celebration. You begin at the bowling alley, where good music and a bit of friendly competition quickly set the party mood.\nThen from the alley you move into a luxury limousine with welcome champagne and plenty more fun. Along the way you can stop wherever you like to take photos and enjoy the moment – that's when you truly feel like VIPs.\nFor the finale you head to your chosen club and party until dawn.",
+    "features": [
+      "2h świetnej zabawy w kręgielni",
+      "Zestaw przekąsek i napojów",
+      "Prywatna loża",
+      "Prywatny koordynator",
+      "Powitalny szampan",
+      "Wejściówki do wybranego klubu",
+      "Godzinny przejazd limuzyną"
+    ],
+    "features_en": [
+      "2 hours of bowling fun",
+      "Set of snacks and drinks",
+      "Private lounge",
+      "Private coordinator",
+      "Welcome champagne",
+      "Entry to a club of your choice",
+      "One-hour limousine ride"
+    ],
+    "images": [
+      "/media/kregle-limuzyna-klub.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "loza-limuzyna",
+    "name": "Loża w klubie + Limuzyna + Mini sesja",
+    "name_en": "VIP Club Lounge + Limousine + Mini Session",
+    "slug": "loza-limuzyna",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 289,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Jeśli w Twoich żyłach płynie imprezowa krew, to mamy dla Ciebie idealny pakiet. Zaczynacie od biforka w luksusowej limuzynie, a finał czeka na Was w jednym z najlepszych klubów w Warszawie.\nSzofer odbiera Was prosto spod apartamentu i zabiera na ekscytujący objazd po mieście. Przejażdżkę umila powitalny szampan i Wasza ulubiona muzyka, tworząc prawdziwy klimat VIP. W trakcie przejazdu dołącza do Was fotograf, który uchwyci najlepsze momenty tej nocy.\nPo krótkiej sesji ruszacie do klubu, gdzie czeka na Was prywatna loża z napojami i przekąskami. Wchodzicie bez kolejek i rozkręcacie imprezę.",
+    "description_en": "If partying runs in your veins, this is the perfect package. You start with pre-drinks in a luxury limousine and the grand finale awaits at one of Warsaw's best clubs.\nThe chauffeur picks you up straight from the apartment for an exciting city tour. Welcome champagne and your favourite music set a true VIP vibe. A photographer joins you during the ride to capture the best moments of the night.\nAfter the short session you head to the club where a private lounge with drinks and snacks is waiting. You skip the line and kick the party into high gear.",
+    "features": [
+      "Wejście bez kolejki",
+      "Prywatna loża na 2h",
+      "Wybrane napoje i przekąski",
+      "Godzinny przejazd limuzyną",
+      "10 profesjonalnie obrobionych zdjęć"
+    ],
+    "features_en": [
+      "Skip-the-queue entry",
+      "Private lounge for 2 hours",
+      "Selected drinks and snacks",
+      "One-hour limousine ride",
+      "10 professionally edited photos"
+    ],
+    "images": [
+      "/media/loza-limuzyna.jpg"
+    ],
+    "minPeople": 5
+  },
+  {
+    "id": "loza-limuzyna-tancerz",
+    "name": "Loża w klubie + Limuzyna + Tancerz + Mini sesja",
+    "name_en": "VIP Club Lounge + Limousine + Dancer + Mini Session",
+    "slug": "loza-limuzyna-tancerz",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 399,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Jeśli w Twoich żyłach płynie imprezowa krew, to mamy dla Ciebie idealny pakiet. Zaczynacie od biforka w luksusowej limuzynie, a finał czeka na Was w jednym z najlepszych klubów w Warszawie.\nSzofer odbiera Was prosto spod apartamentu i zabiera na ekscytujący objazd po mieście. Przejażdżkę umila powitalny szampan i Wasza ulubiona muzyka, a także gorący tancerz, który dosiada się w trakcie przejazdu. Po występie zatrzymujecie się na krótką mini sesję zdjęciową z fotografem, który zrobi Wam zdjęcia niczym z Pinteresta.\nPo krótkiej sesji ruszacie do klubu, gdzie czeka na Was prywatna loża z napojami i przekąskami. Wchodzicie bez kolejek i rozkręcacie imprezę.",
+    "description_en": "If partying runs in your veins, this is the perfect package. You start with pre-drinks in a luxury limousine and the grand finale awaits at one of Warsaw's best clubs.\nThe chauffeur picks you up straight from the apartment for an exciting city tour. Welcome champagne and your favourite music set the vibe, joined mid-ride by a hot dancer. After the performance you stop for a short mini photo session with a photographer who gives you Pinterest-worthy shots.\nAfter the session you head to the club where a private lounge with drinks and snacks awaits. You skip the line and kick the party into high gear.",
+    "features": [
+      "Wejście bez kolejki",
+      "Prywatna loża na 2h",
+      "Wybrane napoje i przekąski",
+      "Przejazd limuzyną 75 minut",
+      "10 profesjonalnie obrobionych zdjęć",
+      "Występ tancerza"
+    ],
+    "features_en": [
+      "Skip-the-queue entry",
+      "Private lounge for 2 hours",
+      "Selected drinks and snacks",
+      "75-minute limousine ride",
+      "10 professionally edited photos",
+      "Dancer performance"
+    ],
+    "images": [
+      "/media/loza-limuzyna-tancerz.jpg"
     ],
     "minPeople": 5
   },
@@ -278,86 +940,6 @@
     "archived": true
   },
   {
-    "id": "objazd-po-klubach",
-    "name": "Objazd po klubach muzycznych",
-    "name_en": "Club Crawl",
-    "slug": "objazd-po-klubach",
-    "subtitle": "(min. 6 osób)",
-    "subtitle_en": "(min. 6 people)",
-    "price": 199,
-    "priceType": "person",
-    "category": "pakiety",
-    "description": "Chcecie poimprezować, ale nie lubicie spędzać zbyt wiele czasu w jednym miejscu? Objazd po klubach muzycznych to idealna atrakcja dla Was! Zabierzemy Was na niezapomnianą trasę po najlepszych klubach w Warszawie.",
-    "description_en": "Want to party but prefer not to stay in one place all night? A club crawl is the perfect activity for you! We'll take you on an unforgettable tour of Warsaw's best clubs.",
-    "description2": "Czas trwania atrakcji: 5h",
-    "description2_en": "Duration: 5 hours",
-    "features": [
-      "wejściówki do klubów",
-      "priorytet wejścia na imprezy",
-      "przyjazd po wieczór panieński na terenie Warszawy",
-      "powitalny szampan",
-      "transfery limuzyną pomiędzy klubami"
-    ],
-    "features_en": [
-      "club entry passes",
-      "priority entry to venues",
-      "pick-up for your hen party anywhere in Warsaw",
-      "welcome champagne",
-      "limousine transfers between clubs"
-    ],
-    "images": [
-      "/media/objazdpoklubach.jpg"
-    ],
-    "minPeople": 6,
-    "archived": true
-  },
-  {
-    "id": "limuzyna-fotograf-piknik",
-    "name": "Limuzyna + Prywatny Fotograf + Piknik nad Wisłą",
-    "name_en": "Limousine + Private Photographer + Picnic by the Vistula",
-    "slug": "limuzyna-fotograf-piknik",
-    "subtitle": "(min. 5 osób)",
-    "subtitle_en": "(min. 5 people)",
-    "price": 299,
-    "priceType": "person",
-    "category": "pakiety",
-    "description": "Pakiet łączący przejażdżkę limuzyną z profesjonalną sesją fotograficzną i relaksującym piknikiem nad Wisłą. To idealne połączenie luksusu, sztuki i natury na niezapomniany wieczór panieński.",
-    "description_en": "A package combining a limousine ride with a professional photo session and a relaxing picnic by the Vistula river. The perfect blend of luxury, art, and nature for an unforgettable hen party.",
-    "features": [
-      "Młody, sympatyczny kierowca",
-      "Powitalny Szampan w Limuzynie",
-      "Godzina przejazdu limuzyną",
-      "Wejście typu Jet Door",
-      "Możliwość puszczania własnej muzyki",
-      "Profesjonalny fotograf na godzinę czasu",
-      "25 profesjonalnie obrobionych zdjęć",
-      "2 godzinny piknik na świeżym powietrzu",
-      "Pyszne przekąski",
-      "Orzeźwiające napoje",
-      "Relaks na kocach przy dźwiękach muzyki",
-      "Gry i zabawy integracyjne"
-    ],
-    "features_en": [
-      "Young, friendly chauffeur",
-      "Welcome champagne in the limousine",
-      "One-hour limousine ride",
-      "Jet Door entry experience",
-      "Option to play your own music",
-      "Professional photographer for one hour",
-      "25 professionally edited photos",
-      "2-hour outdoor picnic",
-      "Delicious snacks",
-      "Refreshing drinks",
-      "Relaxing on blankets to the sound of music",
-      "Group games and ice-breakers"
-    ],
-    "images": [
-      "/media/limuzyna + fotograf + piknik-1.jpg"
-    ],
-    "minPeople": 5,
-    "archived": true
-  },
-  {
     "id": "transfer-tancerz-zakwaterowanie-klub",
     "name": "Transfer lotniskowy limuzyną + Tancerz erotyczny + Zakwaterowanie + Klub muzyczny",
     "name_en": "Limousine Airport Transfer + Exotic Dancer + Accommodation + Nightclub",
@@ -387,242 +969,6 @@
     ],
     "images": [
       "/media/Limuzyna + tancerz + Zakwaterowanie + Klub.jpg"
-    ],
-    "minPeople": 7,
-    "archived": true
-  },
-  {
-    "id": "piknik-fotograf-gondola",
-    "name": "Piknik na Wisłą + Prywatny fotograf + Rejs gondolą po Wiśle",
-    "name_en": "Picnic by the Vistula + Private Photographer + Gondola Cruise on the Vistula",
-    "slug": "piknik-fotograf-gondola",
-    "subtitle": "(min. 7 osób)",
-    "subtitle_en": "(min. 7 people)",
-    "price": 299,
-    "priceType": "person",
-    "category": "pakiety",
-    "description": "Pakiet łączący piknik nad Wisłą z profesjonalną sesją fotograficzną i romantycznym rejsem gondolą. Idealne połączenie relaksu na świeżym powietrzu z niezapomnianymi wrażeniami na wodzie.",
-    "description_en": "A package combining a picnic by the Vistula with a professional photo session and a romantic gondola cruise. The perfect blend of outdoor relaxation and unforgettable moments on the water.",
-    "features": [
-      "2 godzinny piknik na świeżym powietrzu",
-      "Pyszne przekąski",
-      "Orzeźwiające napoje",
-      "25 profesjonalnie obrobionych zdjęć",
-      "Profesjonalny fotograf na godzinę czasu",
-      "Relaks na kocach przy dźwiękach muzyki",
-      "Gry i zabawy integracyjne",
-      "Nagłośnienie",
-      "Godzinny kurs wenecką gondolą po Wiśle"
-    ],
-    "features_en": [
-      "2-hour outdoor picnic",
-      "Delicious snacks",
-      "Refreshing drinks",
-      "25 professionally edited photos",
-      "Professional photographer for one hour",
-      "Relaxing on blankets to the sound of music",
-      "Group games and ice-breakers",
-      "Sound system",
-      "One-hour Venetian gondola cruise on the Vistula"
-    ],
-    "images": [
-      "/media/pikinik + fotograf + gondola.jpg"
-    ],
-    "minPeople": 7,
-    "archived": true
-  },
-  {
-    "id": "taniec-limuzyna-tancerz-klub",
-    "name": "Nauka tańca + Przejazd Limuzyną + Tancerz erotyczny + Klub",
-    "name_en": "Dance Lesson + Limousine Ride + Exotic Dancer + Club",
-    "slug": "taniec-limuzyna-tancerz-klub",
-    "subtitle": "(min. 7 osób)",
-    "subtitle_en": "(min. 7 people)",
-    "price": 299,
-    "priceType": "person",
-    "category": "pakiety",
-    "description": "Pakiet łączący naukę tańca z przejażdżką limuzyną, występem tancerza erotycznego i wejściem do klubu. Pełny wieczór panieński w jednym pakiecie!",
-    "description_en": "A package combining a dance lesson with a limousine ride, an exotic dancer performance, and club entry. A full hen party experience in one package!",
-    "features": [
-      "Godzinna sesja taneczna",
-      "Profesjonalny instruktor",
-      "Profesjonalne studio taneczne z lustrami",
-      "Powitalny kieliszek szampana",
-      "Godzinna imprezowa przejażdżka Limuzyną",
-      "Młody przystojny szofer",
-      "Możliwość wniesienia własnego alkoholu",
-      "Możliwość podłączenia własnej muzyki",
-      "Występ seksownego tancerza",
-      "Bezkolejkowe wejście do klubu"
-    ],
-    "features_en": [
-      "One-hour dance session",
-      "Professional dance instructor",
-      "Professional mirrored dance studio",
-      "Welcome glass of champagne",
-      "One-hour party limousine ride",
-      "Young, handsome chauffeur",
-      "Option to bring your own alcohol",
-      "Option to play your own music",
-      "Sexy exotic dancer performance",
-      "Skip-the-queue club entry"
-    ],
-    "images": [
-      "/media/Nauka tanca + tancerz + Limuzyna + Klub 2.jpg"
-    ],
-    "minPeople": 7,
-    "archived": true
-  },
-  {
-    "id": "fotograf-limuzyna-tancerz-klub",
-    "name": "Prywatny fotograf + objazd po warszawie limuzyną + tancerz + klub",
-    "name_en": "Private Photographer + Limousine Tour of Warsaw + Exotic Dancer + Club",
-    "slug": "fotograf-limuzyna-tancerz-klub",
-    "subtitle": "(min. 8 osób)",
-    "subtitle_en": "(min. 8 people)",
-    "price": 269,
-    "priceType": "person",
-    "category": "pakiety",
-    "description": "Pakiet obejmujący profesjonalną sesję fotograficzną, przejażdżkę limuzyną po Warszawie, występ tancerza erotycznego oraz bezkolejkowe wejście do klubu.",
-    "description_en": "A package including a professional photo session, a limousine tour of Warsaw, an exotic dancer performance, and skip-the-queue club entry.",
-    "features": [
-      "Godzinny Przejazd limuzyną",
-      "Powitalny szampan",
-      "Występ tancerza",
-      "Profesjonalny fotograf na godzinę czasu",
-      "25 profesjonalnie obrobionych zdjęć",
-      "Bezkolejkowe wejcie do Klubu",
-      "Koordynator"
-    ],
-    "features_en": [
-      "One-hour limousine ride",
-      "Welcome champagne",
-      "Exotic dancer performance",
-      "Professional photographer for one hour",
-      "25 professionally edited photos",
-      "Skip-the-queue club entry",
-      "Event coordinator"
-    ],
-    "images": [
-      "/media/Fotograf + Limuzyna + tancerz + Klub.jpg"
-    ],
-    "minPeople": 8,
-    "archived": true
-  },
-  {
-    "id": "fotograf-taniec-limuzyna-klub",
-    "name": "Prywatny fotograf + Nauka tańca + Objazd po warszawie limuzyną + Klub",
-    "name_en": "Private Photographer + Dance Lesson + Limousine Tour of Warsaw + Club",
-    "slug": "fotograf-taniec-limuzyna-klub",
-    "subtitle": "(min. 8 osób)",
-    "subtitle_en": "(min. 8 people)",
-    "price": 269,
-    "priceType": "person",
-    "category": "pakiety",
-    "description": "Pakiet łączący profesjonalną sesję fotograficzną, naukę tańca, przejażdżkę limuzyną po Warszawie oraz wejście do klubu. Idealny wybór dla grupy, która chce połączyć aktywność z luksusem.",
-    "description_en": "A package combining a professional photo session, a dance lesson, a limousine tour of Warsaw, and club entry. The ideal choice for a group that wants to mix activity with luxury.",
-    "features": [
-      "Profesjonalny fotograf na godzinę czasu",
-      "25 profesjonalnie obrobionych zdjęć",
-      "Godzinna sesja taneczna",
-      "Profesjonalny instruktor",
-      "Profesjonalne studio taneczne z lustrami",
-      "Powitalny kieliszek szampana",
-      "Godzinna imprezowa przejażdżka Limuzyną",
-      "Młody przystojny szofer",
-      "Możliwość wniesienia własnego alkoholu",
-      "Możliwość podłączenia własnej muzyki",
-      "Bezkolejkowe wejście do klubu"
-    ],
-    "features_en": [
-      "Professional photographer for one hour",
-      "25 professionally edited photos",
-      "One-hour dance session",
-      "Professional dance instructor",
-      "Professional mirrored dance studio",
-      "Welcome glass of champagne",
-      "One-hour party limousine ride",
-      "Young, handsome chauffeur",
-      "Option to bring your own alcohol",
-      "Option to play your own music",
-      "Skip-the-queue club entry"
-    ],
-    "images": [
-      "/media/nauka tanca + fotograf + limuzyna + klub.jpg"
-    ],
-    "minPeople": 8,
-    "archived": true
-  },
-  {
-    "id": "gokarty-limuzyna-klub",
-    "name": "Gokarty + Objazd Limuzyną po Warszawie + Klub",
-    "name_en": "Go-Karts + Limousine Tour of Warsaw + Club",
-    "slug": "gokarty-limuzyna-klub",
-    "subtitle": "(min. 7 osób)",
-    "subtitle_en": "(min. 7 people)",
-    "price": 249,
-    "priceType": "pcs",
-    "category": "pakiety",
-    "description": "Pakiet łączący emocjonujące wyścigi gokartowe z przejażdżką limuzyną po Warszawie i wejściem do klubu. Idealne połączenie adrenaliny i zabawy!",
-    "description_en": "A package combining thrilling go-kart racing with a limousine tour of Warsaw and club entry. The perfect mix of adrenaline and fun!",
-    "features": [
-      "Powitalny szampan",
-      "Godzinny przejazd limuzyną",
-      "16 minut jazdy dla każdej uczestniczki",
-      "Ceremonia medalowa",
-      "Bezkolejkowe wejcie do Klubu",
-      "Koordynator"
-    ],
-    "features_en": [
-      "Welcome champagne",
-      "One-hour limousine ride",
-      "16 minutes of driving for each participant",
-      "Medal ceremony",
-      "Skip-the-queue club entry",
-      "Event coordinator"
-    ],
-    "images": [
-      "/media/gokarty + limuzyna + klub 2.jpg"
-    ],
-    "minPeople": 7,
-    "archived": true
-  },
-  {
-    "id": "limuzyna-spa",
-    "name": "Limuzyna + Spa",
-    "name_en": "Limousine + Spa",
-    "slug": "limuzyna-spa",
-    "subtitle": "(min. 7 osób)",
-    "subtitle_en": "(min. 7 people)",
-    "price": 359,
-    "priceType": "person",
-    "category": "pakiety",
-    "description": "Pakiet łączący luksusową przejażdżkę limuzyną z relaksującą wizytą w ekskluzywnym SPA. Idealne połączenie imprezowej atmosfery z chwilą wytchnienia.",
-    "description_en": "A package combining a luxury limousine ride with a relaxing visit to an exclusive spa. The perfect balance of party atmosphere and pure indulgence.",
-    "description2": "Następnie limuzyna zawozi Was do ekskluzywnego SPA, gdzie czeka na Was prawdziwa uczta dla ciała i ducha.",
-    "description2_en": "The limousine then takes you to an exclusive spa, where a true feast for body and soul awaits.",
-    "features": [
-      "Młody, przystojny kierowca",
-      "powitalny szampan",
-      "godzinny przejazd limuzyną",
-      "Możliwość wniesienia własnego alkoholu",
-      "Aromaterapeutyczna kąpiel w jacuzzi",
-      "Rytuał Hammam Hurram - dla Panny Młodej",
-      "Hammam klasyczny lub Masaż Balijski (45 min.) - dla pozostałych uczestniczek",
-      "Lampka szampana"
-    ],
-    "features_en": [
-      "Young, handsome chauffeur",
-      "Welcome champagne",
-      "One-hour limousine ride",
-      "Option to bring your own alcohol",
-      "Aromatherapy jacuzzi bath",
-      "Hammam Hurram ritual — for the bride-to-be",
-      "Classic hammam or Balinese massage (45 min.) — for the rest of the group",
-      "Glass of champagne"
-    ],
-    "images": [
-      "/media/limuzyna + spa.jpg"
     ],
     "minPeople": 7,
     "archived": true

@@ -159,7 +159,7 @@ $html = "
 
 $headers  = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-$headers .= "From: The Hen Experience <noreply@thehenexperience.pl>\r\n";
+$headers .= "From: Wieczór Panieński Warszawa <biuro@wieczorpanienskiwarszawa.pl>\r\n";
 $headers .= "Reply-To: {$email}\r\n";
 
 $sent = mail($to, $subject, $html, $headers);
