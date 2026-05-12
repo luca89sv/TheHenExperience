@@ -346,7 +346,7 @@ function SideCard({ item, index }: { item: Product; index: number }) {
 
 export default function FeaturedSection() {
   return (
-    <section className="relative overflow-hidden py-[var(--section-padding)] mt-[-5vh] md:mt-[-20vh] z-[11] md:z-[4]" style={{ position: "relative" }}>
+    <section className="relative overflow-hidden py-[var(--section-padding)] z-[11] md:z-[4]" style={{ position: "relative" }}>
       {/* Subtle background glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] pointer-events-none"

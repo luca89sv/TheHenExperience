@@ -158,6 +158,10 @@ const translations = {
     'cat.fun': 'Entertainment',
     'cat.outdoor': 'Outdoor',
     'cat.transfers': 'Transfers',
+    'cat.picnic': 'Picnic',
+    'cat.arrest': 'Arrest',
+    'cat.party': 'Party',
+    'cat.relax': 'Relax',
     // Featured section
     'featured.badge': 'Season bestsellers',
     'featured.title': 'Season <em>hits</em>',
@@ -392,6 +396,10 @@ const translations = {
     'cat.fun': 'Rozrywka',
     'cat.outdoor': 'Plenerowe',
     'cat.transfers': 'Transfery',
+    'cat.picnic': 'Piknik',
+    'cat.arrest': 'Aresztowanie',
+    'cat.party': 'Imprezowe',
+    'cat.relax': 'Relaks',
     // Featured section
     'featured.badge': 'Bestsellery sezonu',
     'featured.title': 'Hity tego <em>sezonu</em>',

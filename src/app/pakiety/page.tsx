@@ -7,6 +7,7 @@ import pakietyNaWieczor from "@/data/pakiety-na-wieczor.json";
 import { useCart } from "@/lib/cart-context";
 import { useCartToast } from "@/components/CartToast";
 import { useLanguage } from "@/lib/i18n";
+import { PACKAGE_CATEGORY_KEYS, getPackageCategories } from "@/lib/utils";
 import QuickContactForm from "@/components/QuickContactForm";
 
 interface Product {
@@ -136,11 +137,30 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
 
 export default function PakietyPage() {
   const { t } = useLanguage();
+  const [activeCategory, setActiveCategory] = useState("Wszystko");
+
+  const categoryLabels: Record<string, string> = {
+    "Wszystko": t('cat.all'),
+    "Polecane": t('cat.recommended'),
+    "Piknik": t('cat.picnic'),
+    "Aresztowanie": t('cat.arrest'),
+    "Sexy": t('cat.sexy'),
+    "Nocne": t('cat.nightlife'),
+    "Imprezowe": t('cat.party'),
+    "Plenerowe": t('cat.outdoor'),
+    "Dzienne": t('cat.daytime'),
+    "Posiłki": t('cat.meals'),
+    "Relaks": t('cat.relax'),
+  };
+
+  const filtered = activeCategory === "Wszystko"
+    ? allPackages
+    : allPackages.filter((p) => getPackageCategories(p.id).includes(activeCategory));
 
   return (
     <section className="relative overflow-hidden pt-32 pb-[var(--section-padding)]">
       <div className="max-w-[1200px] mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <span className="section-tag" style={{ color: "rgba(255,255,255,0.45)" }}>{t('listing.allPackagesTag')}</span>
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold">
             <span dangerouslySetInnerHTML={{ __html: t('listing.allPackagesTitle') }} />
@@ -150,11 +170,33 @@ export default function PakietyPage() {
           </p>
         </div>
 
+        {/* Category pills */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {PACKAGE_CATEGORY_KEYS.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
+                activeCategory === cat
+                  ? "bg-pink-500/20 border-pink-500/50 text-pink-300"
+                  : "bg-transparent border-white/10 text-white/45 hover:border-pink-500/30 hover:text-white/70"
+              }`}
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              {categoryLabels[cat]}
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {allPackages.map((pkg, i) => (
+          {filtered.map((pkg, i) => (
             <PackageCard key={pkg.id} pkg={pkg} index={i} />
           ))}
         </div>
+
+        {filtered.length === 0 && (
+          <p className="text-center text-white/40 mt-10">Brak pakietów w tej kategorii.</p>
+        )}
 
         <QuickContactForm />
       </div>

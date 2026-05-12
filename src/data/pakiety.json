@@ -35,6 +35,198 @@
     "minPeople": 5
   },
   {
+    "id": "vip-arrest-tancerz-limuzyna-sesja-klub-loza",
+    "name": "VIP Arrest Show + Tancerz + Limuzyna + Mini Sesja + Wejście VIP do Klubu + Loża",
+    "name_en": "VIP Arrest Show + Dancer + Limousine + Mini Session + VIP Club Entry + Lounge",
+    "slug": "vip-arrest-tancerz-limuzyna-sesja-klub-loza",
+    "subtitle": "(min. 6 osób)",
+    "subtitle_en": "(min. 6 people)",
+    "price": 409,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "VIP Arrest Show to najbardziej efektowny pakiet na wieczór panieński. Atrakcja zaczyna się od spektakularnego „aresztowania\" Panny Młodej przez tancerza w roli policjanta. Policjant skuwa Pannę Młodą kajdankami i eskortuje grupę do limuzyny. W limuzynie czeka dalsza część zabawy – energetyczne show tancerza, przepyszny szampan i imprezowa muzyka. Całość utrzymana jest w eleganckim, imprezowym klimacie — z naciskiem na dobrą zabawę. W trakcie przejazdu kierowca wykona pamiątkową sesję zdjęciową. Finałem wieczoru będzie bezkolejkowe wejście do klubu, gdzie możecie kontynuować zabawę do białego rana. W klubie czeka na Was loża na wyłączność z przepysznymi przekąskami i napojami.",
+    "description_en": "VIP Arrest Show is our most spectacular hen-party package. The night kicks off with a dramatic \"arrest\" of the bride-to-be by a dancer playing a police officer. He cuffs her and escorts the group to the limousine. Inside the limo the show continues — an energetic dancer performance, delicious champagne and party music — all wrapped in an elegant, party-forward vibe. During the ride the chauffeur captures a keepsake photo session. The finale is a skip-the-queue club entry where a private lounge with delicious snacks and drinks is waiting for you.",
+    "images": [
+      "/media/vip-arrest-tancerz-limuzyna-sesja-klub-loza.jpg"
+    ],
+    "features": [
+      "Przejazd limuzyną na 70 minut",
+      "Występ tancerza w limuzynie",
+      "Aresztowanie Panny Młodej",
+      "Loża z przekąskami i napojami",
+      "Bezkolejkowe wejście do klubu",
+      "Butelka szampana",
+      "Pamiątkowa mini sesja przy limuzynie"
+    ],
+    "features_en": [
+      "70-minute limousine ride",
+      "Dancer performance in the limousine",
+      "Bride arrest stunt",
+      "Private lounge with snacks and drinks",
+      "Skip-the-queue club entry",
+      "Bottle of champagne",
+      "Keepsake mini photo session by the limousine"
+    ],
+    "minPeople": 6
+  },
+  {
+    "id": "vip-arrest-tancerz-limuzyna-klub",
+    "name": "VIP Arrest Show + Tancerz + Limuzyna + Wejście VIP do Klubu",
+    "name_en": "VIP Arrest Show + Dancer + Limousine + VIP Club Entry",
+    "slug": "vip-arrest-tancerz-limuzyna-klub",
+    "subtitle": "(min. 6 osób)",
+    "subtitle_en": "(min. 6 people)",
+    "price": 289,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "VIP Arrest Show to najbardziej efektowny pakiet na wieczór panieński. Atrakcja zaczyna się od spektakularnego „aresztowania\" Panny Młodej przez tancerza w roli policjanta. Policjant skuwa Pannę Młodą kajdankami i eskortuje grupę do limuzyny. W limuzynie czeka dalsza część zabawy – energetyczne show tancerza, przepyszny szampan i imprezowa muzyka. Całość utrzymana jest w eleganckim, imprezowym klimacie — z naciskiem na dobrą zabawę. Finałem wieczoru będzie bezkolejkowe wejście do klubu, gdzie możecie kontynuować zabawę do białego rana.",
+    "description_en": "VIP Arrest Show is our most spectacular hen-party package. The night kicks off with a dramatic \"arrest\" of the bride-to-be by a dancer playing a police officer. He cuffs her and escorts the group to the limousine. Inside the limo the show continues — an energetic dancer performance, delicious champagne and party music — all wrapped in an elegant, party-forward vibe. The finale is a skip-the-queue club entry where you can keep partying until dawn.",
+    "images": [
+      "/media/vip-arrest-tancerz-limuzyna-klub.jpg"
+    ],
+    "features": [
+      "Przejazd limuzyną na 60 minut",
+      "Występ tancerza w limuzynie",
+      "Aresztowanie Panny Młodej",
+      "Bezkolejkowe wejście do klubu",
+      "Butelka szampana"
+    ],
+    "features_en": [
+      "60-minute limousine ride",
+      "Dancer performance in the limousine",
+      "Bride arrest stunt",
+      "Skip-the-queue club entry",
+      "Bottle of champagne"
+    ],
+    "minPeople": 6
+  },
+  {
+    "id": "vip-arrest-tancerz-limuzyna",
+    "name": "VIP Arrest Show + Tancerz + Limuzyna",
+    "name_en": "VIP Arrest Show + Dancer + Limousine",
+    "slug": "vip-arrest-tancerz-limuzyna",
+    "subtitle": "(min. 6 osób)",
+    "subtitle_en": "(min. 6 people)",
+    "price": 279,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "VIP Arrest Show to najbardziej efektowny pakiet na wieczór panieński. Atrakcja zaczyna się od spektakularnego „aresztowania\" Panny Młodej przez tancerza w roli policjanta. Policjant skuwa Pannę Młodą kajdankami i eskortuje grupę do limuzyny. W limuzynie czeka dalsza część zabawy – energetyczne show tancerza, przepyszny szampan i imprezowa muzyka. Całość utrzymana jest w eleganckim, imprezowym klimacie — z naciskiem na dobrą zabawę.",
+    "description_en": "VIP Arrest Show is our most spectacular hen-party package. The night kicks off with a dramatic \"arrest\" of the bride-to-be by a dancer playing a police officer. He cuffs her and escorts the group to the limousine. Inside the limo the show continues — an energetic dancer performance, delicious champagne and party music — all wrapped in an elegant, party-forward vibe.",
+    "images": [
+      "/media/vip-arrest-tancerz-limuzyna.jpg"
+    ],
+    "features": [
+      "Przejazd limuzyną na 60 minut",
+      "Występ tancerza w limuzynie",
+      "Aresztowanie Panny Młodej",
+      "Butelka szampana"
+    ],
+    "features_en": [
+      "60-minute limousine ride",
+      "Dancer performance in the limousine",
+      "Bride arrest stunt",
+      "Bottle of champagne"
+    ],
+    "minPeople": 6
+  },
+  {
+    "id": "panienski-vip-loza-limuzyna-sesja",
+    "name": "Panieński VIP – Loża VIP w klubie + Limuzyna + Mini Sesja",
+    "name_en": "VIP Hen – VIP Club Lounge + Limousine + Mini Session",
+    "slug": "panienski-vip-loza-limuzyna-sesja",
+    "subtitle": "(min. 8 osób)",
+    "subtitle_en": "(min. 8 people)",
+    "price": 299,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Panieński VIP to pakiet łączący ekskluzywną jazdę limuzyną z wejściem do klubu bez kolejki i rezerwacją loży w wybranym klubie. To propozycja dla grup, które chcą wejść na imprezę w stylu premium, bez stresu i bez oczekiwania przy wejściu. Pakiet obejmuje godzinny przejazd limuzyną połączony z pamiątkową sesją zdjęciową z fotografem, a na pokładzie czekają na Was przepyszne drinki powitalne.",
+    "description_en": "VIP Hen combines an exclusive limousine ride with skip-the-queue entry and a reserved lounge at the venue. It's the right call for groups who want to walk into the party in premium style — no stress, no queueing. You get a one-hour limousine ride paired with a keepsake photo session by a photographer, and welcome drinks are waiting for you on board.",
+    "images": [
+      "/media/panienski-vip-loza-limuzyna-sesja.jpg"
+    ],
+    "features": [
+      "Przejazd limuzyną na 60 minut",
+      "Szampan i kieliszki w limuzynie",
+      "Drink powitalny w limuzynie",
+      "Prywatna loża VIP na 2h",
+      "Bezkolejkowe wejście do klubu",
+      "Przystojny kierowca",
+      "Mini sesja przy limuzynie",
+      "10 profesjonalnie obrobionych zdjęć"
+    ],
+    "features_en": [
+      "60-minute limousine ride",
+      "Champagne and glasses in the limousine",
+      "Welcome drink in the limousine",
+      "Private VIP lounge for 2 hours",
+      "Skip-the-queue club entry",
+      "Handsome chauffeur",
+      "Mini photo session by the limousine",
+      "10 professionally edited photos"
+    ],
+    "minPeople": 8
+  },
+  {
+    "id": "limuzyna-sesja-klub-vip",
+    "name": "Limuzyna + Mini Sesja + Wejście VIP do Klubu",
+    "name_en": "Limousine + Mini Session + VIP Club Entry",
+    "slug": "limuzyna-sesja-klub-vip",
+    "subtitle": "(min. 8 osób)",
+    "subtitle_en": "(min. 8 people)",
+    "price": 149,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Limuzyna + Mini Sesja + Wejście VIP do Klubu to pakiet dla osób, które chcą połączyć elegancki przejazd z profesjonalną pamiątką i efektownym zakończeniem wieczoru. Godzinna jazda limuzyną, ulubiona muzyka w środku, mini sesja z profesjonalnym fotografem oraz wejście VIP do klubu bez kolejki sprawiają, że wieczór zaczyna się stylowo i kończy dokładnie tak, jak trzeba — na parkiecie.",
+    "description_en": "Limousine + Mini Session + VIP Club Entry is the package for those who want to mix an elegant ride with a professional keepsake and a strong finish to the evening. A one-hour limousine ride, your favourite music inside, a mini session with a professional photographer and VIP skip-the-queue club entry — your night starts in style and ends exactly where it should: on the dance floor.",
+    "images": [
+      "/media/limuzyna-sesja-klub-vip.jpg"
+    ],
+    "features": [
+      "Przejazd limuzyną na 60 minut",
+      "Bezkolejkowe wejście do klubu",
+      "Butelka szampana",
+      "Pamiątkowa mini sesja przy limuzynie",
+      "10 profesjonalnie obrobionych zdjęć",
+      "Przystojny kierowca"
+    ],
+    "features_en": [
+      "60-minute limousine ride",
+      "Skip-the-queue club entry",
+      "Bottle of champagne",
+      "Keepsake mini photo session by the limousine",
+      "10 professionally edited photos",
+      "Handsome chauffeur"
+    ],
+    "minPeople": 8
+  },
+  {
+    "id": "fotograf-klub-vip",
+    "name": "Prywatny Fotograf + Wejście VIP do Klubu",
+    "name_en": "Private Photographer + VIP Club Entry",
+    "slug": "fotograf-klub-vip",
+    "subtitle": "(min. 5 osób)",
+    "subtitle_en": "(min. 5 people)",
+    "price": 149,
+    "priceType": "person",
+    "category": "pakiety",
+    "description": "Ten pakiet to idealna propozycja dla grup, które chcą zachować najlepsze momenty wieczoru panieńskiego i jednocześnie zakończyć noc w klubowym klimacie. Pakiet obejmuje godzinną sesję w apartamencie lub plenerze oraz bezkolejkowe wejście do klubu, dzięki czemu cała grupa może skupić się na świętowaniu bez stresu i organizacyjnych przestojów. To świetne połączenie dobrej zabawy i pamiątki w postaci profesjonalnych zdjęć.",
+    "description_en": "This package is a great choice for groups who want to keep the best moments of the hen party and finish the night in a club atmosphere. It includes a one-hour session in your apartment or outdoors plus skip-the-queue club entry, so the whole group can focus on celebrating without stress or scheduling pauses. A great mix of good fun and a keepsake set of professional photos.",
+    "images": [
+      "/media/fotograf-klub-vip.jpg"
+    ],
+    "features": [
+      "Fotograf na godzinę czasu",
+      "25 profesjonalnie obrobionych zdjęć",
+      "Bezkolejkowe wejście do klubu"
+    ],
+    "features_en": [
+      "Photographer for one hour",
+      "25 professionally edited photos",
+      "Skip-the-queue club entry"
+    ],
+    "minPeople": 5
+  },
+  {
     "id": "karaoke-beer-pong-limuzyna-tancerz-klub",
     "name": "Karaoke + Beer Pong + Limuzyna + Tancerz + Mini Sesja + Klub",
     "name_en": "Karaoke + Beer Pong + Limousine + Dancer + Mini Session + Club",
@@ -117,7 +309,7 @@
     "slug": "limuzyna-piknik-sesja-klub",
     "subtitle": "(min. 5 osób)",
     "subtitle_en": "(min. 5 people)",
-    "price": 319,
+    "price": 349,
     "priceType": "person",
     "category": "pakiety",
     "description": "Zacznijcie wieczór panieński od klimatycznego pikniku nad Wisłą – to idealny moment na relaks, rozmowy i wspólne świętowanie w luźnej atmosferze. Na miejscu jest opiekun, który dba o przebieg spotkania, więc Wy możecie po prostu cieszyć się chwilą.\nNastępnie czeka na Was godzinny przejazd luksusową limuzyną po Warszawie. Wsiadacie do eleganckiego auta z nastrojowym oświetleniem i powitalnym szampanem, a w trakcie jazdy zobaczycie najciekawsze miejsca i możecie zrobić krótkie przystanki na zdjęcia. Fotograf uwieczni Wasz wieczór na profesjonalnej sesji zdjęciowej na czerwonym dywanie.\nNa zakończenie limuzyna zawiezie Was do klubu, gdzie zaczyna się dalsza zabawa. To świetne połączenie relaksu, klimatu i dobrej imprezy – dokładnie takie, jak powinien wyglądać wieczór panieński.",
@@ -468,9 +660,9 @@
     "name": "Limuzyna + Mini Sesja + Spa",
     "name_en": "Limousine + Mini Session + Spa",
     "slug": "limuzyna-spa",
-    "subtitle": "(min. 7 osób)",
-    "subtitle_en": "(min. 7 people)",
-    "price": 369,
+    "subtitle": "(min. 6 osób)",
+    "subtitle_en": "(min. 6 people)",
+    "price": 389,
     "priceType": "person",
     "category": "pakiety",
     "description": "Wieczór panieński rozpoczyna się od luksusowej limuzyny, która zabiera Was w relaksującą podróż po mieście. Wnętrze limuzyny jest wyposażone w wygodne siedzenia, nastrojowe oświetlenie i barek z ulubionymi napojami, co tworzy idealne warunki do rozpoczęcia wieczoru w wyjątkowym stylu. Podczas przejazdu macie okazję podziwiać najpiękniejsze zakątki Warszawy, ciesząc się komfortem i elegancją. W trakcie przejazdu zatrzymujemy się na mini sesję zdjęciową, w trakcie której fotograf wykona dla Was 10 profesjonalnych zdjęć.\nNastępnie limuzyna zawozi Was do ekskluzywnego SPA, gdzie czeka na Was prawdziwa uczta dla ciała i ducha. Dodatkowo możecie zrelaksować się w saunie, która będzie do Waszej dyspozycji. To idealna okazja, aby odpocząć, zrelaksować się i naładować baterie przed wielkim dniem.",
@@ -502,7 +694,7 @@
     "images": [
       "/media/limuzyna + spa.jpg"
     ],
-    "minPeople": 7
+    "minPeople": 6
   },
   {
     "id": "fotograf-taniec-limuzyna-klub",
@@ -593,7 +785,7 @@
     "slug": "piknik-fotograf-gondola",
     "subtitle": "(min. 7 osób)",
     "subtitle_en": "(min. 7 people)",
-    "price": 319,
+    "price": 349,
     "priceType": "person",
     "category": "pakiety",
     "description": "Wieczór panieński rozpoczniecie uroczym piknikiem nad brzegiem Wisły. W otoczeniu natury, z widokiem na spokojną rzekę, zrelaksujecie się i będziecie cieszyć się wspólnie spędzonym czasem przy dźwiękach ulubionej muzyki i grach integracyjnych. Towarzyszy Wam prywatny fotograf, który uwiecznia wszystkie wyjątkowe chwile. Fotograf wykonuje profesjonalne zdjęcia podczas pikniku, łapiąc spontaniczne momenty śmiechu i radości oraz stylizowane sesje w różnych urokliwych zakątkach nad Wisłą.\nPo pikniku wsiadacie na statek, by wyruszyć w rejs po Wiśle. Podziwiacie panoramę Warszawy z pokładu, obserwując, jak miasto zmienia się o zmierzchu. Rejs gondolą to nie tylko wspaniała okazja do dalszego relaksu, ale także możliwość wykonania kolejnych pięknych zdjęć, które będą niezapomnianą pamiątką z tego magicznego wieczoru. Cały ten wieczór, pełen relaksu, zabawy i wyjątkowych chwil, pozostanie w Waszej pamięci na długo.",
@@ -634,7 +826,7 @@
     "slug": "limuzyna-fotograf-piknik",
     "subtitle": "(min. 5 osób)",
     "subtitle_en": "(min. 5 people)",
-    "price": 319,
+    "price": 349,
     "priceType": "person",
     "category": "pakiety",
     "description": "Rozpocznijcie wieczór panieński ekscytującym objazdem po mieście w luksusowej limuzynie Chrysler. Spotykacie się w wybranym miejscu, gdzie czeka na Was elegancki pojazd wyposażony w wygodne siedzenia, nastrojowe oświetlenie i barek z powitalnym szampanem. Limuzyna przemierza ulice Warszawy, przejeżdżając obok ikon miasta takich jak Pałac Kultury i Nauki, Opera Narodowa, Stare Miasto oraz nowoczesne wieżowce w centrum Warszawy. W trakcie przejazdu możecie zatrzymać się w wybranych miejscach, aby zrobić zdjęcia i cieszyć się chwilą.\nPo ekscytującej podróży docieracie nad brzeg Wisły, gdzie czeka na Was przygotowany piknik z kwiatami, kocami, drewnianymi stołami i dekoracjami tematycznymi. W otoczeniu natury, z widokiem na rzekę, relaksujecie się, rozmawiacie i bawicie. Cały ten magiczny wieczór towarzyszy Wam prywatny fotograf, który uwiecznia wszystkie wyjątkowe chwile. Każda z Was ma okazję do indywidualnych sesji, jak i wspólnych fotografii grupowych. Kreatywne pomysły fotografa dodają zdjęciom wyjątkowego charakteru, a Wy zyskujecie piękne pamiątki z tego niezapomnianego wieczoru, pełnego luksusu, relaksu i radości.",
@@ -710,7 +902,7 @@
     "slug": "fotograf-piknik",
     "subtitle": "(min. 5 osób)",
     "subtitle_en": "(min. 5 people)",
-    "price": 239,
+    "price": 299,
     "priceType": "person",
     "category": "pakiety",
     "description": "Imprezę organizujemy na plaży nad Wisłą, gdzie czeka na Was klimatyczny piknik z kwiatami, kocami, drewnianymi stołami i dekoracjami tematycznymi. W otoczeniu natury, z widokiem na rzekę, relaksujecie się, rozmawiacie i bawicie. Cały ten magiczny wieczór towarzyszy Wam prywatny fotograf, który uwiecznia wszystkie wyjątkowe chwile. Każda z Was ma okazję do indywidualnych sesji, jak i wspólnych fotografii grupowych. Kreatywne pomysły fotografa dodają zdjęciom wyjątkowego charakteru, a Wy zyskujecie piękne pamiątki z tego niezapomnianego wieczoru, pełnego luksusu, relaksu i radości.",

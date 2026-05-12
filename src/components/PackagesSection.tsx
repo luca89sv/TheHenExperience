@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 // Using <a> tags for navigation to avoid GSAP/canvas reinit issues
 import pakiety from "@/data/pakiety.json";
@@ -9,6 +9,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { useCart } from "@/lib/cart-context";
 import { useCartToast } from "@/components/CartToast";
 import { useLanguage } from "@/lib/i18n";
+import { PACKAGE_CATEGORY_KEYS, getPackageCategories } from "@/lib/utils";
 
 interface Product {
   id: string;
@@ -211,6 +212,28 @@ function PackageCard({ pkg, index }: { pkg: Product; index: number }) {
 
 export default function PackagesSection() {
   const { t } = useLanguage();
+  const [activeCategory, setActiveCategory] = useState("Wszystko");
+
+  const categoryLabels: Record<string, string> = {
+    "Wszystko": t('cat.all'),
+    "Polecane": t('cat.recommended'),
+    "Piknik": t('cat.picnic'),
+    "Aresztowanie": t('cat.arrest'),
+    "Sexy": t('cat.sexy'),
+    "Nocne": t('cat.nightlife'),
+    "Imprezowe": t('cat.party'),
+    "Plenerowe": t('cat.outdoor'),
+    "Dzienne": t('cat.daytime'),
+    "Posiłki": t('cat.meals'),
+    "Relaks": t('cat.relax'),
+  };
+
+  const filtered = activeCategory === "Wszystko"
+    ? allPackages
+    : allPackages.filter((p) => getPackageCategories(p.id).includes(activeCategory));
+
+  const displayItems = filtered.slice(0, 6);
+
   return (
     <section id="pakiety" className="relative overflow-hidden pt-[var(--section-padding)] pb-12" style={{ position: "relative", zIndex: 5 }}>
       <div className="glow-orb absolute -top-40 -right-40" />
@@ -219,10 +242,28 @@ export default function PackagesSection() {
         {/* Header — negative margin pulls it up into the beam glow tip */}
         <PackagesHeader />
 
-        {/* Grid — show first 6 */}
+        {/* Category pills */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {PACKAGE_CATEGORY_KEYS.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
+                activeCategory === cat
+                  ? "bg-pink-500/20 border-pink-500/50 text-pink-300"
+                  : "bg-transparent border-white/10 text-white/45 hover:border-pink-500/30 hover:text-white/70"
+              }`}
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              {categoryLabels[cat]}
+            </button>
+          ))}
+        </div>
+
+        {/* Grid — show first 6 of the active category */}
         <ScrollReveal type="pricing">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-0">
-            {allPackages.slice(0, 6).map((pkg, i) => (
+            {displayItems.map((pkg, i) => (
               <PackageCard key={pkg.id} pkg={pkg} index={i} />
             ))}
           </div>
