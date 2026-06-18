@@ -67,7 +67,7 @@ export const atrakcje: Product[] = [
     id: "rozowa-limuzyna",
     name: "Różowa limuzyna",
     slug: "rozowa-limuzyna",
-    price: 999,
+    price: 1199,
     priceType: "hour",
     category: "atrakcje",
     description: "Poczuj się jak Barbie i zarezerwuj różową limuzynę.",
