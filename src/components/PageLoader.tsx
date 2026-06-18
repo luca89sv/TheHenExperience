@@ -9,23 +9,33 @@ export default function PageLoader() {
     const el = ref.current;
     if (!el) return;
 
+    const MIN_VISIBLE = 700; // bar always plays one clean pass — fast, but no flicker
+    const MAX_WAIT = 6000;   // safety net: never stay stuck (slow net, frame errors)
+    const start = performance.now();
+
     let done = false;
-    const hide = () => {
+    const fade = () => {
       if (done) return;
       done = true;
       el.classList.add("fade-out");
     };
 
-    // Keep the loader up until the hero has painted its first frame...
-    window.addEventListener("hero:ready", hide, { once: true });
-    // ...or if the hero already signalled before this listener attached...
-    if ((window as Window & { __heroReady?: boolean }).__heroReady) hide();
-    // ...with a safety net so it never gets stuck (slow network, frame errors).
-    const fallback = window.setTimeout(hide, 6000);
+    // Fade once the hero has painted AND the bar has been visible long enough,
+    // so it neither flashes away instantly nor reveals a black hero.
+    let pending: ReturnType<typeof setTimeout> | undefined;
+    const requestFade = () => {
+      if (done || pending) return;
+      pending = setTimeout(fade, Math.max(0, MIN_VISIBLE - (performance.now() - start)));
+    };
+
+    window.addEventListener("hero:ready", requestFade, { once: true });
+    if ((window as Window & { __heroReady?: boolean }).__heroReady) requestFade();
+    const fallback = window.setTimeout(fade, MAX_WAIT);
 
     return () => {
-      window.removeEventListener("hero:ready", hide);
+      window.removeEventListener("hero:ready", requestFade);
       clearTimeout(fallback);
+      if (pending) clearTimeout(pending);
     };
   }, []);
 

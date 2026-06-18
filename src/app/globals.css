@@ -518,7 +518,7 @@ body.lang-ready > *:not(#page-loader) {
   align-items: center;
   justify-content: center;
   background: #000;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
 }
 #page-loader.fade-out {
   opacity: 0;
@@ -550,7 +550,7 @@ body.lang-ready > *:not(#page-loader) {
   height: 100%;
   background: linear-gradient(90deg, #db2777, #f472b6);
   border-radius: 2px;
-  animation: loader-slide 1s ease-in-out infinite;
+  animation: loader-slide 0.7s ease-in-out infinite;
 }
 @keyframes loader-slide {
   0% { transform: translateX(-100%); }

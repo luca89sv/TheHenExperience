@@ -373,21 +373,23 @@ export default function HeroSection() {
     const init = async () => {
       setupCanvas();
 
-      // Paint the first frame ASAP and only THEN dismiss the page loader, so the
-      // hero is already visible when the loader fades — instead of revealing a
-      // black canvas while the 121 frames are still downloading.
+      // Paint the first frame, then start the render loop + scroll handling so the
+      // canvas is centred (tick() applies the translate/rotate transform) and its
+      // rotation is already settled. Do this synchronously BEFORE revealing, so the
+      // loader fades onto a finished hero instead of one that snaps into place.
       await loadFrame(0);
       drawFirstFrame();
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+      actualRotationRef.current = targetRotationRef.current; // no rotate-settle on reveal
+      tick();
+
+      // Hero is now visually complete — dismiss the page loader.
       (window as Window & { __heroReady?: boolean }).__heroReady = true;
       window.dispatchEvent(new Event("hero:ready"));
 
       // Remaining frames load in the background for smooth scroll scrubbing.
       await preloadAllFrames();
-      drawFirstFrame();
-
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-      tick();
     };
 
     init();
