@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import PageLoaderGate from "@/components/PageLoaderGate";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import CartDrawer from "@/components/CartDrawer";
@@ -68,6 +69,7 @@ export default function RootLayout({
           <CartProvider>
           <CartToastProvider>
             <ScrollReset />
+            <PageLoaderGate />
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
