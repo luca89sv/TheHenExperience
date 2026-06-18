@@ -46,11 +46,18 @@ console.log('Connected. Resumable deploy →', ROOT);
 let uploaded = 0, skipped = 0, done = 0;
 for (const f of all) {
   const remote = posix.join(ROOT, f.rel);
+  // HTML pages and Next route-data (.txt) keep stable names but change content,
+  // so size matching is unsafe (a same-length edit would be skipped, leaving
+  // stale references to renamed JS chunks). Always re-upload those; only skip
+  // content-hashed/static assets (_next/static, media, frames) by size.
+  const alwaysUpload = f.rel.endsWith(".html") || f.rel.endsWith(".txt");
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
-      let remoteSize = -1;
-      try { remoteSize = await client.size(remote); } catch {}
-      if (remoteSize === f.size) { skipped++; break; }
+      if (!alwaysUpload) {
+        let remoteSize = -1;
+        try { remoteSize = await client.size(remote); } catch {}
+        if (remoteSize === f.size) { skipped++; break; }
+      }
       await client.ensureDir(posix.dirname(remote));
       await client.uploadFrom(f.local, posix.basename(remote));
       await client.cd(ROOT);

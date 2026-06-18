@@ -64,6 +64,10 @@ function MobileVideoHero({ PHASES, PHASE_POSITIONS, t }: {
           muted
           loop
           playsInline
+          onLoadedData={() => {
+            (window as Window & { __heroReady?: boolean }).__heroReady = true;
+            window.dispatchEvent(new Event("hero:ready"));
+          }}
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             maskImage: "radial-gradient(ellipse 85% 75% at 50% 48%, black 35%, transparent 72%)",
@@ -354,10 +358,7 @@ export default function HeroSection() {
       rafRef.current = requestAnimationFrame(tick);
     };
 
-    const init = async () => {
-      setupCanvas();
-      await preloadAllFrames();
-
+    const drawFirstFrame = () => {
       const canvas = canvasRef.current;
       const ctx = canvas?.getContext("2d");
       if (canvas && ctx && framesRef.current[0]) {
@@ -367,6 +368,22 @@ export default function HeroSection() {
         ctx.drawImage(framesRef.current[0]!, 0, 0, w, h);
         drawnFrameRef.current = 0;
       }
+    };
+
+    const init = async () => {
+      setupCanvas();
+
+      // Paint the first frame ASAP and only THEN dismiss the page loader, so the
+      // hero is already visible when the loader fades — instead of revealing a
+      // black canvas while the 121 frames are still downloading.
+      await loadFrame(0);
+      drawFirstFrame();
+      (window as Window & { __heroReady?: boolean }).__heroReady = true;
+      window.dispatchEvent(new Event("hero:ready"));
+
+      // Remaining frames load in the background for smooth scroll scrubbing.
+      await preloadAllFrames();
+      drawFirstFrame();
 
       window.addEventListener("scroll", onScroll, { passive: true });
       onScroll();
