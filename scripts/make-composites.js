@@ -113,6 +113,12 @@ async function compose(parts, outName) {
   const RED_CARPET = "dywan z limuzyna-1.jpg";
 
   const jobs = [
+    // ---- Porwanie Panny Młodej series (dodane 09.2026 wraz z korektą tekstów) ----
+    // "Porwanie Panny Młodej + Mini Sesja + Czerwony Dywan + Limuzyna + Klub"
+    { out: "porwanie-sesja-dywan-limuzyna-klub.jpg", parts: [ARREST, PHOTOG, RED_CARPET, LIMO, CLUB] },
+    // "Porwanie Panny Młodej + Tancerz + Prywatna Sesja Zdjęciowa + Czerwony Dywan + Limuzyna + Klub"
+    { out: "porwanie-tancerz-sesja-dywan-limuzyna-klub.jpg", parts: [ARREST, DANCER_VIP, PHOTOG, RED_CARPET, LIMO, CLUB] },
+
     // ---- VIP Arrest Show series ----
     // "VIP Arrest Show + Tancerz + Limuzyna + Wejście VIP do Klubu"
     { out: "vip-arrest-tancerz-limuzyna-klub.jpg", parts: [ARREST, DANCER_VIP, LIMO, CLUB] },
@@ -176,7 +182,14 @@ async function compose(parts, outName) {
     { out: "restauracja-tancerz-limuzyna-klub.jpg", parts: [RESTAURANT, PHOTOG, DANCER, LIMO, RED_CARPET, CLUB] },
   ];
 
-  for (const j of jobs) {
+  // Optional filter: node scripts/make-composites.js <substring> [...] regenerates
+  // only the matching covers, so a single new package does not rewrite every file.
+  const filters = process.argv.slice(2);
+  const selected = filters.length
+    ? jobs.filter((j) => filters.some((f) => j.out.toLowerCase().includes(f.toLowerCase())))
+    : jobs;
+  if (!selected.length) throw new Error("no jobs matched: " + filters.join(", "));
+  for (const j of selected) {
     await compose(j.parts, j.out);
   }
 })().catch((e) => {

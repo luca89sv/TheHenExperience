@@ -10,6 +10,7 @@ const faqKeys = [
   { qKey: "faq.q3", aKey: "faq.a3" },
   { qKey: "faq.q4", aKey: "faq.a4" },
   { qKey: "faq.q5", aKey: "faq.a5" },
+  { qKey: "faq.q6", aKey: "faq.a6" },
 ];
 
 export default function FAQSection() {
@@ -35,7 +36,7 @@ export default function FAQSection() {
         </ScrollReveal>
 
         <ScrollReveal type="faq-stagger">
-          <div className="flex flex-col" style={{ gap: 0 }}>
+          <div className="faq-list flex flex-col" style={{ gap: 0 }}>
             {faqKeys.map((faq, i) => (
               <div
                 key={i}
@@ -59,23 +60,27 @@ export default function FAQSection() {
                     +
                   </span>
                 </button>
+                {/* grid-rows 0fr→1fr animates to the answer's natural height, so
+                    multi-paragraph answers are never clipped by a fixed max-height */}
                 <div
                   style={{
-                    maxHeight: openIndex === i ? "300px" : "0",
-                    overflow: "hidden",
-                    transition: "max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                    display: "grid",
+                    gridTemplateRows: openIndex === i ? "1fr" : "0fr",
+                    transition: "grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
                   }}
                 >
-                  <p
-                    style={{
-                      paddingBottom: "1.4rem",
-                      fontSize: "0.92rem",
-                      color: "rgba(255, 255, 255, 0.45)",
-                      lineHeight: 1.7,
-                    }}
-                  >
-                    {t(faq.aKey)}
-                  </p>
+                  <div style={{ overflow: "hidden" }}>
+                    <div
+                      className="faq-answer"
+                      style={{
+                        paddingBottom: "1.4rem",
+                        fontSize: "0.92rem",
+                        color: "rgba(255, 255, 255, 0.45)",
+                        lineHeight: 1.7,
+                      }}
+                      dangerouslySetInnerHTML={{ __html: t(faq.aKey) }}
+                    />
+                  </div>
                 </div>
               </div>
             ))}

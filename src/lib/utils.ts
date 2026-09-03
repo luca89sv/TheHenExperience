@@ -8,6 +8,8 @@ export function cn(...inputs: ClassValue[]) {
 /** Package id -> list of category labels (multi-category). Used by /pakiety listing and PackagesSection pills. */
 export const packageCategoryMap: Record<string, string[]> = {
   // --- pakiety.json ---
+  "porwanie-sesja-dywan-limuzyna-klub":                  ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],
+  "porwanie-tancerz-sesja-dywan-limuzyna-klub":          ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],
   "aresztowanie-tancerz-limuzyna-dywan-klub":           ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],
   "vip-arrest-tancerz-limuzyna-sesja-klub-loza":        ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe", "Posiłki"],
   "vip-arrest-tancerz-limuzyna-klub":                   ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],

@@ -607,3 +607,31 @@ body.lang-ready > *:not(#page-loader) {
     overflow: hidden;
   }
 }
+
+/* FAQ answers may hold several <p> blocks (cancellation / participant-change rules) */
+.faq-answer p + p {
+  margin-top: 0.85rem;
+}
+
+/* Long-form SEO article above the footer */
+.seo-article h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: #fff;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  margin: 2.4rem 0 0.9rem;
+}
+.seo-article p {
+  margin-bottom: 1rem;
+}
+.seo-article ul {
+  margin: 0 0 1rem 1.1rem;
+  list-style: disc;
+}
+.seo-article li {
+  margin-bottom: 0.35rem;
+}
+.seo-article strong {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+}
