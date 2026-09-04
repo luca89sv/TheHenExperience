@@ -8,8 +8,6 @@ export function cn(...inputs: ClassValue[]) {
 /** Package id -> list of category labels (multi-category). Used by /pakiety listing and PackagesSection pills. */
 export const packageCategoryMap: Record<string, string[]> = {
   // --- pakiety.json ---
-  "porwanie-sesja-dywan-limuzyna-klub":                  ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],
-  "porwanie-tancerz-sesja-dywan-limuzyna-klub":          ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],
   "aresztowanie-tancerz-limuzyna-dywan-klub":           ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],
   "vip-arrest-tancerz-limuzyna-sesja-klub-loza":        ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe", "Posiłki"],
   "vip-arrest-tancerz-limuzyna-klub":                   ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],
@@ -20,6 +18,7 @@ export const packageCategoryMap: Record<string, string[]> = {
   "karaoke-beer-pong-limuzyna-tancerz-klub":            ["Polecane", "Sexy", "Nocne", "Imprezowe"],
   "karaoke-beer-pong-limuzyna-sesja-klub":              ["Nocne", "Imprezowe", "Dzienne"],
   "limuzyna-piknik-sesja-klub":                         ["Polecane", "Piknik", "Plenerowe", "Posiłki", "Dzienne", "Nocne", "Relaks"],
+  "porwanie-sesja-dywan-limuzyna-klub":                  ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],
   "fotograf-limuzyna-dywan-klub":                       ["Polecane", "Nocne", "Imprezowe", "Dzienne"],
   "sesja-wideo-limuzyna-dywan-klub":                    ["Nocne", "Imprezowe", "Dzienne"],
   "sesja-wideo-limuzyna-klub":                          ["Nocne", "Imprezowe", "Dzienne"],
@@ -27,6 +26,7 @@ export const packageCategoryMap: Record<string, string[]> = {
   "restauracja-tancerz-limuzyna-dywan-klub":            ["Sexy", "Nocne", "Imprezowe", "Posiłki", "Dzienne"],
   "pakiet-sexy-panienski":                              ["Sexy", "Nocne", "Imprezowe"],
   "taniec-limuzyna-tancerz-klub":                       ["Sexy", "Nocne", "Imprezowe", "Dzienne"],
+  "porwanie-tancerz-sesja-dywan-limuzyna-klub":          ["Polecane", "Aresztowanie", "Sexy", "Nocne", "Imprezowe"],
   "gokarty-limuzyna-klub":                              ["Nocne", "Imprezowe", "Dzienne", "Plenerowe"],
   "limuzyna-spa":                                       ["Polecane", "Dzienne", "Relaks"],
   "fotograf-taniec-limuzyna-klub":                      ["Sexy", "Nocne", "Imprezowe", "Plenerowe", "Dzienne"],
