@@ -13,7 +13,7 @@ function env() {
   return e;
 }
 const e = env();
-const ROOT = e.FTP_REMOTE_DIR.replace(/\/$/, '');
+const ROOT = (process.env.FTP_REMOTE_DIR || e.FTP_REMOTE_DIR).replace(/\/$/, '');
 const outDir = new URL('../out/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1').replace(/\/$/, '');
 
 function walk(dir, files = []) {
